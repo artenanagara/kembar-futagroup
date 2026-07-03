@@ -1,0 +1,11 @@
+.git
+.github
+.vercel
+.nuxt
+.output
+node_modules
+logs
+*.log
+.DS_Store
+.env
+.env.*
