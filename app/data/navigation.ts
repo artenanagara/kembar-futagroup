@@ -28,10 +28,10 @@ export const navItems: NavItem[] = [
     hasDropdown: true,
     dropdownLimit: 3,
     eyebrow: 'Tentang Grup',
-    description: 'Kenali profil, nilai pendiri, dan struktur Kembar Futago Group sebagai ekosistem manufaktur dari Klaten.',
+    description: 'Kenali profil, nilai pendiri, dan struktur Kembar Futa Group sebagai ekosistem manufaktur dari Klaten.',
     image: {
       src: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?auto=format&fit=crop&w=900&q=85',
-      alt: 'Aktivitas manufaktur Kembar Futago Group'
+      alt: 'Aktivitas manufaktur Kembar Futa Group'
     },
     children: [
       {
@@ -60,7 +60,7 @@ export const navItems: NavItem[] = [
     description: 'Berbagai unit usaha grup saling terhubung untuk mendukung manufaktur, teknik, lansekap, dan infrastruktur.',
     image: {
       src: businessUnits[0]?.image ?? '',
-      alt: 'Unit bisnis Kembar Futago Group'
+      alt: 'Unit bisnis Kembar Futa Group'
     },
     children: businessUnits.map(unit => ({
       label: unit.name,

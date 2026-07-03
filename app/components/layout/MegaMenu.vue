@@ -14,8 +14,8 @@ const visibleChildren = computed(() => {
 
 <template>
   <div class="absolute inset-x-0 top-20 hidden xl:block">
-    <div class="mx-auto max-w-[1440px] px-8 lg:px-20">
-      <div class="grid min-h-[320px] grid-cols-[minmax(240px,.8fr)_minmax(320px,1fr)_minmax(420px,1.2fr)] gap-8 border border-black/10 bg-white/96 p-6 text-ink shadow-2xl shadow-black/20 backdrop-blur-xl">
+    <div class="mx-auto max-w-360 px-8 lg:px-20">
+      <div class="grid min-h-80 grid-cols-[minmax(240px,.8fr)_minmax(320px,1fr)_minmax(420px,1.2fr)] gap-8 border border-black/10 bg-white/96 p-6 text-ink shadow-2xl shadow-black/20 backdrop-blur-xl">
         <div class="flex flex-col justify-between border-r border-black/12 pr-8">
           <div>
             <p class="text-sm font-medium leading-tight text-brand-green">

@@ -98,15 +98,15 @@ export const projects = [
 
 export const posts = [
   {
-    title: 'Kembar Futago Group Perkuat Ekosistem Manufaktur Berbasis Klaten',
+    title: 'Kembar Futa Group Perkuat Ekosistem Manufaktur Berbasis Klaten',
     image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=80'
   },
   {
-    title: 'Kembar Futago Group Perkuat Ekosistem Manufaktur Berbasis Klaten',
+    title: 'Kembar Futa Group Perkuat Ekosistem Manufaktur Berbasis Klaten',
     image: 'https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?auto=format&fit=crop&w=900&q=80'
   },
   {
-    title: 'Kembar Futago Group Perkuat Ekosistem Manufaktur Berbasis Klaten',
+    title: 'Kembar Futa Group Perkuat Ekosistem Manufaktur Berbasis Klaten',
     image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=80'
   }
 ]

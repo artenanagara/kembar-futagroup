@@ -27,7 +27,7 @@ useSeoMeta({
 
 <template>
   <div>
-    <section class="relative min-h-[500px] overflow-hidden bg-ink text-white">
+    <section class="relative min-h-125 overflow-hidden bg-ink text-white">
       <img
         :src="unit.image"
         :alt="unit.name"
@@ -38,7 +38,7 @@ useSeoMeta({
 
       <LayoutSiteHeader />
 
-      <div class="relative z-10 mx-auto flex min-h-[500px] max-w-[1440px] items-end px-5 pb-14 pt-28 sm:px-8 lg:px-20">
+      <div class="relative z-10 mx-auto flex min-h-125 max-w-360 items-end px-5 pb-14 pt-28 sm:px-8 lg:px-20">
         <div class="max-w-3xl">
           <p class="text-sm font-medium leading-tight text-white/70">
             Beranda / Unit Bisnis
@@ -57,7 +57,7 @@ useSeoMeta({
       class="bg-white"
       data-section-reveal
     >
-      <div class="mx-auto grid max-w-[1440px] gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[.8fr_1.2fr] lg:px-20 lg:py-25">
+      <div class="mx-auto grid max-w-360 gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[.8fr_1.2fr] lg:px-20 lg:py-25">
         <div data-reveal-item>
           <p class="text-sm font-medium leading-tight text-brand-green">
             {{ unit.category }}

@@ -1,42 +1,100 @@
 <script setup lang="ts">
-import { productSolutions } from '~/data/product-solutions'
+import { productSolutionPage, productSolutions } from '~/data/product-solutions'
 
 const title = 'Produk & Solusi - Kembar Futa Group'
-const description = 'Daftar produk dan solusi Kembar Futago Group untuk kebutuhan manufaktur, proyek, lansekap, dan infrastruktur.'
+const description = 'Daftar produk dan solusi Kembar Futa Group untuk kebutuhan manufaktur, proyek, lansekap, dan infrastruktur.'
+const activeIndustryIndex = ref(0)
+
+const activeIndustry = computed(() => productSolutionPage.industries[activeIndustryIndex.value] ?? productSolutionPage.industries[0])
 
 useSeoMeta({
   title,
   description,
   ogTitle: title,
   ogDescription: description,
-  ogImage: productSolutions[0]?.image,
+  ogImage: productSolutionPage.hero.image,
   twitterCard: 'summary_large_image'
 })
 </script>
 
 <template>
   <div>
-    <section class="relative min-h-[500px] overflow-hidden bg-ink text-white">
+    <section class="relative h-125 overflow-hidden bg-ink text-white">
       <img
-        :src="productSolutions[0]?.image"
-        alt="Produk dan solusi Kembar Futago Group"
+        :src="productSolutionPage.hero.image"
+        alt="Produk dan solusi Kembar Futa Group"
         class="absolute inset-0 size-full object-cover"
       >
-      <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,.78)_0%,rgba(0,0,0,.34)_48%,rgba(0,0,0,.7)_100%)]" />
-      <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.72)_0%,rgba(0,0,0,.16)_42%,rgba(0,0,0,.56)_100%)]" />
+      <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.8)_0%,rgba(0,0,0,.38)_20%,rgba(0,0,0,.12)_40%,rgba(0,0,0,.42)_100%)]" />
 
       <LayoutSiteHeader />
 
-      <div class="relative z-10 mx-auto flex min-h-[500px] max-w-[1440px] items-end px-5 pb-14 pt-28 sm:px-8 lg:px-20">
-        <div class="max-w-3xl">
-          <p class="text-sm font-medium leading-tight text-white/70">
-            Beranda / Produk & Solusi
-          </p>
-          <h1 class="mt-8 text-4xl font-normal leading-tight sm:text-5xl lg:text-6xl">
-            Produk & Solusi
-          </h1>
-          <p class="mt-5 max-w-2xl text-base leading-relaxed text-white/80">
-            Produk dan layanan teknis dari desain, produksi, kontrol kualitas, hingga distribusi.
+      <div class="relative z-10 mx-auto flex h-full max-w-360 flex-col items-start justify-end gap-8 px-5 pb-12 pt-28 sm:px-8 lg:px-20">
+        <p class="text-sm font-medium leading-[1.2] text-white">
+          {{ productSolutionPage.hero.breadcrumbs[0] }} / {{ productSolutionPage.hero.breadcrumbs[1] }}
+        </p>
+
+        <h1 class="text-5xl font-medium leading-[1.2]">
+          {{ productSolutionPage.hero.title }}
+        </h1>
+
+        <p class="max-w-160 text-sm font-normal leading-[1.6] text-white">
+          {{ productSolutionPage.hero.description }}
+        </p>
+      </div>
+    </section>
+
+    <section
+      class="bg-white"
+      data-section-reveal
+    >
+      <div
+        class="mx-auto grid max-w-360 gap-12 px-5 py-24 sm:px-8 lg:grid-cols-[.33fr_.67fr] lg:px-20 lg:py-35"
+        data-reveal-item
+      >
+        <p class="text-sm font-medium leading-[1.2] tracking-[0.04em] text-black/70">
+          {{ productSolutionPage.focus.eyebrow }}
+        </p>
+
+        <div
+          class="max-w-5xl"
+        >
+          <h2 class="text-4xl font-medium leading-tight text-black/78 sm:text-4xl ">
+            {{ productSolutionPage.focus.title }}
+          </h2>
+          <div class="mt-10 grid gap-8 text-base font-medium leading-relaxed text-black/72 md:grid-cols-2 lg:max-w-4xl">
+            <p
+              v-for="paragraph in productSolutionPage.focus.paragraphs"
+              :key="paragraph"
+            >
+              {{ paragraph }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="bg-white"
+      data-section-reveal
+    >
+      <div
+        class="relative h-107.5 overflow-hidden lg:h-130"
+        data-reveal-item
+      >
+        <img
+          :src="productSolutionPage.capabilityBand.image"
+          alt="Kapabilitas produk dan solusi Kembar Futa Group"
+          class="absolute inset-0 size-full object-cover"
+        >
+        <div class="absolute inset-0 bg-black/55" />
+        <div class="relative z-10 grid h-full grid-cols-1 content-center gap-8 px-5 text-white sm:px-8 md:grid-cols-2 lg:grid-cols-4 lg:px-20">
+          <p
+            v-for="label in productSolutionPage.capabilityBand.labels"
+            :key="label"
+            class="text-sm font-medium uppercase leading-[1.2] tracking-[0.06em] text-white/90 lg:text-base"
+          >
+            + {{ label }}
           </p>
         </div>
       </div>
@@ -46,37 +104,86 @@ useSeoMeta({
       class="bg-white"
       data-section-reveal
     >
-      <div class="mx-auto max-w-[1440px] px-5 py-20 sm:px-8 lg:px-20 lg:py-25">
-        <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+      <div class="mx-auto max-w-360 px-5 py-20 sm:px-8 lg:px-20 lg:py-25">
+        <h2
+          class="text-5xl font-medium leading-[1.12] text-black/80 sm:text-6xl"
+          data-reveal-item
+        >
+          Produk & Solusi
+        </h2>
+
+        <div class="mt-10">
           <NuxtLink
-            v-for="solution in productSolutions"
+            v-for="(solution, index) in productSolutions"
             :key="solution.slug"
             :to="`/produk-solusi/${solution.slug}`"
-            class="group border border-black/16 p-6 transition duration-500 ease-out hover:-translate-y-1 hover:border-brand-green"
-            data-reveal-item
+            class="sticky top-0 grid min-h-140 gap-6 border-t border-black/20 bg-white py-10 last:border-b md:min-h-107.5 md:grid-cols-[120px_1fr] lg:grid-cols-[180px_1.1fr_1.45fr_452px] lg:items-start"
+            :style="{ zIndex: index + 1 }"
           >
-            <img
-              :src="solution.image"
-              :alt="solution.name"
-              class="h-56 w-full object-cover grayscale transition duration-700 ease-out group-hover:grayscale-0"
-            >
-            <p class="mt-6 text-sm font-medium leading-tight text-brand-green">
-              {{ solution.category }}
+            <p class="font-mono text-base leading-[1.2] text-black/80">
+              [{{ String(index + 1).padStart(2, '0') }}]
             </p>
-            <h2 class="mt-3 text-2xl font-medium leading-tight text-ink">
+
+            <h3 class="text-2xl font-medium leading-[1.15] text-black/78">
               {{ solution.name }}
-            </h2>
-            <p class="mt-4 text-base leading-relaxed text-black/65">
+            </h3>
+
+            <p class="max-w-xl text-base font-medium leading-[1.35] text-black/72">
               {{ solution.description }}
             </p>
+
+            <img
+              :src="solution.cardImage ?? solution.image"
+              :alt="solution.name"
+              class="h-60 w-full object-cover md:col-span-2 lg:col-span-1 lg:h-56"
+            >
           </NuxtLink>
         </div>
       </div>
     </section>
 
+    <section
+      class="bg-white"
+      data-section-reveal
+    >
+      <div class="mx-auto max-w-360 px-5 pb-20 sm:px-8 lg:px-20 lg:pb-25">
+        <p
+          class="text-2xl font-medium leading-[1.2] text-black/80"
+          data-reveal-item
+        >
+          (Area yang Kami Dukung)
+        </p>
+
+        <div
+          class="mt-10 grid gap-12 lg:grid-cols-[.95fr_.9fr] lg:items-center"
+          data-reveal-item
+        >
+          <img
+            :src="activeIndustry.image"
+            :alt="activeIndustry.name"
+            class="aspect-[1.08/1] w-full rounded-lg object-cover"
+          >
+
+          <div class="flex flex-col">
+            <button
+              v-for="(industry, index) in productSolutionPage.industries"
+              :key="industry.name"
+              type="button"
+              class="w-full text-left text-5xl font-medium leading-[1.18] transition duration-300 ease-out sm:text-6xl"
+              :class="activeIndustryIndex === index ? 'text-black' : 'text-black/22 hover:text-black/55'"
+              @click="activeIndustryIndex = index"
+              @mouseenter="activeIndustryIndex = index"
+            >
+              {{ industry.name }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <LayoutSiteFooter
-      title="Temukan unit bisnis pendukungnya."
-      primary-label="Unit Bisnis"
+      title="Temukan unit bisnis pendukungnya"
+      primary-label="Lihat Unit Bisnis"
       primary-to="/unit-bisnis"
     />
   </div>

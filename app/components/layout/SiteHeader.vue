@@ -41,13 +41,13 @@ const handleHeaderFocusOut = (event: FocusEvent) => {
     @keydown.esc="clearActiveMenu"
     @mouseleave="clearActiveMenu"
   >
-    <div class="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-5 sm:px-8 lg:px-20">
+    <div class="mx-auto flex h-22.5 max-w-360 items-center justify-between px-5 sm:px-8 lg:px-25">
       <NuxtLink
         to="/"
-        class="text-2xl font-bold tracking-[0.05em] text-white lg:text-4xl"
+        class="text-white"
         aria-label="Kembar Futa Group"
       >
-        LOGO
+        <AppLogo class="h-6 w-auto lg:h-8" />
       </NuxtLink>
 
       <nav
@@ -63,7 +63,7 @@ const handleHeaderFocusOut = (event: FocusEvent) => {
         >
           <NuxtLink
             :to="item.to"
-            class="group flex items-center gap-1 px-4 py-2 text-base font-medium leading-snug text-white/95"
+            class="group flex items-center gap-1 px-4 py-2 text-base font-medium leading-[1.4] text-white/95"
             :aria-haspopup="hasChildren(item) ? 'menu' : undefined"
             :aria-expanded="hasChildren(item) ? activeMenu === item.label : undefined"
           >
