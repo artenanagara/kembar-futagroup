@@ -4,10 +4,21 @@ import type { NavItem } from '~/data/navigation'
 
 const isOpen = ref(false)
 const activeMenu = ref<string | null>(null)
+const headerRef = ref<HTMLElement | null>(null)
+const isHidden = ref(false)
+const isDarkSurface = ref(true)
 
 const hasChildren = (item: NavItem) => Boolean(item.children?.length)
 const showChevron = (item: NavItem) => item.hasDropdown || hasChildren(item)
 const activeMenuItem = computed(() => navItems.find(item => item.label === activeMenu.value && hasChildren(item)))
+const logoVariant = computed(() => isDarkSurface.value ? 'white' : 'default')
+const navTextClass = computed(() => isDarkSurface.value ? 'text-white/95' : 'text-ink')
+const navIconClass = computed(() => isDarkSurface.value ? 'text-white/85' : 'text-ink/75')
+const mobileButtonClass = computed(() => isDarkSurface.value ? 'border-white/25 text-white' : 'border-black/20 text-ink')
+
+let lastScrollY = 0
+let ticking = false
+
 const getVisibleChildren = (item: NavItem) => {
   const limit = item.dropdownLimit ?? item.children?.length ?? 0
 
@@ -32,11 +43,155 @@ const handleHeaderFocusOut = (event: FocusEvent) => {
 
   clearActiveMenu()
 }
+
+const getColorParts = (color: string) => {
+  const match = color.match(/rgba?\(([^)]+)\)/)
+
+  if (!match) {
+    return null
+  }
+
+  const rawColorParts = match[1]
+
+  if (!rawColorParts) {
+    return null
+  }
+
+  const values = rawColorParts.split(',').map(value => Number.parseFloat(value.trim()))
+  const r = values[0]
+  const g = values[1]
+  const b = values[2]
+  const a = values[3] ?? 1
+
+  if (r === undefined || g === undefined || b === undefined || ![r, g, b, a].every(Number.isFinite)) {
+    return null
+  }
+
+  return { r, g, b, a }
+}
+
+const getLuminance = (r: number, g: number, b: number) => {
+  const toLinear = (value: number) => {
+    const channel = value / 255
+
+    return channel <= 0.03928 ? channel / 12.92 : ((channel + 0.055) / 1.055) ** 2.4
+  }
+
+  return (0.2126 * toLinear(r)) + (0.7152 * toLinear(g)) + (0.0722 * toLinear(b))
+}
+
+const isDarkElement = (element: Element | null) => {
+  let current = element
+
+  while (current && current !== document.body) {
+    if (current instanceof HTMLElement) {
+      const headerTheme = current.dataset.headerTheme
+
+      if (headerTheme === 'dark') {
+        return true
+      }
+
+      if (headerTheme === 'light') {
+        return false
+      }
+
+      const className = current.className.toString()
+
+      if (current.matches('img, video, canvas') || className.includes('text-white') || className.includes('bg-black') || className.includes('bg-ink')) {
+        return true
+      }
+
+      if (className.includes('bg-white') || className.includes('bg-neutral')) {
+        return false
+      }
+
+      const colorParts = getColorParts(getComputedStyle(current).backgroundColor)
+
+      if (colorParts && colorParts.a > 0.2) {
+        return getLuminance(colorParts.r, colorParts.g, colorParts.b) < 0.5
+      }
+    }
+
+    current = current.parentElement
+  }
+
+  return window.scrollY < 80
+}
+
+const updateSurfaceTheme = () => {
+  const header = headerRef.value
+
+  if (!header) {
+    return
+  }
+
+  const y = Math.min(header.offsetHeight / 2, 64)
+  const points = [
+    Math.min(110, window.innerWidth - 24),
+    window.innerWidth / 2,
+    Math.max(window.innerWidth - 110, 24)
+  ]
+
+  const darkVotes = points.reduce((total, x) => {
+    const surface = document.elementsFromPoint(x, y)
+      .find(element => !header.contains(element))
+
+    return total + (isDarkElement(surface ?? null) ? 1 : 0)
+  }, 0)
+
+  isDarkSurface.value = darkVotes >= 2
+}
+
+const updateHeaderOnScroll = () => {
+  const currentScrollY = Math.max(window.scrollY, 0)
+  const delta = currentScrollY - lastScrollY
+
+  updateSurfaceTheme()
+
+  if (isOpen.value || activeMenu.value) {
+    isHidden.value = false
+  } else if (currentScrollY < 80 || delta < -8) {
+    isHidden.value = false
+  } else if (currentScrollY > 120 && delta > 8) {
+    isHidden.value = true
+  }
+
+  lastScrollY = currentScrollY
+  ticking = false
+}
+
+const requestHeaderUpdate = () => {
+  if (ticking) {
+    return
+  }
+
+  ticking = true
+  window.requestAnimationFrame(updateHeaderOnScroll)
+}
+
+watch([isOpen, activeMenu], () => {
+  isHidden.value = false
+  nextTick(updateSurfaceTheme)
+})
+
+onMounted(() => {
+  lastScrollY = Math.max(window.scrollY, 0)
+  updateSurfaceTheme()
+  window.addEventListener('scroll', requestHeaderUpdate, { passive: true })
+  window.addEventListener('resize', updateSurfaceTheme, { passive: true })
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', requestHeaderUpdate)
+  window.removeEventListener('resize', updateSurfaceTheme)
+})
 </script>
 
 <template>
   <header
-    class="absolute inset-x-0 top-0 z-30"
+    ref="headerRef"
+    class="fixed inset-x-0 top-0 z-50 transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)]"
+    :class="isHidden ? '-translate-y-full' : 'translate-y-0'"
     @focusout="handleHeaderFocusOut"
     @keydown.esc="clearActiveMenu"
     @mouseleave="clearActiveMenu"
@@ -47,7 +202,10 @@ const handleHeaderFocusOut = (event: FocusEvent) => {
         class="text-white"
         aria-label="Kembar Futa Group"
       >
-        <AppLogo class="h-6 w-auto lg:h-8" />
+        <AppLogo
+          :variant="logoVariant"
+          class="h-12 w-auto lg:h-14"
+        />
       </NuxtLink>
 
       <nav
@@ -63,7 +221,8 @@ const handleHeaderFocusOut = (event: FocusEvent) => {
         >
           <NuxtLink
             :to="item.to"
-            class="group flex items-center gap-1 px-4 py-2 text-base font-medium leading-[1.4] text-white/95"
+            class="group flex items-center gap-1 px-4 py-2 text-base font-medium leading-[1.4] transition-colors duration-300"
+            :class="navTextClass"
             :aria-haspopup="hasChildren(item) ? 'menu' : undefined"
             :aria-expanded="hasChildren(item) ? activeMenu === item.label : undefined"
           >
@@ -76,7 +235,8 @@ const handleHeaderFocusOut = (event: FocusEvent) => {
             <UIcon
               v-if="showChevron(item)"
               name="i-lucide-chevron-down"
-              class="size-5 text-white/85"
+              class="size-5 transition-colors duration-300"
+              :class="navIconClass"
             />
           </NuxtLink>
         </div>
@@ -84,7 +244,8 @@ const handleHeaderFocusOut = (event: FocusEvent) => {
 
       <button
         type="button"
-        class="inline-flex size-11 items-center justify-center border border-white/25 text-white xl:hidden"
+        class="inline-flex size-11 items-center justify-center border transition-colors duration-300 xl:hidden"
+        :class="mobileButtonClass"
         :aria-expanded="isOpen"
         aria-label="Buka navigasi"
         @click="isOpen = !isOpen"

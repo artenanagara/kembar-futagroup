@@ -25,7 +25,10 @@ useSeoMeta({
 
 <template>
   <div>
-    <section class="relative h-125 overflow-hidden bg-ink text-white">
+    <section
+      class="relative h-125 overflow-hidden bg-ink text-white"
+      data-section-reveal
+    >
       <img
         :src="businessUnitPage.hero.image"
         alt="Unit bisnis Kembar Futa Group"
@@ -36,15 +39,21 @@ useSeoMeta({
       <LayoutSiteHeader />
 
       <div class="relative z-10 mx-auto flex h-full max-w-360 flex-col items-start justify-end gap-8 px-5 pb-12 pt-28 sm:px-8 lg:px-20">
-        <p class="text-sm font-medium leading-[1.2] text-white">
+        <p
+          class="text-sm font-medium leading-[1.2] text-white"
+          data-reveal-item
+        >
           {{ businessUnitPage.hero.breadcrumbs[0] }} / {{ businessUnitPage.hero.breadcrumbs[1] }}
         </p>
 
         <h1 class="text-5xl font-medium leading-[1.2]">
-          {{ businessUnitPage.hero.title }}
+          <UiRevealText :text="businessUnitPage.hero.title" />
         </h1>
 
-        <p class="max-w-160 text-sm font-normal leading-[1.6] text-white">
+        <p
+          class="max-w-160 text-sm font-normal leading-[1.6] text-white"
+          data-reveal-item
+        >
           {{ businessUnitPage.hero.description }}
         </p>
       </div>

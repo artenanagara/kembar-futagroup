@@ -16,7 +16,10 @@ useSeoMeta({
 
 <template>
   <div>
-    <section class="relative min-h-125 overflow-hidden bg-ink text-white">
+    <section
+      class="relative min-h-125 overflow-hidden bg-ink text-white"
+      data-section-reveal
+    >
       <img
         :src="aboutStructureHero.image"
         :alt="aboutStructureHero.title"
@@ -32,6 +35,7 @@ useSeoMeta({
           <nav
             class="mb-8 flex flex-wrap items-center gap-2 text-sm leading-tight text-white/70"
             aria-label="Breadcrumb"
+            data-reveal-item
           >
             <template
               v-for="(crumb, index) in aboutStructureHero.breadcrumbs"
@@ -58,9 +62,12 @@ useSeoMeta({
           </nav>
 
           <h1 class="text-4xl font-normal leading-tight sm:text-5xl lg:text-6xl">
-            {{ aboutStructureHero.title }}
+            <UiRevealText :text="aboutStructureHero.title" />
           </h1>
-          <p class="mt-5 max-w-2xl text-base leading-relaxed text-white/80">
+          <p
+            class="mt-5 max-w-2xl text-base leading-relaxed text-white/80"
+            data-reveal-item
+          >
             {{ aboutStructureHero.description }}
           </p>
         </div>

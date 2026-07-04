@@ -2,6 +2,7 @@ export type ProductSolution = {
   slug: string
   name: string
   description: string
+  navDescription: string
   category: string
   group: 'produk' | 'solusi' | 'layanan'
   image: string
@@ -17,15 +18,15 @@ export const productSolutionPage = {
   },
   focus: {
     eyebrow: 'Fokus Kami',
-    title: 'Kembar Futa Group menghubungkan pengecoran logam, permesinan, dan produk ruang publik menjadi solusi yang siap dipakai proyek.',
+    title: 'Kembar Futa Group merancang produk ruang publik, pengecoran, mesin, drainase, lanskap, dan material finishing untuk kebutuhan proyek.',
     paragraphs: [
       'Berbasis di Klaten, Kembar Futa Group dikenal sebagai holding produk logam olahan yang menaungi lini seperti Futake, Futago, Futastone, Futafarm, serta unit manufaktur terkait.',
-      'Kapabilitas grup bergerak dari street furniture, drainase, landscaping, pengecoran logam, sampai pengembangan mesin untuk kebutuhan industri, pertanian, konstruksi, dan kitchen equipment.'
+      'Kapabilitas grup bergerak dari furnitur jalan dan pedestrian, pengecoran logam, mesin tepat guna, penghijauan kota, infrastruktur drainase, hingga batu dan terrazzo.'
     ]
   },
   capabilityBand: {
     image: 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1800&q=85',
-    labels: ['Cor Logam Custom', 'Mesin & Permesinan', 'Street Furniture', 'Infrastruktur Drainase']
+    labels: ['Furnitur Jalan & Pedestrian', 'Pengecoran Logam & Foundry', 'Mesin Tepat Guna', 'Infrastruktur Drainase']
   },
   industries: [
     {
@@ -61,48 +62,63 @@ export const productSolutionPage = {
 
 export const productSolutions: ProductSolution[] = [
   {
-    slug: 'cor-logam-custom',
-    name: 'Cor Logam Custom',
-    description: 'Pengecoran komponen besi cor dan aluminium untuk kebutuhan proyek, mulai dari manhole cover, grating, grill, sampai elemen custom sesuai spesifikasi.',
-    category: 'Produk',
-    group: 'produk',
-    image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=85',
-    cardImage: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=85'
-  },
-  {
-    slug: 'mesin-produksi',
-    name: 'Mesin Produksi',
-    description: 'Pengembangan dan perakitan mesin untuk kebutuhan industri, pertanian, konstruksi, dan kitchen equipment agar proses usaha lebih efisien.',
-    category: 'Solusi',
-    group: 'solusi',
-    image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=85',
-    cardImage: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=85'
-  },
-  {
-    slug: 'infrastruktur-kawasan',
-    name: 'Infrastruktur Kawasan',
-    description: 'Produk utilitas kawasan seperti drainase, grating, bollard, pagar, dan komponen pendukung untuk jalan, taman kota, serta kawasan industri.',
-    category: 'Solusi',
-    group: 'solusi',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85',
-    cardImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85'
-  },
-  {
-    slug: 'elemen-lansekap',
-    name: 'Elemen Lansekap',
-    description: 'Street furniture dan elemen ruang luar seperti kursi taman, PJU, penunjuk arah, tempat sampah, bollard, dan produk pedestrian lain.',
+    slug: 'furnitur-jalan-pedestrian',
+    name: 'Furnitur Jalan & Pedestrian',
+    description: 'Tiang lampu PJU oktagonal, bollard, bangku dan meja, papan nama jalan, wayfinding, bak sampah, ubin pemandu atau taktil, hingga pagar antik.',
+    navDescription: 'Tiang lampu, bollard, bangku, dan perlengkapan jalan lainnya.',
     category: 'Produk',
     group: 'produk',
     image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85',
     cardImage: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85'
   },
   {
-    slug: 'engineering-produksi',
-    name: 'Engineering Produksi',
-    description: 'Pendampingan teknis dari perumusan kebutuhan, desain, pemilihan material, pengecoran, fabrikasi, machining, hingga kontrol kualitas.',
-    category: 'Layanan',
+    slug: 'pengecoran-logam-foundry',
+    name: 'Pengecoran Logam & Foundry',
+    description: 'Pengecoran komponen besi cor dan aluminium untuk kebutuhan proyek, utilitas kawasan, elemen ruang publik, dan produk custom sesuai spesifikasi.',
+    navDescription: 'Pengecoran besi cor dan aluminium untuk kebutuhan proyek.',
+    category: 'Produksi',
     group: 'layanan',
-    image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=900&q=85',
-    cardImage: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=900&q=85'
+    image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=85',
+    cardImage: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=85'
+  },
+  {
+    slug: 'mesin-tepat-guna',
+    name: 'Mesin Tepat Guna',
+    description: 'Pengembangan dan perakitan mesin untuk kebutuhan industri, pertanian, konstruksi, dan kitchen equipment agar proses kerja lebih efisien.',
+    navDescription: 'Pengembangan mesin untuk industri, pertanian, dan konstruksi.',
+    category: 'Solusi',
+    group: 'solusi',
+    image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=85',
+    cardImage: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=85'
+  },
+  {
+    slug: 'lanskap-penghijauan-kota',
+    name: 'Lanskap & Penghijauan Kota',
+    description: 'Solusi lanskap dan penghijauan untuk taman, koridor pedestrian, area publik, kawasan komersial, dan ruang luar perkotaan.',
+    navDescription: 'Solusi lanskap dan penghijauan ruang publik perkotaan.',
+    category: 'Solusi',
+    group: 'solusi',
+    image: 'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=85',
+    cardImage: 'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=85'
+  },
+  {
+    slug: 'infrastruktur-drainase',
+    name: 'Infrastruktur Drainase',
+    description: 'Komponen drainase dan utilitas kawasan seperti grating, grill, manhole cover, saluran, dan pendukung infrastruktur jalan maupun kawasan.',
+    navDescription: 'Komponen drainase dan utilitas kawasan perkotaan.',
+    category: 'Solusi',
+    group: 'solusi',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85',
+    cardImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85'
+  },
+  {
+    slug: 'batu-terazzo',
+    name: 'Batu & Terazzo',
+    description: 'Material batu dan terrazzo untuk kebutuhan lantai, elemen arsitektural, lanskap, area publik, dan finishing proyek.',
+    navDescription: 'Material batu dan terrazzo untuk lantai dan finishing.',
+    category: 'Produk',
+    group: 'produk',
+    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85',
+    cardImage: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85'
   }
 ]

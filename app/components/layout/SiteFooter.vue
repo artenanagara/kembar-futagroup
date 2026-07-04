@@ -18,7 +18,7 @@ withDefaults(defineProps<{
 
 <template>
   <footer
-    class="bg-black text-white"
+    class="flex min-h-screen flex-col justify-center bg-black text-white"
     data-section-reveal
   >
     <div class="mx-auto max-w-360 px-5 sm:px-8 lg:px-20">
@@ -71,14 +71,14 @@ withDefaults(defineProps<{
       >
         <div class="space-y-8">
           <div>
-            <AppLogo class="h-7 w-auto text-white lg:h-9" />
+            <AppLogo class="h-16 w-auto lg:h-16" />
             <p class="mt-5 max-w-md text-sm leading-[1.6] text-white/80">
               Kembar Futa Group adalah ekosistem holding manufaktur berbasis Klaten yang menaungi berbagai lini bisnis di bidang logam, manufaktur, infrastruktur, lanskap, agribisnis, dan solusi industri.
             </p>
           </div>
           <address class="space-y-4 not-italic">
             <div>
-              <p class="text-base font-bold leading-[1.4] tracking-[0.05em]">
+              <p class="text-base font-bold leading-[1.4] tracking-wider">
                 Kantor Pusat
               </p>
               <p class="mt-1 text-base leading-[1.6] text-white/80">
@@ -86,7 +86,7 @@ withDefaults(defineProps<{
               </p>
             </div>
             <div>
-              <p class="text-base font-bold leading-[1.4] tracking-[0.05em]">
+              <p class="text-base font-bold leading-[1.4] tracking-wider">
                 Email
               </p>
               <p class="mt-1 text-base leading-[1.6] text-white/80">
@@ -94,7 +94,7 @@ withDefaults(defineProps<{
               </p>
             </div>
             <div>
-              <p class="text-base font-bold leading-[1.4] tracking-[0.05em]">
+              <p class="text-base font-bold leading-[1.4] tracking-wider">
                 WhatsApp
               </p>
               <p class="mt-1 text-base leading-[1.6] text-white/80">

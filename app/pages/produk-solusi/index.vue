@@ -19,7 +19,10 @@ useSeoMeta({
 
 <template>
   <div>
-    <section class="relative h-125 overflow-hidden bg-ink text-white">
+    <section
+      class="relative h-125 overflow-hidden bg-ink text-white"
+      data-section-reveal
+    >
       <img
         :src="productSolutionPage.hero.image"
         alt="Produk dan solusi Kembar Futa Group"
@@ -30,15 +33,21 @@ useSeoMeta({
       <LayoutSiteHeader />
 
       <div class="relative z-10 mx-auto flex h-full max-w-360 flex-col items-start justify-end gap-8 px-5 pb-12 pt-28 sm:px-8 lg:px-20">
-        <p class="text-sm font-medium leading-[1.2] text-white">
+        <p
+          class="text-sm font-medium leading-[1.2] text-white"
+          data-reveal-item
+        >
           {{ productSolutionPage.hero.breadcrumbs[0] }} / {{ productSolutionPage.hero.breadcrumbs[1] }}
         </p>
 
         <h1 class="text-5xl font-medium leading-[1.2]">
-          {{ productSolutionPage.hero.title }}
+          <UiRevealText :text="productSolutionPage.hero.title" />
         </h1>
 
-        <p class="max-w-160 text-sm font-normal leading-[1.6] text-white">
+        <p
+          class="max-w-160 text-sm font-normal leading-[1.6] text-white"
+          data-reveal-item
+        >
           {{ productSolutionPage.hero.description }}
         </p>
       </div>
@@ -52,7 +61,7 @@ useSeoMeta({
         class="mx-auto grid max-w-360 gap-12 px-5 py-24 sm:px-8 lg:grid-cols-[.33fr_.67fr] lg:px-20 lg:py-35"
         data-reveal-item
       >
-        <p class="text-sm font-medium leading-[1.2] tracking-[0.04em] text-black/70">
+        <p class="text-sm font-medium leading-[1.2] tracking-[0.04em] text-brand-green">
           {{ productSolutionPage.focus.eyebrow }}
         </p>
 
@@ -117,14 +126,14 @@ useSeoMeta({
             v-for="(solution, index) in productSolutions"
             :key="solution.slug"
             :to="`/produk-solusi/${solution.slug}`"
-            class="sticky top-0 grid min-h-140 gap-6 border-t border-black/20 bg-white py-10 last:border-b md:min-h-107.5 md:grid-cols-[120px_1fr] lg:grid-cols-[180px_1.1fr_1.45fr_452px] lg:items-start"
+            class="sticky top-0 grid min-h-110 gap-6 border-t border-black/20 bg-white py-8 last:border-b md:min-h-80 md:grid-cols-[120px_1fr] lg:min-h-75 lg:grid-cols-[180px_1.1fr_1.45fr_452px] lg:items-start"
             :style="{ zIndex: index + 1 }"
           >
             <p class="font-mono text-base leading-[1.2] text-black/80">
               [{{ String(index + 1).padStart(2, '0') }}]
             </p>
 
-            <h3 class="text-2xl font-medium leading-[1.15] text-black/78">
+            <h3 class="text-xl font-medium leading-[1.15] text-black/78">
               {{ solution.name }}
             </h3>
 
@@ -135,7 +144,7 @@ useSeoMeta({
             <img
               :src="solution.cardImage ?? solution.image"
               :alt="solution.name"
-              class="h-60 w-full object-cover md:col-span-2 lg:col-span-1 lg:h-56"
+              class="h-52 w-full object-cover md:col-span-2 lg:col-span-1 lg:h-48"
             >
           </NuxtLink>
         </div>
@@ -164,12 +173,12 @@ useSeoMeta({
             class="aspect-[1.08/1] w-full rounded-lg object-cover"
           >
 
-          <div class="flex flex-col">
+          <div class="flex flex-col gap-4">
             <button
               v-for="(industry, index) in productSolutionPage.industries"
               :key="industry.name"
               type="button"
-              class="w-full text-left text-5xl font-medium leading-[1.18] transition duration-300 ease-out sm:text-6xl"
+              class="w-full text-left text-3xl font-medium leading-[1.18] transition duration-300 ease-out sm:text-4xl"
               :class="activeIndustryIndex === index ? 'text-black' : 'text-black/22 hover:text-black/55'"
               @click="activeIndustryIndex = index"
               @mouseenter="activeIndustryIndex = index"

@@ -154,7 +154,10 @@ onBeforeUnmount(() => {
 
 <template>
   <div>
-    <section class="relative min-h-115 overflow-hidden bg-ink text-white sm:min-h-125">
+    <section
+      class="relative min-h-115 overflow-hidden bg-ink text-white sm:min-h-125"
+      data-section-reveal
+    >
       <img
         :src="aboutHero.image"
         :alt="aboutHero.title"
@@ -171,6 +174,7 @@ onBeforeUnmount(() => {
           <nav
             class="mb-8 flex flex-wrap items-center gap-2 text-sm leading-tight text-white/70"
             aria-label="Breadcrumb"
+            data-reveal-item
           >
             <template
               v-for="(crumb, index) in aboutHero.breadcrumbs"
@@ -197,9 +201,12 @@ onBeforeUnmount(() => {
           </nav>
 
           <h1 class="text-4xl font-normal leading-tight sm:text-5xl lg:text-6xl">
-            {{ aboutHero.title }}
+            <UiRevealText :text="aboutHero.title" />
           </h1>
-          <p class="mt-5 max-w-2xl text-base leading-relaxed text-white/80">
+          <p
+            class="mt-5 max-w-2xl text-base leading-relaxed text-white/80"
+            data-reveal-item
+          >
             {{ aboutHero.description }}
           </p>
         </div>

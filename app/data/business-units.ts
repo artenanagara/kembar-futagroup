@@ -2,6 +2,7 @@ export type BusinessUnit = {
   slug: string
   name: string
   description: string
+  navDescription: string
   category: string
   group: 'manufaktur-logam' | 'mesin-teknik' | 'material-lansekap'
   image: string
@@ -36,6 +37,7 @@ export const businessUnits: BusinessUnit[] = [
     slug: 'futake-indonesia',
     name: 'Futake Indonesia',
     description: 'Merek konsumen dan industri nasional yang menyatukan produk grup mendukung proyek strategi nasional',
+    navDescription: 'Merek konsumen dan industri untuk proyek strategis nasional.',
     category: 'Manufaktur',
     group: 'manufaktur-logam',
     image: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=900&q=80',
@@ -45,6 +47,7 @@ export const businessUnits: BusinessUnit[] = [
     slug: 'kembar-teknika',
     name: 'Kembar Teknika',
     description: 'Unit teknik yang merancang mesin, komponen custom, dan solusi produksi untuk kebutuhan industri.',
+    navDescription: 'Perancangan mesin dan solusi produksi untuk industri.',
     category: 'Manufaktur',
     group: 'mesin-teknik',
     image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80',
@@ -54,6 +57,7 @@ export const businessUnits: BusinessUnit[] = [
     slug: 'zwilling',
     name: 'Zwilling',
     description: 'Brand produk industri dan lansekap yang menghadirkan elemen ruang publik siap pakai.',
+    navDescription: 'Produk industri dan lansekap siap pakai untuk ruang publik.',
     category: 'Manufaktur',
     group: 'material-lansekap',
     image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80',
@@ -63,6 +67,7 @@ export const businessUnits: BusinessUnit[] = [
     slug: 'ayam-tentrem-logam',
     name: 'Ayam Tentrem Logam',
     description: 'Pusat pengolahan logam dengan pengalaman panjang dalam pengecoran dan fabrikasi.',
+    navDescription: 'Pengecoran dan fabrikasi logam berpengalaman panjang.',
     category: 'Manufaktur',
     group: 'manufaktur-logam',
     image: 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=80',
@@ -72,6 +77,7 @@ export const businessUnits: BusinessUnit[] = [
     slug: 'futago-karya',
     name: 'Futago Karya',
     description: 'Mendukung pengerjaan proyek kawasan melalui produk utilitas, landscape, dan infrastruktur.',
+    navDescription: 'Produk utilitas, lansekap, dan infrastruktur kawasan.',
     category: 'Manufaktur',
     group: 'material-lansekap',
     image: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=900&q=80',
@@ -81,6 +87,7 @@ export const businessUnits: BusinessUnit[] = [
     slug: 'tvilling',
     name: 'Tvilling',
     description: 'Menghubungkan kebutuhan desain, material, dan produksi untuk produk ruang luar yang presisi.',
+    navDescription: 'Desain dan produksi presisi untuk produk ruang luar.',
     category: 'Manufaktur',
     group: 'material-lansekap',
     image: 'https://images.unsplash.com/photo-1522748906645-95d8adfd52c7?auto=format&fit=crop&w=900&q=80',

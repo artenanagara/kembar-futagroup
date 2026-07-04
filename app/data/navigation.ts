@@ -26,7 +26,7 @@ export const navItems: NavItem[] = [
     label: 'Tentang Kami',
     to: '/tentang-kami/profil',
     hasDropdown: true,
-    dropdownLimit: 3,
+    dropdownLimit: 8,
     eyebrow: 'Tentang Grup',
     description: 'Kenali profil, nilai pendiri, dan struktur Kembar Futa Group sebagai ekosistem manufaktur dari Klaten.',
     image: {
@@ -55,7 +55,7 @@ export const navItems: NavItem[] = [
     label: 'Unit Bisnis',
     to: '/unit-bisnis',
     hasDropdown: true,
-    dropdownLimit: 3,
+    dropdownLimit: 8,
     eyebrow: 'Unit Bisnis',
     description: 'Berbagai unit usaha grup saling terhubung untuk mendukung manufaktur, teknik, lansekap, dan infrastruktur.',
     image: {
@@ -65,14 +65,14 @@ export const navItems: NavItem[] = [
     children: businessUnits.map(unit => ({
       label: unit.name,
       to: `/unit-bisnis/${unit.slug}`,
-      description: unit.description
+      description: unit.navDescription
     }))
   },
   {
     label: 'Produk & Solusi',
     to: '/produk-solusi',
     hasDropdown: true,
-    dropdownLimit: 3,
+    dropdownLimit: 8,
     eyebrow: 'Produk & Solusi',
     description: 'Produk dan layanan teknis dari riset, engineering, produksi, kontrol kualitas, hingga distribusi.',
     image: {
@@ -82,13 +82,13 @@ export const navItems: NavItem[] = [
     children: productSolutions.map(solution => ({
       label: solution.name,
       to: `/produk-solusi/${solution.slug}`,
-      description: solution.description
+      description: solution.navDescription
     }))
   },
   { label: 'Proyek', to: '#' },
   { label: 'Kegiatan CSR', to: '#' },
-  { label: 'Berita', to: '#' },
-  { label: 'Karir', to: '#' }
+  { label: 'Berita', to: '/berita' },
+  { label: 'Karir', to: '/karir' }
 ]
 
 export const footerColumns = [

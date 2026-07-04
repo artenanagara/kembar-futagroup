@@ -16,7 +16,7 @@ const props = withDefaults(defineProps<{
   to: undefined
 })
 
-const baseClass = 'inline-flex items-center justify-center gap-2 rounded-full font-medium leading-tight transition duration-300 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green disabled:pointer-events-none disabled:opacity-50'
+const baseClass = 'inline-flex items-center justify-center gap-2 rounded-full font-medium leading-tight transition duration-300 ease-out hover:scale-[1.03] active:scale-[0.97] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green disabled:pointer-events-none disabled:opacity-50'
 
 const variantClass: Record<ButtonVariant, string> = {
   primary: 'bg-brand-green text-white hover:bg-green-700',

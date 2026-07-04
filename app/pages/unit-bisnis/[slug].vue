@@ -27,7 +27,10 @@ useSeoMeta({
 
 <template>
   <div>
-    <section class="relative min-h-125 overflow-hidden bg-ink text-white">
+    <section
+      class="relative min-h-125 overflow-hidden bg-ink text-white"
+      data-section-reveal
+    >
       <img
         :src="unit.image"
         :alt="unit.name"
@@ -40,13 +43,19 @@ useSeoMeta({
 
       <div class="relative z-10 mx-auto flex min-h-125 max-w-360 items-end px-5 pb-14 pt-28 sm:px-8 lg:px-20">
         <div class="max-w-3xl">
-          <p class="text-sm font-medium leading-tight text-white/70">
+          <p
+            class="text-sm font-medium leading-tight text-white/70"
+            data-reveal-item
+          >
             Beranda / Unit Bisnis
           </p>
           <h1 class="mt-8 text-4xl font-normal leading-tight sm:text-5xl lg:text-6xl">
-            {{ unit.name }}
+            <UiRevealText :text="unit.name" />
           </h1>
-          <p class="mt-5 max-w-2xl text-base leading-relaxed text-white/80">
+          <p
+            class="mt-5 max-w-2xl text-base leading-relaxed text-white/80"
+            data-reveal-item
+          >
             {{ unit.description }}
           </p>
         </div>

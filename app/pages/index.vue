@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { businessUnits } from '~/data/business-units'
-import { aboutStats, capabilities, expertiseItems, posts, projects } from '~/data/home'
+import { aboutStats, capabilities, expertiseItems, projects } from '~/data/home'
+import { newsPosts } from '~/data/news'
 
 const isVideoReady = ref(false)
 let videoReadyTimer: ReturnType<typeof setTimeout> | undefined
@@ -179,7 +180,10 @@ const businessFilters = ['Manufaktur & Logam', 'Mesin & Teknik', 'Material & Lan
 
 <template>
   <div>
-    <section class="relative min-h-svh overflow-hidden bg-ink text-white">
+    <section
+      class="relative min-h-svh overflow-hidden bg-ink text-white"
+      data-section-reveal
+    >
       <iframe
         class="pointer-events-none absolute left-1/2 top-1/2 h-[calc(56.25vw+220px)] min-h-[calc(100%+220px)] w-[calc(177.78vh+420px)] min-w-[calc(100%+420px)] -translate-x-1/2 -translate-y-1/2 border-0 transition-opacity duration-700 ease-out"
         :class="isVideoReady ? 'opacity-100' : 'opacity-0'"
@@ -205,10 +209,13 @@ const businessFilters = ['Manufaktur & Logam', 'Mesin & Teknik', 'Material & Lan
       <div class="relative z-10 mx-auto flex min-h-svh max-w-360 items-end px-5 pb-12 pt-28 sm:px-8 lg:px-20 lg:pb-4">
         <div class="w-full lg:pl-30">
           <h1 class="max-w-6xl text-5xl font-medium leading-[1.12] text-white sm:text-6xl lg:text-7xl xl:text-[72px]">
-            Membangun Infrastruktur Indonesia, dari Logam hingga Solusi Industri
+            <UiRevealText text="Membangun Infrastruktur Indonesia, dari Logam hingga Solusi Industri" />
           </h1>
 
-          <div class="mt-12 flex max-w-3xl flex-col gap-6 pb-4 sm:flex-row sm:gap-16 lg:mt-16">
+          <div
+            class="mt-12 flex max-w-3xl flex-col gap-6 pb-4 sm:flex-row sm:gap-16 lg:mt-16"
+            data-reveal-item
+          >
             <div class="flex min-w-48 items-center gap-2 text-base leading-relaxed text-white/90">
               <span class="size-1.5 rounded-full bg-white" />
               <span>Holding Manufaktur</span>
@@ -623,34 +630,37 @@ const businessFilters = ['Manufaktur & Logam', 'Mesin & Teknik', 'Material & Lan
         </div>
 
         <div class="mt-8 grid gap-8 md:grid-cols-3">
-          <article
-            v-for="post in posts"
-            :key="post.image"
-            class="space-y-4"
+          <NuxtLink
+            v-for="post in newsPosts.slice(0, 3)"
+            :key="post.slug"
+            :to="`/berita/${post.slug}`"
+            class="group space-y-4"
             data-reveal-item
           >
-            <img
-              :src="post.image"
-              :alt="post.title"
-              class="h-64 w-full object-cover lg:h-76"
-            >
+            <div class="overflow-hidden">
+              <img
+                :src="post.image"
+                :alt="post.title"
+                class="h-64 w-full object-cover transition duration-700 ease-out group-hover:scale-105 lg:h-76"
+              >
+            </div>
             <div class="space-y-2">
               <UiBadge
                 variant="outline-dark"
                 size="sm"
               >
-                Berita
+                {{ post.category }}
               </UiBadge>
-              <h3 class="min-h-11 text-base font-normal leading-snug text-ink">
+              <h3 class="min-h-11 text-base font-normal leading-snug text-ink transition-colors duration-200 group-hover:text-brand-green">
                 {{ post.title }}
               </h3>
             </div>
             <div class="flex items-center gap-4 text-sm leading-relaxed text-black/50">
-              <time datetime="2026-06-19">19 Juni 2026</time>
+              <time :datetime="post.date">{{ formatNewsDate(post.date) }}</time>
               <span class="size-1.5 rounded-full bg-neutral-300" />
-              <span>5 Menit Baca</span>
+              <span>{{ post.readTime }}</span>
             </div>
-          </article>
+          </NuxtLink>
         </div>
 
         <div
@@ -658,7 +668,7 @@ const businessFilters = ['Manufaktur & Logam', 'Mesin & Teknik', 'Material & Lan
           data-reveal-item
         >
           <UiButton
-            to="#"
+            to="/berita"
             variant="secondary"
           >
             Lihat Semua Berita

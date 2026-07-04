@@ -38,6 +38,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   }
 
   const setupReveals = () => {
+    const curtainRevealed = useCurtainRevealed()
     const sections = gsap.utils.toArray<HTMLElement>('[data-section-reveal]')
 
     sections.forEach((section) => {
@@ -54,6 +55,12 @@ export default defineNuxtPlugin((nuxtApp) => {
       }
 
       items.forEach((item) => {
+        if (item.dataset.revealFrom === 'mask') {
+          gsap.set(item, { yPercent: 100 })
+
+          return
+        }
+
         gsap.set(item, {
           autoAlpha: 0,
           filter: 'blur(10px)',
@@ -61,27 +68,61 @@ export default defineNuxtPlugin((nuxtApp) => {
         })
       })
 
-      const timeline = gsap.timeline({
-        scrollTrigger: {
-          trigger: section,
-          start: section.dataset.revealStart ?? 'top 76%',
-          once: true
+      const playReveal = () => {
+        const timeline = gsap.timeline()
+
+        items.forEach((item, index) => {
+          const delay = toNumber(item.dataset.revealDelay, 0)
+          const stagger = toNumber(section.dataset.revealStagger, 0.08)
+
+          if (item.dataset.revealFrom === 'mask') {
+            timeline.to(item, {
+              yPercent: 0,
+              duration: toNumber(item.dataset.revealDuration, 0.85),
+              ease: item.dataset.revealEase ?? 'power4.out'
+            }, (index * stagger) + delay)
+
+            return
+          }
+
+          timeline.to(item, {
+            autoAlpha: 1,
+            x: 0,
+            y: 0,
+            scale: 1,
+            filter: 'blur(0px)',
+            duration: toNumber(item.dataset.revealDuration, 1),
+            ease: item.dataset.revealEase ?? 'power3.out'
+          }, (index * stagger) + delay)
+        })
+      }
+
+      // Sections already in view when the page mounts (heroes) shouldn't wait on
+      // ScrollTrigger, which snaps "already past" triggers straight to their end
+      // state. Play them directly once the page-transition curtain has lifted.
+      const rect = section.getBoundingClientRect()
+      const isImmediatelyVisible = rect.top < window.innerHeight && rect.bottom > 0
+
+      if (isImmediatelyVisible) {
+        if (curtainRevealed.value) {
+          playReveal()
+        } else {
+          const stopWatch = watch(curtainRevealed, (revealed) => {
+            if (revealed) {
+              stopWatch()
+              playReveal()
+            }
+          })
         }
-      })
 
-      items.forEach((item, index) => {
-        const delay = toNumber(item.dataset.revealDelay, 0)
-        const stagger = toNumber(section.dataset.revealStagger, 0.08)
+        return
+      }
 
-        timeline.to(item, {
-          autoAlpha: 1,
-          x: 0,
-          y: 0,
-          scale: 1,
-          filter: 'blur(0px)',
-          duration: toNumber(item.dataset.revealDuration, 1),
-          ease: item.dataset.revealEase ?? 'power3.out'
-        }, (index * stagger) + delay)
+      ScrollTrigger.create({
+        trigger: section,
+        start: section.dataset.revealStart ?? 'top 76%',
+        once: true,
+        onEnter: playReveal
       })
     })
   }
