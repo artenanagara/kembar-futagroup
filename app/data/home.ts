@@ -21,12 +21,12 @@ export const expertiseItems = [
   {
     number: '01',
     title: 'Logam',
-    description: 'Setiap unit bisnis saling terhubung untuk menciptakan solusi yang lebih kuat dan terintegrasi.',
+    description: 'Pengecoran besi cor dan aluminium.',
     image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=85'
   },
   {
     number: '02',
-    title: 'Logam',
+    title: 'Manufaktur',
     description: 'Pengecoran, fabrikasi, machining, dan finishing untuk kebutuhan produk custom.',
     image: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=900&q=85'
   },

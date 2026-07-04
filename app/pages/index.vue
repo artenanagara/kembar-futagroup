@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { businessUnits } from '~/data/business-units'
-import { aboutStats, capabilities, expertiseItems, projects } from '~/data/home'
+import { businessUnitPage, businessUnits } from '~/data/business-units'
+import { aboutStats, capabilities, expertiseItems } from '~/data/home'
 import { newsPosts } from '~/data/news'
 
 const isVideoReady = ref(false)
@@ -175,7 +175,8 @@ onBeforeUnmount(() => {
   }
 })
 
-const businessFilters = ['Manufaktur & Logam', 'Mesin & Teknik', 'Material & Lansekap']
+const businessFilters = businessUnitPage.filters.slice(1)
+const activeBusinessFilter = ref(businessFilters[0]?.value ?? 'manufaktur-logam')
 </script>
 
 <template>
@@ -303,176 +304,178 @@ const businessFilters = ['Manufaktur & Logam', 'Mesin & Teknik', 'Material & Lan
     </section>
 
     <section
-      class="bg-white"
+      class="bg-black text-white"
       data-section-reveal
     >
-      <div class="mx-auto max-w-360 px-5 py-24 sm:px-8 lg:px-20 lg:py-25">
-        <p
-          class="text-sm font-medium leading-tight text-brand-green"
-          data-reveal-item
-        >
-          Nilai & Budaya
-        </p>
-
+      <div class="mx-auto max-w-[1817px] px-5 py-24 sm:px-8 lg:px-25 lg:py-36">
         <div
-          class="mt-1 space-y-8"
+          class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(420px,600px)] lg:items-end lg:gap-20"
           data-reveal-item
         >
-          <h2 class="text-4xl font-normal leading-tight text-ink sm:text-5xl lg:text-6xl">
-            Bidang Keahlian Kami
-          </h2>
-          <div class="h-px bg-black/20" />
-          <div class="ml-auto grid max-w-4xl gap-8 text-base leading-relaxed text-black/70 lg:grid-cols-2 lg:gap-24">
-            <p>Semuanya berawal dari keahlian teknik dan pengolahan logam di Klaten. Dari sana, Kembar Futa Group berkembang ke berbagai bidang yang saling terhubung.</p>
-            <p>Setiap bidang memiliki fokus berbeda, namun berjalan dalam satu cara kerja yang sama: merancang, memproduksi, mengontrol kualitas, dan menghadirkan solusi yang siap digunakan.</p>
+          <div>
+            <p class="text-sm font-semibold uppercase leading-tight text-brand-orange">
+              Ekosistem Kami
+            </p>
+            <h2 class="mt-8 text-5xl font-normal leading-[1.05] tracking-normal sm:text-6xl lg:text-7xl xl:text-[78px]">
+              Empat Bidang Keahlian
+            </h2>
           </div>
+
+          <p class="max-w-3xl text-base font-medium leading-[1.75] text-white/55 lg:pb-2 lg:text-xl">
+            Setiap lini dirancang untuk saling mendukung, dari pengolahan bahan baku hingga pembangunan infrastruktur akhir.
+          </p>
         </div>
 
-        <div class="mt-12 grid items-center gap-10 lg:grid-cols-[375px_1fr] lg:gap-16">
-          <div
-            class="relative h-80 overflow-hidden bg-neutral-200 lg:h-125"
-            data-reveal-item
+        <div
+          class="mt-20 overflow-hidden border border-white bg-black lg:flex lg:min-h-93"
+          data-reveal-item
+        >
+          <button
+            v-for="(item, index) in expertiseItems"
+            :key="`${item.number}-${item.title}`"
+            type="button"
+            class="group relative flex min-h-76 w-full min-w-0 flex-col border-white p-8 text-left transition-[background-color,color,flex-basis] duration-700 ease-[cubic-bezier(.16,1,.3,1)] lg:min-h-93 lg:w-auto"
+            :class="[
+              activeExpertiseIndex === index ? 'bg-white text-black lg:basis-[40%]' : 'bg-black text-white hover:bg-white/5 lg:basis-[20%]',
+              index === 0 ? '' : 'border-t lg:border-l lg:border-t-0'
+            ]"
+            :aria-pressed="activeExpertiseIndex === index"
+            @focus="setActiveExpertise(index, 0)"
+            @mouseenter="setActiveExpertise(index)"
+            @click="activeExpertiseIndex = index"
           >
-            <div
-              v-for="(item, index) in expertiseItems"
-              :key="item.image"
-              class="absolute inset-0 transition-all duration-900 ease-[cubic-bezier(.22,1,.36,1)]"
-              :class="activeExpertiseIndex === index ? 'z-10 opacity-100 scale-100' : 'z-0 opacity-0 scale-105'"
+            <span
+              v-if="activeExpertiseIndex === index"
+              class="grid min-h-0 flex-1 gap-8 md:grid-cols-[minmax(180px,296px)_1fr] md:items-start"
             >
-              <img
-                :src="item.image"
-                :alt="item.title"
-                class="size-full object-cover grayscale"
-              >
-            </div>
-          </div>
+              <span class="relative block aspect-square w-full max-w-74 overflow-hidden bg-neutral-300">
+                <img
+                  :src="item.image"
+                  :alt="item.title"
+                  class="size-full object-cover"
+                >
+              </span>
 
-          <div data-reveal-item>
-            <button
-              v-for="(item, index) in expertiseItems"
-              :key="`${item.number}-${item.title}`"
-              type="button"
-              class="flex w-full items-start gap-8 overflow-hidden px-4 py-6 text-left transition-[background-color,color,border-color,padding] duration-700 ease-[cubic-bezier(.16,1,.3,1)]"
-              :class="activeExpertiseIndex === index ? 'bg-black text-white' : 'border-b border-black/20 text-ink hover:bg-black/3'"
-              @focus="setActiveExpertise(index, 0)"
-              @mouseenter="setActiveExpertise(index)"
-              @click="activeExpertiseIndex = index"
+              <span class="block pt-2">
+                <span class="block text-base font-normal leading-none text-black/80">
+                  {{ item.number }}
+                </span>
+                <span class="mt-9 block text-3xl font-normal leading-tight sm:text-3xl">
+                  {{ item.title }}
+                </span>
+                <span class="mt-4 block max-w-xs text-sm font-medium leading-[1.55] text-black/80 sm:text-sm">
+                  {{ item.description }}
+                </span>
+              </span>
+            </span>
+
+            <span
+              v-else
+              class="flex h-full min-h-60 flex-col justify-start"
             >
-              <span
-                class="w-5 pt-2 text-right text-sm font-medium transition-colors duration-700 ease-[cubic-bezier(.16,1,.3,1)]"
-                :class="activeExpertiseIndex === index ? 'text-white' : 'text-black/50'"
-              >
+              <span class="text-base font-normal leading-none text-white/80">
                 {{ item.number }}
               </span>
-              <span class="min-w-0 flex-1">
-                <span class="flex items-center gap-8">
-                  <span class="flex-1 text-2xl font-medium leading-tight transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] sm:text-3xl">
-                    {{ item.title }}
-                  </span>
-                  <UIcon
-                    :name="activeExpertiseIndex === index ? 'i-lucide-minus' : 'i-lucide-plus'"
-                    class="size-6 shrink-0 transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)]"
-                    :class="activeExpertiseIndex === index ? 'rotate-180' : 'rotate-0'"
-                  />
-                </span>
-                <span
-                  class="grid transition-[grid-template-rows,opacity,margin] duration-700 ease-[cubic-bezier(.16,1,.3,1)]"
-                  :class="activeExpertiseIndex === index ? 'mt-8 grid-rows-[1fr] opacity-100' : 'mt-0 grid-rows-[0fr] opacity-0'"
-                >
-                  <span class="block min-h-0 overflow-hidden">
-                    <span
-                      class="block max-w-2xl translate-y-0 text-base leading-relaxed text-white/80 transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)]"
-                      :class="activeExpertiseIndex === index ? 'translate-y-0' : '-translate-y-2'"
-                    >
-                      {{ item.description }}
-                    </span>
-                  </span>
-                </span>
+              <span class="mt-9 text-4xl font-normal leading-tight sm:text-4xl">
+                {{ item.title }}
               </span>
-            </button>
-          </div>
+            </span>
+          </button>
         </div>
       </div>
     </section>
 
     <section
-      class="bg-white"
+      class="bg-white text-black"
       data-section-reveal
     >
-      <div class="mx-auto max-w-360 px-5 py-24 sm:px-8 lg:px-20 lg:py-25">
+      <div class="mx-auto grid max-w-[1817px] gap-12 px-5 pb-0 pt-24 sm:px-8 lg:grid-cols-[minmax(180px,360px)_minmax(0,1fr)] lg:gap-18 lg:px-25 lg:pb-0 lg:pt-32">
         <div
-          class="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between"
+          class="pt-1 sticky top-24 self-start"
           data-reveal-item
         >
-          <div class="max-w-2xl">
-            <p class="text-sm font-medium leading-tight text-brand-green">
-              Unit Bisnis
-            </p>
-            <h2 class="mt-1 text-4xl font-normal leading-tight text-ink sm:text-5xl lg:text-6xl">
-              Satu Ekosistem Industri
-            </h2>
-            <p class="mt-2 text-base leading-relaxed text-black/70">
-              Beberapa perusahaan yang bergerak dalam satu ekosistem industri yang terpadu
-            </p>
-          </div>
-
-          <div class="flex flex-wrap gap-3 lg:justify-end">
-            <UiButton
-              v-for="(filter, index) in businessFilters"
-              :key="filter"
-              type="button"
-              :variant="index === 0 ? 'primary' : 'secondary'"
-            >
-              {{ filter }}
-            </UiButton>
-          </div>
+          <p class="text-sm font-semibold uppercase leading-tight text-brand-green">
+            Unit Usaha
+          </p>
+          <h2 class="text-black text-6xl leading-tight pt-2">
+            Satu Ekosistem Industri
+          </h2>
+          <p class="text-black/70 text-base leading-relaxed pt-4">
+            Berbagai peran dalam satu <br> ekosistem industri.
+          </p>
         </div>
 
         <div
-          class="my-8 h-px bg-black/30"
+          class="min-w-0 pb-8"
           data-reveal-item
-        />
-
-        <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          <article
-            v-for="unit in businessUnits"
-            :key="unit.name"
-            class="group relative flex min-h-105 overflow-hidden bg-black p-8 text-white lg:min-h-125"
-            data-reveal-item
-          >
-            <img
-              :src="unit.image"
-              :alt="unit.name"
-              class="absolute inset-0 size-full object-cover transition duration-700 ease-out group-hover:scale-110 group-hover:grayscale"
-            >
-            <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.05)_0%,rgba(0,0,0,.72)_100%)]" />
-            <div class="absolute inset-0 bg-black opacity-0 transition duration-500 ease-out group-hover:opacity-85" />
-            <div class="relative z-10 flex w-full flex-col justify-between">
-              <div class="flex items-center justify-between gap-4">
-                <UiBadge
-                  variant="orange"
-                  size="lg"
+        >
+          <div class="sticky top-22 z-40 -mx-5 mb-10 bg-white px-5 py-4 sm:-mx-8 sm:px-8 lg:mx-0 lg:mb-12 lg:px-0">
+            <div
+              class="absolute inset-x-0 -top-24 h-24 bg-white"
+              aria-hidden="true"
+            />
+            <div class="relative flex w-full items-center justify-between gap-4">
+              <div class="flex max-w-full flex-wrap items-center justify-center gap-x-8 gap-y-4">
+                <button
+                  v-for="filter in businessFilters"
+                  :key="filter.value"
+                  type="button"
+                  class="relative inline-flex min-h-10 items-center justify-center px-1 pb-3 text-base font-medium leading-none transition duration-300 ease-out focus-visible:outline focus-visible:outline-offset-4 focus-visible:outline-brand-orange"
+                  :class="activeBusinessFilter === filter.value ? 'text-brand-orange' : 'text-black/50 hover:text-brand-orange'"
+                  @click="activeBusinessFilter = filter.value"
                 >
-                  {{ unit.category }}
-                </UiBadge>
-                <UIcon
-                  name="i-lucide-arrow-up-right"
-                  class="size-6"
-                />
-              </div>
-              <div class="translate-y-18 space-y-3 transition duration-500 ease-out group-hover:translate-y-0">
-                <h3 class="text-3xl font-medium leading-tight transition duration-500 ease-out lg:text-4xl">
-                  {{ unit.name }}
-                </h3>
-                <p
-                  v-if="unit.description"
-                  class="max-w-sm translate-y-6 text-base font-medium leading-relaxed text-white/70 opacity-0 transition duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100"
-                >
-                  {{ unit.description }}
-                </p>
+                  {{ filter.label }}
+                  <span
+                    class="absolute inset-x-0 bottom-0 h-px origin-center bg-brand-orange transition-transform duration-300 ease-out"
+                    :class="activeBusinessFilter === filter.value ? 'scale-x-100' : 'scale-x-0'"
+                    aria-hidden="true"
+                  />
+                </button>
               </div>
             </div>
-          </article>
+          </div>
+
+          <div class="grid gap-8 md:grid-cols-2 min-[1440px]:grid-cols-3">
+            <article
+              v-for="unit in businessUnits"
+              :key="unit.name"
+              class="group relative flex min-h-105 overflow-hidden bg-black p-8 text-white lg:min-h-125"
+              data-reveal-item
+            >
+              <img
+                :src="unit.image"
+                :alt="unit.name"
+                class="absolute inset-0 size-full object-cover transition duration-700 ease-out group-hover:scale-110 group-hover:grayscale"
+              >
+              <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.05)_0%,rgba(0,0,0,.72)_100%)]" />
+              <div class="absolute inset-0 bg-black opacity-0 transition duration-500 ease-out group-hover:opacity-85" />
+              <div class="relative z-10 flex w-full flex-col justify-between">
+                <div class="flex items-center justify-between gap-4">
+                  <UiBadge
+                    variant="orange"
+                    size="lg"
+                  >
+                    {{ unit.category }}
+                  </UiBadge>
+                  <UIcon
+                    name="i-lucide-arrow-up-right"
+                    class="size-6"
+                  />
+                </div>
+                <div class="translate-y-18 space-y-3 transition duration-500 ease-out group-hover:translate-y-0">
+                  <h3 class="text-3xl font-medium leading-tight transition duration-500 ease-out lg:text-4xl">
+                    {{ unit.name }}
+                  </h3>
+                  <p
+                    v-if="unit.description"
+                    class="max-w-sm translate-y-6 text-base font-medium leading-relaxed text-white/70 opacity-0 transition duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100"
+                  >
+                    {{ unit.description }}
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -480,8 +483,9 @@ const businessFilters = ['Manufaktur & Logam', 'Mesin & Teknik', 'Material & Lan
     <section
       class="relative overflow-hidden bg-black text-white"
       data-section-reveal
+      data-reveal-start="top 92%"
     >
-      <div class="mx-auto max-w-360 px-5 py-24 sm:px-8 lg:px-25 lg:py-25">
+      <div class="mx-auto max-w-360 px-5 pb-24 pt-8 sm:px-8 lg:px-25 lg:pb-25 lg:pt-10">
         <div
           class="max-w-6xl"
           data-reveal-item
@@ -537,7 +541,7 @@ const businessFilters = ['Manufaktur & Logam', 'Mesin & Teknik', 'Material & Lan
       </div>
     </section>
 
-    <section
+    <!-- <section
       class="bg-white"
       data-section-reveal
     >
@@ -607,7 +611,7 @@ const businessFilters = ['Manufaktur & Logam', 'Mesin & Teknik', 'Material & Lan
           </article>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section
       class="bg-white"

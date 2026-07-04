@@ -93,7 +93,7 @@ export const navItems: NavItem[] = [
 
 export const footerColumns = [
   ['Navigasi', 'Beranda', 'Tentang Kami', 'Unit Usaha', 'Produk & Solusi', 'Keberlanjutan'],
-  ['Tentang Kami', 'Profil', 'Value Owner', 'Struktur'],
+  ['Tentang Kami', 'Profil Perusahaan', 'Sejarah', 'Visi & Misi', 'Nilai Perusahaan'],
   ['Informasi', 'Berita & Insight', 'Karir', 'Kontak'],
   ['Unit Usaha', 'Ayem Tentrem Logam', 'Kembar Teknika', 'Zwilling', 'Futago Karya', 'Futake', 'Futastone', 'Futafarm']
 ]

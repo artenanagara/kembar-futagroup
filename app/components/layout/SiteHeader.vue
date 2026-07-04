@@ -6,15 +6,25 @@ const isOpen = ref(false)
 const activeMenu = ref<string | null>(null)
 const headerRef = ref<HTMLElement | null>(null)
 const isHidden = ref(false)
+const hasScrolled = ref(false)
 const isDarkSurface = ref(true)
+const needsHeaderBackground = ref(false)
 
 const hasChildren = (item: NavItem) => Boolean(item.children?.length)
 const showChevron = (item: NavItem) => item.hasDropdown || hasChildren(item)
 const activeMenuItem = computed(() => navItems.find(item => item.label === activeMenu.value && hasChildren(item)))
-const logoVariant = computed(() => isDarkSurface.value ? 'white' : 'default')
-const navTextClass = computed(() => isDarkSurface.value ? 'text-white/95' : 'text-ink')
-const navIconClass = computed(() => isDarkSurface.value ? 'text-white/85' : 'text-ink/75')
-const mobileButtonClass = computed(() => isDarkSurface.value ? 'border-white/25 text-white' : 'border-black/20 text-ink')
+const isGlassHeader = computed(() => hasScrolled.value && !isHidden.value && needsHeaderBackground.value)
+const shouldUseLightHeader = computed(() => isGlassHeader.value || !isDarkSurface.value)
+const logoVariant = computed(() => shouldUseLightHeader.value ? 'default' : 'white')
+const navTextClass = computed(() => shouldUseLightHeader.value ? 'text-ink' : 'text-white/95')
+const navIconClass = computed(() => shouldUseLightHeader.value ? 'text-ink/75' : 'text-white/85')
+const mobileButtonClass = computed(() => {
+  if (isGlassHeader.value) {
+    return 'border-black/15 bg-white/40 text-ink'
+  }
+
+  return shouldUseLightHeader.value ? 'border-black/20 text-ink' : 'border-white/25 text-white'
+})
 
 let lastScrollY = 0
 let ticking = false
@@ -80,7 +90,13 @@ const getLuminance = (r: number, g: number, b: number) => {
   return (0.2126 * toLinear(r)) + (0.7152 * toLinear(g)) + (0.0722 * toLinear(b))
 }
 
-const isDarkElement = (element: Element | null) => {
+const isWhiteColor = (r: number, g: number, b: number) => r > 245 && g > 245 && b > 245
+
+const hasStaticUtility = (classList: string[], utility: string) => classList.some(classItem => (
+  !classItem.includes(':') && (classItem === utility || classItem.startsWith(`${utility}/`))
+))
+
+const getSurfaceState = (element: Element | null) => {
   let current = element
 
   while (current && current !== document.body) {
@@ -88,34 +104,46 @@ const isDarkElement = (element: Element | null) => {
       const headerTheme = current.dataset.headerTheme
 
       if (headerTheme === 'dark') {
-        return true
+        return { isDark: true, needsBackground: true }
       }
 
       if (headerTheme === 'light') {
-        return false
+        return { isDark: false, needsBackground: false }
       }
 
       const className = current.className.toString()
+      const classList = className.split(/\s+/)
 
-      if (current.matches('img, video, canvas') || className.includes('text-white') || className.includes('bg-black') || className.includes('bg-ink')) {
-        return true
+      if (current.matches('img, video, canvas')) {
+        return { isDark: true, needsBackground: true }
       }
 
-      if (className.includes('bg-white') || className.includes('bg-neutral')) {
-        return false
+      if (hasStaticUtility(classList, 'bg-white')) {
+        return { isDark: false, needsBackground: false }
+      }
+
+      if (hasStaticUtility(classList, 'text-white') || hasStaticUtility(classList, 'bg-black') || hasStaticUtility(classList, 'bg-ink') || hasStaticUtility(classList, 'bg-charcoal')) {
+        return { isDark: true, needsBackground: true }
+      }
+
+      if (classList.some(classItem => !classItem.includes(':') && classItem.startsWith('bg-brand-'))) {
+        return { isDark: false, needsBackground: true }
       }
 
       const colorParts = getColorParts(getComputedStyle(current).backgroundColor)
 
       if (colorParts && colorParts.a > 0.2) {
-        return getLuminance(colorParts.r, colorParts.g, colorParts.b) < 0.5
+        return {
+          isDark: getLuminance(colorParts.r, colorParts.g, colorParts.b) < 0.5,
+          needsBackground: !isWhiteColor(colorParts.r, colorParts.g, colorParts.b)
+        }
       }
     }
 
     current = current.parentElement
   }
 
-  return window.scrollY < 80
+  return { isDark: window.scrollY < 80, needsBackground: false }
 }
 
 const updateSurfaceTheme = () => {
@@ -132,20 +160,24 @@ const updateSurfaceTheme = () => {
     Math.max(window.innerWidth - 110, 24)
   ]
 
-  const darkVotes = points.reduce((total, x) => {
+  const surfaceStates = points.map((x) => {
     const surface = document.elementsFromPoint(x, y)
       .find(element => !header.contains(element))
 
-    return total + (isDarkElement(surface ?? null) ? 1 : 0)
-  }, 0)
+    return getSurfaceState(surface ?? null)
+  })
+  const darkVotes = surfaceStates.filter(surface => surface.isDark).length
+  const backgroundVotes = surfaceStates.filter(surface => surface.needsBackground).length
 
   isDarkSurface.value = darkVotes >= 2
+  needsHeaderBackground.value = backgroundVotes >= 2
 }
 
 const updateHeaderOnScroll = () => {
   const currentScrollY = Math.max(window.scrollY, 0)
   const delta = currentScrollY - lastScrollY
 
+  hasScrolled.value = currentScrollY > 80
   updateSurfaceTheme()
 
   if (isOpen.value || activeMenu.value) {
@@ -176,6 +208,7 @@ watch([isOpen, activeMenu], () => {
 
 onMounted(() => {
   lastScrollY = Math.max(window.scrollY, 0)
+  hasScrolled.value = lastScrollY > 80
   updateSurfaceTheme()
   window.addEventListener('scroll', requestHeaderUpdate, { passive: true })
   window.addEventListener('resize', updateSurfaceTheme, { passive: true })
@@ -190,8 +223,11 @@ onBeforeUnmount(() => {
 <template>
   <header
     ref="headerRef"
-    class="fixed inset-x-0 top-0 z-50 transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)]"
-    :class="isHidden ? '-translate-y-full' : 'translate-y-0'"
+    class="fixed inset-x-0 top-0 z-50 border-b transition-[transform,background-color,border-color,box-shadow,backdrop-filter] duration-500 ease-[cubic-bezier(.16,1,.3,1)]"
+    :class="[
+      isHidden ? '-translate-y-full' : 'translate-y-0',
+      isGlassHeader ? 'border-white/35 bg-white/72 shadow-[0_18px_60px_rgba(0,0,0,0.08)] backdrop-blur-xl backdrop-saturate-150' : 'border-transparent bg-transparent shadow-none'
+    ]"
     @focusout="handleHeaderFocusOut"
     @keydown.esc="clearActiveMenu"
     @mouseleave="clearActiveMenu"
