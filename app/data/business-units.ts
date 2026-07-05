@@ -4,7 +4,7 @@ export type BusinessUnit = {
   description: string
   navDescription: string
   category: string
-  group: 'manufaktur-logam' | 'mesin-teknik' | 'material-lansekap'
+  group: 'manufaktur-logam' | 'mesin-teknik' | 'material-lansekap' | 'agribisnis'
   image: string
   cardImage?: string
 }
@@ -92,5 +92,25 @@ export const businessUnits: BusinessUnit[] = [
     group: 'material-lansekap',
     image: 'https://images.unsplash.com/photo-1522748906645-95d8adfd52c7?auto=format&fit=crop&w=900&q=80',
     cardImage: 'https://images.unsplash.com/photo-1522748906645-95d8adfd52c7?auto=format&fit=crop&w=900&q=80'
+  },
+  {
+    slug: 'futastone',
+    name: 'Futastone',
+    description: 'Mengolah material batu alam dan produk cetak beton untuk kebutuhan lansekap dan konstruksi.',
+    navDescription: 'Material batu alam dan produk cetak beton untuk lansekap.',
+    category: 'Manufaktur',
+    group: 'material-lansekap',
+    image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=900&q=80',
+    cardImage: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=900&q=80'
+  },
+  {
+    slug: 'futafarm',
+    name: 'Futafarm',
+    description: 'Unit agribisnis grup yang mengelola produksi dan distribusi hasil pertanian serta peternakan.',
+    navDescription: 'Produksi dan distribusi hasil pertanian serta peternakan.',
+    category: 'Agribisnis',
+    group: 'agribisnis',
+    image: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=900&q=80',
+    cardImage: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=900&q=80'
   }
 ]

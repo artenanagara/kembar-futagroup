@@ -21,25 +21,25 @@ export const expertiseItems = [
   {
     number: '01',
     title: 'Logam',
-    description: 'Pengecoran besi cor dan aluminium.',
+    description: 'Mengolah besi cor dan aluminium menjadi komponen, produk, dan kebutuhan proyek.',
     image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=85'
   },
   {
     number: '02',
     title: 'Manufaktur',
-    description: 'Pengecoran, fabrikasi, machining, dan finishing untuk kebutuhan produk custom.',
+    description: 'Mengerjakan fabrikasi, machining, perakitan, dan finishing untuk produk custom.',
     image: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=900&q=85'
   },
   {
     number: '03',
     title: 'Lansekap',
-    description: 'Elemen ruang publik, taman, dan lingkungan binaan dengan pendekatan fungsional.',
+    description: 'Menghadirkan elemen ruang luar, taman, dan fasilitas publik yang fungsional.',
     image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85'
   },
   {
     number: '04',
     title: 'Infrastruktur',
-    description: 'Produk utilitas dan komponen pendukung proyek kawasan, jalan, dan fasilitas umum.',
+    description: 'Mendukung proyek kawasan, jalan, dan fasilitas umum melalui produk utilitas.',
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85'
   }
 ]

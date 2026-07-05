@@ -58,6 +58,7 @@ onMounted(async () => {
   const section = sectionRef.value
   const slides = gsap.utils.toArray<HTMLElement>('[data-story-slide]', section)
   const fills = gsap.utils.toArray<HTMLElement>('[data-story-progress-fill]', section)
+  const titleWords = slides.map(slide => gsap.utils.toArray<HTMLElement>('[data-reveal-item][data-reveal-from="mask"]', slide))
 
   if (!slides.length || !fills.length || !slides[0]) {
     return
@@ -79,6 +80,17 @@ onMounted(async () => {
     scaleY: 0,
     transformOrigin: 'top'
   })
+
+  gsap.set(titleWords.flat(), { yPercent: 100 })
+
+  if (titleWords[0]?.length) {
+    gsap.to(titleWords[0], {
+      yPercent: 0,
+      duration: 0.85,
+      ease: 'power4.out',
+      stagger: 0.05
+    })
+  }
 
   const showSlide = (nextIndex: number) => {
     if (nextIndex === activeStoryIndex.value) {
@@ -116,6 +128,31 @@ onMounted(async () => {
       ease: storyTextTransition.ease,
       overwrite: true
     })
+
+    const previousWords = titleWords[previousIndex]
+    const nextWords = titleWords[nextIndex]
+
+    if (previousWords?.length) {
+      gsap.to(previousWords, {
+        yPercent: 100,
+        duration: 0.3,
+        ease: 'power2.in',
+        overwrite: true
+      })
+    }
+
+    if (nextWords?.length) {
+      gsap.fromTo(nextWords, {
+        yPercent: 100
+      }, {
+        yPercent: 0,
+        duration: 0.85,
+        ease: 'power4.out',
+        stagger: 0.05,
+        delay: 0.15,
+        overwrite: true
+      })
+    }
   }
 
   storyTrigger = ScrollTrigger.create({
@@ -279,8 +316,9 @@ onBeforeUnmount(() => {
     </section>
 
     <section
+      id="sejarah"
       ref="sectionRef"
-      class="relative bg-black text-white"
+      class="relative bg-black text-white scroll-mt-24"
       :style="{ height: storySectionHeight }"
     >
       <div class="sticky top-0 h-svh overflow-hidden">
@@ -338,7 +376,7 @@ onBeforeUnmount(() => {
                     {{ slide.year }}
                   </p>
                   <h2 class="mt-8 text-3xl font-normal leading-tight sm:text-4xl lg:text-5xl">
-                    {{ slide.title }}
+                    <UiRevealText :text="slide.title" />
                   </h2>
                   <p class="mt-5 text-base leading-relaxed text-white/75">
                     {{ slide.description }}
@@ -352,7 +390,8 @@ onBeforeUnmount(() => {
     </section>
 
     <section
-      class="bg-black text-white"
+      id="visi-misi"
+      class="bg-black text-white scroll-mt-24"
       data-section-reveal
     >
       <div class="mx-auto max-w-360 px-5 py-20 sm:px-8 lg:px-20 lg:py-25">
@@ -399,7 +438,7 @@ onBeforeUnmount(() => {
               <article
                 v-for="principle in visionMission.principles"
                 :key="principle.title"
-                class="border border-white/24 p-6 transition duration-500 ease-out hover:border-brand-green hover:bg-white/[0.04]"
+                class="border border-white/24 p-6 transition duration-500 ease-out hover:border-brand-green hover:bg-white/4"
               >
                 <h3 class="text-base font-medium leading-tight text-white">
                   {{ principle.title }}

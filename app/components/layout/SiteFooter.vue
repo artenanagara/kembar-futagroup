@@ -32,23 +32,23 @@ withDefaults(defineProps<{
     class="bg-white text-ink"
     data-section-reveal
   >
-    <div class="mx-auto max-w-[1817px] px-5 py-10 sm:px-8 lg:px-25 lg:pb-6 lg:pt-14">
+    <div class="mx-auto px-5 py-10 sm:px-8 lg:px-16 lg:pb-6 lg:pt-14 2xl:px-25">
       <div
-        class="grid gap-10 border-b border-black/18 pb-14 lg:grid-cols-[minmax(220px,520px)_minmax(0,1fr)] lg:items-start lg:gap-16 xl:gap-24"
+        class="grid gap-10 border-b border-black/18 pb-14 lg:grid-cols-[minmax(220px,520px)_minmax(0,1fr)] lg:items-start lg:gap-16 2xl:gap-24"
         data-reveal-item
       >
-        <AppLogo class="h-20 w-auto lg:h-48" />
+        <AppLogo class="h-16 w-auto lg:h-18 2xl:h-32" />
 
         <div class="flex flex-col items-start gap-7 lg:items-end">
-          <p class="max-w-2xl text-left text-base font-medium leading-[1.55] text-black/68 lg:text-right lg:text-xl">
+          <p class="max-w-2xl text-left text-base font-medium leading-[1.55] text-black/68 lg:text-right">
             Kembar Futago Group adalah ekosistem holding manufaktur berbasis Klaten yang menaungi berbagai lini bisnis di bidang logam, manufaktur, infrastruktur, lanskap, agribisnis, dan solusi industri.
           </p>
-          <div class="flex w-full flex-wrap justify-start gap-5 lg:justify-end xl:gap-7">
+          <div class="flex w-full flex-wrap justify-start gap-5 lg:justify-end 2xl:gap-7">
             <NuxtLink
               v-for="social in ['Instagram', 'LinkedIn', 'YouTube']"
               :key="social"
               to="#"
-              class="inline-flex min-h-12 items-center justify-center rounded-full bg-black/10 px-7 text-base font-medium leading-none text-ink transition duration-300 hover:bg-black hover:text-white lg:min-w-34 lg:text-xl xl:min-w-36"
+              class="inline-flex min-h-12 items-center justify-center rounded-full bg-black/10 px-6 text-base font-medium leading-none text-ink transition duration-300 hover:bg-black hover:text-white lg:min-w-28 2xl:min-w-36 2xl:px-7 2xl:text-xl"
             >
               {{ social }}
             </NuxtLink>
@@ -57,45 +57,45 @@ withDefaults(defineProps<{
       </div>
 
       <div
-        class="grid gap-12 border-b border-black/18 py-12 lg:grid-cols-[minmax(220px,380px)_minmax(0,1fr)] lg:gap-14 xl:grid-cols-[minmax(240px,520px)_minmax(0,1fr)] xl:gap-24"
+        class="grid gap-12 border-b border-black/18 py-12 lg:grid-cols-[minmax(220px,320px)_minmax(0,1fr)] lg:gap-12 2xl:grid-cols-[minmax(240px,520px)_minmax(0,1fr)] 2xl:gap-24"
         data-reveal-item
       >
         <div>
           <address class="space-y-8 not-italic">
             <div>
-              <p class="text-xl font-bold leading-tight tracking-wide text-ink">
+              <p class="text-lg font-bold leading-tight tracking-wide text-ink">
                 Kantor Pusat
               </p>
-              <p class="mt-3 text-xl font-medium leading-[1.45] text-black/68">
+              <p class="mt-3 text-base font-medium leading-[1.45] text-black/68">
                 Klaten, Jawa Tengah, Indonesia
               </p>
             </div>
             <div>
-              <p class="text-xl font-bold leading-tight tracking-wide text-ink">
+              <p class="text-lg font-bold leading-tight tracking-wide text-ink">
                 Email
               </p>
-              <p class="mt-3 text-xl font-medium leading-[1.45] text-black/68">
+              <p class="mt-3 text-base font-medium leading-[1.45] text-black/68">
                 kembarfutagroup@gmail.com
               </p>
             </div>
             <div>
-              <p class="text-xl font-bold leading-tight tracking-wide text-ink">
+              <p class="text-lg font-bold leading-tight tracking-wide text-ink">
                 WhatsApp
               </p>
-              <p class="mt-3 text-xl font-medium leading-[1.45] text-black/68">
+              <p class="mt-3 text-base font-medium leading-[1.45] text-black/68">
                 0821 3672 8913
               </p>
             </div>
           </address>
         </div>
 
-        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8 xl:gap-12">
+        <div class="grid grid-cols-2 gap-10 lg:grid-cols-4 lg:gap-8 2xl:gap-12">
           <div
             v-for="column in footerColumns"
             :key="column[0]"
             class="space-y-6"
           >
-            <h3 class="text-lg font-normal leading-tight text-ink xl:text-xl">
+            <h3 class="text-base font-normal leading-tight text-ink 2xl:text-xl">
               {{ column[0] }}
             </h3>
             <ul class="space-y-5">
@@ -105,7 +105,7 @@ withDefaults(defineProps<{
               >
                 <NuxtLink
                   to="#"
-                  class="text-base font-medium leading-tight text-black/65 transition hover:text-ink"
+                  class="text-sm font-medium leading-tight text-black/65 transition hover:text-ink 2xl:text-base"
                 >
                   {{ item }}
                 </NuxtLink>
@@ -116,7 +116,7 @@ withDefaults(defineProps<{
       </div>
 
       <div
-        class="flex flex-col gap-5 pt-4 text-base font-medium leading-[1.4] text-ink sm:flex-row sm:items-center sm:justify-between lg:text-base"
+        class="flex flex-col gap-5 pt-4 text-base font-medium leading-[1.4] text-black/70 sm:flex-row sm:items-center sm:justify-between lg:text-base"
         data-reveal-item
       >
         <p>© Copyright PT Kembar Futagrup (Persero) 2026. All Right Reserved.</p>

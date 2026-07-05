@@ -9,12 +9,14 @@ const isHidden = ref(false)
 const hasScrolled = ref(false)
 const isDarkSurface = ref(true)
 const needsHeaderBackground = ref(false)
+const isMenuActivationPaused = ref(false)
 
 const hasChildren = (item: NavItem) => Boolean(item.children?.length)
 const showChevron = (item: NavItem) => item.hasDropdown || hasChildren(item)
 const activeMenuItem = computed(() => navItems.find(item => item.label === activeMenu.value && hasChildren(item)))
+const isMegaMenuOpen = computed(() => Boolean(activeMenuItem.value))
 const isGlassHeader = computed(() => hasScrolled.value && !isHidden.value && needsHeaderBackground.value)
-const shouldUseLightHeader = computed(() => isGlassHeader.value || !isDarkSurface.value)
+const shouldUseLightHeader = computed(() => isMegaMenuOpen.value || isGlassHeader.value || !isDarkSurface.value)
 const logoVariant = computed(() => shouldUseLightHeader.value ? 'default' : 'white')
 const navTextClass = computed(() => shouldUseLightHeader.value ? 'text-ink' : 'text-white/95')
 const navIconClass = computed(() => shouldUseLightHeader.value ? 'text-ink/75' : 'text-white/85')
@@ -28,6 +30,9 @@ const mobileButtonClass = computed(() => {
 
 let lastScrollY = 0
 let ticking = false
+let menuActivationTimer: ReturnType<typeof setTimeout> | undefined
+
+const menuActivationDelay = 1500
 
 const getVisibleChildren = (item: NavItem) => {
   const limit = item.dropdownLimit ?? item.children?.length ?? 0
@@ -36,11 +41,30 @@ const getVisibleChildren = (item: NavItem) => {
 }
 
 const setActiveMenu = (item: NavItem) => {
+  if (isMenuActivationPaused.value) {
+    activeMenu.value = null
+
+    return
+  }
+
   activeMenu.value = showChevron(item) ? item.label : null
 }
 
 const clearActiveMenu = () => {
   activeMenu.value = null
+}
+
+const pauseMenuActivation = () => {
+  isMenuActivationPaused.value = true
+  clearActiveMenu()
+
+  if (menuActivationTimer) {
+    clearTimeout(menuActivationTimer)
+  }
+
+  menuActivationTimer = setTimeout(() => {
+    isMenuActivationPaused.value = false
+  }, menuActivationDelay)
 }
 
 const handleHeaderFocusOut = (event: FocusEvent) => {
@@ -217,6 +241,10 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', requestHeaderUpdate)
   window.removeEventListener('resize', updateSurfaceTheme)
+
+  if (menuActivationTimer) {
+    clearTimeout(menuActivationTimer)
+  }
 })
 </script>
 
@@ -226,7 +254,7 @@ onBeforeUnmount(() => {
     class="fixed inset-x-0 top-0 z-50 border-b transition-[transform,background-color,border-color,box-shadow,backdrop-filter] duration-500 ease-[cubic-bezier(.16,1,.3,1)]"
     :class="[
       isHidden ? '-translate-y-full' : 'translate-y-0',
-      isGlassHeader ? 'border-white/35 bg-white/72 shadow-[0_18px_60px_rgba(0,0,0,0.08)] backdrop-blur-xl backdrop-saturate-150' : 'border-transparent bg-transparent shadow-none'
+      isMegaMenuOpen ? 'border-black/10 bg-white/96 shadow-2xl shadow-black/10 backdrop-blur-xl backdrop-saturate-150' : isGlassHeader ? 'border-white/35 bg-white/72 shadow-[0_18px_60px_rgba(0,0,0,0.08)] backdrop-blur-xl backdrop-saturate-150' : 'border-transparent bg-transparent shadow-none'
     ]"
     @focusout="handleHeaderFocusOut"
     @keydown.esc="clearActiveMenu"
@@ -261,6 +289,7 @@ onBeforeUnmount(() => {
             :class="navTextClass"
             :aria-haspopup="hasChildren(item) ? 'menu' : undefined"
             :aria-expanded="hasChildren(item) ? activeMenu === item.label : undefined"
+            @click="pauseMenuActivation"
           >
             <span
               class="transition-colors duration-200 group-hover:text-brand-green"
@@ -305,6 +334,7 @@ onBeforeUnmount(() => {
         v-if="activeMenuItem"
         :item="activeMenuItem"
         role="menu"
+        @click.capture="pauseMenuActivation"
       />
     </Transition>
 

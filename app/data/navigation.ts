@@ -40,6 +40,16 @@ export const navItems: NavItem[] = [
         description: 'Cerita, perjalanan, visi, dan budaya perusahaan.'
       },
       {
+        label: 'Visi & Misi',
+        to: '/tentang-kami/profil#visi-misi',
+        description: 'Arah dan prinsip yang memandu langkah grup.'
+      },
+      {
+        label: 'Sejarah',
+        to: '/tentang-kami/profil#sejarah',
+        description: 'Perjalanan Kembar Futa Group dari waktu ke waktu.'
+      },
+      {
         label: 'Value Owner',
         to: '/tentang-kami/value-owner',
         description: 'Prinsip pendiri yang membentuk cara grup bekerja.'
