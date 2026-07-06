@@ -32,7 +32,6 @@ useSeoMeta({
       image-alt="Unit bisnis Kembar Futa Group"
       :breadcrumbs="businessUnitPage.hero.breadcrumbs.map((crumb, index) => ({ label: crumb, to: index === 0 ? '/' : undefined }))"
       height-class="h-125"
-      overlay-class="bg-[linear-gradient(180deg,rgba(0,0,0,.8)_0%,rgba(0,0,0,.35)_20%,rgba(0,0,0,.1)_40%,rgba(0,0,0,.2)_100%)]"
     />
 
     <section
@@ -48,7 +47,7 @@ useSeoMeta({
             <p class="text-sm font-medium leading-tight text-brand-green">
               {{ businessUnitPage.intro.eyebrow }}
             </p>
-            <h2 class="text-4xl font-medium leading-[1.2] text-black sm:text-5xl lg:text-[56px]">
+            <h2 class="text-4xl font-medium leading-[1.2] text-black sm:text-5xl lg:text-heading-lg">
               {{ businessUnitPage.intro.title }}
             </h2>
           </div>

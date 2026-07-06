@@ -206,7 +206,7 @@ onBeforeUnmount(() => {
 
       <div class="relative z-10 mx-auto flex min-h-svh max-w-360 items-end px-5 pb-12 pt-28 sm:px-8 lg:px-20 lg:pb-4">
         <div class="w-full lg:pl-30">
-          <h1 class="max-w-6xl text-5xl font-medium leading-[1.12] text-white sm:text-6xl lg:text-7xl xl:text-[72px]">
+          <h1 class="max-w-6xl text-5xl font-medium leading-[1.12] text-white sm:text-6xl lg:text-7xl">
             <UiRevealText text="Membangun Infrastruktur Indonesia, dari Logam hingga Solusi Industri" />
           </h1>
 
@@ -258,7 +258,7 @@ onBeforeUnmount(() => {
               class="relative inline-block pr-2.5"
               :class="tone === 'green' ? 'font-medium' : ''"
             >
-              <span class="text-[#c9c9c9]">
+              <span class="text-mist">
                 {{ word }}
               </span>
               <span
@@ -313,7 +313,7 @@ onBeforeUnmount(() => {
             <p class="text-sm font-semibold uppercase leading-tight text-brand-orange">
               Ekosistem Kami
             </p>
-            <h2 class="mt-8 text-5xl font-normal leading-[1.05] tracking-normal sm:text-6xl lg:text-7xl xl:text-[78px]">
+            <h2 class="mt-8 text-5xl font-normal leading-[1.05] tracking-normal sm:text-6xl lg:text-7xl xl:text-display-lg">
               Empat Bidang Keahlian
             </h2>
           </div>

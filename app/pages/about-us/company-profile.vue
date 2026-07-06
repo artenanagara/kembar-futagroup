@@ -201,8 +201,8 @@ onBeforeUnmount(() => {
         class="absolute inset-0 size-full object-cover"
       >
       <div class="absolute inset-0 backdrop-blur-[2px]" />
-      <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,.72)_0%,rgba(0,0,0,.32)_48%,rgba(0,0,0,.74)_100%)]" />
-      <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.72)_0%,rgba(0,0,0,.16)_42%,rgba(0,0,0,.58)_100%)]" />
+      <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,.74)_0%,rgba(0,0,0,.28)_48%,rgba(0,0,0,.68)_100%)]" />
+      <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.72)_0%,rgba(0,0,0,.16)_42%,rgba(0,0,0,.56)_100%)]" />
 
       <LayoutSiteHeader />
 

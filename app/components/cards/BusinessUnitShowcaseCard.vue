@@ -16,7 +16,7 @@ defineProps<{
       :alt="unit.name"
       class="absolute inset-0 size-full object-cover transition duration-700 ease-out group-hover:scale-110 group-hover:grayscale"
     >
-    <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.05)_0%,rgba(0,0,0,.72)_100%)]" />
+    <div class="bg-card-scrim absolute inset-0" />
     <div class="absolute inset-0 bg-black opacity-0 transition duration-500 ease-out group-hover:opacity-85" />
     <div class="relative z-10 flex w-full flex-col justify-between">
       <div class="flex items-center justify-between gap-4">

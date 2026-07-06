@@ -23,7 +23,7 @@ defineProps<{
     >
     <div
       v-if="unit.cardImage"
-      class="absolute inset-0 bg-[linear-gradient(180deg,rgba(102,102,102,0)_0%,rgba(0,0,0,.7)_100%)] transition-opacity duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:opacity-0"
+      class="bg-card-scrim absolute inset-0 transition-opacity duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:opacity-0"
     />
     <div class="absolute inset-0 bg-black/0 transition-colors duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:bg-black" />
 

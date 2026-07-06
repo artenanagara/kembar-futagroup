@@ -4,6 +4,8 @@ type Breadcrumb = {
   to?: string
 }
 
+type HeroOverlay = 'vignette' | 'vignette-soft' | 'vignette-horizontal' | 'vignette-side'
+
 withDefaults(defineProps<{
   title: string
   description?: string
@@ -12,13 +14,13 @@ withDefaults(defineProps<{
   breadcrumbs?: Breadcrumb[]
   revealTitle?: boolean
   heightClass?: string
-  overlayClass?: string
+  overlay?: HeroOverlay
 }>(), {
   description: undefined,
   breadcrumbs: () => [],
   revealTitle: true,
   heightClass: 'min-h-125',
-  overlayClass: 'bg-[linear-gradient(180deg,rgba(0,0,0,.8)_0%,rgba(0,0,0,.35)_20%,rgba(0,0,0,.1)_40%,rgba(0,0,0,.42)_100%)]'
+  overlay: 'vignette'
 })
 </script>
 
@@ -34,9 +36,21 @@ withDefaults(defineProps<{
       class="absolute inset-0 size-full object-cover"
     >
     <div
-      class="absolute inset-0"
-      :class="overlayClass"
+      v-if="overlay === 'vignette'"
+      class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.8)_0%,rgba(0,0,0,.35)_20%,rgba(0,0,0,.1)_40%,rgba(0,0,0,.42)_100%)]"
     />
+    <div
+      v-else-if="overlay === 'vignette-soft'"
+      class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.72)_0%,rgba(0,0,0,.16)_42%,rgba(0,0,0,.56)_100%)]"
+    />
+    <div
+      v-else-if="overlay === 'vignette-horizontal'"
+      class="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,.74)_0%,rgba(0,0,0,.28)_48%,rgba(0,0,0,.68)_100%)]"
+    />
+    <template v-else>
+      <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,.74)_0%,rgba(0,0,0,.28)_48%,rgba(0,0,0,.68)_100%)]" />
+      <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.72)_0%,rgba(0,0,0,.16)_42%,rgba(0,0,0,.56)_100%)]" />
+    </template>
 
     <LayoutSiteHeader />
 

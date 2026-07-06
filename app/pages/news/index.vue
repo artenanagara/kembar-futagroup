@@ -24,7 +24,7 @@ useSeoMeta({
       :breadcrumbs="newsHero.breadcrumbs.map((crumb, index) => ({ label: crumb, to: index === 0 ? '/' : undefined }))"
       :reveal-title="false"
       height-class="min-h-125"
-      overlay-class="bg-[linear-gradient(90deg,rgba(0,0,0,.74)_0%,rgba(0,0,0,.28)_48%,rgba(0,0,0,.68)_100%)]"
+      overlay="vignette-horizontal"
     />
 
     <section

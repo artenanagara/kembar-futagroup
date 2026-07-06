@@ -23,7 +23,7 @@ useSeoMeta({
       :image-alt="careersHero.title"
       :breadcrumbs="careersHero.breadcrumbs.map((crumb, index) => ({ label: crumb, to: index === 0 ? '/' : undefined }))"
       height-class="h-125"
-      overlay-class="bg-[linear-gradient(180deg,rgba(0,0,0,.72)_0%,rgba(0,0,0,.16)_42%,rgba(0,0,0,.56)_100%)]"
+      overlay="vignette-soft"
     />
 
     <section

@@ -26,7 +26,6 @@ useSeoMeta({
       image-alt="Produk dan solusi Kembar Futa Group"
       :breadcrumbs="productSolutionPage.hero.breadcrumbs.map((crumb, index) => ({ label: crumb, to: index === 0 ? '/' : undefined }))"
       height-class="h-125"
-      overlay-class="bg-[linear-gradient(180deg,rgba(0,0,0,.8)_0%,rgba(0,0,0,.38)_20%,rgba(0,0,0,.12)_40%,rgba(0,0,0,.42)_100%)]"
     />
 
     <section
