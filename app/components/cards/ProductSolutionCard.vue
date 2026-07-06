@@ -1,0 +1,38 @@
+<script setup lang="ts">
+defineProps<{
+  solution: {
+    slug: string
+    name: string
+    description: string
+    image: string
+    cardImage?: string
+  }
+  index: number
+}>()
+</script>
+
+<template>
+  <NuxtLink
+    :to="`/produk-solusi/${solution.slug}`"
+    class="sticky top-0 grid min-h-110 gap-6 border-t border-black/20 bg-white py-8 last:border-b md:min-h-80 md:grid-cols-[120px_1fr] lg:min-h-75 lg:grid-cols-[180px_1.1fr_1.45fr_452px] lg:items-start"
+    :style="{ zIndex: index + 1 }"
+  >
+    <p class="font-mono text-base leading-[1.2] text-black/80">
+      [{{ String(index + 1).padStart(2, '0') }}]
+    </p>
+
+    <h3 class="text-xl font-medium leading-[1.15] text-black/78">
+      {{ solution.name }}
+    </h3>
+
+    <p class="max-w-xl text-base font-medium leading-[1.35] text-black/72">
+      {{ solution.description }}
+    </p>
+
+    <img
+      :src="solution.cardImage ?? solution.image"
+      :alt="solution.name"
+      class="h-52 w-full object-cover md:col-span-2 lg:col-span-1 lg:h-48"
+    >
+  </NuxtLink>
+</template>

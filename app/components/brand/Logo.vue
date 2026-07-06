@@ -11,11 +11,6 @@ const logoSrc = computed(() => props.variant === 'white' ? '/logo-white.png' : '
 <template>
   <img
     :src="logoSrc"
-    width="1192"
-    height="626"
-    alt="Kembar Futagroup Companies"
-    class="block object-contain"
-    decoding="async"
-    draggable="false"
+    alt="Kembar Futa Group"
   >
 </template>

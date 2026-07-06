@@ -37,7 +37,7 @@ withDefaults(defineProps<{
         class="grid gap-10 border-b border-black/18 pb-14 lg:grid-cols-[minmax(220px,520px)_minmax(0,1fr)] lg:items-start lg:gap-16 2xl:gap-24"
         data-reveal-item
       >
-        <AppLogo class="h-16 w-auto lg:h-18 2xl:h-32" />
+        <BrandLogo class="h-16 w-auto lg:h-18 2xl:h-32" />
 
         <div class="flex flex-col items-start gap-7 lg:items-end">
           <p class="max-w-2xl text-left text-base font-medium leading-[1.55] text-black/68 lg:text-right">

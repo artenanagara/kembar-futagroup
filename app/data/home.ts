@@ -74,24 +74,3 @@ export const capabilities = [
     image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=760&q=85'
   }
 ]
-
-export const projects = [
-  {
-    title: 'Proyek Ibu Kota Nusantara',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80',
-    meta: [
-      ['Kategori', 'Infrastruktur Nasional'],
-      ['Lokasi', 'Kalimantan Timur'],
-      ['Kontribusi', 'Produk infrastruktur, utilitas kawasan, dan elemen ruang publik']
-    ]
-  },
-  {
-    title: 'Pembangunan Jembatan Pandansimo',
-    image: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1000&q=80',
-    meta: [
-      ['Kategori', 'Infrastruktur Nasional'],
-      ['Lokasi', 'Kalimantan Timur'],
-      ['Kontribusi', 'Produk infrastruktur, utilitas kawasan, dan elemen ruang publik']
-    ]
-  }
-]

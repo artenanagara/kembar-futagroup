@@ -66,17 +66,11 @@ const handleSubmit = () => {
       data-section-reveal
     >
       <div class="mx-auto max-w-160 px-5 pb-16 pt-40 sm:px-8 lg:px-20 lg:pb-20">
-        <NuxtLink
+        <NavigationBackLink
           :to="`/karir/${job.slug}`"
-          class="inline-flex items-center gap-2 text-sm font-medium leading-tight text-brand-green transition hover:text-ink"
+          :label="job.title"
           data-reveal-item
-        >
-          <UIcon
-            name="i-lucide-arrow-left"
-            class="size-4"
-          />
-          {{ job.title }}
-        </NuxtLink>
+        />
 
         <template v-if="!isSubmitted">
           <p

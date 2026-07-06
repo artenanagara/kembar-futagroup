@@ -19,39 +19,15 @@ useSeoMeta({
 
 <template>
   <div>
-    <section
-      class="relative h-125 overflow-hidden bg-ink text-white"
-      data-section-reveal
-    >
-      <img
-        :src="productSolutionPage.hero.image"
-        alt="Produk dan solusi Kembar Futa Group"
-        class="absolute inset-0 size-full object-cover"
-      >
-      <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.8)_0%,rgba(0,0,0,.38)_20%,rgba(0,0,0,.12)_40%,rgba(0,0,0,.42)_100%)]" />
-
-      <LayoutSiteHeader />
-
-      <div class="relative z-10 mx-auto flex h-full max-w-360 flex-col items-start justify-end gap-8 px-5 pb-12 pt-28 sm:px-8 lg:px-20">
-        <p
-          class="text-sm font-medium leading-[1.2] text-white"
-          data-reveal-item
-        >
-          {{ productSolutionPage.hero.breadcrumbs[0] }} / {{ productSolutionPage.hero.breadcrumbs[1] }}
-        </p>
-
-        <h1 class="text-5xl font-medium leading-[1.2]">
-          <UiRevealText :text="productSolutionPage.hero.title" />
-        </h1>
-
-        <p
-          class="max-w-160 text-sm font-normal leading-[1.6] text-white"
-          data-reveal-item
-        >
-          {{ productSolutionPage.hero.description }}
-        </p>
-      </div>
-    </section>
+    <SectionsPageHero
+      :title="productSolutionPage.hero.title"
+      :description="productSolutionPage.hero.description"
+      :image="productSolutionPage.hero.image"
+      image-alt="Produk dan solusi Kembar Futa Group"
+      :breadcrumbs="productSolutionPage.hero.breadcrumbs.map((crumb, index) => ({ label: crumb, to: index === 0 ? '/' : undefined }))"
+      height-class="h-125"
+      overlay-class="bg-[linear-gradient(180deg,rgba(0,0,0,.8)_0%,rgba(0,0,0,.38)_20%,rgba(0,0,0,.12)_40%,rgba(0,0,0,.42)_100%)]"
+    />
 
     <section
       class="bg-white"
@@ -122,31 +98,12 @@ useSeoMeta({
         </h2>
 
         <div class="mt-10">
-          <NuxtLink
+          <CardsProductSolutionCard
             v-for="(solution, index) in productSolutions"
             :key="solution.slug"
-            :to="`/produk-solusi/${solution.slug}`"
-            class="sticky top-0 grid min-h-110 gap-6 border-t border-black/20 bg-white py-8 last:border-b md:min-h-80 md:grid-cols-[120px_1fr] lg:min-h-75 lg:grid-cols-[180px_1.1fr_1.45fr_452px] lg:items-start"
-            :style="{ zIndex: index + 1 }"
-          >
-            <p class="font-mono text-base leading-[1.2] text-black/80">
-              [{{ String(index + 1).padStart(2, '0') }}]
-            </p>
-
-            <h3 class="text-xl font-medium leading-[1.15] text-black/78">
-              {{ solution.name }}
-            </h3>
-
-            <p class="max-w-xl text-base font-medium leading-[1.35] text-black/72">
-              {{ solution.description }}
-            </p>
-
-            <img
-              :src="solution.cardImage ?? solution.image"
-              :alt="solution.name"
-              class="h-52 w-full object-cover md:col-span-2 lg:col-span-1 lg:h-48"
-            >
-          </NuxtLink>
+            :solution="solution"
+            :index="index"
+          />
         </div>
       </div>
     </section>

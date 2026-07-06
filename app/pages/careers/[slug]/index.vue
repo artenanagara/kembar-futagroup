@@ -34,17 +34,11 @@ useSeoMeta({
       data-section-reveal
     >
       <div class="mx-auto max-w-360 px-5 pb-20 pt-40 sm:px-8 lg:px-20">
-        <NuxtLink
+        <NavigationBackLink
           to="/karir"
-          class="inline-flex items-center gap-2 text-sm font-medium leading-tight text-brand-green transition hover:text-ink"
+          label="Karir"
           data-reveal-item
-        >
-          <UIcon
-            name="i-lucide-arrow-left"
-            class="size-4"
-          />
-          Karir
-        </NuxtLink>
+        />
 
         <div class="mt-8 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div class="max-w-3xl">

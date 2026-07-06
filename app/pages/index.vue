@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { businessUnitPage, businessUnits } from '~/data/business-units'
+import { businessUnits } from '~/data/business-units'
 import { aboutStats, capabilities, expertiseItems } from '~/data/home'
 import { newsPosts } from '~/data/news'
 
@@ -146,7 +146,7 @@ onMounted(async () => {
         autoAlpha: 1,
         y: 0,
         stagger: 0.08,
-        duration: 0.5,
+        duration: 2,
         ease: 'power2.out'
       }, '+=0.18')
   })
@@ -174,9 +174,6 @@ onBeforeUnmount(() => {
     clearTimeout(expertiseHoverTimer)
   }
 })
-
-const businessFilters = businessUnitPage.filters.slice(1)
-const activeBusinessFilter = ref(businessFilters[0]?.value ?? 'manufaktur-logam')
 </script>
 
 <template>
@@ -244,7 +241,7 @@ const activeBusinessFilter = ref(businessFilters[0]?.value ?? 'manufaktur-logam'
     >
       <div
         ref="contentRef"
-        class="mx-auto grid h-screen max-w-360 items-center gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[220px_1fr] lg:gap-48 lg:px-20"
+        class="mx-auto grid h-screen max-w-360 items-start top-24 gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[220px_1fr] lg:gap-48 lg:px-20"
       >
         <p class="pt-2 text-sm font-medium leading-tight text-brand-green lg:pt-1">
           Sekilas Tentang Kami
@@ -389,9 +386,9 @@ const activeBusinessFilter = ref(businessFilters[0]?.value ?? 'manufaktur-logam'
       class="bg-white text-black"
       data-section-reveal
     >
-      <div class="mx-auto grid max-w-[1817px] gap-12 px-5 pb-0 pt-24 sm:px-8 lg:grid-cols-[minmax(180px,360px)_minmax(0,1fr)] lg:gap-18 lg:px-25 lg:pb-0 lg:pt-32">
+      <div class="mx-auto grid gap-12 px-5 pb-0 pt-24 sm:px-8 lg:grid-cols-[minmax(180px,360px)_minmax(0,1fr)] lg:gap-18 lg:px-25 lg:pb-0 lg:pt-32">
         <div
-          class="pt-1 sticky top-24 self-start"
+          class="pt-2 pb-16 sticky top-24 self-start"
           data-reveal-item
         >
           <p class="text-sm font-semibold uppercase leading-tight text-brand-green">
@@ -409,72 +406,12 @@ const activeBusinessFilter = ref(businessFilters[0]?.value ?? 'manufaktur-logam'
           class="min-w-0 pb-8"
           data-reveal-item
         >
-          <div class="sticky top-22 z-40 -mx-5 mb-10 bg-white px-5 py-4 sm:-mx-8 sm:px-8 lg:mx-0 lg:mb-12 lg:px-0">
-            <div
-              class="absolute inset-x-0 -top-24 h-24 bg-white"
-              aria-hidden="true"
-            />
-            <div class="relative flex w-full items-center justify-between gap-4">
-              <div class="flex max-w-full flex-wrap items-center justify-center gap-x-8 gap-y-4">
-                <button
-                  v-for="filter in businessFilters"
-                  :key="filter.value"
-                  type="button"
-                  class="relative inline-flex min-h-10 items-center justify-center px-1 pb-3 text-base font-medium leading-none transition duration-300 ease-out focus-visible:outline focus-visible:outline-offset-4 focus-visible:outline-brand-orange"
-                  :class="activeBusinessFilter === filter.value ? 'text-brand-orange' : 'text-black/50 hover:text-brand-orange'"
-                  @click="activeBusinessFilter = filter.value"
-                >
-                  {{ filter.label }}
-                  <span
-                    class="absolute inset-x-0 bottom-0 h-px origin-center bg-brand-orange transition-transform duration-300 ease-out"
-                    :class="activeBusinessFilter === filter.value ? 'scale-x-100' : 'scale-x-0'"
-                    aria-hidden="true"
-                  />
-                </button>
-              </div>
-            </div>
-          </div>
-
           <div class="grid gap-8 md:grid-cols-2 min-[1440px]:grid-cols-3">
-            <article
+            <CardsBusinessUnitShowcaseCard
               v-for="unit in businessUnits"
               :key="unit.name"
-              class="group relative flex min-h-105 overflow-hidden bg-black p-8 text-white lg:min-h-125"
-              data-reveal-item
-            >
-              <img
-                :src="unit.image"
-                :alt="unit.name"
-                class="absolute inset-0 size-full object-cover transition duration-700 ease-out group-hover:scale-110 group-hover:grayscale"
-              >
-              <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.05)_0%,rgba(0,0,0,.72)_100%)]" />
-              <div class="absolute inset-0 bg-black opacity-0 transition duration-500 ease-out group-hover:opacity-85" />
-              <div class="relative z-10 flex w-full flex-col justify-between">
-                <div class="flex items-center justify-between gap-4">
-                  <UiBadge
-                    variant="orange"
-                    size="lg"
-                  >
-                    {{ unit.category }}
-                  </UiBadge>
-                  <UIcon
-                    name="i-lucide-arrow-up-right"
-                    class="size-6"
-                  />
-                </div>
-                <div class="translate-y-18 space-y-3 transition duration-500 ease-out group-hover:translate-y-0">
-                  <h3 class="text-3xl font-medium leading-tight transition duration-500 ease-out lg:text-4xl">
-                    {{ unit.name }}
-                  </h3>
-                  <p
-                    v-if="unit.description"
-                    class="max-w-sm translate-y-6 text-base font-medium leading-relaxed text-white/70 opacity-0 transition duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100"
-                  >
-                    {{ unit.description }}
-                  </p>
-                </div>
-              </div>
-            </article>
+              :unit="unit"
+            />
           </div>
         </div>
       </div>
@@ -618,53 +555,21 @@ const activeBusinessFilter = ref(businessFilters[0]?.value ?? 'manufaktur-logam'
       data-section-reveal
     >
       <div class="mx-auto max-w-360 px-5 py-24 sm:px-8 lg:px-20 lg:py-25">
-        <div
-          class="mx-auto max-w-4xl text-center"
+        <SectionsSectionHeader
+          eyebrow="Berita & Insight"
+          title="Cerita dan Perkembangan Grup"
+          description="Kembar Futa Group menghubungkan pengalaman teknik, proses produksi, dan kontrol kualitas untuk menghadirkan solusi yang sesuai kebutuhan industri, proyek, dan bisnis."
+          align="center"
           data-reveal-item
-        >
-          <p class="text-sm font-medium leading-tight text-brand-green">
-            Berita & Insight
-          </p>
-          <h2 class="mt-1 text-4xl font-normal leading-tight text-ink sm:text-5xl lg:text-6xl">
-            Cerita dan Perkembangan Grup
-          </h2>
-          <p class="mt-2 text-base leading-relaxed text-black/70">
-            Kembar Futa Group menghubungkan pengalaman teknik, proses produksi, dan kontrol kualitas untuk menghadirkan solusi yang sesuai kebutuhan industri, proyek, dan bisnis.
-          </p>
-        </div>
+        />
 
         <div class="mt-8 grid gap-8 md:grid-cols-3">
-          <NuxtLink
+          <CardsNewsCard
             v-for="post in newsPosts.slice(0, 3)"
             :key="post.slug"
-            :to="`/berita/${post.slug}`"
-            class="group space-y-4"
-            data-reveal-item
-          >
-            <div class="overflow-hidden">
-              <img
-                :src="post.image"
-                :alt="post.title"
-                class="h-64 w-full object-cover transition duration-700 ease-out group-hover:scale-105 lg:h-76"
-              >
-            </div>
-            <div class="space-y-2">
-              <UiBadge
-                variant="outline-dark"
-                size="sm"
-              >
-                {{ post.category }}
-              </UiBadge>
-              <h3 class="min-h-11 text-base font-normal leading-snug text-ink transition-colors duration-200 group-hover:text-brand-green">
-                {{ post.title }}
-              </h3>
-            </div>
-            <div class="flex items-center gap-4 text-sm leading-relaxed text-black/50">
-              <time :datetime="post.date">{{ formatNewsDate(post.date) }}</time>
-              <span class="size-1.5 rounded-full bg-neutral-300" />
-              <span>{{ post.readTime }}</span>
-            </div>
-          </NuxtLink>
+            :post="post"
+            heading-tag="h3"
+          />
         </div>
 
         <div

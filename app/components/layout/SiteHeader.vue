@@ -22,7 +22,7 @@ const navTextClass = computed(() => shouldUseLightHeader.value ? 'text-ink' : 't
 const navIconClass = computed(() => shouldUseLightHeader.value ? 'text-ink/75' : 'text-white/85')
 const mobileButtonClass = computed(() => {
   if (isGlassHeader.value) {
-    return 'border-black/15 bg-white/40 text-ink'
+    return 'border-black/15 bg-white/96 text-ink'
   }
 
   return shouldUseLightHeader.value ? 'border-black/20 text-ink' : 'border-white/25 text-white'
@@ -254,7 +254,7 @@ onBeforeUnmount(() => {
     class="fixed inset-x-0 top-0 z-50 border-b transition-[transform,background-color,border-color,box-shadow,backdrop-filter] duration-500 ease-[cubic-bezier(.16,1,.3,1)]"
     :class="[
       isHidden ? '-translate-y-full' : 'translate-y-0',
-      isMegaMenuOpen ? 'border-black/10 bg-white/96 shadow-2xl shadow-black/10 backdrop-blur-xl backdrop-saturate-150' : isGlassHeader ? 'border-white/35 bg-white/72 shadow-[0_18px_60px_rgba(0,0,0,0.08)] backdrop-blur-xl backdrop-saturate-150' : 'border-transparent bg-transparent shadow-none'
+      isMegaMenuOpen ? 'border-black/10 bg-white/96 shadow-2xl shadow-black/10 backdrop-blur-xl backdrop-saturate-150' : isGlassHeader ? 'border-black/10 bg-white/96 shadow-2xl shadow-black/10 backdrop-blur-xl backdrop-saturate-150' : 'border-transparent bg-transparent shadow-none'
     ]"
     @focusout="handleHeaderFocusOut"
     @keydown.esc="clearActiveMenu"
@@ -266,7 +266,7 @@ onBeforeUnmount(() => {
         class="text-white"
         aria-label="Kembar Futa Group"
       >
-        <AppLogo
+        <BrandLogo
           :variant="logoVariant"
           class="h-12 w-auto lg:h-14"
         />
@@ -330,7 +330,7 @@ onBeforeUnmount(() => {
       leave-from-class="translate-y-0 opacity-100"
       leave-to-class="-translate-y-2 opacity-0"
     >
-      <LayoutMegaMenu
+      <NavigationMegaMenu
         v-if="activeMenuItem"
         :item="activeMenuItem"
         role="menu"

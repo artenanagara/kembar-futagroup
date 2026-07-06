@@ -27,40 +27,18 @@ useSeoMeta({
 
 <template>
   <div>
-    <section
-      class="relative min-h-125 overflow-hidden bg-ink text-white"
-      data-section-reveal
-    >
-      <img
-        :src="unit.image"
-        :alt="unit.name"
-        class="absolute inset-0 size-full object-cover"
-      >
-      <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,.78)_0%,rgba(0,0,0,.34)_48%,rgba(0,0,0,.72)_100%)]" />
-      <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.72)_0%,rgba(0,0,0,.16)_42%,rgba(0,0,0,.56)_100%)]" />
-
-      <LayoutSiteHeader />
-
-      <div class="relative z-10 mx-auto flex min-h-125 max-w-360 items-end px-5 pb-14 pt-28 sm:px-8 lg:px-20">
-        <div class="max-w-3xl">
-          <p
-            class="text-sm font-medium leading-tight text-white/70"
-            data-reveal-item
-          >
-            Beranda / Unit Bisnis
-          </p>
-          <h1 class="mt-8 text-4xl font-normal leading-tight sm:text-5xl lg:text-6xl">
-            <UiRevealText :text="unit.name" />
-          </h1>
-          <p
-            class="mt-5 max-w-2xl text-base leading-relaxed text-white/80"
-            data-reveal-item
-          >
-            {{ unit.description }}
-          </p>
-        </div>
-      </div>
-    </section>
+    <SectionsPageHero
+      :title="unit.name"
+      :description="unit.description"
+      :image="unit.image"
+      :image-alt="unit.name"
+      :breadcrumbs="[
+        { label: 'Beranda', to: '/' },
+        { label: 'Unit Bisnis', to: '/unit-bisnis' }
+      ]"
+      height-class="h-125"
+      overlay-class="bg-[linear-gradient(180deg,rgba(0,0,0,.72)_0%,rgba(0,0,0,.16)_42%,rgba(0,0,0,.56)_100%)]"
+    />
 
     <section
       class="bg-white"

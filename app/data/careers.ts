@@ -5,11 +5,6 @@ export const careersHero = {
   image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1800&q=85'
 }
 
-export const careersBanner = {
-  image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1800&q=85',
-  alt: 'Tim Kembar Futa Group bekerja di fasilitas produksi'
-}
-
 export const careersIntro = {
   eyebrow: 'Mengapa Bergabung',
   title: 'Tumbuh bersama tim yang membangun industri dari akarnya.',

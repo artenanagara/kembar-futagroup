@@ -43,17 +43,11 @@ const headings = computed(() => post.content.filter(block => block.type === 'hea
       data-section-reveal
     >
       <div class="mx-auto max-w-360 px-5 pb-12 pt-40 sm:px-8 lg:px-20">
-        <NuxtLink
+        <NavigationBackLink
           to="/berita"
-          class="inline-flex items-center gap-2 text-sm font-medium leading-tight text-brand-green transition hover:text-ink"
+          label="Kembali ke Berita"
           data-reveal-item
-        >
-          <UIcon
-            name="i-lucide-arrow-left"
-            class="size-4"
-          />
-          Kembali ke Berita
-        </NuxtLink>
+        />
 
         <div class="mt-8 max-w-3xl">
           <nav
@@ -193,32 +187,12 @@ const headings = computed(() => post.content.filter(block => block.type === 'hea
         </h2>
 
         <div class="mt-8 grid gap-8 md:grid-cols-3">
-          <NuxtLink
+          <CardsNewsCard
             v-for="item in otherPosts"
             :key="item.slug"
-            :to="`/berita/${item.slug}`"
-            class="group space-y-4"
-            data-reveal-item
-          >
-            <div class="overflow-hidden">
-              <img
-                :src="item.image"
-                :alt="item.title"
-                class="h-64 w-full object-cover transition duration-700 ease-out group-hover:scale-105"
-              >
-            </div>
-            <div class="space-y-2">
-              <UiBadge
-                variant="outline-dark"
-                size="sm"
-              >
-                {{ item.category }}
-              </UiBadge>
-              <h3 class="min-h-11 text-base font-normal leading-snug text-ink transition-colors duration-200 group-hover:text-brand-green">
-                {{ item.title }}
-              </h3>
-            </div>
-          </NuxtLink>
+            :post="item"
+            heading-tag="h3"
+          />
         </div>
       </div>
     </section>

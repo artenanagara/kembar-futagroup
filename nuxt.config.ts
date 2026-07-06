@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import type { NuxtPage } from '@nuxt/schema'
 import { businessUnits } from './app/data/business-units'
 import { jobListings } from './app/data/careers'
 import { newsPosts } from './app/data/news'
@@ -12,16 +13,44 @@ const detailRoutes = [
   ...newsPosts.map(post => `/berita/${post.slug}`)
 ]
 
+const localizedRoutePaths = new Map([
+  ['app/pages/about-us/index.vue', '/tentang-kami'],
+  ['app/pages/about-us/company-profile.vue', '/tentang-kami/profil'],
+  ['app/pages/about-us/owner-values.vue', '/tentang-kami/value-owner'],
+  ['app/pages/about-us/organization-structure.vue', '/tentang-kami/struktur'],
+  ['app/pages/business-units/index.vue', '/unit-bisnis'],
+  ['app/pages/business-units/[slug].vue', '/unit-bisnis/:slug()'],
+  ['app/pages/product-solutions/index.vue', '/produk-solusi'],
+  ['app/pages/product-solutions/[slug].vue', '/produk-solusi/:slug()'],
+  ['app/pages/news/index.vue', '/berita'],
+  ['app/pages/news/[slug].vue', '/berita/:slug()'],
+  ['app/pages/careers/index.vue', '/karir'],
+  ['app/pages/careers/[slug]/index.vue', '/karir/:slug()'],
+  ['app/pages/careers/[slug]/apply.vue', '/karir/:slug()/lamar']
+])
+
+const applyLocalizedRoutePaths = (pages: NuxtPage[]) => {
+  for (const page of pages) {
+    const localizedPath = [...localizedRoutePaths.entries()]
+      .find(([filePath]) => page.file?.endsWith(filePath))?.[1]
+
+    if (localizedPath) {
+      page.path = localizedPath
+    }
+
+    if (page.children?.length) {
+      applyLocalizedRoutePaths(page.children)
+    }
+  }
+}
+
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
     '@nuxt/ui',
-    '@nuxt/image',
     '@nuxt/fonts',
     '@nuxt/icon',
-    '@nuxtjs/seo',
-    '@pinia/nuxt',
-    '@vueuse/nuxt'
+    '@nuxtjs/seo'
   ],
 
   devtools: {
@@ -58,6 +87,10 @@ export default defineNuxtConfig({
     }
   },
 
+  hooks: {
+    'pages:extend': applyLocalizedRoutePaths
+  },
+
   eslint: {
     config: {
       stylistic: {
@@ -65,5 +98,9 @@ export default defineNuxtConfig({
         braceStyle: '1tbs'
       }
     }
+  },
+
+  ogImage: {
+    enabled: false
   }
 })
