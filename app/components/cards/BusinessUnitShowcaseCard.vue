@@ -7,7 +7,8 @@ defineProps<{
 </script>
 
 <template>
-  <article
+  <NuxtLink
+    :to="`/unit-bisnis/${unit.slug}`"
     class="group relative flex min-h-105 overflow-hidden bg-black p-8 text-white lg:min-h-125"
     data-reveal-item
   >
@@ -43,5 +44,5 @@ defineProps<{
         </p>
       </div>
     </div>
-  </article>
+  </NuxtLink>
 </template>

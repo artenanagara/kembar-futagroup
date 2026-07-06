@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { valueOwnerFounder, valueOwnerHero, valueOwnerPrinciples, valueOwnerQuote } from '~/data/about'
 
-const title = 'Value Owner - Kembar Futa Group'
-const description = 'Kisah dan prinsip Ir. H. Fikky Arif Ardianta sebagai sosok di balik Kembar Futa Group.'
+const title = 'Value Owner - Kembar Futagroup'
+const description = 'Kisah dan prinsip Ir. H. Fikky Arif Ardianta sebagai sosok di balik Kembar Futagroup.'
 
 useSeoMeta({
   title,

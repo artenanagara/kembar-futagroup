@@ -8,14 +8,13 @@ const headerRef = ref<HTMLElement | null>(null)
 const isHidden = ref(false)
 const hasScrolled = ref(false)
 const isDarkSurface = ref(true)
-const needsHeaderBackground = ref(false)
 const isMenuActivationPaused = ref(false)
 
 const hasChildren = (item: NavItem) => Boolean(item.children?.length)
 const showChevron = (item: NavItem) => item.hasDropdown || hasChildren(item)
 const activeMenuItem = computed(() => navItems.find(item => item.label === activeMenu.value && hasChildren(item)))
 const isMegaMenuOpen = computed(() => Boolean(activeMenuItem.value))
-const isGlassHeader = computed(() => hasScrolled.value && !isHidden.value && needsHeaderBackground.value)
+const isGlassHeader = computed(() => hasScrolled.value && !isHidden.value)
 const shouldUseLightHeader = computed(() => isMegaMenuOpen.value || isGlassHeader.value || !isDarkSurface.value)
 const logoVariant = computed(() => shouldUseLightHeader.value ? 'default' : 'white')
 const navTextClass = computed(() => shouldUseLightHeader.value ? 'text-ink' : 'text-white/95')
@@ -114,8 +113,6 @@ const getLuminance = (r: number, g: number, b: number) => {
   return (0.2126 * toLinear(r)) + (0.7152 * toLinear(g)) + (0.0722 * toLinear(b))
 }
 
-const isWhiteColor = (r: number, g: number, b: number) => r > 245 && g > 245 && b > 245
-
 const hasStaticUtility = (classList: string[], utility: string) => classList.some(classItem => (
   !classItem.includes(':') && (classItem === utility || classItem.startsWith(`${utility}/`))
 ))
@@ -128,38 +125,37 @@ const getSurfaceState = (element: Element | null) => {
       const headerTheme = current.dataset.headerTheme
 
       if (headerTheme === 'dark') {
-        return { isDark: true, needsBackground: true }
+        return { isDark: true }
       }
 
       if (headerTheme === 'light') {
-        return { isDark: false, needsBackground: false }
+        return { isDark: false }
       }
 
       const className = current.className.toString()
       const classList = className.split(/\s+/)
 
       if (current.matches('img, video, canvas')) {
-        return { isDark: true, needsBackground: true }
+        return { isDark: true }
       }
 
       if (hasStaticUtility(classList, 'bg-white')) {
-        return { isDark: false, needsBackground: false }
+        return { isDark: false }
       }
 
       if (hasStaticUtility(classList, 'text-white') || hasStaticUtility(classList, 'bg-black') || hasStaticUtility(classList, 'bg-ink') || hasStaticUtility(classList, 'bg-charcoal')) {
-        return { isDark: true, needsBackground: true }
+        return { isDark: true }
       }
 
       if (classList.some(classItem => !classItem.includes(':') && classItem.startsWith('bg-brand-'))) {
-        return { isDark: false, needsBackground: true }
+        return { isDark: false }
       }
 
       const colorParts = getColorParts(getComputedStyle(current).backgroundColor)
 
       if (colorParts && colorParts.a > 0.2) {
         return {
-          isDark: getLuminance(colorParts.r, colorParts.g, colorParts.b) < 0.5,
-          needsBackground: !isWhiteColor(colorParts.r, colorParts.g, colorParts.b)
+          isDark: getLuminance(colorParts.r, colorParts.g, colorParts.b) < 0.5
         }
       }
     }
@@ -167,7 +163,7 @@ const getSurfaceState = (element: Element | null) => {
     current = current.parentElement
   }
 
-  return { isDark: window.scrollY < 80, needsBackground: false }
+  return { isDark: window.scrollY < 80 }
 }
 
 const updateSurfaceTheme = () => {
@@ -191,10 +187,8 @@ const updateSurfaceTheme = () => {
     return getSurfaceState(surface ?? null)
   })
   const darkVotes = surfaceStates.filter(surface => surface.isDark).length
-  const backgroundVotes = surfaceStates.filter(surface => surface.needsBackground).length
 
   isDarkSurface.value = darkVotes >= 2
-  needsHeaderBackground.value = backgroundVotes >= 2
 }
 
 const updateHeaderOnScroll = () => {
@@ -264,7 +258,7 @@ onBeforeUnmount(() => {
       <NuxtLink
         to="/"
         class="text-white"
-        aria-label="Kembar Futa Group"
+        aria-label="Kembar Futagroup"
       >
         <BrandLogo
           :variant="logoVariant"

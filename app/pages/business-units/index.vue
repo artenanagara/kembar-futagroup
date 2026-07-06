@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { businessUnitPage, businessUnits } from '~/data/business-units'
 
-const title = 'Unit Bisnis - Kembar Futa Group'
-const description = 'Daftar unit bisnis Kembar Futa Group di bidang manufaktur, logam, teknik, lansekap, dan solusi industri.'
+const title = 'Unit Bisnis - Kembar Futagroup'
+const description = 'Daftar unit bisnis Kembar Futagroup di bidang manufaktur, logam, teknik, lansekap, dan solusi industri.'
 const activeFilter = ref<(typeof businessUnitPage.filters)[number]['value']>('all')
 
 const filteredUnits = computed(() => {
@@ -29,7 +29,7 @@ useSeoMeta({
       :title="businessUnitPage.hero.title"
       :description="businessUnitPage.hero.description"
       :image="businessUnitPage.hero.image"
-      image-alt="Unit bisnis Kembar Futa Group"
+      image-alt="Unit bisnis Kembar Futagroup"
       :breadcrumbs="businessUnitPage.hero.breadcrumbs.map((crumb, index) => ({ label: crumb, to: index === 0 ? '/' : undefined }))"
       height-class="h-125"
     />

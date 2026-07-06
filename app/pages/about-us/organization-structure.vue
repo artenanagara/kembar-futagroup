@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { aboutStructureHero, groupStructureItems } from '~/data/about'
 
-const title = 'Struktur Grup - Kembar Futa Group'
-const description = 'Struktur Kembar Futa Group sebagai ekosistem holding manufaktur, teknik, produk, dan solusi infrastruktur.'
+const title = 'Struktur Grup - Kembar Futagroup'
+const description = 'Struktur Kembar Futagroup sebagai ekosistem holding manufaktur, teknik, produk, dan solusi infrastruktur.'
 
 useSeoMeta({
   title,

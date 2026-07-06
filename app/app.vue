@@ -1,6 +1,6 @@
 <script setup lang="ts">
-const title = 'Kembar Futa Group - Holding Manufaktur dan Solusi Industri'
-const description = 'Kembar Futa Group membangun ekosistem manufaktur, pengecoran logam, permesinan, lansekap, dan solusi infrastruktur dari Klaten untuk Indonesia.'
+const title = 'Kembar Futagroup - Holding Manufaktur dan Solusi Industri'
+const description = 'Kembar Futagroup membangun ekosistem manufaktur, pengecoran logam, permesinan, lansekap, dan solusi infrastruktur dari Klaten untuk Indonesia.'
 
 useHead({
   meta: [

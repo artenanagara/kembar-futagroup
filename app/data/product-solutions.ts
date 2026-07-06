@@ -18,9 +18,9 @@ export const productSolutionPage = {
   },
   focus: {
     eyebrow: 'Fokus Kami',
-    title: 'Kembar Futa Group merancang produk ruang publik, pengecoran, mesin, drainase, lanskap, dan material finishing untuk kebutuhan proyek.',
+    title: 'Kembar Futagroup merancang produk ruang publik, pengecoran, mesin, drainase, lanskap, dan material finishing untuk kebutuhan proyek.',
     paragraphs: [
-      'Berbasis di Klaten, Kembar Futa Group dikenal sebagai holding produk logam olahan yang menaungi lini seperti Futake, Futago, Futastone, Futafarm, serta unit manufaktur terkait.',
+      'Berbasis di Klaten, Kembar Futagroup dikenal sebagai holding produk logam olahan yang menaungi lini seperti Futake, Futago, Futastone, Futafarm, serta unit manufaktur terkait.',
       'Kapabilitas grup bergerak dari furnitur jalan dan pedestrian, pengecoran logam, mesin tepat guna, penghijauan kota, infrastruktur drainase, hingga batu dan terrazzo.'
     ]
   },

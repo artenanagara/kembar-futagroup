@@ -12,8 +12,8 @@ if (!job) {
   })
 }
 
-const title = `Lamar ${job.title} - Karir Kembar Futa Group`
-const description = `Form lamaran untuk posisi ${job.title} di Kembar Futa Group.`
+const title = `Lamar ${job.title} - Karir Kembar Futagroup`
+const description = `Form lamaran untuk posisi ${job.title} di Kembar Futagroup.`
 
 useSeoMeta({
   title,

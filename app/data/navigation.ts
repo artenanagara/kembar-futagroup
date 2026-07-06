@@ -28,10 +28,10 @@ export const navItems: NavItem[] = [
     hasDropdown: true,
     dropdownLimit: 8,
     eyebrow: 'Tentang Grup',
-    description: 'Kenali profil, nilai pendiri, dan struktur Kembar Futa Group sebagai ekosistem manufaktur dari Klaten.',
+    description: 'Kenali profil, nilai pendiri, dan struktur Kembar Futagroup sebagai ekosistem manufaktur dari Klaten.',
     image: {
       src: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?auto=format&fit=crop&w=900&q=85',
-      alt: 'Aktivitas manufaktur Kembar Futa Group'
+      alt: 'Aktivitas manufaktur Kembar Futagroup'
     },
     children: [
       {
@@ -47,7 +47,7 @@ export const navItems: NavItem[] = [
       {
         label: 'Sejarah',
         to: '/tentang-kami/profil#sejarah',
-        description: 'Perjalanan Kembar Futa Group dari waktu ke waktu.'
+        description: 'Perjalanan Kembar Futagroup dari waktu ke waktu.'
       },
       {
         label: 'Value Owner',
@@ -58,6 +58,11 @@ export const navItems: NavItem[] = [
         label: 'Struktur',
         to: '/tentang-kami/struktur',
         description: 'Peta ekosistem holding, kapabilitas, dan unit usaha.'
+      },
+      {
+        label: 'Tata Nilai Perusahaan',
+        to: '/tentang-kami/tata-nilai-perusahaan',
+        description: 'Nilai dan prinsip yang membimbing perilaku dan keputusan grup.'
       }
     ]
   },
@@ -70,7 +75,7 @@ export const navItems: NavItem[] = [
     description: 'Berbagai unit usaha grup saling terhubung untuk mendukung manufaktur, teknik, lansekap, dan infrastruktur.',
     image: {
       src: businessUnits[0]?.image ?? '',
-      alt: 'Unit bisnis Kembar Futa Group'
+      alt: 'Unit bisnis Kembar Futagroup'
     },
     children: businessUnits.map(unit => ({
       label: unit.name,
@@ -105,5 +110,5 @@ export const footerColumns = [
   ['Navigasi', 'Beranda', 'Tentang Kami', 'Unit Usaha', 'Produk & Solusi', 'Keberlanjutan'],
   ['Tentang Kami', 'Profil Perusahaan', 'Sejarah', 'Visi & Misi', 'Nilai Perusahaan'],
   ['Informasi', 'Berita & Insight', 'Karir', 'Kontak'],
-  ['Unit Usaha', 'Ayem Tentrem Logam', 'Kembar Teknika', 'Zwilling', 'Futago Karya', 'Futake', 'Futastone', 'Futafarm']
+  ['Unit Usaha', 'Ayem Tentrem Logam', 'Kembar Teknika', 'Zwilling', 'Futago Karya', 'Futake', 'Futastone', 'Futafarm', 'Futago Land']
 ]

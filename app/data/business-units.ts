@@ -1,10 +1,12 @@
+export type BusinessUnitGroup = 'manufaktur-logam' | 'channel-pasar' | 'material-lansekap' | 'properti'
+
 export type BusinessUnit = {
   slug: string
   name: string
   description: string
   navDescription: string
   category: string
-  group: 'manufaktur-logam' | 'mesin-teknik' | 'material-lansekap' | 'agribisnis'
+  group: BusinessUnitGroup
   image: string
   cardImage?: string
   about: {
@@ -26,45 +28,211 @@ export const businessUnitPage = {
   hero: {
     breadcrumbs: ['Beranda', 'Unit Bisnis'],
     title: 'Unit Bisnis',
-    description: 'Kembar Futa Group menaungi sejumlah unit usaha yang bekerja sebagai satu ekosistem — dari pengecoran logam, manufaktur, material lansekap, hingga properti.',
+    description: 'Kembar Futagroup menaungi sejumlah unit usaha yang bekerja sebagai satu ekosistem — dari pengecoran logam, manufaktur, material lansekap, hingga properti.',
     image: 'https://images.unsplash.com/photo-1779608993307-456d4a9ab4fa?auto=format&fit=crop&w=1800&q=85'
   },
   intro: {
     eyebrow: 'Satu Ekosistem',
     title: 'Bukan sekumpulan usaha terpisah,tapi satu ekosistem yang saling menopang.',
     paragraphs: [
-      'Setiap unit usaha di Kembar Futa Group lahir dari satu akar yang sama: keahlian mengolah logam di Klaten. Dari sana, masing-masing tumbuh dengan fokusnya sendiri — ada yang mendalami pengecoran, manufaktur mesin, material lansekap, hingga pengembangan properti.',
+      'Setiap unit usaha di Kembar Futagroup lahir dari satu akar yang sama: keahlian mengolah logam di Klaten. Dari sana, masing-masing tumbuh dengan fokusnya sendiri — ada yang mendalami pengecoran, manufaktur mesin, material lansekap, hingga pengembangan properti.',
       'Yang membuatnya menjadi ekosistem adalah cara mereka terhubung. Bahan baku, kapabilitas produksi, dan jaringan pasar mengalir antar unit, sehingga kekuatan di satu lini menjadi nilai tambah bagi lini lainnya.'
     ]
   },
   filters: [
     { label: 'Semua', value: 'all' },
     { label: 'Manufaktur & Logam', value: 'manufaktur-logam' },
-    { label: 'Mesin & Teknik', value: 'mesin-teknik' },
-    { label: 'Material & Lansekap', value: 'material-lansekap' }
+    { label: 'Channel Pasar', value: 'channel-pasar' },
+    { label: 'Material & Lansekap', value: 'material-lansekap' },
+    { label: 'Properti', value: 'properti' }
   ]
 } as const
 
 export const businessUnits: BusinessUnit[] = [
   {
-    slug: 'futake-indonesia',
-    name: 'Futake Indonesia',
-    description: 'Merek konsumen dan industri nasional yang menyatukan produk grup mendukung proyek strategi nasional',
-    navDescription: 'Merek konsumen dan industri untuk proyek strategis nasional.',
+    slug: 'ayem-tentrem-logam',
+    name: 'Ayem Tentrem Logam',
+    description: 'Pusat pengecoran logam yang mengolah besi cor dan aluminium menjadi komponen dasar produksi.',
+    navDescription: 'Pusat pengecoran logam untuk komponen dasar produksi.',
     category: 'Manufaktur',
     group: 'manufaktur-logam',
+    image: 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=80',
+    cardImage: 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=80',
+    about: {
+      eyebrow: 'Tentang Unit',
+      title: 'Ayem Tentrem Logam menjadi titik awal produksi grup, mengolah logam cair menjadi komponen siap pakai.',
+      paragraphs: [
+        'Ayem Tentrem Logam menjalankan proses pengecoran logam — titik awal dari seluruh rangkaian produksi Kembar Futagroup. Di sinilah besi cor dan aluminium diolah dari bahan mentah menjadi komponen dasar yang siap diteruskan ke tahap produksi berikutnya.',
+        'Berbasis di Klaten, unit ini menjadi fondasi produksi bagi unit-unit lain dalam ekosistem, khususnya Kembar Teknika dan Zwilling yang menangani perakitan dan penyelesaian produk akhir. Setiap komponen yang dihasilkan disesuaikan dengan spesifikasi teknis yang dibutuhkan, baik untuk kebutuhan produk katalog maupun proyek custom.',
+        'Selain menopang produksi internal grup, Ayem Tentrem Logam juga menjadi mitra bagi unit trading dan proyek seperti Futago Karya, memastikan pasokan komponen logam tetap konsisten ketika kebutuhan proyek berskala besar datang secara bersamaan.'
+      ]
+    },
+    focus: {
+      title: 'Ruang kerja Ayem Tentrem Logam berpusat pada pengecoran logam dan penyediaan komponen dasar produksi.',
+      description: 'Setiap proses diarahkan untuk menghasilkan komponen logam yang presisi, konsisten, dan siap diteruskan ke tahap produksi berikutnya.',
+      items: [
+        {
+          title: 'Pengecoran besi cor',
+          description: 'Mengolah besi cor menjadi komponen dasar sesuai spesifikasi produk dan proyek.'
+        },
+        {
+          title: 'Pengecoran aluminium',
+          description: 'Produksi komponen aluminium untuk kebutuhan yang membutuhkan bobot lebih ringan.'
+        },
+        {
+          title: 'Komponen custom',
+          description: 'Penyesuaian bentuk, ukuran, dan spesifikasi sesuai kebutuhan unit produksi lain dalam grup.'
+        },
+        {
+          title: 'Quality check awal',
+          description: 'Pemeriksaan kualitas hasil cor sebelum diteruskan ke tahap perakitan dan finishing.'
+        }
+      ]
+    }
+  },
+  {
+    slug: 'kembar-teknika',
+    name: 'Kembar Teknika',
+    description: 'Unit perakitan mesin tepat guna untuk kebutuhan produksi industri dan UMKM.',
+    navDescription: 'Perakitan mesin tepat guna untuk industri dan UMKM.',
+    category: 'Manufaktur',
+    group: 'manufaktur-logam',
+    image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80',
+    cardImage: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80',
+    about: {
+      eyebrow: 'Tentang Unit',
+      title: 'Kembar Teknika merakit mesin tepat guna yang membuat produksi lebih efisien, dari skala UMKM hingga kebutuhan internal grup.',
+      paragraphs: [
+        'Kembar Teknika berfokus pada perakitan mesin dan peralatan produksi, dengan perhatian khusus pada kebutuhan usaha skala kecil dan menengah (UMKM). Unit ini hadir untuk menjembatani kebutuhan alat produksi yang efisien dengan kapasitas dan anggaran yang realistis bagi pelaku usaha di berbagai skala.',
+        'Proses kerja Kembar Teknika dimulai dari memahami kebutuhan spesifik pelanggan — jenis produksi, volume, hingga ruang kerja yang tersedia — sebelum merancang dan merakit mesin yang sesuai. Pendekatan ini membuat setiap mesin yang dihasilkan tidak sekadar fungsional, tetapi juga mudah dioperasikan oleh penggunanya.',
+        'Selain melayani kebutuhan UMKM, Kembar Teknika turut merancang dan merakit mesin custom untuk mendukung proses produksi di unit-unit lain dalam ekosistem Kembar Futagroup, menjadikannya bagian penting dari efisiensi produksi internal grup secara keseluruhan.'
+      ]
+    },
+    focus: {
+      title: 'Ruang kerja Kembar Teknika berpusat pada perakitan mesin tepat guna dan dukungan produksi UMKM.',
+      description: 'Setiap mesin dirakit dengan mempertimbangkan skala usaha, kebutuhan produksi, dan kemudahan pengoperasian di lapangan.',
+      items: [
+        {
+          title: 'Perakitan mesin tepat guna',
+          description: 'Merakit mesin produksi yang sesuai kebutuhan usaha skala kecil-menengah.'
+        },
+        {
+          title: 'Rekayasa mesin custom',
+          description: 'Merancang mesin sesuai spesifikasi khusus untuk kebutuhan proyek atau unit internal.'
+        },
+        {
+          title: 'Dukungan UMKM',
+          description: 'Menyediakan alat produksi yang terjangkau dan mudah dioperasikan pelaku usaha kecil.'
+        },
+        {
+          title: 'Kolaborasi produksi grup',
+          description: 'Mendukung kebutuhan mesin produksi untuk unit manufaktur lain dalam ekosistem.'
+        }
+      ]
+    }
+  },
+  {
+    slug: 'zwilling',
+    name: 'Zwilling',
+    description: 'Unit assembly yang menyelesaikan tahap akhir produksi sebelum produk didistribusikan.',
+    navDescription: 'Assembly akhir dan quality control sebelum distribusi.',
+    category: 'Manufaktur',
+    group: 'manufaktur-logam',
+    image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80',
+    cardImage: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80',
+    about: {
+      eyebrow: 'Tentang Unit',
+      title: 'Zwilling menjadi titik penyelesaian akhir sebelum produk grup siap didistribusikan.',
+      paragraphs: [
+        'Zwilling menjalankan proses assembly (perakitan akhir) yang melengkapi rangkaian produksi dari unit-unit manufaktur lain dalam grup. Komponen yang telah dicor oleh Ayem Tentrem Logam dan dirakit sebagian oleh Kembar Teknika, disatukan dan diselesaikan di sini menjadi produk jadi yang siap digunakan atau didistribusikan.',
+        'Posisinya di ujung rantai produksi menjadikan Zwilling titik kontrol kualitas terakhir sebelum produk sampai ke tangan unit trading seperti Futago Karya dan Futake. Setiap produk yang melewati tahap ini diperiksa secara menyeluruh, mulai dari kekuatan sambungan, kerapian finishing, hingga kesesuaian dengan spesifikasi awal.',
+        'Dengan berada di titik pertemuan seluruh lini manufaktur grup, Zwilling juga berperan menjaga konsistensi kualitas antar-batch produksi, sehingga produk yang keluar dari ekosistem Kembar Futagroup memiliki standar yang sama meskipun berasal dari proses produksi yang berbeda-beda.'
+      ]
+    },
+    focus: {
+      title: 'Ruang kerja Zwilling berpusat pada perakitan akhir dan kontrol kualitas produk grup.',
+      description: 'Setiap produk melewati tahap perakitan akhir dan pemeriksaan kualitas sebelum dinyatakan siap didistribusikan.',
+      items: [
+        {
+          title: 'Perakitan akhir',
+          description: 'Menyatukan komponen dari berbagai unit manufaktur menjadi produk jadi.'
+        },
+        {
+          title: 'Quality control akhir',
+          description: 'Pemeriksaan kualitas menyeluruh sebelum produk diteruskan ke distribusi.'
+        },
+        {
+          title: 'Finishing produk',
+          description: 'Penyelesaian tampilan dan detail akhir produk sesuai standar grup.'
+        },
+        {
+          title: 'Persiapan distribusi',
+          description: 'Pengemasan dan penyiapan produk untuk diteruskan ke unit trading.'
+        }
+      ]
+    }
+  },
+  {
+    slug: 'futago-karya',
+    name: 'Futago Karya',
+    description: 'Menjalankan proyek kawasan dan trading produk industri ke klien korporat dan pemerintah.',
+    navDescription: 'Project management dan trading produk industri.',
+    category: 'Project & Trading',
+    group: 'channel-pasar',
+    image: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=900&q=80',
+    cardImage: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=900&q=80',
+    about: {
+      eyebrow: 'Tentang Unit',
+      title: 'Futago Karya menerjemahkan kapasitas produksi grup menjadi proyek kawasan dan infrastruktur yang nyata.',
+      paragraphs: [
+        'Futago Karya menjadi kanal yang menghubungkan hasil produksi manufaktur grup dengan pasar proyek berskala besar — mulai dari proyek kawasan, utilitas publik, lansekap, hingga infrastruktur. Unit ini menangani sisi project management sekaligus trading, memastikan produk-produk dari Ayem Tentrem Logam, Kembar Teknika, dan Zwilling sampai ke klien dalam bentuk solusi proyek yang utuh.',
+        'Dalam menjalankan setiap proyek, Futago Karya terlibat sejak tahap perencanaan kebutuhan, koordinasi dengan unit produksi, hingga pengawalan proses hingga serah terima. Pendekatan ini memungkinkan klien mendapatkan solusi yang terintegrasi, alih-alih sekadar membeli produk secara terpisah.',
+        'Sebagai unit yang berhadapan langsung dengan klien korporat maupun instansi pemerintah, Futago Karya berperan penting dalam menerjemahkan kapasitas produksi grup menjadi proyek nyata di lapangan — menjembatani skala produksi manufaktur dengan kebutuhan proyek yang seringkali memiliki tenggat dan spesifikasi ketat.'
+      ]
+    },
+    focus: {
+      title: 'Ruang kerja Futago Karya berpusat pada manajemen proyek dan trading produk industri berskala besar.',
+      description: 'Setiap proyek dikelola dari perencanaan hingga eksekusi, memastikan kebutuhan klien terhubung dengan kapasitas produksi grup.',
+      items: [
+        {
+          title: 'Manajemen proyek kawasan',
+          description: 'Mengelola proyek infrastruktur dan kawasan dari perencanaan hingga serah terima.'
+        },
+        {
+          title: 'Trading produk industri',
+          description: 'Mendistribusikan produk grup ke klien korporat dan pemerintah.'
+        },
+        {
+          title: 'Koordinasi produksi',
+          description: 'Menghubungkan kebutuhan proyek dengan kapasitas unit manufaktur grup.'
+        },
+        {
+          title: 'Solusi utilitas & lansekap',
+          description: 'Menyediakan produk utilitas dan elemen lansekap untuk proyek berskala besar.'
+        }
+      ]
+    }
+  },
+  {
+    slug: 'futake',
+    name: 'Futake',
+    description: 'Kanal retail dan trading yang menghubungkan produk grup dengan pasar nasional.',
+    navDescription: 'Kanal retail dan trading untuk pasar nasional.',
+    category: 'Retail & Trading',
+    group: 'channel-pasar',
     image: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=900&q=80',
     cardImage: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=900&q=80',
     about: {
       eyebrow: 'Tentang Unit',
-      title: 'Futake Indonesia menjadi wajah produk manufaktur grup untuk kebutuhan proyek, kawasan, dan ruang publik.',
+      title: 'Futake menjadi kanal utama yang menghubungkan produk grup dengan pasar ritel dan proyek di seluruh Indonesia.',
       paragraphs: [
-        'Unit ini menghubungkan kemampuan produksi internal Kembar Futa Group dengan kebutuhan pasar yang membutuhkan produk siap pakai, rapi secara desain, dan konsisten secara kualitas.',
-        'Futake Indonesia bekerja sebagai kanal brand, katalog produk, dan distribusi sehingga output dari lini pengecoran, fabrikasi, serta finishing dapat menjangkau proyek pemerintah, swasta, dan konsumen profesional.'
+        'Futake menghubungkan kemampuan produksi internal Kembar Futagroup dengan kebutuhan pasar yang menuntut produk siap pakai, rapi secara desain, dan konsisten secara kualitas. Unit ini menjalankan fungsi retail dan trading, menjadi jembatan antara hasil produksi grup dengan pasar yang lebih luas.',
+        'Futake bekerja sebagai kanal brand, katalog produk, dan distribusi, sehingga output dari lini pengecoran, fabrikasi, serta finishing dapat menjangkau proyek pemerintah, swasta, dan konsumen profesional. Melalui jaringan kantor cabang penjualan di berbagai kota besar di Indonesia, Futake memastikan produk grup dapat diakses oleh pelanggan di berbagai wilayah, bukan hanya di sekitar basis produksi di Klaten.',
+        'Peran ini menjadikan Futake ujung tombak distribusi grup ke konsumen akhir dan mitra bisnis di tingkat nasional, sekaligus menjadi titik umpan balik pasar yang membantu unit produksi memahami kebutuhan yang terus berkembang di lapangan.'
       ]
     },
     focus: {
-      title: 'Ruang kerja Futake Indonesia berpusat pada produk utilitas dan elemen ruang publik siap deploy.',
+      title: 'Ruang kerja Futake berpusat pada produk utilitas dan elemen ruang publik siap deploy.',
       description: 'Setiap pekerjaan diarahkan agar produk mudah dipilih, mudah disesuaikan, dan siap masuk ke kebutuhan proyek berskala kecil hingga besar.',
       items: [
         {
@@ -87,241 +255,42 @@ export const businessUnits: BusinessUnit[] = [
     }
   },
   {
-    slug: 'kembar-teknika',
-    name: 'Kembar Teknika',
-    description: 'Unit teknik yang merancang mesin, komponen custom, dan solusi produksi untuk kebutuhan industri.',
-    navDescription: 'Perancangan mesin dan solusi produksi untuk industri.',
-    category: 'Manufaktur',
-    group: 'mesin-teknik',
-    image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80',
-    cardImage: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80',
-    about: {
-      eyebrow: 'Tentang Unit',
-      title: 'Kembar Teknika fokus pada rekayasa mesin, komponen custom, dan solusi produksi untuk kebutuhan industri.',
-      paragraphs: [
-        'Unit ini menjadi ruang engineering di dalam ekosistem grup. Pekerjaannya dimulai dari memahami masalah produksi, menerjemahkannya menjadi rancangan teknis, lalu mewujudkannya melalui proses fabrikasi dan perakitan.',
-        'Kembar Teknika mendukung kebutuhan internal grup sekaligus melayani kebutuhan eksternal yang memerlukan mesin tepat guna, komponen industri, serta modifikasi alat produksi.'
-      ]
-    },
-    focus: {
-      title: 'Lingkup pekerjaan Kembar Teknika mencakup desain teknis sampai pengerjaan mesin siap pakai.',
-      description: 'Pendekatannya praktis: mesin harus menyelesaikan masalah kerja, mudah dioperasikan, dan dapat dirawat oleh pengguna.',
-      items: [
-        {
-          title: 'Perancangan mesin',
-          description: 'Pengembangan konsep, layout, mekanisme kerja, dan kebutuhan teknis berdasarkan proses produksi.'
-        },
-        {
-          title: 'Fabrikasi dan perakitan',
-          description: 'Pengerjaan rangka, komponen, sistem penggerak, serta integrasi mesin sampai siap diuji.'
-        },
-        {
-          title: 'Komponen custom',
-          description: 'Pembuatan part khusus untuk lini produksi, alat bantu kerja, jig, fixture, dan kebutuhan teknis lainnya.'
-        },
-        {
-          title: 'Optimasi proses',
-          description: 'Modifikasi mesin atau alur kerja agar produksi lebih efisien, stabil, dan sesuai kapasitas target.'
-        }
-      ]
-    }
-  },
-  {
-    slug: 'zwilling',
-    name: 'Zwilling',
-    description: 'Brand produk industri dan lansekap yang menghadirkan elemen ruang publik siap pakai.',
-    navDescription: 'Produk industri dan lansekap siap pakai untuk ruang publik.',
-    category: 'Manufaktur',
-    group: 'material-lansekap',
-    image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80',
-    cardImage: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80',
-    about: {
-      eyebrow: 'Tentang Unit',
-      title: 'Zwilling menghadirkan produk industri dan lansekap untuk ruang luar yang fungsional, kuat, dan siap digunakan.',
-      paragraphs: [
-        'Unit ini berperan sebagai pengembang lini produk yang dekat dengan kebutuhan kawasan, taman, pedestrian, dan ruang publik. Fokusnya adalah menghasilkan elemen luar ruang yang memiliki fungsi jelas sekaligus tampilan yang layak untuk lingkungan modern.',
-        'Dengan dukungan ekosistem produksi grup, Zwilling dapat bergerak dari produk katalog hingga kebutuhan custom untuk proyek dengan karakter desain tertentu.'
-      ]
-    },
-    focus: {
-      title: 'Zwilling bekerja pada pengembangan produk outdoor yang menggabungkan material, bentuk, dan fungsi.',
-      description: 'Setiap produk diarahkan agar tahan penggunaan luar ruang, mudah dipasang, dan tetap relevan secara visual.',
-      items: [
-        {
-          title: 'Elemen lansekap',
-          description: 'Produk pendukung taman, pedestrian, area duduk, wayfinding, dan kebutuhan ruang komunal.'
-        },
-        {
-          title: 'Produk berbasis logam',
-          description: 'Pemanfaatan komponen cor, plat, pipa, dan struktur logam untuk produk ruang luar.'
-        },
-        {
-          title: 'Finishing outdoor',
-          description: 'Pengembangan warna, tekstur, dan perlindungan permukaan untuk penggunaan luar ruang.'
-        },
-        {
-          title: 'Produk siap proyek',
-          description: 'Penyediaan lini produk yang dapat dipilih, disesuaikan, dan diproduksi sesuai kebutuhan proyek.'
-        }
-      ]
-    }
-  },
-  {
-    slug: 'ayam-tentrem-logam',
-    name: 'Ayam Tentrem Logam',
-    description: 'Pusat pengolahan logam dengan pengalaman panjang dalam pengecoran dan fabrikasi.',
-    navDescription: 'Pengecoran dan fabrikasi logam berpengalaman panjang.',
-    category: 'Manufaktur',
-    group: 'manufaktur-logam',
-    image: 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=80',
-    cardImage: 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=80',
-    about: {
-      eyebrow: 'Tentang Unit',
-      title: 'Ayam Tentrem Logam adalah basis pengolahan logam yang menopang kemampuan pengecoran dan fabrikasi grup.',
-      paragraphs: [
-        'Unit ini membawa pengalaman panjang dalam pengerjaan logam, terutama untuk kebutuhan produk cor, komponen utilitas, dan elemen teknis yang membutuhkan kekuatan material.',
-        'Sebagai salah satu akar kapabilitas Kembar Futa Group, Ayam Tentrem Logam menjadi penghubung antara kebutuhan desain produk dan proses produksi berbasis logam.'
-      ]
-    },
-    focus: {
-      title: 'Lingkup utama Ayam Tentrem Logam berada di proses foundry, fabrikasi, dan finishing komponen logam.',
-      description: 'Pekerjaan disusun untuk menjaga ketepatan bentuk, kekuatan material, dan konsistensi hasil akhir.',
-      items: [
-        {
-          title: 'Pengecoran logam',
-          description: 'Produksi komponen besi cor dan aluminium untuk kebutuhan utilitas, mesin, dan elemen ruang publik.'
-        },
-        {
-          title: 'Pola dan cetakan',
-          description: 'Pembuatan pola, cetakan, serta penyesuaian dimensi agar produk sesuai kebutuhan teknis.'
-        },
-        {
-          title: 'Fabrikasi lanjutan',
-          description: 'Pemotongan, penyambungan, penghalusan, dan pengerjaan struktur pendukung setelah proses cor.'
-        },
-        {
-          title: 'Kontrol kualitas',
-          description: 'Pemeriksaan bentuk, permukaan, kekuatan, dan kesiapan produk sebelum masuk proses finishing atau pengiriman.'
-        }
-      ]
-    }
-  },
-  {
-    slug: 'futago-karya',
-    name: 'Futago Karya',
-    description: 'Mendukung pengerjaan proyek kawasan melalui produk utilitas, landscape, dan infrastruktur.',
-    navDescription: 'Produk utilitas, lansekap, dan infrastruktur kawasan.',
-    category: 'Manufaktur',
-    group: 'material-lansekap',
-    image: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=900&q=80',
-    cardImage: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=900&q=80',
-    about: {
-      eyebrow: 'Tentang Unit',
-      title: 'Futago Karya mendukung pengerjaan proyek kawasan melalui produk utilitas, lansekap, dan infrastruktur.',
-      paragraphs: [
-        'Unit ini bergerak dekat dengan kebutuhan proyek yang membutuhkan pasokan produk, penyesuaian spesifikasi, serta koordinasi antar lini pekerjaan.',
-        'Futago Karya menjembatani kemampuan produksi grup dengan kebutuhan lapangan, mulai dari elemen drainase, pedestrian, utilitas kawasan, hingga produk pendukung ruang luar.'
-      ]
-    },
-    focus: {
-      title: 'Fokus Futago Karya adalah memastikan kebutuhan produk proyek dapat dirancang, diproduksi, dan dipenuhi secara terarah.',
-      description: 'Pekerjaannya menuntut koordinasi antara spesifikasi teknis, jadwal produksi, dan kebutuhan implementasi di lapangan.',
-      items: [
-        {
-          title: 'Produk utilitas kawasan',
-          description: 'Grating, manhole cover, bollard, street furniture, dan elemen pendukung infrastruktur kawasan.'
-        },
-        {
-          title: 'Lansekap dan pedestrian',
-          description: 'Produk pendukung taman, trotoar, ruang komunal, dan koridor publik.'
-        },
-        {
-          title: 'Pemenuhan spesifikasi proyek',
-          description: 'Penyesuaian material, ukuran, desain, dan finishing mengikuti kebutuhan gambar kerja atau dokumen teknis.'
-        },
-        {
-          title: 'Koordinasi supply',
-          description: 'Pengaturan prioritas produksi, pengiriman, dan kesiapan produk untuk kebutuhan pelaksanaan proyek.'
-        }
-      ]
-    }
-  },
-  {
-    slug: 'tvilling',
-    name: 'Tvilling',
-    description: 'Menghubungkan kebutuhan desain, material, dan produksi untuk produk ruang luar yang presisi.',
-    navDescription: 'Desain dan produksi presisi untuk produk ruang luar.',
-    category: 'Manufaktur',
-    group: 'material-lansekap',
-    image: 'https://images.unsplash.com/photo-1522748906645-95d8adfd52c7?auto=format&fit=crop&w=900&q=80',
-    cardImage: 'https://images.unsplash.com/photo-1522748906645-95d8adfd52c7?auto=format&fit=crop&w=900&q=80',
-    about: {
-      eyebrow: 'Tentang Unit',
-      title: 'Tvilling menghubungkan desain, material, dan produksi untuk produk ruang luar yang presisi.',
-      paragraphs: [
-        'Unit ini berangkat dari kebutuhan produk outdoor yang tidak hanya kuat, tetapi juga membutuhkan proporsi, detail, dan pengalaman visual yang baik.',
-        'Tvilling bekerja di antara kebutuhan desainer, arsitek, pengembang kawasan, dan tim produksi untuk menerjemahkan ide menjadi produk yang realistis dibuat.'
-      ]
-    },
-    focus: {
-      title: 'Lingkup Tvilling berada pada pengembangan produk, detail desain, dan produksi elemen ruang luar.',
-      description: 'Fokusnya adalah menjaga agar bentuk, fungsi, material, dan proses produksi bertemu dalam satu solusi yang layak dipakai.',
-      items: [
-        {
-          title: 'Pengembangan desain',
-          description: 'Penyusunan konsep bentuk, proporsi, dan detail produk berdasarkan kebutuhan ruang atau identitas proyek.'
-        },
-        {
-          title: 'Material dan konstruksi',
-          description: 'Pemilihan kombinasi logam, beton, batu, kayu, atau finishing yang sesuai penggunaan outdoor.'
-        },
-        {
-          title: 'Prototipe dan penyesuaian',
-          description: 'Pembuatan contoh, revisi detail, dan pengujian praktis sebelum produksi lebih lanjut.'
-        },
-        {
-          title: 'Produksi presisi',
-          description: 'Koordinasi pengerjaan agar dimensi, sambungan, permukaan, dan hasil akhir sesuai rancangan.'
-        }
-      ]
-    }
-  },
-  {
     slug: 'futastone',
     name: 'Futastone',
     description: 'Mengolah material batu alam dan produk cetak beton untuk kebutuhan lansekap dan konstruksi.',
-    navDescription: 'Material batu alam dan produk cetak beton untuk lansekap.',
-    category: 'Manufaktur',
+    navDescription: 'Material batu alam dan precast untuk lansekap.',
+    category: 'Retail & Project',
     group: 'material-lansekap',
     image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=900&q=80',
     cardImage: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=900&q=80',
     about: {
       eyebrow: 'Tentang Unit',
-      title: 'Futastone mengolah material batu alam dan produk cetak untuk kebutuhan lansekap, arsitektur, dan konstruksi.',
+      title: 'Futastone menyediakan material batu dan precast yang menopang proyek lansekap dan konstruksi grup.',
       paragraphs: [
-        'Unit ini memperluas kemampuan grup dari logam ke material hardscape. Produk yang dikerjakan mendukung lantai, dinding, elemen taman, area publik, dan kebutuhan finishing kawasan.',
-        'Futastone mengutamakan pengolahan material yang rapi, konsisten, dan mudah diaplikasikan pada proyek yang membutuhkan karakter natural maupun modern.'
+        'Futastone menangani pengolahan material batu — baik batu alam maupun produk cetak beton (precast) — yang menjadi bahan penting dalam proyek lansekap dan konstruksi. Unit ini menggabungkan sisi produksi/retail dengan keterlibatan langsung dalam proyek, sehingga dapat menyesuaikan produk dengan kebutuhan spesifik setiap proyek yang ditangani.',
+        'Dari sisi retail, Futastone melayani kebutuhan material dalam skala kecil hingga menengah. Sementara dari sisi proyek, unit ini terlibat lebih jauh dalam perencanaan material untuk kebutuhan konstruksi dan penataan ruang publik berskala besar, termasuk penyesuaian bentuk, tekstur, dan dimensi sesuai desain kawasan.',
+        'Material dari Futastone banyak digunakan untuk mendukung proyek kawasan yang dijalankan bersama Futago Karya, khususnya untuk elemen ruang publik dan infrastruktur berbasis batu dan beton — menjadikan unit ini bagian penting dari rantai material grup untuk proyek-proyek berskala kawasan.'
       ]
     },
     focus: {
-      title: 'Fokus Futastone berada pada material hardscape yang siap masuk ke pekerjaan lansekap dan arsitektural.',
-      description: 'Setiap produk diarahkan agar kuat secara fungsi, stabil secara dimensi, dan punya kualitas permukaan yang layak tampil.',
+      title: 'Ruang kerja Futastone berpusat pada material batu dan precast untuk kebutuhan lansekap dan konstruksi.',
+      description: 'Setiap material disiapkan agar sesuai kebutuhan struktural maupun estetika proyek, dari skala retail hingga proyek kawasan.',
       items: [
         {
-          title: 'Batu alam',
-          description: 'Pemotongan, pemilahan, dan pengolahan batu untuk lantai, dinding, taman, dan elemen dekoratif.'
+          title: 'Pengolahan batu alam',
+          description: 'Produksi material batu untuk kebutuhan lansekap dan elemen bangunan.'
         },
         {
-          title: 'Produk cetak',
-          description: 'Pengerjaan produk berbasis beton, terrazzo, atau material cetak untuk kebutuhan lansekap dan konstruksi.'
+          title: 'Produksi precast',
+          description: 'Pembuatan produk cetak beton sesuai spesifikasi proyek.'
         },
         {
-          title: 'Finishing permukaan',
-          description: 'Pengaturan tekstur, warna, pola, dan treatment permukaan sesuai kebutuhan desain.'
+          title: 'Material proyek kawasan',
+          description: 'Menyediakan material untuk mendukung proyek yang dijalankan Futago Karya.'
         },
         {
-          title: 'Supply proyek',
-          description: 'Pemenuhan material hardscape untuk kawasan, taman, ruang publik, properti, dan proyek komersial.'
+          title: 'Retail material',
+          description: 'Penjualan material batu dan precast untuk kebutuhan retail dan proyek kecil.'
         }
       ]
     }
@@ -329,39 +298,81 @@ export const businessUnits: BusinessUnit[] = [
   {
     slug: 'futafarm',
     name: 'Futafarm',
-    description: 'Unit agribisnis grup yang mengelola produksi dan distribusi hasil pertanian serta peternakan.',
-    navDescription: 'Produksi dan distribusi hasil pertanian serta peternakan.',
-    category: 'Agribisnis',
-    group: 'agribisnis',
+    description: 'Mengelola pembibitan tanaman dan pengerjaan lansekap untuk mendukung penghijauan kota dan kawasan.',
+    navDescription: 'Pembibitan tanaman dan pengerjaan lansekap.',
+    category: 'Retail & Project',
+    group: 'material-lansekap',
     image: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=900&q=80',
     cardImage: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=900&q=80',
     about: {
       eyebrow: 'Tentang Unit',
-      title: 'Futafarm menjadi lini agribisnis grup yang mengelola produksi, pengolahan, dan distribusi hasil pertanian serta peternakan.',
+      title: 'Futafarm menghadirkan elemen hijau yang melengkapi proyek lansekap dan penghijauan kota.',
       paragraphs: [
-        'Unit ini memperluas ekosistem Kembar Futa Group ke sektor pangan dan agribisnis. Fokusnya adalah membangun proses yang lebih tertata dari hulu produksi sampai penyaluran produk.',
-        'Futafarm juga membuka ruang kolaborasi dengan lingkungan sekitar melalui pengelolaan komoditas, pemanfaatan sumber daya, dan pengembangan rantai pasok lokal.'
+        'Futafarm menjalankan fungsi pembibitan (nursery) dan pengerjaan lansekap, melengkapi ekosistem material & lansekap Kembar Futagroup. Unit ini menyediakan tanaman dan elemen hijau yang dibutuhkan dalam proyek penataan ruang publik, taman kota, dan kawasan.',
+        'Proses kerja Futafarm dimulai dari pembibitan dan perawatan tanaman hingga siap ditanam, kemudian dilanjutkan dengan perencanaan tata letak dan eksekusi penghijauan di lokasi proyek. Pendekatan ini memungkinkan unit untuk terlibat dari hulu ke hilir dalam setiap kebutuhan elemen hijau.',
+        'Futafarm bekerja beriringan dengan Futastone yang menangani sisi material keras (batu dan precast). Kombinasi keduanya memungkinkan grup menawarkan solusi lansekap yang lebih menyeluruh — dari elemen hijau hingga elemen struktural — dalam satu proyek yang sama, tanpa perlu melibatkan vendor terpisah.'
       ]
     },
     focus: {
-      title: 'Lingkup Futafarm mencakup produksi agribisnis, pengelolaan komoditas, dan distribusi hasil.',
-      description: 'Kegiatan unit ini diarahkan untuk menjaga kesinambungan pasokan, kualitas hasil, dan hubungan yang baik dengan pasar maupun mitra lokal.',
+      title: 'Ruang kerja Futafarm berpusat pada pembibitan dan penghijauan untuk kebutuhan lansekap kota.',
+      description: 'Setiap tanaman dan elemen hijau disiapkan agar sesuai kebutuhan penataan ruang publik, taman kota, hingga kawasan.',
       items: [
         {
-          title: 'Produksi pertanian',
-          description: 'Pengelolaan budidaya, panen, dan penyiapan hasil pertanian sesuai kebutuhan pasar.'
+          title: 'Pembibitan tanaman',
+          description: 'Produksi bibit tanaman untuk kebutuhan penghijauan dan lansekap.'
         },
         {
-          title: 'Peternakan dan hasil turunan',
-          description: 'Pengembangan aktivitas peternakan, pengelolaan hasil, dan pemanfaatan sumber daya pendukung.'
+          title: 'Pengerjaan lansekap',
+          description: 'Perencanaan dan eksekusi penataan ruang hijau di proyek kawasan.'
         },
         {
-          title: 'Distribusi hasil',
-          description: 'Penyaluran produk agribisnis ke jaringan pasar, mitra, dan kebutuhan internal ekosistem.'
+          title: 'Penghijauan kota',
+          description: 'Mendukung proyek taman kota dan ruang publik berbasis vegetasi.'
         },
         {
-          title: 'Kolaborasi lokal',
-          description: 'Penguatan rantai pasok bersama petani, peternak, dan mitra sekitar untuk dampak yang berkelanjutan.'
+          title: 'Retail tanaman',
+          description: 'Penjualan tanaman dan elemen hijau untuk kebutuhan retail dan proyek kecil.'
+        }
+      ]
+    }
+  },
+  {
+    slug: 'futago-land',
+    name: 'Futago Land',
+    description: 'Mengembangkan properti dan kawasan, dari interior-eksterior hingga kerja sama lahan dan pembangunan.',
+    navDescription: 'Pengembangan properti, kawasan, dan kerja sama lahan.',
+    category: 'Developer & Property',
+    group: 'properti',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80',
+    cardImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80',
+    about: {
+      eyebrow: 'Tentang Unit',
+      title: 'Futago Land mengelola siklus properti grup secara menyeluruh, dari penataan ruang hingga pengembangan kawasan.',
+      paragraphs: [
+        'Futago Land menjalankan tiga lini bisnis yang saling melengkapi dalam bidang properti: penataan interior & eksterior, jual-beli & sewa properti, serta pengembangan kawasan (developer). Sebagai unit yang menaungi sisi properti dari ekosistem Kembar Futagroup, Futago Land memungkinkan grup untuk terlibat dalam siklus properti secara menyeluruh.',
+        'Pada lini interior & eksterior, Futago Land menangani kebutuhan penataan ruang, baik untuk hunian, komersial, maupun kawasan proyek. Pada lini jual-beli & sewa, unit ini memfasilitasi transaksi properti bagi pelanggan yang membutuhkan unit siap huni atau siap sewa.',
+        'Pada lini developer, Futago Land membuka dua skema kerja: pembangunan berdasarkan pesanan langsung dari klien, dan kerja sama lahan — baik menggunakan lahan milik sendiri maupun lahan milik pihak lain yang diajak bekerja sama. Fleksibilitas skema ini memungkinkan Futago Land menjangkau kebutuhan properti dari berbagai jenis klien, tanpa terbatas pada satu model bisnis saja.'
+      ]
+    },
+    focus: {
+      title: 'Ruang kerja Futago Land berpusat pada tiga lini properti yang saling melengkapi.',
+      description: 'Setiap lini bisnis dijalankan untuk melengkapi kebutuhan properti pelanggan, dari penataan ruang hingga kepemilikan baru.',
+      items: [
+        {
+          title: 'Interior & Eksterior',
+          description: 'Jasa desain dan pengerjaan ruang, baik dalam maupun luar bangunan.'
+        },
+        {
+          title: 'Jual Beli & Sewa',
+          description: 'Transaksi dan pengelolaan properti untuk kebutuhan pelanggan.'
+        },
+        {
+          title: 'Developer (Pesan Bangunan)',
+          description: 'Pembangunan properti berdasarkan pesanan langsung dari klien.'
+        },
+        {
+          title: 'Developer (Kerja Sama Lahan)',
+          description: 'Pengembangan kawasan melalui kerja sama lahan, baik milik sendiri maupun pihak lain.'
         }
       ]
     }

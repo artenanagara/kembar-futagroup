@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { careerBenefits, careersHero, careersIntro, careersListImage, jobListings } from '~/data/careers'
 
-const title = 'Karir - Kembar Futa Group'
+const title = 'Karir - Kembar Futagroup'
 const description = careersHero.description
 
 useSeoMeta({

@@ -11,6 +11,6 @@ const logoSrc = computed(() => props.variant === 'white' ? '/logo-white.png' : '
 <template>
   <img
     :src="logoSrc"
-    alt="Kembar Futa Group"
+    alt="Kembar Futagroup"
   >
 </template>

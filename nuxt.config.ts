@@ -60,7 +60,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
 
   site: {
-    name: 'Kembar Futa Group'
+    name: 'Kembar Futagroup'
   },
 
   routeRules: {

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { productSolutionPage, productSolutions } from '~/data/product-solutions'
 
-const title = 'Produk & Solusi - Kembar Futa Group'
-const description = 'Daftar produk dan solusi Kembar Futa Group untuk kebutuhan manufaktur, proyek, lansekap, dan infrastruktur.'
+const title = 'Produk & Solusi - Kembar Futagroup'
+const description = 'Daftar produk dan solusi Kembar Futagroup untuk kebutuhan manufaktur, proyek, lansekap, dan infrastruktur.'
 const activeIndustryIndex = ref(0)
 
 const activeIndustry = computed(() => productSolutionPage.industries[activeIndustryIndex.value] ?? productSolutionPage.industries[0])
@@ -23,7 +23,7 @@ useSeoMeta({
       :title="productSolutionPage.hero.title"
       :description="productSolutionPage.hero.description"
       :image="productSolutionPage.hero.image"
-      image-alt="Produk dan solusi Kembar Futa Group"
+      image-alt="Produk dan solusi Kembar Futagroup"
       :breadcrumbs="productSolutionPage.hero.breadcrumbs.map((crumb, index) => ({ label: crumb, to: index === 0 ? '/' : undefined }))"
       height-class="h-125"
     />
@@ -68,7 +68,7 @@ useSeoMeta({
       >
         <img
           :src="productSolutionPage.capabilityBand.image"
-          alt="Kapabilitas produk dan solusi Kembar Futa Group"
+          alt="Kapabilitas produk dan solusi Kembar Futagroup"
           class="absolute inset-0 size-full object-cover"
         >
         <div class="absolute inset-0 bg-black/55" />

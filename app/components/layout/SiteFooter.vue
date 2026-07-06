@@ -41,7 +41,7 @@ withDefaults(defineProps<{
 
         <div class="flex flex-col items-start gap-7 lg:items-end">
           <p class="max-w-2xl text-left text-base font-medium leading-[1.55] text-black/68 lg:text-right">
-            Kembar Futago Group adalah ekosistem holding manufaktur berbasis Klaten yang menaungi berbagai lini bisnis di bidang logam, manufaktur, infrastruktur, lanskap, agribisnis, dan solusi industri.
+            Kembar Futago Group adalah ekosistem holding manufaktur berbasis Klaten yang menaungi berbagai lini bisnis di bidang logam, manufaktur, infrastruktur, lanskap, properti, dan solusi industri.
           </p>
           <div class="flex w-full flex-wrap justify-start gap-5 lg:justify-end 2xl:gap-7">
             <NuxtLink
@@ -63,7 +63,7 @@ withDefaults(defineProps<{
         <div>
           <address class="space-y-8 not-italic">
             <div>
-              <p class="text-lg font-bold leading-tight tracking-wide text-ink">
+              <p class="text-base font-bold leading-tight tracking-wide text-ink">
                 Kantor Pusat
               </p>
               <p class="mt-3 text-base font-medium leading-[1.45] text-black/68">
@@ -71,7 +71,7 @@ withDefaults(defineProps<{
               </p>
             </div>
             <div>
-              <p class="text-lg font-bold leading-tight tracking-wide text-ink">
+              <p class="text-base font-bold leading-tight tracking-wide text-ink">
                 Email
               </p>
               <p class="mt-3 text-base font-medium leading-[1.45] text-black/68">
@@ -79,7 +79,7 @@ withDefaults(defineProps<{
               </p>
             </div>
             <div>
-              <p class="text-lg font-bold leading-tight tracking-wide text-ink">
+              <p class="text-base font-bold leading-tight tracking-wide text-ink">
                 WhatsApp
               </p>
               <p class="mt-3 text-base font-medium leading-[1.45] text-black/68">
@@ -116,7 +116,7 @@ withDefaults(defineProps<{
       </div>
 
       <div
-        class="flex flex-col gap-5 pt-4 text-base font-medium leading-[1.4] text-black/70 sm:flex-row sm:items-center sm:justify-between lg:text-base"
+        class="flex flex-col gap-5 pt-4 text-base font-medium leading-[1.4] text-black/70 sm:flex-row sm:items-center sm:justify-between lg:text-sm"
         data-reveal-item
       >
         <p>© Copyright PT Kembar Futagrup (Persero) 2026. All Right Reserved.</p>

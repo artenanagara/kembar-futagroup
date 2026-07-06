@@ -1,7 +1,7 @@
 export const careersHero = {
   breadcrumbs: ['Beranda', 'Karir'],
   title: 'Karir',
-  description: 'Bangun kariermu bersama Kembar Futa Group dan jadi bagian dari ekosistem manufaktur yang terus tumbuh dari Klaten untuk Indonesia.',
+  description: 'Bangun kariermu bersama Kembar Futagroup dan jadi bagian dari ekosistem manufaktur yang terus tumbuh dari Klaten untuk Indonesia.',
   image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1800&q=85'
 }
 
@@ -9,12 +9,12 @@ export const careersIntro = {
   eyebrow: 'Mengapa Bergabung',
   title: 'Tumbuh bersama tim yang membangun industri dari akarnya.',
   paragraphs: [
-    'Kami percaya pertumbuhan perusahaan berjalan beriringan dengan pertumbuhan setiap orang di dalamnya. Di Kembar Futa Group, kamu belajar langsung dari proses produksi, engineering, hingga pengembangan bisnis di berbagai unit usaha grup.',
+    'Kami percaya pertumbuhan perusahaan berjalan beriringan dengan pertumbuhan setiap orang di dalamnya. Di Kembar Futagroup, kamu belajar langsung dari proses produksi, engineering, hingga pengembangan bisnis di berbagai unit usaha grup.',
     'Dari lantai produksi di Klaten hingga proyek berskala nasional, setiap peran punya kontribusi nyata terhadap industri dan pembangunan Indonesia.'
   ],
   image: {
     src: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1600&q=85',
-    alt: 'Tim engineering Kembar Futa Group berdiskusi'
+    alt: 'Tim engineering Kembar Futagroup berdiskusi'
   }
 }
 
@@ -165,5 +165,5 @@ export const jobListings: JobListing[] = [
 
 export const careersListImage = {
   src: 'https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=1200&q=85',
-  alt: 'Fasilitas produksi Kembar Futa Group'
+  alt: 'Fasilitas produksi Kembar Futagroup'
 }

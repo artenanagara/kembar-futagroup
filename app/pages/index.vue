@@ -40,11 +40,11 @@ const statsRef = ref<HTMLElement | null>(null)
 let aboutAnimationContext: { revert: () => void } | undefined
 
 const introWords = [
-  ['Kami', 'black'],
-  ['mengubah', 'black'],
-  ['logam', 'green'],
+  ['Dari', 'black'],
+  ['logam', 'black'],
   ['cair', 'green'],
-  ['menjadi', 'black'],
+  ['kami', 'green'],
+  ['menghasilkan', 'black'],
   ['produk', 'black'],
   ['yang', 'black'],
   ['dipakai', 'black'],
@@ -59,17 +59,21 @@ const introWords = [
   ['manhole,', 'black'],
   ['dan', 'black'],
   ['mesin', 'black'],
-  ['produksi', 'black'],
+  ['produksi.', 'black'],
+  ['Semuanya', 'black'],
   ['dirancang,', 'black'],
   ['dicor,', 'black'],
   ['dan', 'black'],
   ['difinishing', 'black'],
   ['di', 'black'],
   ['Klaten,', 'black'],
-  ['jantung', 'green'],
+  ['salah', 'black'],
+  ['satu', 'black'],
+  ['pusat', 'green'],
   ['industri', 'green'],
   ['cor', 'green'],
   ['logam', 'green'],
+  ['di', 'black'],
   ['Indonesia.', 'black']
 ]
 
@@ -186,7 +190,7 @@ onBeforeUnmount(() => {
         class="pointer-events-none absolute left-1/2 top-1/2 h-[calc(56.25vw+220px)] min-h-[calc(100%+220px)] w-[calc(177.78vh+420px)] min-w-[calc(100%+420px)] -translate-x-1/2 -translate-y-1/2 border-0 transition-opacity duration-700 ease-out"
         :class="isVideoReady ? 'opacity-100' : 'opacity-0'"
         src="https://www.youtube-nocookie.com/embed/6CeIASQz6rc?autoplay=1&mute=1&controls=0&loop=1&playlist=6CeIASQz6rc&playsinline=1&modestbranding=1&rel=0&iv_load_policy=3&fs=0&disablekb=1&cc_load_policy=0&showinfo=0&autohide=1"
-        title="Kembar Futa Group company profile video"
+        title="Kembar Futagroup company profile video"
         allow="autoplay; encrypted-media"
         referrerpolicy="strict-origin-when-cross-origin"
         aria-hidden="true"
@@ -220,10 +224,10 @@ onBeforeUnmount(() => {
             </div>
             <div class="space-y-8 text-base leading-relaxed text-white/90">
               <p>
-                Berawal dari keahlian teknik dan pengolahan logam di Klaten, Kembar Futa Group tumbuh menjadi ekosistem bisnis yang menaungi berbagai lini usaha.
+                Berawal dari keahlian pengecoran logam di Klaten, Kembar Futagroup tumbuh menjadi ekosistem industri yang menaungi lini manufaktur, lansekap, dan infrastruktur di seluruh Indonesia.
               </p>
               <NuxtLink
-                to="#tentang"
+                to="/tentang-kami/profil"
                 class="font-medium underline underline-offset-4"
               >
                 Pelajari Lebih Lanjut
@@ -343,9 +347,9 @@ onBeforeUnmount(() => {
           >
             <span
               v-if="activeExpertiseIndex === index"
-              class="grid min-h-0 flex-1 gap-8 md:grid-cols-[minmax(180px,296px)_1fr] md:items-start"
+              class="grid min-h-0 flex-1 gap-6 md:grid-cols-[13rem_minmax(0,1fr)] md:items-start xl:grid-cols-[15rem_minmax(0,1fr)] xl:gap-8"
             >
-              <span class="relative block aspect-square w-full max-w-74 overflow-hidden bg-neutral-300">
+              <span class="relative block size-44 shrink-0 overflow-hidden bg-neutral-300 sm:size-52 xl:size-60">
                 <img
                   :src="item.image"
                   :alt="item.title"
@@ -434,7 +438,7 @@ onBeforeUnmount(() => {
             Kemampuan Terintegrasi Kami
           </h2>
           <p class="mt-2 max-w-3xl text-base leading-relaxed text-white/70">
-            Kembar Futa Group menghubungkan pengalaman teknik, proses produksi, dan kontrol kualitas untuk menghadirkan solusi yang sesuai kebutuhan industri, proyek, dan bisnis.
+            Kembar Futagroup menghubungkan pengalaman teknik, proses produksi, dan kontrol kualitas untuk menghadirkan solusi yang sesuai kebutuhan industri, proyek, dan bisnis.
           </p>
         </div>
 
@@ -558,7 +562,7 @@ onBeforeUnmount(() => {
         <SectionsSectionHeader
           eyebrow="Berita & Insight"
           title="Cerita dan Perkembangan Grup"
-          description="Kembar Futa Group menghubungkan pengalaman teknik, proses produksi, dan kontrol kualitas untuk menghadirkan solusi yang sesuai kebutuhan industri, proyek, dan bisnis."
+          description="Kembar Futagroup menghubungkan pengalaman teknik, proses produksi, dan kontrol kualitas untuk menghadirkan solusi yang sesuai kebutuhan industri, proyek, dan bisnis."
           align="center"
           data-reveal-item
         />

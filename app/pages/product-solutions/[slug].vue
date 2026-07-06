@@ -12,7 +12,7 @@ if (!solution) {
   })
 }
 
-const title = `${solution.name} - Kembar Futa Group`
+const title = `${solution.name} - Kembar Futagroup`
 const description = solution.description
 
 useSeoMeta({

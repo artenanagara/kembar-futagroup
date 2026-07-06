@@ -27,19 +27,19 @@ export const expertiseItems = [
   {
     number: '02',
     title: 'Manufaktur',
-    description: 'Mengerjakan fabrikasi, machining, perakitan, dan finishing untuk produk custom.',
+    description: 'MMerancang dan merakit mesin serta peralatan produksi untuk kebutuhan industri dan UMKM.',
     image: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=900&q=85'
   },
   {
     number: '03',
     title: 'Lansekap',
-    description: 'Menghadirkan elemen ruang luar, taman, dan fasilitas publik yang fungsional.',
+    description: ' Menghadirkan elemen ruang publik dan penghijauan kota, dari material hingga instalasi.',
     image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85'
   },
   {
     number: '04',
     title: 'Infrastruktur',
-    description: 'Mendukung proyek kawasan, jalan, dan fasilitas umum melalui produk utilitas.',
+    description: 'Mendukung proyek kawasan dan infrastruktur publik melalui produk utilitas dan konstruksi.',
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85'
   }
 ]

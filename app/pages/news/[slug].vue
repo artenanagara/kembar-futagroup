@@ -12,7 +12,7 @@ if (!post) {
   })
 }
 
-const title = `${post.title} - Kembar Futa Group`
+const title = `${post.title} - Kembar Futagroup`
 const description = post.excerpt
 
 useSeoMeta({

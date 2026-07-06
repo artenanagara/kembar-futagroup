@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { newsHero, newsPosts } from '~/data/news'
 
-const title = 'Berita & Insight - Kembar Futa Group'
+const title = 'Berita & Insight - Kembar Futagroup'
 const description = newsHero.description
 
 useSeoMeta({

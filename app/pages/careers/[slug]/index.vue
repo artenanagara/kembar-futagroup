@@ -12,7 +12,7 @@ if (!job) {
   })
 }
 
-const title = `${job.title} - Karir Kembar Futa Group`
+const title = `${job.title} - Karir Kembar Futagroup`
 const description = job.description
 
 useSeoMeta({

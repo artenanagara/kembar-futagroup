@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { aboutHero, aboutIntro, aboutStorySlides, companyValues, visionMission } from '~/data/about'
 
-const title = 'Profil Perusahaan - Kembar Futa Group'
-const description = 'Profil Kembar Futa Group sebagai holding manufaktur dari Klaten yang menaungi unit usaha logam, permesinan, lansekap, dan infrastruktur.'
+const title = 'Profil Perusahaan - Kembar Futagroup'
+const description = 'Profil Kembar Futagroup sebagai holding manufaktur dari Klaten yang menaungi unit usaha logam, permesinan, lansekap, dan infrastruktur.'
 
 useSeoMeta({
   title,
