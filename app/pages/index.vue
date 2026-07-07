@@ -55,7 +55,7 @@ const introWords = [
   ['lampu,', 'black'],
   ['bangku', 'black'],
   ['taman,', 'black'],
-  ['tutup', 'black'],
+  ['cover', 'black'],
   ['manhole,', 'black'],
   ['dan', 'black'],
   ['mesin', 'black'],
@@ -254,7 +254,7 @@ onBeforeUnmount(() => {
         <div>
           <p
             ref="paragraphRef"
-            class="max-w-5xl text-3xl leading-[1.55] text-ink sm:text-4xl"
+            class="max-w-5xl text-xl leading-[1.55] text-ink sm:text-3xl"
           >
             <span
               v-for="([word, tone], index) in introWords"
@@ -317,12 +317,12 @@ onBeforeUnmount(() => {
             <p class="text-sm font-semibold uppercase leading-tight text-brand-orange">
               Ekosistem Kami
             </p>
-            <h2 class="mt-8 text-5xl font-normal leading-[1.05] tracking-normal sm:text-6xl lg:text-7xl xl:text-display-lg">
+            <h2 class="mt-8 text-5xl font-normal leading-[1.05] tracking-normal sm:text-7xl">
               Empat Bidang Keahlian
             </h2>
           </div>
 
-          <p class="max-w-3xl text-base font-medium leading-[1.75] text-white/55 lg:pb-2 lg:text-xl">
+          <p class="max-w-3xl text-base font-medium leading-[1.75] text-white/55 lg:pb-2 lg:text-lg">
             Dari pengolahan logam hingga kebutuhan proyek, setiap bidang bekerja saling mendukung dalam satu ekosistem industri.
           </p>
         </div>
@@ -398,10 +398,10 @@ onBeforeUnmount(() => {
           <p class="text-sm font-semibold uppercase leading-tight text-brand-green">
             Unit Usaha
           </p>
-          <h2 class="text-black text-6xl leading-tight pt-2">
+          <h2 class="text-black text-6xl leading-tight pt-2 sm:text-6xl">
             Satu Ekosistem Industri
           </h2>
-          <p class="text-black/70 text-base leading-relaxed pt-4">
+          <p class="text-black/70 text-base leading-relaxed pt-4 sm:text-lg">
             Berbagai peran dalam satu <br> ekosistem industri.
           </p>
         </div>
