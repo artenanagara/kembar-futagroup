@@ -9,7 +9,7 @@ useSeoMeta({
   description,
   ogTitle: title,
   ogDescription: description,
-  ogImage: '/images/og-image.jpg',
+  ogImage: '/images/og-image.webp',
   twitterCard: 'summary_large_image'
 })
 </script>
