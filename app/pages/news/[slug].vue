@@ -20,7 +20,7 @@ useSeoMeta({
   description,
   ogTitle: title,
   ogDescription: description,
-  ogImage: post.image,
+  ogImage: '/images/og-image.jpg',
   twitterCard: 'summary_large_image'
 })
 

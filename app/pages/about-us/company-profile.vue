@@ -9,7 +9,7 @@ useSeoMeta({
   description,
   ogTitle: title,
   ogDescription: description,
-  ogImage: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?auto=format&fit=crop&w=1600&q=85',
+  ogImage: '/images/og-image.jpg',
   twitterCard: 'summary_large_image'
 })
 

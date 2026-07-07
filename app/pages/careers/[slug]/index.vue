@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { careersListImage, jobListings } from '~/data/careers'
+import { jobListings } from '~/data/careers'
 
 const route = useRoute()
 const slug = String(route.params.slug ?? '')
@@ -20,7 +20,7 @@ useSeoMeta({
   description,
   ogTitle: title,
   ogDescription: description,
-  ogImage: careersListImage.src,
+  ogImage: '/images/og-image.jpg',
   twitterCard: 'summary_large_image'
 })
 </script>
