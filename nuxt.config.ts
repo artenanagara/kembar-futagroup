@@ -61,7 +61,8 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
 
   site: {
-    name: 'Kembar Futagroup'
+    name: 'Kembar Futagroup',
+    url: process.env.NUXT_PUBLIC_SITE_URL || 'https://kembarfutagroup.com'
   },
 
   routeRules: {
