@@ -55,7 +55,7 @@ export const navItems: NavItem[] = [
         description: 'Prinsip pendiri yang membentuk cara grup bekerja.'
       },
       {
-        label: 'Struktur',
+        label: 'Tim & Struktur Organisasi',
         to: '/tentang-kami/struktur',
         description: 'Peta ekosistem holding, kapabilitas, dan unit usaha.'
       },

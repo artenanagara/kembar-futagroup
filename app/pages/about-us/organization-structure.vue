@@ -73,8 +73,8 @@ useSeoMeta({
 
     <LayoutSiteFooter
       title="Kenali nilai yang membentuk grup ini."
-      primary-label="Value Owner"
-      primary-to="/tentang-kami/value-owner"
+      primary-label="Kepemimpinan"
+      primary-to="/tentang-kami/kepemimpinan"
     />
   </div>
 </template>

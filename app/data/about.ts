@@ -107,9 +107,9 @@ export const leadership = {
   title: 'Digerakkan oleh visi satu keluarga, dijalankan oleh satu ekosistem.',
   description: 'Kembar Futagroup didirikan dan dipimpin oleh Ir. H. Fikky Arif Ardianta, yang meletakkan fondasi awal usaha ini dari keahlian teknik dan pengolahan logam di Klaten. Di bawah kepemimpinannya, usaha yang semula berfokus pada satu bidang berkembang menjadi ekosistem yang menaungi berbagai unit usaha dengan peran saling melengkapi.',
   ctaLabel: 'Kenali Lebih Jauh',
-  ctaTo: '#',
-  // No dedicated leadership page or portrait photo confirmed yet — set this once available,
-  // the section already renders it in place of the placeholder.
+  ctaTo: '/tentang-kami/kepemimpinan',
+  // No portrait photo confirmed yet — set this once available, the section already
+  // renders it in place of the placeholder.
   portrait: null as { src: string, alt: string } | null
 }
 
@@ -147,50 +147,202 @@ export const trackRecord = {
   ]
 }
 
-export const valueOwnerHero = {
+export const leadershipHero = {
   breadcrumbs: [
     { label: 'Beranda', to: '/' },
     { label: 'Tentang Kami', to: '/tentang-kami/profil' },
-    { label: 'Value Owner' }
+    { label: 'Kepemimpinan' }
   ],
-  title: 'Value Owner',
-  image: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1800&q=85'
+  title: 'Kepemimpinan',
+  description: 'Prinsip kepemimpinan yang menjadi dasar cara Kembar Futagroup bekerja dan tumbuh.',
+  image: 'https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=1800&q=85'
 }
 
-export const valueOwnerFounder = {
-  eyebrow: 'Tentang Pendiri',
-  title: 'Sosok Dibalik Grup',
+export const leadershipStory = {
+  eyebrow: 'Sosok Dibalik Ekosistem',
+  title: 'Membangun dari daerah, menggerakkan banyak peran',
   paragraphs: [
-    'Ir. H. Fikky Arif Ardianta adalah sosok di belakang Kembar Futagroup. Ia seorang insinyur muda yang telah menempuh perjalanan panjang untuk membangun reputasi terbaiknya. Selain seorang pengusaha, ia juga memahami betul industri - baik secara teori maupun di lapangan.',
-    'Bagi sebagian orang, sebuah komponen cor hanyalah bagian kecil dari sebuah produk. Namun bagi Ir. Fikky, setiap detail adalah titik krusial yang menentukan keandalan keseluruhan. Satu celah kecil pada pengecoran bisa berarti kegagalan, dan kerugian besar dalam sebuah proyek.',
-    'Pemahaman itu tidak datang tiba-tiba. Sejak duduk di bangku sekolah, ia tumbuh di lingkungan usaha keluarga yang bergerak di bidang manufaktur. Ia menyaksikan langsung bagaimana kualitas produk menentukan reputasi, dan bagaimana ketahanan material menjadi faktor yang tidak bisa ditawar.'
+    'Ir. H. Fikky Arif Ardianta adalah pendiri Kembar Futagroup, sosok yang memiliki perhatian pada pengembangan industri, kewirausahaan, dan pemberdayaan. Dari akar daerah, ia membangun usaha dengan keyakinan bahwa industri dapat tumbuh kuat melalui proses, ketekunan, dan kerja nyata.',
+    'Dalam perjalanannya, Kembar Futagroup berkembang sebagai ekosistem industri yang menghubungkan logam, manufaktur, lansekap, infrastruktur, dan pengembangan kawasan. Setiap unit usaha tumbuh dengan peran berbeda, namun tetap diarahkan untuk saling melengkapi dalam satu rantai nilai.',
+    'Bagi Ir. H. Fikky Arif Ardianta, membangun usaha bukan hanya tentang memperbesar bisnis, tetapi juga tentang menumbuhkan orang, membuka ruang kesempatan, dan menghadirkan manfaat yang lebih luas bagi industri, masyarakat, dan pembangunan.'
+  ],
+  // No portrait photo confirmed by client yet — set `{ src, alt }` once available,
+  // the section already renders it in place of the placeholder.
+  portrait: null as { src: string, alt: string } | null
+}
+
+export const leadershipQuote = 'Usaha yang baik bukan hanya tumbuh besar, tetapi juga tumbuh bersama orang-orang di dalamnya dan memberi manfaat bagi lingkungan sekitarnya.'
+
+export const leadershipPrinciples = {
+  eyebrow: 'Nilai-Nilai Kepemimpinan',
+  title: 'Prinsip yang Menjadi Dasar',
+  items: [
+    {
+      title: 'Ketekunan',
+      description: 'Bertumbuh melalui proses, kerja nyata, dan konsistensi.'
+    },
+    {
+      title: 'Keberanian',
+      description: 'Berani memulai, mencoba, dan mengambil langkah dalam ketidakpastian.'
+    },
+    {
+      title: 'Tanggung Jawab',
+      description: 'Membangun usaha dengan kesadaran atas dampak bagi tim, pelanggan, dan masyarakat.'
+    },
+    {
+      title: 'Manfaat',
+      description: 'Mengarah pada pertumbuhan yang memberi nilai lebih luas.'
+    }
   ]
 }
 
-export const valueOwnerQuote = 'Krisis moneter 1998 menjadi fase paling berat. Usaha runtuh dan di tengah keterbatasan itulah tekadnya terbentuk. Ia memahami bahwa fondasi yang kuat bukan hanya berlaku pada bangunan, tetapi juga pada prinsip hidup dan bisnis.'
+export const leadershipJourney = {
+  eyebrow: 'Perjalanan Belajar',
+  title: 'Belajar dari Proses, Tumbuh dari Pengalaman',
+  items: [
+    {
+      title: 'Belajar dari Lapangan',
+      description: 'Memahami kebutuhan industri, pelanggan, dan masyarakat melalui pengalaman langsung.'
+    },
+    {
+      title: 'Menguatkan Cara Kerja',
+      description: 'Membangun proses yang lebih tertata, bertanggung jawab, dan berorientasi pada kualitas.'
+    },
+    {
+      title: 'Menumbuhkan Tim',
+      description: 'Mengembangkan orang-orang di dalam ekosistem usaha agar mampu mengambil peran.'
+    },
+    {
+      title: 'Memperluas Manfaat',
+      description: 'Mengarahkan pertumbuhan usaha agar memberi nilai bagi industri, masyarakat, dan pembangunan.'
+    }
+  ]
+}
 
-export const valueOwnerPrinciples = [
-  {
-    title: 'Pembelajar Seumur Hidup',
-    description: 'Selalu ada cara yang lebih baik; ia terus belajar untuk menemukannya.'
-  },
-  {
-    title: 'Ilmu di Atas Dagang',
-    description: 'Memahami material dan rekayasa, bukan sekadar menjual.'
-  },
-  {
-    title: 'Presisi yang Tak Ditawar',
-    description: 'Satu celah kecil pun bisa menentukan keandalan keseluruhan.'
-  },
-  {
-    title: 'Fondasi yang Kuat',
-    description: 'Berlaku pada bangunan, pada bisnis, dan pada prinsip hidup.'
-  },
-  {
-    title: 'Standar Global, Buatan Lokal',
-    description: 'Industri dalam negeri mampu setara bila dibangun dengan benar.'
-  }
-]
+export const companyValuesHero = {
+  breadcrumbs: [
+    { label: 'Beranda', to: '/' },
+    { label: 'Tentang Kami', to: '/tentang-kami/profil' },
+    { label: 'Tata Nilai Perusahaan' }
+  ],
+  title: 'Tata Nilai Perusahaan',
+  description: 'Tata nilai Kembar Futagroup menjadi pedoman utama dalam menjaga kualitas kerja, pelayanan, dan sinergi ekosistem industri.',
+  image: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1800&q=85'
+}
+
+export const companyValuesFoundation = {
+  eyebrow: 'Dasar Nilai Kami',
+  title: 'Nilai yang Hadir dalam Setiap Proses Kerja',
+  paragraphs: [
+    'CREATIVE+ adalah tata nilai perusahaan yang menjadi panduan bagi seluruh insan Kembar Futagroup dalam bekerja, mengambil keputusan, berkolaborasi, dan memberikan hasil terbaik.',
+    'Nilai ini tidak hanya menjadi pernyataan, tetapi diterapkan dalam keseharian: dari cara menjaga tanggung jawab, membangun kepercayaan, beradaptasi, menciptakan inovasi, hingga bekerja secara efektif dan efisien.'
+  ],
+  commitments: [
+    {
+      title: 'Bekerja dengan tanggung jawab',
+      description: 'Menjaga amanah dalam setiap peran dan pekerjaan.'
+    },
+    {
+      title: 'Bergerak dengan kualitas',
+      description: 'Membangun proses yang teliti, terukur, dan terus diperbaiki.'
+    },
+    {
+      title: 'Bertumbuh bersama',
+      description: 'Menguatkan kolaborasi antarindividu, unit usaha, dan mitra.'
+    }
+  ]
+}
+
+// CREATIVE+ pillar order follows the acronym letters: C-R-E-A-T-I-V-E+
+export const companyValuesPillars = {
+  eyebrow: 'CREATIVE+',
+  title: 'Delapan Pilar Budaya Kerja Perusahaan',
+  description: 'Setiap nilai dalam CREATIVE+ menjadi pedoman dalam membangun karakter kerja yang bertanggung jawab, adaptif, kolaboratif, inovatif, dan berorientasi pada hasil.',
+  items: [
+    {
+      title: 'Commitment',
+      description: 'Bekerja dengan kejujuran, tanggung jawab, kesungguhan, dan kemauan untuk menyelesaikan amanah dengan baik.'
+    },
+    {
+      title: 'Respect',
+      description: 'Menghargai nilai, pendapat, dan peran setiap orang dengan sikap sopan, adil, dapat dipercaya, dan mau mendengarkan.'
+    },
+    {
+      title: 'Excellence',
+      description: 'Memberikan usaha terbaik melalui kualitas kerja, respons yang cepat, dan dorongan untuk terus menciptakan hasil yang lebih baik.'
+    },
+    {
+      title: 'Adaptive',
+      description: 'Mampu menyesuaikan diri dengan perubahan, bergerak dinamis, terus belajar, dan meningkatkan kemampuan.'
+    },
+    {
+      title: 'Teamwork',
+      description: 'Mengutamakan kepentingan bersama, saling mendukung, mengikuti arahan kerja, dan mengejar pencapaian sebagai satu tim.'
+    },
+    {
+      title: 'Innovation',
+      description: 'Mendorong perbaikan, pengembangan, dan penciptaan produk maupun proses baru yang memberi nilai tambah.'
+    },
+    {
+      title: 'Visibility',
+      description: 'Membangun pekerjaan yang terpantau, menarik, minim cacat, dan mampu mendeteksi masalah sejak awal.'
+    },
+    {
+      title: 'Effectiveness & Efficiency',
+      description: 'Melakukan hal yang benar dengan cara yang tepat, tepat waktu, teratur, dan sesuai target.'
+    }
+  ]
+}
+
+export const companyValuesBehavior = {
+  eyebrow: 'Perilaku Kerja',
+  title: 'Nilai dalam Perilaku Kerja',
+  items: [
+    {
+      title: 'Dalam Produksi',
+      description: 'Menjaga ketelitian, kualitas, dan tanggung jawab atas hasil kerja.'
+    },
+    {
+      title: 'Dalam Pelayanan',
+      description: 'Melayani dengan sikap responsif, ramah, dan mengutamakan kebutuhan pelanggan.'
+    },
+    {
+      title: 'Dalam Tim',
+      description: 'Bekerja sama secara terbuka, saling mendukung, dan menghargai peran masing-masing.'
+    },
+    {
+      title: 'Dalam Pengembangan',
+      description: 'Terus belajar dan mencari cara yang lebih baik dalam menyelesaikan pekerjaan.'
+    },
+    {
+      title: 'Dalam Pengukuran',
+      description: 'Mengevaluasi hasil kerja secara jujur dan terukur untuk perbaikan berkelanjutan.'
+    }
+  ]
+}
+
+export const companyValuesOperational = {
+  eyebrow: 'Budaya Operasional',
+  title: 'Nilai yang Menghubungkan Seluruh Unit Usaha',
+  items: [
+    {
+      title: 'Untuk Individu',
+      description: 'Menjadi dasar dalam membangun karakter kerja yang jujur, disiplin, dan bertanggung jawab.'
+    },
+    {
+      title: 'Untuk Tim',
+      description: 'Menjadi pedoman dalam berkolaborasi, saling mendukung, dan menyelesaikan pekerjaan bersama.'
+    },
+    {
+      title: 'Untuk Unit Usaha',
+      description: 'Menjadi penghubung agar setiap unit bergerak selaras dalam satu ekosistem grup.'
+    },
+    {
+      title: 'Untuk Pelanggan & Mitra',
+      description: 'Menjadi dasar dalam membangun kepercayaan, kualitas layanan, dan hubungan jangka panjang.'
+    }
+  ]
+}
 
 export const aboutStructureHero = {
   breadcrumbs: [
