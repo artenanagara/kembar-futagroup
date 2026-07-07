@@ -22,25 +22,25 @@ export const expertiseItems = [
     number: '01',
     title: 'Logam',
     description: 'Mengolah besi cor dan aluminium menjadi komponen, produk, dan kebutuhan proyek.',
-    image: '/images/expertise-logam.jpg'
+    image: '/images/expertise-logam.webp'
   },
   {
     number: '02',
     title: 'Manufaktur',
     description: 'MMerancang dan merakit mesin serta peralatan produksi untuk kebutuhan industri dan UMKM.',
-    image: '/images/expertise-manufaktur.jpg'
+    image: '/images/expertise-manufaktur.webp'
   },
   {
     number: '03',
     title: 'Lansekap',
     description: ' Menghadirkan elemen ruang publik dan penghijauan kota, dari material hingga instalasi.',
-    image: '/images/expertise-lansekap.jpg'
+    image: '/images/expertise-lansekap.webp'
   },
   {
     number: '04',
     title: 'Infrastruktur',
     description: 'Mendukung proyek kawasan dan infrastruktur publik melalui produk utilitas dan konstruksi.',
-    image: '/images/expertise-infrastruktur.jpg'
+    image: '/images/expertise-infrastruktur.webp'
   }
 ]
 
