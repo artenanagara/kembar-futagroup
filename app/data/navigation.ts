@@ -50,8 +50,8 @@ export const navItems: NavItem[] = [
         description: 'Perjalanan Kembar Futagroup dari waktu ke waktu.'
       },
       {
-        label: 'Value Owner',
-        to: '/tentang-kami/value-owner',
+        label: 'Kepemimpinan',
+        to: '/tentang-kami/kepemimpinan',
         description: 'Prinsip pendiri yang membentuk cara grup bekerja.'
       },
       {

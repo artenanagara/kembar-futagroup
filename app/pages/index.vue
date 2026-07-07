@@ -392,7 +392,7 @@ onBeforeUnmount(() => {
     >
       <div class="mx-auto grid gap-12 px-5 pb-0 pt-24 sm:px-8 lg:grid-cols-[minmax(180px,360px)_minmax(0,1fr)] lg:gap-18 lg:px-25 lg:pb-0 lg:pt-32">
         <div
-          class="pt-2 pb-16 sticky top-24 self-start"
+          class="pt-2 pb-16 sticky top-24 self-start h-140"
           data-reveal-item
         >
           <p class="text-sm font-semibold uppercase leading-tight text-brand-green">

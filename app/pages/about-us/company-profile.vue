@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { aboutHero, aboutIntro, aboutStorySlides, companyValues, visionMission } from '~/data/about'
+import { aboutHero, aboutIntro, aboutStorySlides, companyValues, leadership, trackRecord, visionMission } from '~/data/about'
 
 const title = 'Profil Perusahaan - Kembar Futagroup'
 const description = 'Profil Kembar Futagroup sebagai holding manufaktur dari Klaten yang menaungi unit usaha logam, permesinan, lansekap, dan infrastruktur.'
@@ -495,6 +495,111 @@ onBeforeUnmount(() => {
               {{ value.description }}
             </p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="bg-white"
+      data-section-reveal
+    >
+      <div class="mx-auto max-w-360 px-5 py-20 sm:px-8 lg:px-20 lg:py-25">
+        <p
+          class="text-sm font-medium leading-tight text-brand-green"
+          data-reveal-item
+        >
+          {{ leadership.eyebrow }}
+        </p>
+
+        <div
+          class="mt-8 grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:gap-16"
+          data-reveal-item
+        >
+          <div class="overflow-hidden bg-neutral-200 lg:order-2">
+            <img
+              v-if="leadership.portrait"
+              :src="leadership.portrait.src"
+              :alt="leadership.portrait.alt"
+              class="h-80 w-full object-cover lg:h-full"
+            >
+            <div
+              v-else
+              class="flex h-80 w-full items-center justify-center lg:h-full"
+              aria-hidden="true"
+            >
+              <UIcon
+                name="i-lucide-user-round"
+                class="size-16 text-black/20"
+              />
+            </div>
+          </div>
+
+          <div class="flex flex-col justify-center lg:order-1">
+            <h2 class="max-w-xl text-4xl font-normal leading-[1.12] text-ink sm:text-5xl lg:text-6xl">
+              {{ leadership.title }}
+            </h2>
+            <p class="mt-6 max-w-xl text-base leading-relaxed text-black/70">
+              {{ leadership.description }}
+            </p>
+            <div class="mt-8">
+              <UiButton
+                :to="leadership.ctaTo"
+                variant="secondary"
+                size="md"
+              >
+                {{ leadership.ctaLabel }}
+              </UiButton>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <SectionsSalesNetwork />
+
+    <section
+      class="bg-white"
+      data-section-reveal
+    >
+      <div class="mx-auto max-w-360 px-5 py-20 sm:px-8 lg:px-20 lg:py-25">
+        <p
+          class="text-sm font-medium leading-tight text-brand-green"
+          data-reveal-item
+        >
+          {{ trackRecord.eyebrow }}
+        </p>
+
+        <div
+          class="mt-8 grid gap-8 lg:grid-cols-2 lg:gap-16"
+          data-reveal-item
+        >
+          <h2 class="max-w-xl text-4xl font-normal leading-tight text-ink sm:text-5xl lg:text-6xl">
+            {{ trackRecord.title }}
+          </h2>
+          <p class="max-w-xl text-base leading-relaxed text-black/70 lg:pt-3">
+            {{ trackRecord.description }}
+          </p>
+        </div>
+
+        <div
+          class="mt-14 divide-y divide-black/10 border-t border-black/10"
+          data-reveal-item
+        >
+          <div
+            v-for="(item, index) in trackRecord.items"
+            :key="item.title"
+            class="flex flex-col gap-3 py-8 sm:flex-row sm:items-baseline sm:gap-10"
+          >
+            <span class="font-mono text-sm text-black/40 sm:w-12 sm:shrink-0">
+              {{ String(index + 1).padStart(2, '0') }}
+            </span>
+            <h3 class="text-xl font-medium leading-tight text-ink sm:w-72 sm:shrink-0 sm:text-2xl">
+              {{ item.title }}
+            </h3>
+            <p class="text-base leading-relaxed text-black/65">
+              {{ item.description }}
+            </p>
+          </div>
         </div>
       </div>
     </section>

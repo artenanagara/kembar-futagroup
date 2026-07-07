@@ -102,6 +102,51 @@ export const companyValues = [
   }
 ]
 
+export const leadership = {
+  eyebrow: 'Kepemimpinan',
+  title: 'Digerakkan oleh visi satu keluarga, dijalankan oleh satu ekosistem.',
+  description: 'Kembar Futagroup didirikan dan dipimpin oleh Ir. H. Fikky Arif Ardianta, yang meletakkan fondasi awal usaha ini dari keahlian teknik dan pengolahan logam di Klaten. Di bawah kepemimpinannya, usaha yang semula berfokus pada satu bidang berkembang menjadi ekosistem yang menaungi berbagai unit usaha dengan peran saling melengkapi.',
+  ctaLabel: 'Kenali Lebih Jauh',
+  ctaTo: '#',
+  // No dedicated leadership page or portrait photo confirmed yet — set this once available,
+  // the section already renders it in place of the placeholder.
+  portrait: null as { src: string, alt: string } | null
+}
+
+// Track-record cards for the "Jejak & Kredensial" section. Kept as plain constants (not
+// hardcoded in the page template) so copy can be corrected here the moment the client confirms
+// numbers/scope, without touching component code.
+export const trackRecord = {
+  eyebrow: 'Jejak & Kredensial',
+  title: 'Bukti nyata dari setiap proyek dan pasar yang kami jangkau.',
+  description: 'Perjalanan kami tidak hanya diukur dari jumlah unit usaha, tetapi dari proyek dan pasar yang berhasil kami jangkau — di dalam maupun luar negeri.',
+  items: [
+    {
+      title: 'Proyek Strategis Nasional',
+      description: 'Berkontribusi dalam proyek pembangunan Ibu Kota Nusantara (IKN).',
+      // PENDING VERIFICATION: no specific project name, product, or scope confirmed by client yet.
+      // Do not add invented specifics — update this description once confirmed.
+      verified: false
+    },
+    {
+      title: 'Ekspor Internasional',
+      description: 'Produk kami telah menjangkau pasar Singapura dan Timor Leste.',
+      verified: true
+    },
+    {
+      title: 'Basis Produksi',
+      description: 'Berpusat di Klaten, Jawa Tengah — fondasi pengecoran logam bagi seluruh rantai produksi grup.',
+      verified: true
+    },
+    {
+      title: 'Satu Ekosistem',
+      description: 'Sembilan unit usaha yang saling terhubung dalam satu ekosistem industri.',
+      // PENDING VERIFICATION: unit count pending client confirmation — update once confirmed.
+      verified: false
+    }
+  ]
+}
+
 export const valueOwnerHero = {
   breadcrumbs: [
     { label: 'Beranda', to: '/' },
