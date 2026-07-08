@@ -15,7 +15,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   }
 
   const getRevealFromVars = (item: HTMLElement) => {
-    const distance = toNumber(item.dataset.revealDistance, 56)
+    const distance = toNumber(item.dataset.revealDistance, 90)
     const from = item.dataset.revealFrom ?? 'up'
 
     if (from === 'left') {
@@ -31,7 +31,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     }
 
     if (from === 'scale') {
-      return { x: 0, y: distance * 0.45, scale: 0.96 }
+      return { x: 0, y: distance * 0.45, scale: 0.92 }
     }
 
     return { x: 0, y: distance, scale: 1 }
@@ -63,7 +63,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 
         gsap.set(item, {
           autoAlpha: 0,
-          filter: 'blur(10px)',
+          filter: 'blur(18px)',
           ...getRevealFromVars(item)
         })
       })
@@ -73,7 +73,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 
         items.forEach((item, index) => {
           const delay = toNumber(item.dataset.revealDelay, 0)
-          const stagger = toNumber(section.dataset.revealStagger, 0.08)
+          const stagger = toNumber(section.dataset.revealStagger, 0.14)
 
           if (item.dataset.revealFrom === 'mask') {
             timeline.to(item, {
@@ -91,7 +91,7 @@ export default defineNuxtPlugin((nuxtApp) => {
             y: 0,
             scale: 1,
             filter: 'blur(0px)',
-            duration: toNumber(item.dataset.revealDuration, 1),
+            duration: toNumber(item.dataset.revealDuration, 1.15),
             ease: item.dataset.revealEase ?? 'power3.out'
           }, (index * stagger) + delay)
         })
@@ -120,7 +120,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 
       ScrollTrigger.create({
         trigger: section,
-        start: section.dataset.revealStart ?? 'top 76%',
+        start: section.dataset.revealStart ?? 'top 65%',
         once: true,
         onEnter: playReveal
       })

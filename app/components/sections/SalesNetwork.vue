@@ -32,7 +32,7 @@ const tickerCities = [...cities, ...cities]
           JARINGAN PENJUALAN
         </p>
 
-        <div class="mt-5 w-full max-w-xs overflow-hidden text-base font-medium leading-none text-white/62 [mask-image:linear-gradient(90deg,transparent,black_18%,black_82%,transparent)] sm:max-w-md">
+        <div class="mt-5 w-full max-w-xs overflow-hidden text-base font-medium leading-none text-white/62 mask-[linear-gradient(90deg,transparent,black_18%,black_82%,transparent)] sm:max-w-md">
           <div class="sales-network-ticker-track flex w-max items-center gap-7 whitespace-nowrap">
             <template
               v-for="(city, index) in tickerCities"
@@ -47,27 +47,19 @@ const tickerCities = [...cities, ...cities]
           </div>
         </div>
 
-        <div
-          class="mt-7 flex flex-col items-center"
-          aria-hidden="true"
-        >
-          <span class="h-15 w-px bg-white/28 sm:h-20" />
-          <span class="-mt-px size-2.5 rounded-full bg-brand-green" />
-        </div>
-
-        <div class="relative mx-auto mt-6 h-[24rem] w-full max-w-[72rem] overflow-hidden sm:h-[28rem] lg:h-[33rem]">
+        <div class="relative mx-auto h-[28rem] w-full max-w-[72rem] overflow-hidden sm:h-[36rem] lg:h-[48rem]">
           <img
             src="/images/sales-network-globe.png"
             alt="Globe jaringan penjualan Kembar Futago Group dengan fokus Indonesia"
-            class="absolute inset-0 size-full origin-top scale-150 select-none object-cover object-top mix-blend-screen"
+            class="absolute inset-0 size-full select-none object-cover object-top mix-blend-screen scale-[1.5] sm:scale-[1.75] lg:scale-[2] origin-top"
             draggable="false"
           >
-          <div class="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-linear-to-t from-ink via-ink/85 to-transparent" />
+          <div class="pointer-events-none absolute inset-x-0 bottom-0 h-3/4 bg-linear-to-t from-ink via-ink/80 to-transparent" />
         </div>
       </div>
 
       <p
-        class="mx-auto mt-6 max-w-4xl text-center text-base leading-relaxed text-white/62 sm:text-lg"
+        class="relative z-10 mx-auto -mt-20 max-w-4xl text-center text-base leading-relaxed text-white/80 sm:-mt-28 sm:text-lg lg:-mt-36"
         data-reveal-item
       >
         Melalui kantor cabang penjualan di berbagai kota besar, kami memastikan produk dan layanan Kembar Futago Group dapat diakses oleh pelanggan di seluruh Indonesia.

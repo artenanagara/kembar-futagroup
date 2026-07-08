@@ -23,7 +23,7 @@ useSeoMeta({
       <img
         :src="leadershipHero.image"
         :alt="leadershipHero.title"
-        class="absolute inset-0 size-full object-cover"
+        class="absolute inset-0 size-full object-cover -scale-x-100"
       >
       <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,.74)_0%,rgba(0,0,0,.28)_48%,rgba(0,0,0,.68)_100%)]" />
       <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.72)_0%,rgba(0,0,0,.16)_42%,rgba(0,0,0,.56)_100%)]" />

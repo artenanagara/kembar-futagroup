@@ -532,7 +532,7 @@ onBeforeUnmount(() => {
             <p class="mb-4 text-sm font-medium uppercase leading-tight tracking-wide text-brand-green">
               {{ leadership.eyebrow }}
             </p>
-            <h2 class="max-w-xl text-4xl font-normal leading-[1.12] text-ink sm:text-5xl lg:text-6xl">
+            <h2 class="max-w-xl text-4xl font-normal leading-tight text-ink sm:text-5xl">
               {{ leadership.title }}
             </h2>
             <p class="mt-6 max-w-xl text-base leading-relaxed text-black/70">
@@ -542,7 +542,7 @@ onBeforeUnmount(() => {
               <UiButton
                 :to="leadership.ctaTo"
                 variant="secondary"
-                size="md"
+                size="sm"
               >
                 {{ leadership.ctaLabel }}
               </UiButton>
