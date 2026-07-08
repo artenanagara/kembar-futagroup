@@ -75,7 +75,10 @@ withDefaults(defineProps<{
                 Email
               </p>
               <p class="mt-3 text-base font-medium leading-[1.45] text-black/68">
-                kembarfutagroup@gmail.com
+                <a
+                  href="mailto:kembarfutagroup@gmail.com"
+                  class="transition hover:text-ink"
+                >kembarfutagroup@gmail.com</a>
               </p>
             </div>
             <div>
@@ -83,7 +86,12 @@ withDefaults(defineProps<{
                 WhatsApp
               </p>
               <p class="mt-3 text-base font-medium leading-[1.45] text-black/68">
-                0821 3672 8913
+                <a
+                  href="https://wa.me/6282136728913"
+                  target="_blank"
+                  rel="noopener"
+                  class="transition hover:text-ink"
+                >0821 3672 8913</a>
               </p>
             </div>
           </address>
@@ -92,22 +100,22 @@ withDefaults(defineProps<{
         <div class="grid grid-cols-2 gap-10 lg:grid-cols-4 lg:gap-8 2xl:gap-12">
           <div
             v-for="column in footerColumns"
-            :key="column[0]"
+            :key="column.title"
             class="space-y-6"
           >
             <h3 class="text-base font-normal leading-tight text-ink 2xl:text-xl">
-              {{ column[0] }}
+              {{ column.title }}
             </h3>
             <ul class="space-y-5">
               <li
-                v-for="item in column.slice(1)"
-                :key="item"
+                v-for="link in column.links"
+                :key="link.label"
               >
                 <NuxtLink
-                  to="#"
+                  :to="link.to"
                   class="text-sm font-medium leading-tight text-black/65 transition hover:text-ink 2xl:text-base"
                 >
-                  {{ item }}
+                  {{ link.label }}
                 </NuxtLink>
               </li>
             </ul>

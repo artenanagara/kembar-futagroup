@@ -106,9 +106,55 @@ export const navItems: NavItem[] = [
   { label: 'Karir', to: '/karir' }
 ]
 
-export const footerColumns = [
-  ['Navigasi', 'Beranda', 'Tentang Kami', 'Unit Usaha', 'Produk & Solusi', 'Keberlanjutan'],
-  ['Tentang Kami', 'Profil Perusahaan', 'Sejarah', 'Visi & Misi', 'Nilai Perusahaan'],
-  ['Informasi', 'Berita & Insight', 'Karir', 'Kontak'],
-  ['Unit Usaha', 'Ayem Tentrem Logam', 'Kembar Teknika', 'Zwilling', 'Futago Karya', 'Futake', 'Futastone', 'Futafarm', 'Futago Land']
+export type FooterLink = {
+  label: string
+  to: string
+}
+
+export type FooterColumn = {
+  title: string
+  links: FooterLink[]
+}
+
+export const footerColumns: FooterColumn[] = [
+  {
+    title: 'Navigasi',
+    links: [
+      { label: 'Beranda', to: '/' },
+      { label: 'Tentang Kami', to: '/tentang-kami/profil' },
+      { label: 'Unit Usaha', to: '/unit-bisnis' },
+      { label: 'Produk & Solusi', to: '/produk-solusi' },
+      { label: 'Keberlanjutan', to: '#' }
+    ]
+  },
+  {
+    title: 'Tentang Kami',
+    links: [
+      { label: 'Profil Perusahaan', to: '/tentang-kami/profil' },
+      { label: 'Sejarah', to: '/tentang-kami/profil#sejarah' },
+      { label: 'Visi & Misi', to: '/tentang-kami/profil#visi-misi' },
+      { label: 'Nilai Perusahaan', to: '/tentang-kami/tata-nilai-perusahaan' }
+    ]
+  },
+  {
+    title: 'Informasi',
+    links: [
+      { label: 'Berita & Insight', to: '/berita' },
+      { label: 'Karir', to: '/karir' },
+      { label: 'Kontak', to: '#' }
+    ]
+  },
+  {
+    title: 'Unit Usaha',
+    links: [
+      { label: 'Ayem Tentrem Logam', to: '/unit-bisnis/ayem-tentrem-logam' },
+      { label: 'Kembar Teknika', to: '/unit-bisnis/kembar-teknika' },
+      { label: 'Zwilling', to: '/unit-bisnis/zwilling' },
+      { label: 'Futago Karya', to: '/unit-bisnis/futago-karya' },
+      { label: 'Futake', to: '/unit-bisnis/futake' },
+      { label: 'Futastone', to: '/unit-bisnis/futastone' },
+      { label: 'Futafarm', to: '/unit-bisnis/futafarm' },
+      { label: 'Futago Land', to: '/unit-bisnis/futago-land' }
+    ]
+  }
 ]
