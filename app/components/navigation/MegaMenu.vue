@@ -32,7 +32,7 @@ const imageAspectClass = computed(() => {
       <div class="grid items-start grid-cols-[minmax(240px,.7fr)_minmax(520px,1.4fr)_minmax(380px,1fr)] gap-8 border border-black/10 bg-white/96 p-6 text-ink shadow-2xl shadow-black/20 backdrop-blur-xl">
         <div class="flex flex-col justify-between border-r border-black/12 pr-8">
           <div>
-            <p class="text-sm font-medium leading-tight text-brand-green">
+            <p class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green">
               {{ item.eyebrow ?? item.label }}
             </p>
             <h2 class="mt-4 text-2xl font-medium leading-tight">

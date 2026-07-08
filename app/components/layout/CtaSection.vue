@@ -26,7 +26,7 @@ withDefaults(defineProps<{
         class="w-full"
         data-reveal-item
       >
-        <h2 class="mx-auto max-w-340 text-5xl font-normal leading-[1.08] tracking-normal text-white sm:text-5xl">
+        <h2 class="mx-auto max-w-340 text-3xl font-normal leading-[1.08] tracking-normal text-white sm:text-5xl">
           {{ title }}
         </h2>
         <p

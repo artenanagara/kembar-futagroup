@@ -97,7 +97,7 @@ withDefaults(defineProps<{
           </address>
         </div>
 
-        <div class="grid grid-cols-2 gap-10 lg:grid-cols-4 lg:gap-8 2xl:gap-12">
+        <div class="grid grid-cols-2 gap-10 lg:grid-cols-5 lg:gap-8 2xl:gap-12">
           <div
             v-for="column in footerColumns"
             :key="column.title"

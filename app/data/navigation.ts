@@ -145,6 +145,17 @@ export const footerColumns: FooterColumn[] = [
     ]
   },
   {
+    title: 'Produk & Solusi',
+    links: [
+      { label: 'Furnitur Jalan & Pedestrian', to: '/produk-solusi/furnitur-jalan-pedestrian' },
+      { label: 'Pengecoran Logam & Foundry', to: '/produk-solusi/pengecoran-logam-foundry' },
+      { label: 'Mesin Tepat Guna', to: '/produk-solusi/mesin-tepat-guna' },
+      { label: 'Lanskap & Penghijauan', to: '/produk-solusi/lanskap-penghijauan-kota' },
+      { label: 'Infrastruktur Drainase', to: '/produk-solusi/infrastruktur-drainase' },
+      { label: 'Batu & Terazzo', to: '/produk-solusi/batu-terazzo' }
+    ]
+  },
+  {
     title: 'Unit Usaha',
     links: [
       { label: 'Ayem Tentrem Logam', to: '/unit-bisnis/ayem-tentrem-logam' },

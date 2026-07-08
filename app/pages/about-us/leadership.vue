@@ -80,7 +80,7 @@ useSeoMeta({
     >
       <div class="mx-auto grid max-w-360 gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[1.2fr_1fr] lg:gap-16 lg:px-20 lg:py-25">
         <div data-reveal-item>
-          <p class="text-sm font-medium leading-tight text-brand-green">
+          <p class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green">
             {{ leadershipStory.eyebrow }}
           </p>
           <h2 class="mt-2 max-w-xl text-4xl font-normal leading-tight text-ink sm:text-5xl">
@@ -98,24 +98,26 @@ useSeoMeta({
         </div>
 
         <div
-          class="overflow-hidden bg-neutral-200"
+          class="flex items-center justify-center py-8 lg:py-12"
           data-reveal-item
         >
-          <img
-            v-if="leadershipStory.portrait"
-            :src="leadershipStory.portrait.src"
-            :alt="leadershipStory.portrait.alt"
-            class="h-80 w-full object-cover lg:h-full"
-          >
-          <div
-            v-else
-            class="flex h-80 w-full items-center justify-center lg:h-full"
-            aria-hidden="true"
-          >
-            <UIcon
-              name="i-lucide-user-round"
-              class="size-16 text-black/20"
-            />
+          <div class="aspect-[3/4] w-full max-w-sm overflow-hidden bg-neutral-200 lg:max-w-md">
+            <img
+              v-if="leadershipStory.portrait"
+              :src="leadershipStory.portrait.src"
+              :alt="leadershipStory.portrait.alt"
+              class="h-full w-full object-cover"
+            >
+            <div
+              v-else
+              class="flex h-full w-full items-center justify-center"
+              aria-hidden="true"
+            >
+              <UIcon
+                name="i-lucide-user-round"
+                class="size-16 text-black/20"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -149,7 +151,7 @@ useSeoMeta({
     >
       <div class="mx-auto max-w-360 px-5 py-20 sm:px-8 lg:px-20 lg:py-25">
         <p
-          class="text-sm font-medium leading-tight text-brand-orange"
+          class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green"
           data-reveal-item
         >
           {{ leadershipPrinciples.eyebrow }}
@@ -187,7 +189,7 @@ useSeoMeta({
     >
       <div class="mx-auto grid max-w-360 gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[.8fr_1.2fr] lg:gap-16 lg:px-20 lg:py-25">
         <div data-reveal-item>
-          <p class="text-sm font-medium leading-tight text-brand-green">
+          <p class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green">
             {{ leadershipJourney.eyebrow }}
           </p>
           <h2 class="mt-2 max-w-md text-4xl font-normal leading-tight text-ink sm:text-5xl">

@@ -64,7 +64,7 @@ useSeoMeta({
             class="h-fit lg:sticky lg:top-32"
             data-reveal-item
           >
-            <p class="text-sm font-medium leading-tight text-brand-green">
+            <p class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green">
               {{ unit.about.eyebrow }}
             </p>
           </div>
@@ -102,7 +102,7 @@ useSeoMeta({
       >
         <div class="relative mx-auto grid max-w-360 gap-12 px-5 pb-20 pt-16 sm:px-8 lg:grid-cols-[minmax(280px,.76fr)_minmax(0,1.24fr)] lg:gap-18 lg:px-20 lg:pb-28 lg:pt-20">
           <div data-reveal-item>
-            <p class="text-sm font-medium leading-tight text-brand-green">
+            <p class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green">
               Fokus Unit
             </p>
             <h2 class="mt-2 text-4xl font-medium leading-[1.15] sm:text-5xl lg:text-heading-lg">

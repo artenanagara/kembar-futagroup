@@ -74,7 +74,7 @@ const handleSubmit = () => {
 
         <template v-if="!isSubmitted">
           <p
-            class="mt-8 text-sm font-medium leading-tight text-brand-green"
+            class="mt-8 text-sm font-medium uppercase leading-tight tracking-wide text-brand-green"
             data-reveal-item
           >
             Form Lamaran

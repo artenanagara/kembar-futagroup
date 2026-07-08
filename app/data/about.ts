@@ -2,7 +2,7 @@ export const aboutHero = {
   breadcrumbs: ['Beranda', 'Profil'],
   title: 'Profil Perusahaan',
   description: 'Berawal dari kekuatan teknik dan pengolahan logam di Klaten, Kembar Futagroup tumbuh sebagai ekosistem bisnis yang mendukung kebutuhan industri dan pembangunan.',
-  image: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?auto=format&fit=crop&w=1800&q=85'
+  image: '/images/hero-profil.webp'
 }
 
 export const aboutIntro = {
@@ -156,7 +156,7 @@ export const leadershipHero = {
   ],
   title: 'Kepemimpinan',
   description: 'Prinsip kepemimpinan yang menjadi dasar cara Kembar Futagroup bekerja dan tumbuh.',
-  image: 'https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=1800&q=85'
+  image: '/images/hero-kepemimpinan.webp'
 }
 
 export const leadershipStory = {

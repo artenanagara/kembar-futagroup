@@ -46,7 +46,7 @@ useSeoMeta({
     >
       <div class="mx-auto grid max-w-360 gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[.8fr_1.2fr] lg:px-20 lg:py-25">
         <div data-reveal-item>
-          <p class="text-sm font-medium leading-tight text-brand-green">
+          <p class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green">
             {{ solution.category }}
           </p>
           <h2 class="mt-2 text-4xl font-normal leading-tight text-ink sm:text-5xl">

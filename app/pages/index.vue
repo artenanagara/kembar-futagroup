@@ -247,7 +247,7 @@ onBeforeUnmount(() => {
         ref="contentRef"
         class="mx-auto grid h-screen max-w-360 items-start top-24 gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[220px_1fr] lg:gap-48 lg:px-20"
       >
-        <p class="pt-2 text-sm font-medium leading-tight text-brand-green lg:pt-1">
+        <p class="pt-2 text-sm font-medium uppercase leading-tight tracking-wide text-brand-green lg:pt-1">
           Sekilas Tentang Kami
         </p>
 
@@ -314,7 +314,7 @@ onBeforeUnmount(() => {
           data-reveal-item
         >
           <div>
-            <p class="text-sm font-semibold uppercase leading-tight text-brand-orange">
+            <p class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green">
               Ekosistem Kami
             </p>
             <h2 class="mt-8 text-5xl font-normal leading-[1.05] tracking-normal sm:text-7xl">
@@ -395,7 +395,7 @@ onBeforeUnmount(() => {
           class="pt-2 pb-16 sticky top-24 self-start h-140"
           data-reveal-item
         >
-          <p class="text-sm font-semibold uppercase leading-tight text-brand-green">
+          <p class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green">
             Unit Usaha
           </p>
           <h2 class="text-black text-6xl leading-tight pt-2 sm:text-6xl">
@@ -431,7 +431,7 @@ onBeforeUnmount(() => {
           class="max-w-6xl"
           data-reveal-item
         >
-          <p class="text-sm font-medium leading-tight text-brand-orange">
+          <p class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green">
             Kapabilitas
           </p>
           <h2 class="mt-1 text-4xl font-normal leading-tight sm:text-5xl lg:text-6xl">

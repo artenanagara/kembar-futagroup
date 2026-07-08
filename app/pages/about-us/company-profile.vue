@@ -200,9 +200,8 @@ onBeforeUnmount(() => {
         :alt="aboutHero.title"
         class="absolute inset-0 size-full object-cover"
       >
-      <div class="absolute inset-0 backdrop-blur-[2px]" />
-      <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,.74)_0%,rgba(0,0,0,.28)_48%,rgba(0,0,0,.68)_100%)]" />
-      <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.72)_0%,rgba(0,0,0,.16)_42%,rgba(0,0,0,.56)_100%)]" />
+      <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,.5)_0%,rgba(0,0,0,.15)_48%,rgba(0,0,0,.45)_100%)]" />
+      <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.45)_0%,rgba(0,0,0,.08)_42%,rgba(0,0,0,.35)_100%)]" />
 
       <LayoutSiteHeader />
 
@@ -256,7 +255,7 @@ onBeforeUnmount(() => {
     >
       <div class="mx-auto max-w-360 px-5 py-20 sm:px-8 lg:px-20 lg:py-25">
         <p
-          class="text-sm font-medium leading-tight text-brand-green"
+          class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green"
           data-reveal-item
         >
           {{ aboutIntro.eyebrow }}
@@ -360,7 +359,7 @@ onBeforeUnmount(() => {
             </div>
 
             <div class="relative flex max-w-3xl flex-col justify-between py-8 lg:py-12">
-              <p class="text-sm font-medium leading-tight text-white/80">
+              <p class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green">
                 Kisah Kami
               </p>
 
@@ -459,7 +458,7 @@ onBeforeUnmount(() => {
     >
       <div class="mx-auto max-w-360 px-5 py-20 sm:px-8 lg:px-20 lg:py-25">
         <p
-          class="text-sm font-medium leading-tight text-brand-green"
+          class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green"
           data-reveal-item
         >
           Nilai & Budaya
@@ -504,37 +503,35 @@ onBeforeUnmount(() => {
       data-section-reveal
     >
       <div class="mx-auto max-w-360 px-5 py-20 sm:px-8 lg:px-20 lg:py-25">
-        <p
-          class="text-sm font-medium leading-tight text-brand-green"
-          data-reveal-item
-        >
-          {{ leadership.eyebrow }}
-        </p>
-
         <div
           class="mt-8 grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:gap-16"
           data-reveal-item
         >
-          <div class="overflow-hidden bg-neutral-200 lg:order-2">
-            <img
-              v-if="leadership.portrait"
-              :src="leadership.portrait.src"
-              :alt="leadership.portrait.alt"
-              class="h-80 w-full object-cover lg:h-full"
-            >
-            <div
-              v-else
-              class="flex h-80 w-full items-center justify-center lg:h-full"
-              aria-hidden="true"
-            >
-              <UIcon
-                name="i-lucide-user-round"
-                class="size-16 text-black/20"
-              />
+          <div class="flex items-center justify-center py-8 lg:order-2 lg:py-12">
+            <div class="aspect-3/4 w-full max-w-sm overflow-hidden bg-neutral-200 lg:max-w-md">
+              <img
+                v-if="leadership.portrait"
+                :src="leadership.portrait.src"
+                :alt="leadership.portrait.alt"
+                class="h-full w-full object-cover"
+              >
+              <div
+                v-else
+                class="flex h-full w-full items-center justify-center"
+                aria-hidden="true"
+              >
+                <UIcon
+                  name="i-lucide-user-round"
+                  class="size-16 text-black/20"
+                />
+              </div>
             </div>
           </div>
 
-          <div class="flex flex-col justify-center lg:order-1">
+          <div class="flex flex-col justify-end py-8 lg:order-1 lg:py-12">
+            <p class="mb-4 text-sm font-medium uppercase leading-tight tracking-wide text-brand-green">
+              {{ leadership.eyebrow }}
+            </p>
             <h2 class="max-w-xl text-4xl font-normal leading-[1.12] text-ink sm:text-5xl lg:text-6xl">
               {{ leadership.title }}
             </h2>
@@ -563,7 +560,7 @@ onBeforeUnmount(() => {
     >
       <div class="mx-auto max-w-360 px-5 py-20 sm:px-8 lg:px-20 lg:py-25">
         <p
-          class="text-sm font-medium leading-tight text-brand-green"
+          class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green"
           data-reveal-item
         >
           {{ trackRecord.eyebrow }}
@@ -573,7 +570,7 @@ onBeforeUnmount(() => {
           class="mt-8 grid gap-8 lg:grid-cols-2 lg:gap-16"
           data-reveal-item
         >
-          <h2 class="max-w-xl text-4xl font-normal leading-tight text-ink sm:text-5xl lg:text-6xl">
+          <h2 class="max-w-xl text-4xl font-normal leading-tight text-ink sm:text-5xl">
             {{ trackRecord.title }}
           </h2>
           <p class="max-w-xl text-base leading-relaxed text-black/70 lg:pt-3">

@@ -86,7 +86,7 @@ const activeBehaviorIndex = ref(0)
           data-reveal-item
         >
           <div>
-            <p class="text-sm font-medium leading-tight text-brand-green">
+            <p class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green">
               {{ companyValuesFoundation.eyebrow }}
             </p>
             <h2 class="mt-2 max-w-md text-4xl font-normal leading-tight text-ink sm:text-5xl">
@@ -130,7 +130,7 @@ const activeBehaviorIndex = ref(0)
     >
       <div class="mx-auto max-w-360 px-5 py-20 text-center sm:px-8 lg:px-20 lg:py-25">
         <p
-          class="text-sm font-medium leading-tight text-brand-green"
+          class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green"
           data-reveal-item
         >
           {{ companyValuesPillars.eyebrow }}
@@ -174,7 +174,7 @@ const activeBehaviorIndex = ref(0)
     >
       <div class="mx-auto grid max-w-360 gap-10 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:gap-16 lg:px-20 lg:py-25">
         <div data-reveal-item>
-          <p class="text-sm font-medium leading-tight text-brand-orange">
+          <p class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green">
             {{ companyValuesBehavior.eyebrow }}
           </p>
           <h2 class="mt-2 max-w-md text-4xl font-normal leading-tight text-white sm:text-5xl">
@@ -228,7 +228,7 @@ const activeBehaviorIndex = ref(0)
     >
       <div class="mx-auto grid max-w-360 gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[.8fr_1.2fr] lg:gap-16 lg:px-20 lg:py-25">
         <div data-reveal-item>
-          <p class="text-sm font-medium leading-tight text-brand-green">
+          <p class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green">
             {{ companyValuesOperational.eyebrow }}
           </p>
           <h2 class="mt-2 max-w-md text-4xl font-normal leading-tight text-ink sm:text-5xl">

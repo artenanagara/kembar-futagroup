@@ -36,7 +36,7 @@ useSeoMeta({
         class="mx-auto grid max-w-360 gap-12 px-5 py-24 sm:px-8 lg:grid-cols-[.33fr_.67fr] lg:px-20 lg:py-35"
         data-reveal-item
       >
-        <p class="text-sm font-medium leading-[1.2] tracking-[0.04em] text-brand-green">
+        <p class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green">
           {{ productSolutionPage.focus.eyebrow }}
         </p>
 

@@ -22,8 +22,7 @@ withDefaults(defineProps<{
   >
     <p
       v-if="eyebrow"
-      class="text-sm font-medium leading-tight"
-      :class="tone === 'light' ? 'text-brand-orange' : 'text-brand-green'"
+      class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green"
     >
       {{ eyebrow }}
     </p>

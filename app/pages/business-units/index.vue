@@ -44,7 +44,7 @@ useSeoMeta({
           data-reveal-item
         >
           <div class="flex flex-col gap-2.5">
-            <p class="text-sm font-medium leading-tight text-brand-green">
+            <p class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green">
               {{ businessUnitPage.intro.eyebrow }}
             </p>
             <h2 class="text-4xl font-medium leading-[1.2] text-black sm:text-5xl lg:text-heading-lg">

@@ -37,7 +37,7 @@ useSeoMeta({
           data-reveal-from="left"
         >
           <div>
-            <p class="text-sm font-medium leading-tight text-brand-green">
+            <p class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green">
               Struktur
             </p>
             <h2 class="mt-2 text-4xl font-normal leading-tight text-ink sm:text-5xl lg:text-6xl">
