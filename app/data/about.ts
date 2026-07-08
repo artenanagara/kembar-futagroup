@@ -108,9 +108,10 @@ export const leadership = {
   description: 'Kembar Futagroup didirikan dan dipimpin oleh Ir. H. Fikky Arif Ardianta, yang meletakkan fondasi awal usaha ini dari keahlian teknik dan pengolahan logam di Klaten. Di bawah kepemimpinannya, usaha yang semula berfokus pada satu bidang berkembang menjadi ekosistem yang menaungi berbagai unit usaha dengan peran saling melengkapi.',
   ctaLabel: 'Kenali Lebih Jauh',
   ctaTo: '/tentang-kami/kepemimpinan',
-  // No portrait photo confirmed yet — set this once available, the section already
-  // renders it in place of the placeholder.
-  portrait: null as { src: string, alt: string } | null
+  portrait: {
+    src: '/images/foto-pak-fiky.webp',
+    alt: 'Ir. H. Fikky Arif Ardianta'
+  }
 }
 
 // Track-record cards for the "Jejak & Kredensial" section. Kept as plain constants (not
@@ -166,9 +167,10 @@ export const leadershipStory = {
     'Dalam perjalanannya, Kembar Futagroup berkembang sebagai ekosistem industri yang menghubungkan logam, manufaktur, lansekap, infrastruktur, dan pengembangan kawasan. Setiap unit usaha tumbuh dengan peran berbeda, namun tetap diarahkan untuk saling melengkapi dalam satu rantai nilai.',
     'Bagi Ir. H. Fikky Arif Ardianta, membangun usaha bukan hanya tentang memperbesar bisnis, tetapi juga tentang menumbuhkan orang, membuka ruang kesempatan, dan menghadirkan manfaat yang lebih luas bagi industri, masyarakat, dan pembangunan.'
   ],
-  // No portrait photo confirmed by client yet — set `{ src, alt }` once available,
-  // the section already renders it in place of the placeholder.
-  portrait: null as { src: string, alt: string } | null
+  portrait: {
+    src: '/images/foto-pak-fiky.webp',
+    alt: 'Ir. H. Fikky Arif Ardianta'
+  }
 }
 
 export const leadershipQuote = 'Usaha yang baik bukan hanya tumbuh besar, tetapi juga tumbuh bersama orang-orang di dalamnya dan memberi manfaat bagi lingkungan sekitarnya.'
