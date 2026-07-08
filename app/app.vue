@@ -3,6 +3,7 @@ const title = 'Kembar Futagroup - Holding Manufaktur dan Solusi Industri'
 const description = 'Kembar Futagroup membangun ekosistem manufaktur, pengecoran logam, permesinan, lansekap, dan solusi infrastruktur dari Klaten untuk Indonesia.'
 
 useHead({
+  titleTemplate: '%s',
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1' }
   ],
@@ -22,6 +23,24 @@ useSeoMeta({
   ogImage: '/images/og-image.webp',
   twitterCard: 'summary_large_image'
 })
+
+useSchemaOrg([
+  defineOrganization({
+    name: 'Kembar Futagroup',
+    logo: '/favicon.ico',
+    description,
+    url: 'https://kembarfutagroup.com',
+    sameAs: [
+      'https://www.instagram.com',
+      'https://www.linkedin.com',
+      'https://www.youtube.com'
+    ]
+  }),
+  defineWebSite({
+    name: 'Kembar Futagroup'
+  }),
+  defineWebPage()
+])
 
 const curtainRef = ref<HTMLElement | null>(null)
 const isCovering = ref(false)
