@@ -111,17 +111,8 @@ onMounted(async () => {
       y: 24
     })
 
-    gsap.fromTo(content, {
+    gsap.set(content, {
       y: 72
-    }, {
-      y: 0,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: section,
-        start: 'top bottom',
-        end: 'top top',
-        scrub: 0.9
-      }
     })
 
     const revealTimeline = gsap.timeline({
@@ -129,7 +120,7 @@ onMounted(async () => {
         trigger: section,
         start: 'top top',
         end: '+=180%',
-        scrub: 0.95,
+        scrub: 1.4,
         pin: true,
         pinSpacing: true,
         anticipatePin: 1,
@@ -138,6 +129,11 @@ onMounted(async () => {
     })
 
     revealTimeline
+      .to(content, {
+        y: 0,
+        ease: 'power2.out',
+        duration: 0.5
+      })
       .to(words, {
         width: '100%',
         stagger: {
@@ -145,7 +141,7 @@ onMounted(async () => {
         },
         ease: 'none',
         duration: 0.12
-      })
+      }, '-=0.1')
       .to(revealItems, {
         autoAlpha: 1,
         y: 0,

@@ -18,6 +18,8 @@ export default defineNuxtPlugin(() => {
   })
 
   lenis.on('scroll', ScrollTrigger.update)
+  // @ts-expect-error temp debug
+  window.lenisInstance = lenis
 
   gsap.ticker.add((time) => {
     lenis.raf(time * 1000)

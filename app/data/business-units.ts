@@ -33,10 +33,10 @@ export const businessUnitPage = {
   },
   intro: {
     eyebrow: 'Satu Ekosistem',
-    title: 'Bukan sekumpulan usaha terpisah,tapi satu ekosistem yang saling menopang.',
+    title: 'Setiap unit memiliki peran berbeda, namun bergerak dalam arah yang sama.',
     paragraphs: [
-      'Setiap unit usaha di Kembar Futagroup lahir dari satu akar yang sama: keahlian mengolah logam di Klaten. Dari sana, masing-masing tumbuh dengan fokusnya sendiri — ada yang mendalami pengecoran, manufaktur mesin, material lansekap, hingga pengembangan properti.',
-      'Yang membuatnya menjadi ekosistem adalah cara mereka terhubung. Bahan baku, kapabilitas produksi, dan jaringan pasar mengalir antar unit, sehingga kekuatan di satu lini menjadi nilai tambah bagi lini lainnya.'
+      'Kembar Futago Group menaungi delapan unit usaha yang bergerak di empat lini industri: logam, manufaktur, lansekap, dan infrastruktur. Setiap unit dijalankan secara independen dengan standar kerja masing-masing — namun terhubung dalam satu rantai nilai yang saling mendukung.',
+      'Dari pengolahan bahan baku logam di hulu, produksi komponen dan manufaktur di tengah, hingga pengembangan lahan dan infrastruktur di hilir, setiap unit mengisi peran spesifik dalam ekosistem industri grup.'
     ]
   },
   filters: [

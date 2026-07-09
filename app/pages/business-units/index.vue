@@ -38,29 +38,43 @@ useSeoMeta({
       class="bg-white"
       data-section-reveal
     >
-      <div class="mx-auto flex max-w-360 flex-col items-end gap-16 px-5 py-20 sm:px-8 lg:px-20 lg:py-25">
-        <div
-          class="flex w-full max-w-200 flex-col gap-8"
+      <div class="mx-auto max-w-360 px-5 py-20 sm:px-8 lg:px-20 lg:py-25">
+        <!-- Eyebrow -->
+        <p
+          class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green"
           data-reveal-item
         >
-          <div class="flex flex-col gap-2.5">
-            <p class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green">
-              {{ businessUnitPage.intro.eyebrow }}
+          {{ businessUnitPage.intro.eyebrow }}
+        </p>
+
+        <!-- 2-column: title left, paragraphs right -->
+        <div
+          class="mt-5 grid gap-10 lg:grid-cols-2 lg:gap-20"
+          data-reveal-item
+        >
+          <h2 class="text-3xl font-normal leading-tight text-ink sm:text-4xl lg:text-5xl">
+            {{ businessUnitPage.intro.title }}
+          </h2>
+
+          <div class="flex flex-col gap-5 text-base leading-relaxed text-black/70 lg:pt-2">
+            <p
+              v-for="paragraph in businessUnitPage.intro.paragraphs"
+              :key="paragraph"
+            >
+              {{ paragraph }}
             </p>
-            <h2 class="text-4xl font-medium leading-[1.2] text-black sm:text-5xl lg:text-heading-lg">
-              {{ businessUnitPage.intro.title }}
-            </h2>
           </div>
-
-          <div class="h-px w-full bg-black/20" />
-
-          <p class="text-base font-normal leading-[1.6] text-black/70 lg:text-lg">
-            {{ businessUnitPage.intro.paragraphs[0] }}<br><br>{{ businessUnitPage.intro.paragraphs[1] }}
-          </p>
         </div>
 
+        <!-- Separator -->
         <div
-          class="flex w-full flex-col items-start gap-8"
+          class="mt-12 h-px w-full bg-black/15"
+          data-reveal-item
+        />
+
+        <!-- Filter + cards grid -->
+        <div
+          class="mt-12 flex flex-col items-start gap-8"
           data-reveal-item
         >
           <div class="flex flex-wrap items-center gap-4">

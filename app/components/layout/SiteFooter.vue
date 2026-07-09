@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { footerColumns } from '~/data/navigation'
+
 
 withDefaults(defineProps<{
   title?: string
@@ -57,70 +57,43 @@ withDefaults(defineProps<{
       </div>
 
       <div
-        class="grid gap-12 border-b border-black/18 py-12 lg:grid-cols-[minmax(220px,320px)_minmax(0,1fr)] lg:gap-12 2xl:grid-cols-[minmax(240px,520px)_minmax(0,1fr)] 2xl:gap-24"
+        class="border-b border-black/18 py-12"
         data-reveal-item
       >
-        <div>
-          <address class="space-y-8 not-italic">
-            <div>
-              <p class="text-base font-bold leading-tight tracking-wide text-ink">
-                Kantor Pusat
-              </p>
-              <p class="mt-3 text-base font-medium leading-[1.45] text-black/68">
-                Klaten, Jawa Tengah, Indonesia
-              </p>
-            </div>
-            <div>
-              <p class="text-base font-bold leading-tight tracking-wide text-ink">
-                Email
-              </p>
-              <p class="mt-3 text-base font-medium leading-[1.45] text-black/68">
-                <a
-                  href="mailto:kembarfutagroup@gmail.com"
-                  class="transition hover:text-ink"
-                >kembarfutagroup@gmail.com</a>
-              </p>
-            </div>
-            <div>
-              <p class="text-base font-bold leading-tight tracking-wide text-ink">
-                WhatsApp
-              </p>
-              <p class="mt-3 text-base font-medium leading-[1.45] text-black/68">
-                <a
-                  href="https://wa.me/6282136728913"
-                  target="_blank"
-                  rel="noopener"
-                  class="transition hover:text-ink"
-                >0821 3672 8913</a>
-              </p>
-            </div>
-          </address>
-        </div>
-
-        <div class="grid grid-cols-2 gap-10 lg:grid-cols-5 lg:gap-8 2xl:gap-12">
-          <div
-            v-for="column in footerColumns"
-            :key="column.title"
-            class="space-y-6"
-          >
-            <h3 class="text-base font-normal leading-tight text-ink 2xl:text-xl">
-              {{ column.title }}
-            </h3>
-            <ul class="space-y-5">
-              <li
-                v-for="link in column.links"
-                :key="link.label"
-              >
-                <NuxtLink
-                  :to="link.to"
-                  class="text-sm font-medium leading-tight text-black/65 transition hover:text-ink 2xl:text-base"
-                >
-                  {{ link.label }}
-                </NuxtLink>
-              </li>
-            </ul>
+        <address class="flex flex-wrap gap-12 not-italic lg:gap-20">
+          <div>
+            <p class="text-base font-bold leading-tight tracking-wide text-ink">
+              Kantor Pusat
+            </p>
+            <p class="mt-3 text-base font-medium leading-[1.45] text-black/68">
+              Klaten, Jawa Tengah, Indonesia
+            </p>
           </div>
-        </div>
+          <div>
+            <p class="text-base font-bold leading-tight tracking-wide text-ink">
+              Email
+            </p>
+            <p class="mt-3 text-base font-medium leading-[1.45] text-black/68">
+              <a
+                href="mailto:kembarfutagroup@gmail.com"
+                class="transition hover:text-ink"
+              >kembarfutagroup@gmail.com</a>
+            </p>
+          </div>
+          <div>
+            <p class="text-base font-bold leading-tight tracking-wide text-ink">
+              WhatsApp
+            </p>
+            <p class="mt-3 text-base font-medium leading-[1.45] text-black/68">
+              <a
+                href="https://wa.me/6282136728913"
+                target="_blank"
+                rel="noopener"
+                class="transition hover:text-ink"
+              >0821 3672 8913</a>
+            </p>
+          </div>
+        </address>
       </div>
 
       <div

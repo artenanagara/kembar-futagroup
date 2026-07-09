@@ -24,27 +24,68 @@ export const aboutIntro = {
   ]
 }
 
+export const aboutStoryHeader = {
+  eyebrow: 'Kisah Kami',
+  title: 'Dari Satu Unit Usaha, Tumbuh Menjadi Ekosistem Industri',
+  description: 'Setiap langkah adalah bukti komitmen kami untuk terus berkembang dan memberikan dampak nyata bagi industri nasional.'
+}
+
 export const aboutStorySlides = [
   {
-    eyebrow: 'Kisah Kami',
-    year: '2015',
-    title: 'Berawal dari logam',
-    description: 'Perjalanan kami dimulai dari bengkel pengecoran logam di Klaten, salah satu jantung industri cor logam di Indonesia. Keahlian merancang, mengecor, dan memfinishing logam dengan presisi inilah yang menjadi fondasi dan tetap menjadi akar dari setiap unit usaha yang kami bangun kemudian.',
+    eyebrow: 'Awal Berdiri',
+    year: '2008',
+    title: 'Fondasi pertama di Klaten',
+    description: 'Unit usaha pengolahan logam pertama berdiri di Klaten, Jawa Tengah. Berawal dari fasilitas produksi kecil dengan tim yang berdedikasi, inilah titik awal dari seluruh ekosistem yang ada hari ini.',
     image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1800&q=85'
   },
   {
-    eyebrow: 'Kisah Kami',
-    year: '2018',
-    title: 'Menguatkan proses produksi',
-    description: 'Kami mulai memperluas kemampuan dari pengecoran ke fabrikasi, permesinan, perakitan, dan finishing. Setiap proses dibangun agar produk tidak hanya selesai dibuat, tetapi layak digunakan dengan mutu yang konsisten.',
+    eyebrow: 'Ekspansi',
+    year: '2011',
+    title: 'Masuk ke sektor manufaktur',
+    description: 'Kembar Teknika hadir sebagai unit manufaktur pertama dalam grup, memberikan kapabilitas rekayasa teknis yang melengkapi kemampuan logam yang sudah ada.',
     image: 'https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?auto=format&fit=crop&w=1800&q=85'
   },
   {
-    eyebrow: 'Kisah Kami',
-    year: '2024',
-    title: 'Menjadi ekosistem industri',
-    description: 'Dari akar manufaktur itu, Kembar Futagroup tumbuh menjadi holding yang menaungi berbagai unit usaha di bidang logam, teknik, lansekap, dan infrastruktur untuk menjawab kebutuhan proyek di berbagai wilayah.',
+    eyebrow: 'Diversifikasi',
+    year: '2014',
+    title: 'Lansekap masuk ke dalam portofolio grup',
+    description: 'Futastone didirikan untuk menjawab kebutuhan material batu alam yang terus tumbuh seiring meningkatnya proyek lansekap dan infrastruktur di Jawa Tengah dan sekitarnya.',
     image: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1800&q=85'
+  },
+  {
+    eyebrow: 'Milestone Korporat',
+    year: '2016',
+    title: 'Kembar Futago Group resmi terbentuk',
+    description: 'Struktur holding diformalkan. Unit-unit usaha yang selama ini beroperasi secara terpisah kini dihimpun bersama dalam satu entitas grup — memperkokoh koordinasi, sinergi, dan arah strategis bersama.',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1800&q=85'
+  },
+  {
+    eyebrow: 'Inisiatif',
+    year: '2018',
+    title: 'Futago Land memperkokoh tata nilai',
+    description: 'Dengan hadirnya Futago Land, grup menambahkan dimensi properti dan industri — ditopang oleh satu visi bersama untuk terus mengembangkan kapasitas dan infrastruktur. Inilah nilai terintegrasi dari hulu ke hilir.',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=85'
+  },
+  {
+    eyebrow: 'Peningkatan Kapasitas',
+    year: '2020',
+    title: 'Peningkatan fasilitas produksi di tengah ketidakpastian',
+    description: 'Di saat banyak industri melambat, grup justru memperkuat fasilitas — meningkatkan kapasitas area, memperluas jangkauan pasar, dan memastikan ketahanan operasional jangka panjang.',
+    image: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1600&q=85'
+  },
+  {
+    eyebrow: 'Khazanah Sosial',
+    year: '2022',
+    title: 'Yayasan Futago resmi diluncurkan',
+    description: 'Komitmen sosial grup diformalkan melalui pendirian yayasan yang berfokus pada pemberdayaan masyarakat, aksesibilitas pendidikan, dan program lingkungan di sekitar wilayah operasi.',
+    image: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1800&q=85'
+  },
+  {
+    eyebrow: 'Saat Ini',
+    year: '2024',
+    title: 'Delapan unit usaha, satu ekosistem industri terpadu',
+    description: 'Kembar Futago Group kini menaungi delapan unit usaha aktif di sektor industri, dengan jangkauan pasar yang meluas ke seluruh Jawa dan terus memperkuat posisi sebagai holding industri regional yang diperhitungkan.',
+    image: 'https://images.unsplash.com/photo-1624397640148-949b1732bb0a?auto=format&fit=crop&w=1800&q=85'
   }
 ]
 

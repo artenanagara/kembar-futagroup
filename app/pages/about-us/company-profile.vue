@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { aboutHero, aboutIntro, aboutStorySlides, companyValues, leadership, trackRecord, visionMission } from '~/data/about'
+import { aboutHero, aboutIntro, aboutStoryHeader, aboutStorySlides, companyValues, leadership, trackRecord, visionMission } from '~/data/about'
 
 const title = 'Profil Perusahaan - Kembar Futagroup'
 const description = 'Profil Kembar Futagroup sebagai holding manufaktur dari Klaten yang menaungi unit usaha logam, permesinan, lansekap, dan infrastruktur.'
@@ -11,181 +11,6 @@ useSeoMeta({
   ogDescription: description,
   ogImage: '/images/og-image.webp',
   twitterCard: 'summary_large_image'
-})
-
-const sectionRef = ref<HTMLElement | null>(null)
-const activeStoryIndex = ref(0)
-let storyTrigger: { kill: () => void } | undefined
-
-const storyScrollUnits = aboutStorySlides.map((slide) => {
-  const readableWeight = slide.description.length / 230
-
-  return Math.min(1.45, Math.max(0.9, readableWeight))
-})
-
-const totalStoryScrollUnits = storyScrollUnits.reduce((total, unit) => total + unit, 0)
-
-const storyStops = storyScrollUnits.reduce<number[]>((stops, unit) => {
-  const previousStop = stops[stops.length - 1] ?? 0
-
-  stops.push(previousStop + unit / totalStoryScrollUnits)
-
-  return stops
-}, [0])
-
-const storySectionHeight = `${(1 + totalStoryScrollUnits) * 100}svh`
-
-const storyProgressSegments = storyScrollUnits.map(unit => ({
-  height: `${(unit / totalStoryScrollUnits) * 100}%`
-}))
-
-const storyTextTransition = {
-  exitDuration: 0.8,
-  enterDuration: 1.15,
-  ease: 'power2.out'
-}
-
-onMounted(async () => {
-  if (!sectionRef.value || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    return
-  }
-
-  const gsap = (await import('gsap')).default
-  const { ScrollTrigger } = await import('gsap/ScrollTrigger')
-
-  gsap.registerPlugin(ScrollTrigger)
-
-  const section = sectionRef.value
-  const slides = gsap.utils.toArray<HTMLElement>('[data-story-slide]', section)
-  const fills = gsap.utils.toArray<HTMLElement>('[data-story-progress-fill]', section)
-  const titleWords = slides.map(slide => gsap.utils.toArray<HTMLElement>('[data-reveal-item][data-reveal-from="mask"]', slide))
-
-  if (!slides.length || !fills.length || !slides[0]) {
-    return
-  }
-
-  gsap.set(slides, {
-    autoAlpha: 0,
-    y: 54,
-    filter: 'blur(10px)'
-  })
-
-  gsap.set(slides[0], {
-    autoAlpha: 1,
-    y: 0,
-    filter: 'blur(0px)'
-  })
-
-  gsap.set(fills, {
-    scaleY: 0,
-    transformOrigin: 'top'
-  })
-
-  gsap.set(titleWords.flat(), { yPercent: 100 })
-
-  if (titleWords[0]?.length) {
-    gsap.to(titleWords[0], {
-      yPercent: 0,
-      duration: 0.85,
-      ease: 'power4.out',
-      stagger: 0.05
-    })
-  }
-
-  const showSlide = (nextIndex: number) => {
-    if (nextIndex === activeStoryIndex.value) {
-      return
-    }
-
-    const previousIndex = activeStoryIndex.value
-    const previousSlide = slides[previousIndex]
-    const nextSlide = slides[nextIndex]
-
-    if (!previousSlide || !nextSlide) {
-      return
-    }
-
-    activeStoryIndex.value = nextIndex
-
-    gsap.to(previousSlide, {
-      autoAlpha: 0,
-      y: nextIndex > previousIndex ? -42 : 42,
-      filter: 'blur(10px)',
-      duration: storyTextTransition.exitDuration,
-      ease: storyTextTransition.ease,
-      overwrite: true
-    })
-
-    gsap.fromTo(nextSlide, {
-      autoAlpha: 0,
-      y: nextIndex > previousIndex ? 54 : -54,
-      filter: 'blur(10px)'
-    }, {
-      autoAlpha: 1,
-      y: 0,
-      filter: 'blur(0px)',
-      duration: storyTextTransition.enterDuration,
-      ease: storyTextTransition.ease,
-      overwrite: true
-    })
-
-    const previousWords = titleWords[previousIndex]
-    const nextWords = titleWords[nextIndex]
-
-    if (previousWords?.length) {
-      gsap.to(previousWords, {
-        yPercent: 100,
-        duration: 0.3,
-        ease: 'power2.in',
-        overwrite: true
-      })
-    }
-
-    if (nextWords?.length) {
-      gsap.fromTo(nextWords, {
-        yPercent: 100
-      }, {
-        yPercent: 0,
-        duration: 0.85,
-        ease: 'power4.out',
-        stagger: 0.05,
-        delay: 0.15,
-        overwrite: true
-      })
-    }
-  }
-
-  storyTrigger = ScrollTrigger.create({
-    trigger: section,
-    start: 'top top',
-    end: 'bottom bottom',
-    scrub: 0.85,
-    onUpdate: (self) => {
-      const slideCount = aboutStorySlides.length
-      const progress = Math.min(0.999, self.progress)
-      const nextIndex = Math.max(0, storyStops.findIndex((stop, index) => {
-        const nextStop = storyStops[index + 1] ?? 1
-
-        return progress >= stop && progress < nextStop
-      }))
-
-      showSlide(Math.min(slideCount - 1, nextIndex))
-
-      fills.forEach((fill, index) => {
-        const start = storyStops[index] ?? 0
-        const end = storyStops[index + 1] ?? 1
-        const localProgress = Math.min(1, Math.max(0, (self.progress - start) / (end - start)))
-
-        gsap.set(fill, {
-          scaleY: localProgress
-        })
-      })
-    }
-  })
-})
-
-onBeforeUnmount(() => {
-  storyTrigger?.kill()
 })
 </script>
 
@@ -316,73 +141,79 @@ onBeforeUnmount(() => {
 
     <section
       id="sejarah"
-      ref="sectionRef"
-      class="relative bg-black text-white scroll-mt-24"
-      :style="{ height: storySectionHeight }"
+      class="bg-white text-ink scroll-mt-24"
     >
-      <div class="sticky top-0 h-svh overflow-hidden">
+      <div class="mx-auto max-w-360 px-5 py-20 sm:px-8 lg:px-20 lg:py-25">
         <div
-          v-for="(slide, index) in aboutStorySlides"
-          :key="slide.year"
-          class="absolute inset-0 transition duration-700 ease-[cubic-bezier(.16,1,.3,1)]"
-          :class="activeStoryIndex === index ? 'opacity-100 scale-100' : 'opacity-0 scale-105'"
+          class="grid gap-8 lg:grid-cols-2 lg:gap-16"
+          data-section-reveal
         >
-          <img
-            :src="slide.image"
-            :alt="slide.title"
-            class="size-full object-cover grayscale"
+          <div data-reveal-item>
+            <p class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green">
+              {{ aboutStoryHeader.eyebrow }}
+            </p>
+            <h2 class="mt-2 max-w-xl text-4xl font-normal leading-tight text-ink sm:text-5xl">
+              {{ aboutStoryHeader.title }}
+            </h2>
+          </div>
+          <p
+            class="text-base leading-relaxed text-black/65 lg:max-w-sm lg:justify-self-end lg:pt-2"
+            data-reveal-item
           >
+            {{ aboutStoryHeader.description }}
+          </p>
         </div>
 
-        <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,.88)_0%,rgba(0,0,0,.5)_48%,rgba(0,0,0,.9)_100%)]" />
-        <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.22)_0%,rgba(0,0,0,.68)_100%)]" />
+        <div class="mt-10 h-px bg-black/15" />
 
-        <div class="relative z-10 mx-auto flex h-full max-w-360 px-5 sm:px-8 lg:px-20">
-          <div class="grid h-full w-full grid-cols-[24px_1fr] gap-6 sm:grid-cols-[32px_1fr] sm:gap-8">
-            <div class="relative h-full">
-              <div
-                class="absolute inset-y-2 left-0 w-[1.5px] overflow-hidden bg-white/24"
-                aria-hidden="true"
-              >
-                <div
-                  v-for="(segment, index) in storyProgressSegments"
-                  :key="`${aboutStorySlides[index]?.year}-progress`"
-                  class="relative w-full overflow-hidden border-b border-black/40 last:border-b-0"
-                  :style="{ height: segment.height }"
-                >
-                  <span
-                    data-story-progress-fill
-                    class="absolute inset-x-0 top-0 h-full origin-top scale-y-0 bg-brand-green transition-transform duration-300 ease-out"
-                  />
-                </div>
-              </div>
-            </div>
+        <div class="grid grid-cols-[auto_1fr]">
+          <div
+            class="relative hidden border-t border-black/10 pt-14 sm:block"
+            aria-hidden="true"
+          >
+            <span class="sticky top-48 mb-28 block select-none font-medium leading-none text-brand-green text-7xl sm:text-8xl lg:text-9xl">
+              20
+            </span>
+          </div>
 
-            <div class="relative flex max-w-3xl flex-col justify-between py-8 lg:py-12">
-              <p class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green">
-                Kisah Kami
+          <div class="sm:pb-0">
+            <article
+              v-for="slide in aboutStorySlides"
+              :key="slide.year"
+              class="grid grid-cols-[auto_1fr] items-start gap-x-0 gap-y-6 border-t border-black/10 py-14 sm:gap-x-10 lg:gap-x-20"
+              data-section-reveal
+            >
+              <p class="select-none font-medium leading-none text-brand-green text-7xl sm:text-8xl lg:text-9xl">
+                <span
+                  class="sm:hidden"
+                  aria-hidden="true"
+                >20</span><span class="inline-block overflow-hidden pb-[0.05em] align-top"><span
+                  class="inline-block"
+                  data-reveal-item
+                  data-reveal-from="mask"
+                >{{ slide.year.slice(2) }}</span></span>
               </p>
-
-              <div class="relative min-h-90 pb-6 sm:min-h-105 lg:min-h-110">
-                <article
-                  v-for="(slide, index) in aboutStorySlides"
-                  :key="slide.year"
-                  data-story-slide
-                  class="absolute inset-x-0 bottom-0 max-w-2xl transition duration-500 ease-[cubic-bezier(.16,1,.3,1)]"
-                  :class="activeStoryIndex === index ? 'pointer-events-auto translate-y-0 opacity-100' : 'pointer-events-none translate-y-8 opacity-0'"
+              <div class="max-w-xl">
+                <p
+                  class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green"
+                  data-reveal-item
                 >
-                  <p class="text-2xl font-normal leading-tight text-white sm:text-3xl">
-                    {{ slide.year }}
-                  </p>
-                  <h2 class="mt-8 text-3xl font-normal leading-tight sm:text-4xl lg:text-5xl">
-                    <UiRevealText :text="slide.title" />
-                  </h2>
-                  <p class="mt-5 text-base leading-relaxed text-white/75">
-                    {{ slide.description }}
-                  </p>
-                </article>
+                  {{ slide.eyebrow }}
+                </p>
+                <h3
+                  class="mt-3 text-2xl font-medium leading-tight text-ink"
+                  data-reveal-item
+                >
+                  {{ slide.title }}
+                </h3>
+                <p
+                  class="mt-4 text-base leading-relaxed text-black/65"
+                  data-reveal-item
+                >
+                  {{ slide.description }}
+                </p>
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </div>
