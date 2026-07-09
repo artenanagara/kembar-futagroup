@@ -101,7 +101,7 @@ useSeoMeta({
           class="flex items-center justify-center py-8 lg:py-12"
           data-reveal-item
         >
-          <div class="aspect-[3/4] w-full max-w-sm overflow-hidden bg-neutral-200 lg:max-w-md">
+          <div class="aspect-3/4 w-full max-w-sm overflow-hidden bg-neutral-200 lg:max-w-md">
             <img
               v-if="leadershipStory.portrait"
               :src="leadershipStory.portrait.src"

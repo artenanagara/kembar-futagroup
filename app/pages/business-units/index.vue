@@ -82,7 +82,7 @@ useSeoMeta({
               v-for="filter in businessUnitPage.filters"
               :key="filter.value"
               type="button"
-              class="inline-flex items-center justify-center rounded-full px-4 py-3 text-sm font-normal leading-[1.2] transition duration-300 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green"
+              class="inline-flex items-center justify-center rounded-full px-4 py-3 text-sm font-normal leading-[1.2] transition duration-300 ease-out focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-brand-green"
               :class="activeFilter === filter.value ? 'bg-brand-green text-white' : 'border border-black/10 text-black/70 hover:border-brand-green hover:text-brand-green'"
               @click="activeFilter = filter.value"
             >

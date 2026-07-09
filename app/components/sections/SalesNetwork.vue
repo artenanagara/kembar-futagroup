@@ -47,7 +47,7 @@ const tickerCities = [...cities, ...cities]
           </div>
         </div>
 
-        <div class="relative mx-auto h-[28rem] w-full max-w-[72rem] overflow-hidden sm:h-[36rem] lg:h-[48rem]">
+        <div class="relative mx-auto h-112 w-full max-w-6xl overflow-hidden sm:h-144 lg:h-192">
           <img
             src="/images/sales-network-globe.png"
             alt="Globe jaringan penjualan Kembar Futago Group dengan fokus Indonesia"

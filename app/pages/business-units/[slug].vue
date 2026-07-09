@@ -117,7 +117,7 @@ useSeoMeta({
             class="flex flex-col gap-8"
             data-reveal-item
           >
-            <h3 class="text-2xl font-medium leading-[1.25] text-ink sm:text-3xl lg:text-4xl">
+            <h3 class="text-2xl font-medium leading-tight text-ink sm:text-3xl lg:text-4xl">
               {{ unit.focus.title }}
             </h3>
 
