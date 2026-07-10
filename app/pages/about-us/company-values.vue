@@ -13,6 +13,15 @@ useSeoMeta({
   twitterCard: 'summary_large_image'
 })
 
+useSchemaOrg([
+  defineBreadcrumb({
+    itemListElement: companyValuesHero.breadcrumbs.map(crumb => ({
+      name: crumb.label,
+      item: crumb.to
+    }))
+  })
+])
+
 const activeBehaviorIndex = ref(0)
 </script>
 
@@ -142,7 +151,7 @@ const activeBehaviorIndex = ref(0)
           {{ companyValuesPillars.title }}
         </h2>
         <p
-          class="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-black/65"
+          class="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-black/70"
           data-reveal-item
         >
           {{ companyValuesPillars.description }}
@@ -191,13 +200,13 @@ const activeBehaviorIndex = ref(0)
             >
               <span
                 class="text-base font-medium leading-tight"
-                :class="activeBehaviorIndex === index ? 'text-white' : 'text-white/55'"
+                :class="activeBehaviorIndex === index ? 'text-white' : 'text-white/45'"
               >
                 {{ item.title }}
               </span>
               <p
                 v-if="activeBehaviorIndex === index"
-                class="max-w-md text-sm leading-relaxed text-white/55"
+                class="max-w-md text-sm leading-relaxed text-white/70"
               >
                 {{ item.description }}
               </p>
@@ -215,7 +224,7 @@ const activeBehaviorIndex = ref(0)
           >
             <UIcon
               name="i-lucide-image"
-              class="size-12 text-white/25"
+              class="size-12 text-white/20"
             />
           </div>
         </div>

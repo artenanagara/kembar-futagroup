@@ -206,7 +206,7 @@ onBeforeUnmount(() => {
 
       <div class="relative z-10 mx-auto flex min-h-svh max-w-360 items-end px-5 pb-12 pt-28 sm:px-8 lg:px-20 lg:pb-4">
         <div class="w-full lg:pl-30">
-          <h1 class="max-w-6xl text-5xl font-medium leading-[1.12] text-white sm:text-6xl lg:text-7xl">
+          <h1 class="max-w-6xl text-4xl font-normal leading-tight text-white sm:text-5xl lg:text-6xl">
             <UiRevealText text="Membangun Infrastruktur Indonesia, dari Logam hingga Solusi Industri" />
           </h1>
 
@@ -214,11 +214,11 @@ onBeforeUnmount(() => {
             class="mt-12 flex max-w-3xl flex-col gap-6 pb-4 sm:flex-row sm:gap-16 lg:mt-16"
             data-reveal-item
           >
-            <div class="flex min-w-48 items-center gap-2 text-base leading-relaxed text-white/90">
+            <div class="flex min-w-48 items-center gap-2 text-base leading-relaxed text-white/80">
               <span class="size-1.5 rounded-full bg-white" />
               <span>Holding Manufaktur</span>
             </div>
-            <div class="space-y-8 text-base leading-relaxed text-white/90">
+            <div class="space-y-8 text-base leading-relaxed text-white/80">
               <p>
                 Berawal dari keahlian pengecoran logam di Klaten, Kembar Futagroup tumbuh menjadi ekosistem industri yang menaungi lini manufaktur, lansekap, dan infrastruktur di seluruh Indonesia.
               </p>
@@ -288,7 +288,7 @@ onBeforeUnmount(() => {
               class="space-y-2"
               data-about-stat
             >
-              <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-brand-orange">
+              <h3 class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-orange">
                 {{ item.title }}
               </h3>
               <p class="text-base leading-relaxed text-black/70">
@@ -313,12 +313,12 @@ onBeforeUnmount(() => {
             <p class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green">
               Ekosistem Kami
             </p>
-            <h2 class="mt-8 text-5xl font-normal leading-[1.05] tracking-normal sm:text-7xl">
+            <h2 class="mt-8 text-4xl font-normal leading-tight sm:text-5xl lg:text-6xl">
               Empat Bidang Keahlian
             </h2>
           </div>
 
-          <p class="max-w-3xl text-base font-medium leading-[1.75] text-white/55 lg:pb-2 lg:text-lg">
+          <p class="max-w-3xl text-base leading-relaxed text-white/70 lg:pb-2 lg:text-lg">
             Dari pengolahan logam hingga kebutuhan proyek, setiap bidang bekerja saling mendukung dalam satu ekosistem industri.
           </p>
         </div>
@@ -360,7 +360,7 @@ onBeforeUnmount(() => {
                 <span class="mt-9 block text-3xl font-normal leading-tight sm:text-3xl">
                   {{ item.title }}
                 </span>
-                <span class="mt-4 block max-w-xs text-sm font-medium leading-[1.55] text-black/80 sm:text-sm">
+                <span class="mt-4 block max-w-xs text-sm leading-relaxed text-black/65">
                   {{ item.description }}
                 </span>
               </span>
@@ -394,7 +394,7 @@ onBeforeUnmount(() => {
           <p class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green">
             Unit Usaha
           </p>
-          <h2 class="text-black text-6xl leading-tight pt-2 sm:text-6xl">
+          <h2 class="pt-2 text-4xl font-normal leading-tight text-ink sm:text-5xl lg:text-6xl">
             Satu Ekosistem Industri
           </h2>
           <p class="text-black/70 text-base leading-relaxed pt-4 sm:text-lg">
@@ -455,7 +455,7 @@ onBeforeUnmount(() => {
               {{ item.number }}
             </p>
             <div class="grid gap-8 lg:grid-cols-[300px_1fr] lg:gap-24">
-              <h3 class="text-left text-xl font-medium leading-tight lg:text-right">
+              <h3 class="text-left text-xl font-medium leading-tight sm:text-2xl lg:text-right">
                 {{ item.title }}
               </h3>
               <div class="space-y-10">

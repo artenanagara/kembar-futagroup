@@ -38,12 +38,12 @@ withDefaults(defineProps<{
       </UiBadge>
       <component
         :is="headingTag"
-        class="min-h-11 text-base font-normal leading-snug text-ink transition-colors duration-200 group-hover:text-brand-green"
+        class="min-h-11 text-base font-medium leading-tight text-ink transition-colors duration-200 group-hover:text-brand-green"
       >
         {{ post.title }}
       </component>
     </div>
-    <div class="flex items-center gap-4 text-sm leading-relaxed text-black/50">
+    <div class="flex items-center gap-4 text-sm leading-relaxed text-black/45">
       <time :datetime="post.date">{{ formatNewsDate(post.date) }}</time>
       <span class="size-1.5 rounded-full bg-neutral-300" />
       <span>{{ post.readTime }}</span>

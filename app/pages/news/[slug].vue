@@ -24,6 +24,16 @@ useSeoMeta({
   twitterCard: 'summary_large_image'
 })
 
+useSchemaOrg([
+  defineBreadcrumb({
+    itemListElement: [
+      { name: 'Beranda', item: '/' },
+      { name: 'Berita', item: '/berita' },
+      { name: post.title }
+    ]
+  })
+])
+
 const otherPosts = newsPosts.filter(item => item.slug !== slug).slice(0, 3)
 
 const slugify = (text: string) => text
@@ -51,7 +61,7 @@ const headings = computed(() => post.content.filter(block => block.type === 'hea
 
         <div class="mt-8 max-w-3xl">
           <nav
-            class="flex flex-wrap items-center gap-2 text-sm leading-tight text-black/50"
+            class="flex flex-wrap items-center gap-2 text-sm leading-tight text-black/45"
             aria-label="Breadcrumb"
             data-reveal-item
           >
@@ -61,29 +71,29 @@ const headings = computed(() => post.content.filter(block => block.type === 'hea
             >
               Beranda
             </NuxtLink>
-            <span class="text-black/30">/</span>
+            <span class="text-black/20">/</span>
             <NuxtLink
               to="/berita"
               class="transition hover:text-ink"
             >
               Berita
             </NuxtLink>
-            <span class="text-black/30">/</span>
+            <span class="text-black/20">/</span>
             <span class="text-black/70">{{ post.title }}</span>
           </nav>
 
-          <h1 class="mt-5 text-4xl font-medium leading-tight text-ink sm:text-5xl lg:text-6xl">
+          <h1 class="mt-5 text-4xl font-normal leading-tight text-ink sm:text-5xl lg:text-6xl">
             <UiRevealText :text="post.title" />
           </h1>
           <p
-            class="mt-5 text-base leading-relaxed text-black/65"
+            class="mt-5 text-base leading-relaxed text-black/70"
             data-reveal-item
           >
             {{ post.excerpt }}
           </p>
 
           <div
-            class="mt-5 flex flex-wrap items-center gap-3 text-sm leading-tight text-black/50"
+            class="mt-5 flex flex-wrap items-center gap-3 text-sm leading-tight text-black/45"
             data-reveal-item
           >
             <span>{{ post.category }}</span>
@@ -127,7 +137,7 @@ const headings = computed(() => post.content.filter(block => block.type === 'hea
             >
               <a
                 :href="`#${slugify(heading.text)}`"
-                class="block text-sm leading-relaxed text-black/60 transition hover:text-brand-green"
+                class="block text-sm leading-relaxed text-black/65 transition hover:text-brand-green"
               >
                 {{ heading.text }}
               </a>
@@ -163,7 +173,7 @@ const headings = computed(() => post.content.filter(block => block.type === 'hea
               >
               <figcaption
                 v-if="block.caption"
-                class="mt-3 text-sm leading-relaxed text-black/50"
+                class="mt-3 text-sm leading-relaxed text-black/45"
               >
                 {{ block.caption }}
               </figcaption>

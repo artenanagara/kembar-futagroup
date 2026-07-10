@@ -24,7 +24,7 @@ const tickerCities = [...cities, ...cities]
         class="mx-auto flex max-w-6xl flex-col items-center text-center"
         data-reveal-item
       >
-        <h2 class="max-w-4xl text-balance text-3xl font-medium leading-tight tracking-normal text-white sm:text-5xl lg:text-6xl">
+        <h2 class="max-w-4xl text-balance text-4xl font-normal leading-tight text-white sm:text-5xl lg:text-6xl">
           Berbasis di Klaten, menjangkau pasar nasional
         </h2>
 

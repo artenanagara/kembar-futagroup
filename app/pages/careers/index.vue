@@ -12,6 +12,15 @@ useSeoMeta({
   ogImage: '/images/og-image.webp',
   twitterCard: 'summary_large_image'
 })
+
+useSchemaOrg([
+  defineBreadcrumb({
+    itemListElement: careersHero.breadcrumbs.map((label, index) => ({
+      name: label,
+      item: index === 0 ? '/' : undefined
+    }))
+  })
+])
 </script>
 
 <template>
@@ -42,7 +51,7 @@ useSeoMeta({
           class="mt-2 space-y-8"
           data-reveal-item
         >
-          <h2 class="max-w-4xl text-4xl font-normal leading-[1.12] text-ink sm:text-5xl lg:text-6xl">
+          <h2 class="max-w-4xl text-4xl font-normal leading-tight text-ink sm:text-5xl lg:text-6xl">
             {{ careersIntro.title }}
           </h2>
           <div class="h-px bg-black/20" />
@@ -87,13 +96,13 @@ useSeoMeta({
             :key="benefit.number"
             class="border border-white/20 p-7 transition duration-500 ease-out hover:border-brand-green"
           >
-            <p class="text-sm font-medium leading-tight text-white/50">
+            <p class="text-sm font-medium leading-tight text-white/45">
               {{ benefit.number }}
             </p>
             <h3 class="mt-6 text-xl font-medium leading-tight text-white">
               {{ benefit.title }}
             </h3>
-            <p class="mt-4 text-sm leading-relaxed text-white/65">
+            <p class="mt-4 text-sm leading-relaxed text-white/70">
               {{ benefit.description }}
             </p>
           </article>
@@ -133,7 +142,7 @@ useSeoMeta({
               class="group flex items-center justify-between gap-6 py-6"
             >
               <div class="flex items-center gap-6">
-                <span class="font-mono text-sm text-black/40">
+                <span class="font-mono text-sm text-black/45">
                   {{ String(index + 1).padStart(2, '0') }}
                 </span>
                 <div>
@@ -141,7 +150,7 @@ useSeoMeta({
                     {{ job.title }}
                   </h3>
                   <div class="mt-2 flex flex-wrap items-center gap-3">
-                    <span class="text-sm leading-tight text-black/60">
+                    <span class="text-sm leading-tight text-black/65">
                       {{ job.city }}
                     </span>
                     <UiBadge
@@ -156,7 +165,7 @@ useSeoMeta({
 
               <UIcon
                 name="i-lucide-arrow-up-right"
-                class="size-6 shrink-0 text-black/30 transition-colors duration-200 group-hover:text-brand-green"
+                class="size-6 shrink-0 text-black/45 transition-colors duration-200 group-hover:text-brand-green"
               />
             </NuxtLink>
           </div>

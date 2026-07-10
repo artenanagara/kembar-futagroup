@@ -27,13 +27,13 @@ useSeoMeta({
 useSchemaOrg([
   defineOrganization({
     name: 'Kembar Futagroup',
-    logo: '/favicon.ico',
+    logo: '/logo.png',
     description,
     url: 'https://kembarfutagroup.com',
     sameAs: [
-      'https://www.instagram.com',
-      'https://www.linkedin.com',
-      'https://www.youtube.com'
+      'https://www.instagram.com/futakeindonesia/',
+      'https://www.linkedin.com/company/futake-hardware-indonesia/',
+      'https://www.youtube.com/@FutakeIndonesia'
     ]
   }),
   defineWebSite({

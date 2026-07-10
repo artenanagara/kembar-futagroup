@@ -15,6 +15,15 @@ useSeoMeta({
   ogImage: '/images/og-image.webp',
   twitterCard: 'summary_large_image'
 })
+
+useSchemaOrg([
+  defineBreadcrumb({
+    itemListElement: productSolutionPage.hero.breadcrumbs.map((label, index) => ({
+      name: label,
+      item: index === 0 ? '/' : undefined
+    }))
+  })
+])
 </script>
 
 <template>
@@ -43,10 +52,10 @@ useSeoMeta({
         <div
           class="max-w-5xl"
         >
-          <h2 class="text-4xl font-medium leading-tight text-black/78 sm:text-4xl ">
+          <h2 class="text-4xl font-normal leading-tight text-ink sm:text-5xl">
             {{ productSolutionPage.focus.title }}
           </h2>
-          <div class="mt-10 grid gap-8 text-base font-medium leading-relaxed text-black/72 md:grid-cols-2 lg:max-w-4xl">
+          <div class="mt-10 grid gap-8 text-base leading-relaxed text-black/70 md:grid-cols-2 lg:max-w-4xl">
             <p
               v-for="paragraph in productSolutionPage.focus.paragraphs"
               :key="paragraph"
@@ -76,7 +85,7 @@ useSeoMeta({
           <p
             v-for="label in productSolutionPage.capabilityBand.labels"
             :key="label"
-            class="text-sm font-medium uppercase leading-[1.2] tracking-[0.06em] text-white/90 lg:text-base"
+            class="text-sm font-medium uppercase leading-tight tracking-wide text-white lg:text-base"
           >
             + {{ label }}
           </p>
@@ -90,7 +99,7 @@ useSeoMeta({
     >
       <div class="mx-auto max-w-360 px-5 py-20 sm:px-8 lg:px-20 lg:py-25">
         <h2
-          class="text-5xl font-medium leading-[1.12] text-black/80 sm:text-6xl"
+          class="text-4xl font-normal leading-tight text-ink sm:text-5xl lg:text-6xl"
           data-reveal-item
         >
           Produk & Solusi
@@ -113,7 +122,7 @@ useSeoMeta({
     >
       <div class="mx-auto max-w-360 px-5 pb-20 sm:px-8 lg:px-20 lg:pb-25">
         <p
-          class="text-2xl font-medium leading-[1.2] text-black/80"
+          class="text-2xl font-medium leading-tight text-ink"
           data-reveal-item
         >
           (Area yang Kami Dukung)
@@ -134,8 +143,8 @@ useSeoMeta({
               v-for="(industry, index) in productSolutionPage.industries"
               :key="industry.name"
               type="button"
-              class="w-full text-left text-3xl font-medium leading-[1.18] transition duration-300 ease-out sm:text-4xl"
-              :class="activeIndustryIndex === index ? 'text-black' : 'text-black/22 hover:text-black/55'"
+              class="w-full text-left text-3xl font-medium leading-tight transition duration-300 ease-out sm:text-4xl"
+              :class="activeIndustryIndex === index ? 'text-ink' : 'text-black/20 hover:text-black/45'"
               @click="activeIndustryIndex = index"
               @mouseenter="activeIndustryIndex = index"
             >

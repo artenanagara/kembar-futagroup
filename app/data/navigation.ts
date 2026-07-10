@@ -57,7 +57,7 @@ export const navItems: NavItem[] = [
       {
         label: 'Tim & Struktur Organisasi',
         to: '/tentang-kami/struktur',
-        description: 'Peta ekosistem holding, kapabilitas, dan unit usaha.'
+        description: 'Susunan direksi dan kepala divisi dalam ekosistem grup.'
       },
       {
         label: 'Tata Nilai Perusahaan',

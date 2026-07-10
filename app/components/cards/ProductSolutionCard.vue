@@ -17,15 +17,15 @@ defineProps<{
     class="sticky top-0 grid min-h-110 gap-6 border-t border-black/20 bg-white py-8 last:border-b md:min-h-80 md:grid-cols-[120px_1fr] lg:min-h-75 lg:grid-cols-[180px_1.1fr_1.45fr_452px] lg:items-start"
     :style="{ zIndex: index + 1 }"
   >
-    <p class="font-mono text-base leading-[1.2] text-black/80">
+    <p class="font-mono text-base leading-tight text-black/45">
       [{{ String(index + 1).padStart(2, '0') }}]
     </p>
 
-    <h3 class="text-xl font-medium leading-[1.15] text-black/78">
+    <h3 class="text-xl font-medium leading-tight text-ink sm:text-2xl">
       {{ solution.name }}
     </h3>
 
-    <p class="max-w-xl text-base font-medium leading-[1.35] text-black/72">
+    <p class="max-w-xl text-base leading-relaxed text-black/70">
       {{ solution.description }}
     </p>
 

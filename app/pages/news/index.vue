@@ -12,6 +12,15 @@ useSeoMeta({
   ogImage: '/images/og-image.webp',
   twitterCard: 'summary_large_image'
 })
+
+useSchemaOrg([
+  defineBreadcrumb({
+    itemListElement: newsHero.breadcrumbs.map((label, index) => ({
+      name: label,
+      item: index === 0 ? '/' : undefined
+    }))
+  })
+])
 </script>
 
 <template>

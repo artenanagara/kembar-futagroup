@@ -26,12 +26,12 @@ withDefaults(defineProps<{
         class="w-full"
         data-reveal-item
       >
-        <h2 class="mx-auto max-w-340 text-3xl font-normal leading-[1.08] tracking-normal text-white sm:text-5xl">
+        <h2 class="mx-auto max-w-340 text-4xl font-normal leading-tight text-white sm:text-5xl lg:text-6xl">
           {{ title }}
         </h2>
         <p
           v-if="description"
-          class="mx-auto mt-8 max-w-4xl text-base font-medium leading-relaxed text-white/50 sm:text-lg"
+          class="mx-auto mt-8 max-w-4xl text-base leading-relaxed text-white/70 sm:text-lg"
         >
           {{ description }}
         </p>

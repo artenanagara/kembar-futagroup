@@ -17,7 +17,7 @@ const localizedRoutePaths = new Map([
   ['app/pages/about-us/index.vue', '/tentang-kami'],
   ['app/pages/about-us/company-profile.vue', '/tentang-kami/profil'],
   ['app/pages/about-us/leadership.vue', '/tentang-kami/kepemimpinan'],
-  ['app/pages/about-us/organization-structure.vue', '/tentang-kami/struktur'],
+  ['app/pages/about-us/leadership-structure.vue', '/tentang-kami/struktur'],
   ['app/pages/about-us/company-values.vue', '/tentang-kami/tata-nilai-perusahaan'],
   ['app/pages/business-units/index.vue', '/unit-bisnis'],
   ['app/pages/business-units/[slug].vue', '/unit-bisnis/:slug()'],

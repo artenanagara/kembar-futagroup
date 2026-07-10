@@ -12,6 +12,34 @@ useSeoMeta({
   ogImage: '/images/og-image.webp',
   twitterCard: 'summary_large_image'
 })
+
+useSchemaOrg([
+  defineBreadcrumb({
+    itemListElement: aboutHero.breadcrumbs.map((label, index) => ({
+      name: label,
+      item: index === 0 ? '/' : undefined
+    }))
+  })
+])
+
+const imgRevealed = ref(false)
+
+onMounted(() => {
+  const img = document.querySelector<HTMLElement>('[data-scale-reveal]')
+  if (!img) return
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry?.isIntersecting) {
+        imgRevealed.value = true
+        observer.disconnect()
+      }
+    },
+    { threshold: 0.15 }
+  )
+
+  observer.observe(img)
+})
 </script>
 
 <template>
@@ -90,7 +118,7 @@ useSeoMeta({
           class="mt-2 space-y-8"
           data-reveal-item
         >
-          <h2 class="max-w-4xl text-4xl font-normal leading-[1.12] text-ink sm:text-5xl lg:text-6xl">
+          <h2 class="max-w-4xl text-4xl font-normal leading-tight text-ink sm:text-5xl lg:text-6xl">
             {{ aboutIntro.title }}
           </h2>
           <div class="h-px bg-black/20" />
@@ -109,13 +137,20 @@ useSeoMeta({
         </div>
 
         <div
-          class="mt-12 overflow-hidden bg-neutral-200"
+          class="mt-6 overflow-hidden"
           data-reveal-item
         >
           <img
             :src="aboutIntro.media.src"
             :alt="aboutIntro.media.alt"
-            class="h-70 w-full object-cover grayscale transition duration-900 ease-[cubic-bezier(.16,1,.3,1)] hover:scale-[1.02] hover:grayscale-0 sm:h-105 lg:h-125"
+            data-scale-reveal
+            class="h-70 w-full object-cover object-bottom sm:h-105 lg:h-125"
+            :style="{
+              transform: imgRevealed ? 'scale(1)' : 'scale(0.5)',
+              opacity: imgRevealed ? '1' : '0',
+              transformOrigin: 'center',
+              transition: 'transform 1200ms cubic-bezier(.16,1,.3,1), opacity 1200ms cubic-bezier(.16,1,.3,1)'
+            }"
           >
         </div>
 
@@ -157,7 +192,7 @@ useSeoMeta({
             </h2>
           </div>
           <p
-            class="text-base leading-relaxed text-black/65 lg:max-w-sm lg:justify-self-end lg:pt-2"
+            class="text-base leading-relaxed text-black/70 lg:max-w-sm lg:justify-self-end lg:pt-2"
             data-reveal-item
           >
             {{ aboutStoryHeader.description }}
@@ -207,7 +242,7 @@ useSeoMeta({
                   {{ slide.title }}
                 </h3>
                 <p
-                  class="mt-4 text-base leading-relaxed text-black/65"
+                  class="mt-4 text-base leading-relaxed text-black/70"
                   data-reveal-item
                 >
                   {{ slide.description }}
@@ -236,7 +271,7 @@ useSeoMeta({
             <h2 class="text-3xl font-normal leading-tight sm:text-4xl lg:text-5xl">
               {{ visionMission.vision.title }}
             </h2>
-            <p class="mt-5 text-base leading-relaxed text-white/65">
+            <p class="mt-5 text-base leading-relaxed text-white/70">
               {{ visionMission.vision.description }}
             </p>
           </div>
@@ -259,7 +294,7 @@ useSeoMeta({
               <h2 class="text-3xl font-normal leading-tight sm:text-4xl lg:text-5xl">
                 {{ visionMission.mission.title }}
               </h2>
-              <p class="mt-5 text-base leading-relaxed text-white/65">
+              <p class="mt-5 text-base leading-relaxed text-white/70">
                 {{ visionMission.mission.description }}
               </p>
             </div>
@@ -273,7 +308,7 @@ useSeoMeta({
                 <h3 class="text-base font-medium leading-tight text-white">
                   {{ principle.title }}
                 </h3>
-                <p class="mt-6 text-sm leading-relaxed text-white/62">
+                <p class="mt-6 text-sm leading-relaxed text-white/70">
                   {{ principle.description }}
                 </p>
               </article>
@@ -312,7 +347,7 @@ useSeoMeta({
             class="group border border-black/16 p-7 transition duration-500 ease-out hover:-translate-y-1 hover:border-brand-green"
             data-reveal-item
           >
-            <div class="flex size-8 items-center justify-center bg-neutral-200 text-black/55 transition duration-500 ease-out group-hover:bg-brand-green group-hover:text-white">
+            <div class="flex size-8 items-center justify-center bg-neutral-200 text-black/45 transition duration-500 ease-out group-hover:bg-brand-green group-hover:text-white">
               <UIcon
                 :name="value.icon"
                 class="size-5"
@@ -418,13 +453,13 @@ useSeoMeta({
             :key="item.title"
             class="flex flex-col gap-3 py-8 sm:flex-row sm:items-baseline sm:gap-10"
           >
-            <span class="font-mono text-sm text-black/40 sm:w-12 sm:shrink-0">
+            <span class="font-mono text-sm text-black/45 sm:w-12 sm:shrink-0">
               {{ String(index + 1).padStart(2, '0') }}
             </span>
             <h3 class="text-xl font-medium leading-tight text-ink sm:w-72 sm:shrink-0 sm:text-2xl">
               {{ item.title }}
             </h3>
-            <p class="text-base leading-relaxed text-black/65">
+            <p class="text-base leading-relaxed text-black/70">
               {{ item.description }}
             </p>
           </div>

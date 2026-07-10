@@ -21,6 +21,15 @@ useSeoMeta({
   ogImage: '/images/og-image.webp',
   twitterCard: 'summary_large_image'
 })
+
+useSchemaOrg([
+  defineBreadcrumb({
+    itemListElement: businessUnitPage.hero.breadcrumbs.map((label, index) => ({
+      name: label,
+      item: index === 0 ? '/' : undefined
+    }))
+  })
+])
 </script>
 
 <template>
@@ -52,7 +61,7 @@ useSeoMeta({
           class="mt-5 grid gap-10 lg:grid-cols-2 lg:gap-20"
           data-reveal-item
         >
-          <h2 class="text-3xl font-normal leading-tight text-ink sm:text-4xl lg:text-5xl">
+          <h2 class="text-4xl font-normal leading-tight text-ink sm:text-5xl">
             {{ businessUnitPage.intro.title }}
           </h2>
 

@@ -43,11 +43,11 @@ defineProps<{
       </div>
 
       <div class="flex w-full flex-col gap-2">
-        <h2 class="text-4xl font-medium leading-[1.2]">
+        <h2 class="text-3xl font-medium leading-tight lg:text-4xl">
           {{ unit.name }}
         </h2>
         <div class="grid grid-rows-[0fr] opacity-0 transition-[grid-template-rows,opacity,transform] duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:grid-rows-[1fr] group-hover:opacity-100">
-          <p class="min-h-0 translate-y-2 overflow-hidden text-base font-medium leading-[1.6] text-white/70 transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-y-0">
+          <p class="min-h-0 translate-y-2 overflow-hidden text-base leading-relaxed text-white/70 transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-y-0">
             {{ unit.description }}
           </p>
         </div>

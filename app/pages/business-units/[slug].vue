@@ -23,6 +23,16 @@ useSeoMeta({
   ogImage: '/images/og-image.webp',
   twitterCard: 'summary_large_image'
 })
+
+useSchemaOrg([
+  defineBreadcrumb({
+    itemListElement: [
+      { name: 'Beranda', item: '/' },
+      { name: 'Unit Bisnis', item: '/unit-bisnis' },
+      { name: unit.name }
+    ]
+  })
+])
 </script>
 
 <template>
@@ -74,10 +84,10 @@ useSeoMeta({
             data-reveal-item
           >
             <div class="space-y-6 lg:pt-12">
-              <h3 class="text-3xl font-medium leading-relaxed text-ink sm:text-4xl lg:text-4xl">
+              <h3 class="text-3xl font-normal leading-tight text-ink sm:text-4xl">
                 {{ unit.about.title }}
               </h3>
-              <div class="space-y-5 text-base leading-[1.75] text-black/68 lg:text-lg">
+              <div class="space-y-5 text-base leading-relaxed text-black/70 lg:text-lg">
                 <p
                   v-for="paragraph in unit.about.paragraphs"
                   :key="paragraph"
@@ -105,10 +115,10 @@ useSeoMeta({
             <p class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green">
               Fokus Unit
             </p>
-            <h2 class="mt-2 text-4xl font-medium leading-[1.15] sm:text-5xl lg:text-heading-lg">
+            <h2 class="mt-2 text-4xl font-normal leading-tight text-ink sm:text-5xl">
               Fokus/Lingkup Pekerjaan
             </h2>
-            <p class="mt-6 max-w-md text-base leading-[1.75] text-black/62">
+            <p class="mt-6 max-w-md text-base leading-relaxed text-black/70">
               {{ unit.focus.description }}
             </p>
           </div>
@@ -117,7 +127,7 @@ useSeoMeta({
             class="flex flex-col gap-8"
             data-reveal-item
           >
-            <h3 class="text-2xl font-medium leading-tight text-ink sm:text-3xl lg:text-4xl">
+            <h3 class="text-3xl font-normal leading-tight text-ink sm:text-4xl">
               {{ unit.focus.title }}
             </h3>
 
@@ -135,7 +145,7 @@ useSeoMeta({
                     <h4 class="text-xl font-medium leading-tight text-ink">
                       {{ item.title }}
                     </h4>
-                    <p class="mt-3 text-base leading-[1.7] text-black/62">
+                    <p class="mt-3 text-base leading-relaxed text-black/70">
                       {{ item.description }}
                     </p>
                   </div>

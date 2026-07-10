@@ -13,7 +13,7 @@ export const aboutIntro = {
     'Dari satu keahlian itu, kami berkembang menjadi holding yang menaungi unit usaha di bidang logam, manufaktur, lansekap, dan infrastruktur. Dengan akar lokal dan standar mutu yang kami jaga, produk kami kini menjangkau pasar ekspor hingga proyek pembangunan nasional.'
   ],
   media: {
-    src: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1600&q=85',
+    src: '/images/siapa-kami.webp',
     alt: 'Aktivitas produksi logam di fasilitas manufaktur'
   },
   stats: [
@@ -387,41 +387,59 @@ export const companyValuesOperational = {
   ]
 }
 
-export const aboutStructureHero = {
+export const leadershipStructureHero = {
   breadcrumbs: [
     { label: 'Beranda', to: '/' },
     { label: 'Tentang Kami', to: '/tentang-kami/profil' },
-    { label: 'Struktur' }
+    { label: 'Struktur Kepemimpinan' }
   ],
-  title: 'Struktur Grup',
-  description: 'Kembar Futagroup dibangun sebagai ekosistem usaha yang saling memperkuat dari manufaktur, teknik, produk ruang publik, hingga solusi infrastruktur.',
-  image: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1800&q=85'
+  title: 'Struktur Kepemimpinan',
+  description: 'Kembar Futagroup dijalankan oleh tim kepemimpinan yang berlapis, dari pendiri hingga kepala divisi di setiap unit usaha.',
+  image: 'https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=1800&q=85'
 }
 
-export const groupStructureItems = [
-  {
-    label: 'Holding',
-    title: 'Kembar Futagroup',
-    description: 'Pusat arah strategis, standar mutu, dan kolaborasi lintas unit usaha.'
-  },
-  {
-    label: 'Manufaktur & Logam',
-    title: 'Ayem Tentrem Logam, Kembar Teknika, Zwilling',
-    description: 'Pengecoran, perakitan mesin, assembly akhir, dan kontrol kualitas produk grup.'
-  },
-  {
-    label: 'Channel Pasar',
-    title: 'Futago Karya, Futake',
-    description: 'Manajemen proyek, trading, retail, dan distribusi produk grup ke pasar nasional.'
-  },
-  {
-    label: 'Material & Lansekap',
-    title: 'Futastone, Futafarm',
-    description: 'Material batu, precast, pembibitan, dan penghijauan untuk kebutuhan kawasan.'
-  },
-  {
-    label: 'Properti',
-    title: 'Futago Land',
-    description: 'Penataan ruang, transaksi properti, dan pengembangan kawasan.'
+export const leadershipStructureIntro = {
+  eyebrow: 'Satu Ekosistem',
+  title: 'Dipimpin oleh individu yang membawa komitmen nyata terhadap industri nasional.',
+  description: 'Kembar Futagroup dijalankan oleh tim kepemimpinan yang berlapis — dari pendiri, dewan direksi grup, kepala divisi fungsional, hingga manajemen di tiap unit usaha. Setiap level membawa tanggung jawab dan keahlian yang spesifik untuk memastikan seluruh ekosistem bergerak dengan arah yang sama.'
+}
+
+export const leadershipStructureFounder = {
+  title: 'Founder',
+  description: 'Pendiri yang menjadi arah utama pertumbuhan Kembar Futagroup.',
+  name: 'Ir. H. Fikky Arif Ardianta',
+  role: 'Owner',
+  portrait: {
+    src: '/images/foto-pak-fiky.webp',
+    alt: 'Ir. H. Fikky Arif Ardianta'
   }
-]
+}
+
+// DUMMY DATA: names, roles, and Unsplash stock photos below are placeholders, not real
+// people — the client has not confirmed actual Direksi/Kepala Divisi members yet. Replace
+// each entry here once confirmed, without touching the page template.
+export const leadershipStructureDireksi = {
+  title: 'Direksi',
+  description: 'Pimpinan grup berperan dalam menjaga arah pertumbuhan, pengambilan keputusan strategis, serta koordinasi antarunit usaha di dalam ekosistem Kembar Futagroup.',
+  members: [
+    { name: 'Bambang Setiawan', role: 'Direktur Utama', portrait: { src: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=900&q=80', alt: 'Bambang Setiawan' } },
+    { name: 'Andi Wijaya', role: 'Direktur Operasional', portrait: { src: 'https://images.unsplash.com/photo-1544717297-fa95b6ee9643?auto=format&fit=crop&w=900&q=80', alt: 'Andi Wijaya' } },
+    { name: 'Siti Rahayu', role: 'Direktur Keuangan', portrait: { src: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=900&q=80', alt: 'Siti Rahayu' } },
+    { name: 'Hendra Kusuma', role: 'Direktur Pemasaran', portrait: { src: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=80', alt: 'Hendra Kusuma' } },
+    { name: 'Rudi Hartono', role: 'Direktur Teknik', portrait: { src: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=900&q=80', alt: 'Rudi Hartono' } },
+    { name: 'Dewi Lestari', role: 'Direktur SDM & Umum', portrait: { src: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=900&q=80', alt: 'Dewi Lestari' } }
+  ]
+}
+
+export const leadershipStructureDivisi = {
+  title: 'Kepala Divisi',
+  description: 'Setiap divisi memiliki peran penting dalam mendukung kebutuhan grup, mulai dari produksi, operasional, pemasaran, proyek, keuangan, sumber daya manusia, hingga komunikasi brand.',
+  members: [
+    { name: 'Agus Prasetyo', role: 'Kepala Divisi Produksi', portrait: { src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80', alt: 'Agus Prasetyo' } },
+    { name: 'Yuni Astuti', role: 'Kepala Divisi Operasional', portrait: { src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=900&q=80', alt: 'Yuni Astuti' } },
+    { name: 'Fajar Nugroho', role: 'Kepala Divisi Pemasaran', portrait: { src: 'https://images.unsplash.com/photo-1566753323558-f4e0952af115?auto=format&fit=crop&w=900&q=80', alt: 'Fajar Nugroho' } },
+    { name: 'Rina Marlina', role: 'Kepala Divisi Proyek', portrait: { src: 'https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?auto=format&fit=crop&w=900&q=80', alt: 'Rina Marlina' } },
+    { name: 'Eko Purnomo', role: 'Kepala Divisi Keuangan', portrait: { src: 'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?auto=format&fit=crop&w=900&q=80', alt: 'Eko Purnomo' } },
+    { name: 'Maya Sari', role: 'Kepala Divisi Sumber Daya Manusia', portrait: { src: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=900&q=80', alt: 'Maya Sari' } }
+  ]
+}

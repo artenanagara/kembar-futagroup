@@ -38,7 +38,7 @@ defineProps<{
         </h3>
         <p
           v-if="unit.description"
-          class="max-w-sm translate-y-6 text-base font-medium leading-relaxed text-white/70 opacity-0 transition duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100"
+          class="max-w-sm translate-y-6 text-base leading-relaxed text-white/70 opacity-0 transition duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100"
         >
           {{ unit.description }}
         </p>

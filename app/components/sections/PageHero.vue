@@ -57,7 +57,7 @@ withDefaults(defineProps<{
     <div class="relative z-10 mx-auto flex h-full max-w-360 flex-col items-start justify-end gap-8 px-5 pb-12 pt-28 sm:px-8 lg:px-20">
       <nav
         v-if="breadcrumbs.length"
-        class="flex flex-wrap items-center gap-2 text-sm font-medium leading-[1.2] text-white/75"
+        class="flex flex-wrap items-center gap-2 text-sm leading-tight text-white/70"
         aria-label="Breadcrumb"
         data-reveal-item
       >
@@ -85,7 +85,7 @@ withDefaults(defineProps<{
         </template>
       </nav>
 
-      <h1 class="max-w-5xl text-5xl font-medium leading-[1.2]">
+      <h1 class="max-w-5xl text-4xl font-normal leading-tight sm:text-5xl lg:text-6xl">
         <UiRevealText
           v-if="revealTitle"
           :text="title"
@@ -95,7 +95,7 @@ withDefaults(defineProps<{
 
       <p
         v-if="description"
-        class="max-w-160 text-sm font-normal leading-[1.6] text-white"
+        class="max-w-2xl text-base leading-relaxed text-white/80"
         data-reveal-item
       >
         {{ description }}

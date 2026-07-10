@@ -22,6 +22,17 @@ useSeoMeta({
   ogDescription: description
 })
 
+useSchemaOrg([
+  defineBreadcrumb({
+    itemListElement: [
+      { name: 'Beranda', item: '/' },
+      { name: 'Karir', item: '/karir' },
+      { name: job.title, item: `/karir/${job.slug}` },
+      { name: 'Lamar' }
+    ]
+  })
+])
+
 const form = reactive({
   name: '',
   email: '',
@@ -80,13 +91,13 @@ const handleSubmit = () => {
             Form Lamaran
           </p>
           <h1
-            class="mt-2 text-3xl font-normal leading-tight text-ink sm:text-4xl"
+            class="mt-2 text-4xl font-normal leading-tight text-ink sm:text-5xl lg:text-6xl"
             data-reveal-item
           >
             Lamar untuk {{ job.title }}
           </h1>
           <p
-            class="mt-3 text-base leading-relaxed text-black/65"
+            class="mt-3 text-base leading-relaxed text-black/70"
             data-reveal-item
           >
             Lengkapi data di bawah ini, tim kami akan menghubungimu jika profilmu sesuai dengan posisi ini.
@@ -165,7 +176,7 @@ const handleSubmit = () => {
                 type="text"
                 readonly
                 :value="job.title"
-                class="mt-2 w-full border border-black/20 bg-black/5 px-4 py-3 text-base text-black/60"
+                class="mt-2 w-full border border-black/20 bg-black/5 px-4 py-3 text-base text-black/70"
               >
             </div>
 
@@ -221,10 +232,10 @@ const handleSubmit = () => {
             name="i-lucide-check-circle-2"
             class="mx-auto size-16 text-brand-green"
           />
-          <h2 class="mt-6 text-3xl font-normal leading-tight text-ink">
+          <h2 class="mt-6 text-3xl font-normal leading-tight text-ink sm:text-4xl">
             Lamaran Terkirim
           </h2>
-          <p class="mx-auto mt-3 max-w-md text-base leading-relaxed text-black/65">
+          <p class="mx-auto mt-3 max-w-md text-base leading-relaxed text-black/70">
             Terima kasih, {{ form.name }}. Lamaranmu untuk posisi {{ job.title }} sudah kami terima. Tim kami akan menghubungimu melalui email atau WhatsApp jika profilmu sesuai.
           </p>
           <NuxtLink

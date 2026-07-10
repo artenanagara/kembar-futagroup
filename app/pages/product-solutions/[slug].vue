@@ -23,6 +23,16 @@ useSeoMeta({
   ogImage: '/images/og-image.webp',
   twitterCard: 'summary_large_image'
 })
+
+useSchemaOrg([
+  defineBreadcrumb({
+    itemListElement: [
+      { name: 'Beranda', item: '/' },
+      { name: 'Produk & Solusi', item: '/produk-solusi' },
+      { name: solution.name }
+    ]
+  })
+])
 </script>
 
 <template>
@@ -34,7 +44,8 @@ useSeoMeta({
       :image-alt="solution.name"
       :breadcrumbs="[
         { label: 'Beranda', to: '/' },
-        { label: 'Produk & Solusi', to: '/produk-solusi' }
+        { label: 'Produk & Solusi', to: '/produk-solusi' },
+        { label: solution.name }
       ]"
       height-class="h-125"
       overlay="vignette-soft"

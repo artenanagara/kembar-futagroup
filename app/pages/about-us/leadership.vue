@@ -12,6 +12,15 @@ useSeoMeta({
   ogImage: '/images/og-image.webp',
   twitterCard: 'summary_large_image'
 })
+
+useSchemaOrg([
+  defineBreadcrumb({
+    itemListElement: leadershipHero.breadcrumbs.map(crumb => ({
+      name: crumb.label,
+      item: crumb.to
+    }))
+  })
+])
 </script>
 
 <template>
@@ -133,7 +142,7 @@ useSeoMeta({
           data-reveal-item
         />
         <p
-          class="mx-auto my-14 max-w-4xl text-center text-2xl font-normal leading-[1.6] text-ink sm:text-3xl"
+          class="mx-auto my-14 max-w-4xl text-center text-2xl font-normal leading-relaxed text-ink sm:text-3xl"
           data-reveal-item
         >
           {{ leadershipQuote }}
@@ -175,7 +184,7 @@ useSeoMeta({
             <p class="text-base font-medium leading-tight text-white">
               {{ item.title }}
             </p>
-            <p class="mt-3 text-sm leading-relaxed text-white/60">
+            <p class="mt-3 text-sm leading-relaxed text-white/70">
               {{ item.description }}
             </p>
           </div>
@@ -206,7 +215,7 @@ useSeoMeta({
             :key="item.title"
             class="flex flex-col gap-3 py-8 sm:flex-row sm:items-baseline sm:gap-10"
           >
-            <span class="font-mono text-sm text-black/40 sm:w-12 sm:shrink-0">
+            <span class="font-mono text-sm text-black/45 sm:w-12 sm:shrink-0">
               {{ String(index + 1).padStart(2, '0') }}
             </span>
             <h3 class="text-base font-medium leading-tight text-ink sm:w-56 sm:shrink-0">

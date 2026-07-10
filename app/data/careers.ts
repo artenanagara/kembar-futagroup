@@ -41,6 +41,8 @@ export type JobListing = {
   title: string
   city: string
   type: string
+  datePosted: string
+  validThrough: string
   description: string
   responsibilities: string[]
   requirements: string[]
@@ -52,6 +54,8 @@ export const jobListings: JobListing[] = [
     title: 'Staff Quality Control',
     city: 'Klaten, Jawa Tengah',
     type: 'Penuh Waktu',
+    datePosted: '2026-07-10',
+    validThrough: '2026-08-09',
     description: 'Memastikan setiap produk cor logam dan komponen mesin yang keluar dari fasilitas produksi memenuhi standar mutu sebelum dikirim ke pelanggan.',
     responsibilities: [
       'Melakukan pemeriksaan dimensi dan visual pada produk hasil produksi',
@@ -71,6 +75,8 @@ export const jobListings: JobListing[] = [
     title: 'Teknisi Mesin Produksi',
     city: 'Klaten, Jawa Tengah',
     type: 'Penuh Waktu',
+    datePosted: '2026-07-10',
+    validThrough: '2026-08-09',
     description: 'Mengoperasikan dan merawat mesin produksi agar proses pengecoran, fabrikasi, dan permesinan berjalan lancar sesuai target produksi.',
     responsibilities: [
       'Mengoperasikan mesin produksi sesuai prosedur kerja',
@@ -90,6 +96,8 @@ export const jobListings: JobListing[] = [
     title: 'Marketing Executive',
     city: 'Yogyakarta',
     type: 'Penuh Waktu',
+    datePosted: '2026-07-10',
+    validThrough: '2026-08-09',
     description: 'Mengembangkan strategi pemasaran dan menjalin hubungan dengan calon klien untuk produk dan solusi dari unit usaha grup.',
     responsibilities: [
       'Menyusun dan menjalankan rencana pemasaran produk dan solusi',
@@ -109,6 +117,8 @@ export const jobListings: JobListing[] = [
     title: 'Drafter & Desainer Produk',
     city: 'Klaten, Jawa Tengah',
     type: 'Kontrak',
+    datePosted: '2026-07-10',
+    validThrough: '2026-08-09',
     description: 'Menerjemahkan kebutuhan produk menjadi gambar teknik dan desain yang siap diproduksi oleh tim engineering.',
     responsibilities: [
       'Membuat gambar teknik dan detail produk menggunakan software CAD',
@@ -128,6 +138,8 @@ export const jobListings: JobListing[] = [
     title: 'Staff Purchasing',
     city: 'Klaten, Jawa Tengah',
     type: 'Penuh Waktu',
+    datePosted: '2026-07-10',
+    validThrough: '2026-08-09',
     description: 'Mengelola proses pengadaan bahan baku dan material produksi agar kebutuhan operasional grup terpenuhi tepat waktu.',
     responsibilities: [
       'Mencari dan mengevaluasi pemasok bahan baku dan material',
@@ -147,6 +159,8 @@ export const jobListings: JobListing[] = [
     title: 'Magang Engineering',
     city: 'Klaten, Jawa Tengah',
     type: 'Magang',
+    datePosted: '2026-07-10',
+    validThrough: '2026-08-09',
     description: 'Kesempatan belajar langsung di tim engineering, mulai dari riset produk hingga proses produksi di fasilitas manufaktur grup.',
     responsibilities: [
       'Membantu tim engineering dalam riset dan pengembangan produk',
