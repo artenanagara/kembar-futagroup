@@ -18,7 +18,7 @@ useSeoMeta({
   description,
   ogTitle: title,
   ogDescription: description,
-  ogImage: '/images/og-image.webp',
+  ogImage: '/images/brand/og-image.webp',
   twitterCard: 'summary_large_image'
 })
 

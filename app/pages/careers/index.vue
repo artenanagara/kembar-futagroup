@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { careerBenefits, careersHero, careersIntro, careersListImage, jobListings } from '~/data/careers'
+import { careerAreas, careersHero, careersIntro, careersJobsSection, jobListings, workCulture, workEnvironment } from '~/data/careers'
 
 const title = 'Karir - Kembar Futagroup'
 const description = careersHero.description
@@ -9,7 +9,7 @@ useSeoMeta({
   description,
   ogTitle: title,
   ogDescription: description,
-  ogImage: '/images/og-image.webp',
+  ogImage: '/images/brand/og-image.webp',
   twitterCard: 'summary_large_image'
 })
 
@@ -21,6 +21,8 @@ useSchemaOrg([
     }))
   })
 ])
+
+const openArea = ref(0)
 </script>
 
 <template>
@@ -68,44 +70,79 @@ useSchemaOrg([
             {{ paragraph }}
           </p>
         </div>
-
-        <div
-          class="mt-12 overflow-hidden bg-neutral-200"
-          data-reveal-item
-        >
-          <img
-            :src="careersIntro.image.src"
-            :alt="careersIntro.image.alt"
-            class="h-70 w-full object-cover grayscale transition duration-900 ease-[cubic-bezier(.16,1,.3,1)] hover:scale-[1.02] hover:grayscale-0 sm:h-105 lg:h-125"
-          >
-        </div>
       </div>
     </section>
 
     <section
-      class="bg-black text-white"
+      class="bg-white"
+      data-section-reveal
+    >
+      <div
+        class="overflow-hidden bg-neutral-200"
+        data-reveal-item
+      >
+        <img
+          :src="careersIntro.image.src"
+          :alt="careersIntro.image.alt"
+          class="h-70 w-full object-cover grayscale transition duration-900 ease-[cubic-bezier(.16,1,.3,1)] hover:scale-[1.02] hover:grayscale-0 sm:h-105 lg:h-150"
+        >
+      </div>
+    </section>
+
+    <section
+      class="bg-white"
       data-section-reveal
     >
       <div class="mx-auto max-w-360 px-5 py-20 sm:px-8 lg:px-20 lg:py-25">
-        <div
-          class="grid gap-5 sm:grid-cols-3"
+        <p
+          class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green"
           data-reveal-item
         >
-          <article
-            v-for="benefit in careerBenefits"
-            :key="benefit.number"
-            class="border border-white/20 p-7 transition duration-500 ease-out hover:border-brand-green"
+          {{ careersJobsSection.eyebrow }}
+        </p>
+        <h2
+          class="mt-2 max-w-2xl text-4xl font-normal leading-tight text-ink sm:text-5xl"
+          data-reveal-item
+        >
+          {{ careersJobsSection.title }}
+        </h2>
+
+        <div
+          class="mt-12 divide-y divide-black/10 border-y border-black/10"
+          data-reveal-item
+        >
+          <NuxtLink
+            v-for="job in jobListings"
+            :key="job.slug"
+            :to="`/karir/${job.slug}`"
+            class="group grid grid-cols-[1fr_auto] items-center gap-x-6 gap-y-3 px-2 py-7 transition-colors duration-200 hover:bg-neutral-50 sm:grid-cols-[1.4fr_1fr_1fr_auto] sm:px-4"
           >
-            <p class="text-sm font-medium leading-tight text-white/45">
-              {{ benefit.number }}
-            </p>
-            <h3 class="mt-6 text-xl font-medium leading-tight text-white">
-              {{ benefit.title }}
+            <h3 class="text-lg font-medium leading-tight text-ink transition-colors duration-200 group-hover:text-brand-green sm:text-xl">
+              {{ job.title }}
             </h3>
-            <p class="mt-4 text-sm leading-relaxed text-white/70">
-              {{ benefit.description }}
-            </p>
-          </article>
+
+            <div class="order-3 sm:order-none sm:justify-self-center">
+              <UiBadge
+                variant="outline-dark"
+                size="sm"
+              >
+                {{ job.type }}
+              </UiBadge>
+            </div>
+
+            <span class="order-4 inline-flex items-center gap-2 text-sm leading-tight text-black/65 sm:order-none sm:justify-self-center">
+              <UIcon
+                name="i-lucide-map-pin"
+                class="size-4 shrink-0 text-black/45"
+              />
+              {{ job.city }}
+            </span>
+
+            <UIcon
+              name="i-lucide-arrow-right"
+              class="size-6 shrink-0 justify-self-end text-black/45 transition duration-200 group-hover:translate-x-1 group-hover:text-brand-green"
+            />
+          </NuxtLink>
         </div>
       </div>
     </section>
@@ -114,69 +151,128 @@ useSchemaOrg([
       class="bg-white"
       data-section-reveal
     >
-      <div class="mx-auto grid max-w-360 gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[.8fr_1.2fr] lg:px-20 lg:py-25">
-        <div
-          class="relative min-h-90 overflow-hidden lg:sticky lg:top-28 lg:h-150"
+      <div class="mx-auto max-w-360 px-5 py-20 sm:px-8 lg:px-20 lg:py-25">
+        <p
+          class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green"
           data-reveal-item
         >
-          <img
-            :src="careersListImage.src"
-            :alt="careersListImage.alt"
-            class="absolute inset-0 size-full object-cover grayscale"
-          >
-        </div>
+          {{ workCulture.eyebrow }}
+        </p>
+        <h2
+          class="mt-2 max-w-3xl text-4xl font-normal leading-tight text-ink sm:text-5xl"
+          data-reveal-item
+        >
+          {{ workCulture.title }}
+        </h2>
 
+        <div class="mt-12 grid gap-10 sm:grid-cols-2 xl:grid-cols-4">
+          <article
+            v-for="value in workCulture.values"
+            :key="value.title"
+            class="border-l border-black/15 pl-6 transition-colors duration-500 ease-out hover:border-brand-green"
+            data-reveal-item
+          >
+            <h3 class="text-base font-medium leading-tight text-ink">
+              {{ value.title }}
+            </h3>
+            <p class="mt-4 text-sm leading-relaxed text-black/65">
+              {{ value.description }}
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="bg-black text-white"
+      data-section-reveal
+    >
+      <div class="mx-auto grid max-w-360 gap-12 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:gap-20 lg:px-20 lg:py-25">
         <div data-reveal-item>
           <p class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green">
-            Bergabung Sekarang
+            {{ careerAreas.eyebrow }}
           </p>
-          <h2 class="mt-2 text-4xl font-normal leading-tight text-ink sm:text-5xl">
-            Karir yang Tersedia
+          <h2 class="mt-2 max-w-xl text-4xl font-normal leading-tight sm:text-5xl">
+            {{ careerAreas.title }}
           </h2>
+          <p class="mt-6 max-w-md text-base leading-relaxed text-white/70">
+            {{ careerAreas.description }}
+          </p>
+        </div>
 
-          <div class="mt-10 divide-y divide-black/10 border-t border-black/10">
-            <NuxtLink
-              v-for="(job, index) in jobListings"
-              :key="job.slug"
-              :to="`/karir/${job.slug}`"
-              class="group flex items-center justify-between gap-6 py-6"
+        <div
+          class="divide-y divide-white/20 border-y border-white/20"
+          data-reveal-item
+        >
+          <div
+            v-for="(area, index) in careerAreas.items"
+            :key="area.title"
+          >
+            <button
+              type="button"
+              class="flex w-full items-center justify-between gap-6 py-6 text-left"
+              :aria-expanded="openArea === index"
+              @click="openArea = openArea === index ? -1 : index"
             >
-              <div class="flex items-center gap-6">
-                <span class="font-mono text-sm text-black/45">
-                  {{ String(index + 1).padStart(2, '0') }}
-                </span>
-                <div>
-                  <h3 class="text-xl font-medium leading-tight text-ink transition-colors duration-200 group-hover:text-brand-green sm:text-2xl">
-                    {{ job.title }}
-                  </h3>
-                  <div class="mt-2 flex flex-wrap items-center gap-3">
-                    <span class="text-sm leading-tight text-black/65">
-                      {{ job.city }}
-                    </span>
-                    <UiBadge
-                      variant="outline-dark"
-                      size="sm"
-                    >
-                      {{ job.type }}
-                    </UiBadge>
-                  </div>
-                </div>
-              </div>
-
+              <h3
+                class="text-base font-medium leading-tight transition-colors duration-200"
+                :class="openArea === index ? 'text-white' : 'text-white/80 hover:text-white'"
+              >
+                {{ area.title }}
+              </h3>
               <UIcon
-                name="i-lucide-arrow-up-right"
-                class="size-6 shrink-0 text-black/45 transition-colors duration-200 group-hover:text-brand-green"
+                :name="openArea === index ? 'i-lucide-minus' : 'i-lucide-plus'"
+                class="size-5 shrink-0 text-white/45"
               />
-            </NuxtLink>
+            </button>
+            <p
+              v-if="openArea === index"
+              class="pb-6 text-sm leading-relaxed text-white/70"
+            >
+              {{ area.description }}
+            </p>
           </div>
         </div>
       </div>
     </section>
 
+    <section
+      class="bg-white"
+      data-section-reveal
+    >
+      <div class="mx-auto grid max-w-360 gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[1fr_1.2fr] lg:gap-20 lg:px-20 lg:py-25">
+        <div data-reveal-item>
+          <h2 class="text-4xl font-normal leading-tight text-ink sm:text-5xl">
+            {{ workEnvironment.title }}
+          </h2>
+          <p class="mt-6 max-w-md text-base leading-relaxed text-black/70">
+            {{ workEnvironment.description }}
+          </p>
+        </div>
+
+        <div
+          class="grid gap-5 sm:grid-cols-2"
+          data-reveal-item
+        >
+          <div
+            class="aspect-4/5 bg-neutral-200"
+            aria-hidden="true"
+          />
+          <div
+            class="aspect-4/5 bg-neutral-200"
+            aria-hidden="true"
+          />
+        </div>
+      </div>
+    </section>
+
     <LayoutSiteFooter
-      title="Tidak menemukan posisi yang cocok?"
+      title="Siap mengambil peran bersama kami?"
+      description=""
       primary-label="Hubungi Kami"
       primary-to="#"
+      secondary-label="Lihat Produk Lainnya"
+      secondary-to="/produk-solusi"
     />
   </div>
 </template>

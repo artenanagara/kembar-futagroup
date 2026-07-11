@@ -142,6 +142,12 @@ withDefaults(defineProps<{
         <p>© Copyright PT Kembar Futagrup (Persero) 2026. All Right Reserved.</p>
         <div class="flex flex-wrap gap-8 lg:gap-14">
           <NuxtLink
+            to="/peta-situs"
+            class="transition hover:text-brand-green"
+          >
+            Peta Situs
+          </NuxtLink>
+          <NuxtLink
             to="#"
             class="transition hover:text-brand-green"
           >

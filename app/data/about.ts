@@ -2,7 +2,7 @@ export const aboutHero = {
   breadcrumbs: ['Beranda', 'Profil'],
   title: 'Profil Perusahaan',
   description: 'Berawal dari kekuatan teknik dan pengolahan logam di Klaten, Kembar Futagroup tumbuh sebagai ekosistem bisnis yang mendukung kebutuhan industri dan pembangunan.',
-  image: '/images/hero-profil.webp'
+  image: '/images/hero/profil.webp'
 }
 
 export const aboutIntro = {
@@ -13,7 +13,7 @@ export const aboutIntro = {
     'Dari satu keahlian itu, kami berkembang menjadi holding yang menaungi unit usaha di bidang logam, manufaktur, lansekap, dan infrastruktur. Dengan akar lokal dan standar mutu yang kami jaga, produk kami kini menjangkau pasar ekspor hingga proyek pembangunan nasional.'
   ],
   media: {
-    src: '/images/siapa-kami.webp',
+    src: '/images/misc/siapa-kami.webp',
     alt: 'Aktivitas produksi logam di fasilitas manufaktur'
   },
   stats: [
@@ -150,7 +150,7 @@ export const leadership = {
   ctaLabel: 'Kenali Lebih Jauh',
   ctaTo: '/tentang-kami/kepemimpinan',
   portrait: {
-    src: '/images/foto-pak-fiky.webp',
+    src: '/images/misc/foto-pak-fiky.webp',
     alt: 'Ir. H. Fikky Arif Ardianta'
   }
 }
@@ -197,7 +197,7 @@ export const leadershipHero = {
   ],
   title: 'Kepemimpinan',
   description: 'Prinsip kepemimpinan yang menjadi dasar cara Kembar Futagroup bekerja dan tumbuh.',
-  image: '/images/hero-kepemimpinan.webp'
+  image: '/images/hero/kepemimpinan.webp'
 }
 
 export const leadershipStory = {
@@ -209,7 +209,7 @@ export const leadershipStory = {
     'Bagi Ir. H. Fikky Arif Ardianta, membangun usaha bukan hanya tentang memperbesar bisnis, tetapi juga tentang menumbuhkan orang, membuka ruang kesempatan, dan menghadirkan manfaat yang lebih luas bagi industri, masyarakat, dan pembangunan.'
   ],
   portrait: {
-    src: '/images/foto-pak-fiky.webp',
+    src: '/images/misc/foto-pak-fiky.webp',
     alt: 'Ir. H. Fikky Arif Ardianta'
   }
 }
@@ -410,7 +410,7 @@ export const leadershipStructureFounder = {
   name: 'Ir. H. Fikky Arif Ardianta',
   role: 'Owner',
   portrait: {
-    src: '/images/foto-pak-fiky.webp',
+    src: '/images/misc/foto-pak-fiky.webp',
     alt: 'Ir. H. Fikky Arif Ardianta'
   }
 }

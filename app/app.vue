@@ -20,14 +20,14 @@ useSeoMeta({
   description,
   ogTitle: title,
   ogDescription: description,
-  ogImage: '/images/og-image.webp',
+  ogImage: '/images/brand/og-image.webp',
   twitterCard: 'summary_large_image'
 })
 
 useSchemaOrg([
   defineOrganization({
     name: 'Kembar Futagroup',
-    logo: '/logo.png',
+    logo: '/images/brand/logo.png',
     description,
     url: 'https://kembarfutagroup.com',
     sameAs: [

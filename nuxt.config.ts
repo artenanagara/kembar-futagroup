@@ -27,7 +27,8 @@ const localizedRoutePaths = new Map([
   ['app/pages/news/[slug].vue', '/berita/:slug()'],
   ['app/pages/careers/index.vue', '/karir'],
   ['app/pages/careers/[slug]/index.vue', '/karir/:slug()'],
-  ['app/pages/careers/[slug]/apply.vue', '/karir/:slug()/lamar']
+  ['app/pages/careers/[slug]/apply.vue', '/karir/:slug()/lamar'],
+  ['app/pages/sitemap.vue', '/peta-situs']
 ])
 
 const applyLocalizedRoutePaths = (pages: NuxtPage[]) => {
@@ -79,7 +80,8 @@ export default defineNuxtConfig({
     '/karir': { prerender: true },
     '/karir/**': { prerender: true },
     '/berita': { prerender: true },
-    '/berita/**': { prerender: true }
+    '/berita/**': { prerender: true },
+    '/peta-situs': { prerender: true }
   },
 
   compatibilityDate: '2026-06-30',

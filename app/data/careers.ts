@@ -1,44 +1,84 @@
 export const careersHero = {
   breadcrumbs: ['Beranda', 'Karir'],
   title: 'Karir',
-  description: 'Bangun kariermu bersama Kembar Futagroup dan jadi bagian dari ekosistem manufaktur yang terus tumbuh dari Klaten untuk Indonesia.',
+  description: 'Kembar Futago Group membuka ruang bagi talenta yang ingin belajar, bekerja, dan berkontribusi di dalam ekosistem lintas industri: logam, manufaktur, lansekap, infrastruktur, dan pengembangan kawasan.',
   image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1800&q=85'
 }
 
 export const careersIntro = {
-  eyebrow: 'Mengapa Bergabung',
-  title: 'Tumbuh bersama tim yang membangun industri dari akarnya.',
+  eyebrow: 'Bekerja Bersama Kami',
+  title: 'Tempat untuk belajar, bekerja, dan bertumbuh.',
   paragraphs: [
-    'Kami percaya pertumbuhan perusahaan berjalan beriringan dengan pertumbuhan setiap orang di dalamnya. Di Kembar Futagroup, kamu belajar langsung dari proses produksi, engineering, hingga pengembangan bisnis di berbagai unit usaha grup.',
-    'Dari lantai produksi di Klaten hingga proyek berskala nasional, setiap peran punya kontribusi nyata terhadap industri dan pembangunan Indonesia.'
+    'Kembar Futago Group dibangun oleh orang-orang yang bekerja di berbagai bidang: produksi, manufaktur, penjualan, proyek, keuangan, operasional, kreatif, hingga pengembangan unit usaha.',
+    'Setiap peran memiliki kontribusi penting dalam menjaga ekosistem grup tetap bergerak. Di sini, pekerjaan bukan hanya tentang menyelesaikan tugas, tetapi juga tentang belajar dari proses, membangun kualitas kerja, dan memberi manfaat melalui peran masing-masing.'
   ],
   image: {
     src: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1600&q=85',
-    alt: 'Tim engineering Kembar Futagroup berdiskusi'
+    alt: 'Tim Kembar Futago Group bekerja bersama'
   }
 }
 
-export const careerBenefits = [
-  {
-    number: '01',
-    title: 'Pengembangan Karier',
-    description: 'Pelatihan teknis dan jenjang karier yang jelas di setiap unit usaha grup.'
-  },
-  {
-    number: '02',
-    title: 'Lingkungan Kolaboratif',
-    description: 'Bekerja lintas unit usaha dengan tim yang saling mendukung dan terbuka.'
-  },
-  {
-    number: '03',
-    title: 'Kesejahteraan Karyawan',
-    description: 'Jaminan kesehatan, tunjangan, dan keseimbangan kerja yang terjaga.'
-  }
-]
+export const careersJobsSection = {
+  eyebrow: 'Lowongan Tersedia',
+  title: 'Temukan posisi yang sesuai dengan Anda'
+}
+
+export const workCulture = {
+  eyebrow: 'Budaya Kerja',
+  title: 'Nilai yang hadir dalam pekerjaan sehari-hari',
+  values: [
+    {
+      title: 'Tanggung Jawab',
+      description: 'Menjaga amanah dalam setiap pekerjaan.'
+    },
+    {
+      title: 'Kerja Sama',
+      description: 'Bergerak bersama lintas tim dan unit usaha.'
+    },
+    {
+      title: 'Pembelajaran',
+      description: 'Terus memperbaiki cara kerja dan kemampuan.'
+    },
+    {
+      title: 'Ketelitian',
+      description: 'Menjaga kualitas dalam proses dan hasil kerja.'
+    }
+  ]
+}
+
+export const careerAreas = {
+  eyebrow: 'Area Karir',
+  title: 'Berbagai ruang untuk mengambil peran',
+  description: 'Kembar Futago Group membuka ruang karir di berbagai fungsi kerja, dari produksi dan operasional lapangan hingga pemasaran, administrasi, kreatif, dan pengembangan bisnis.',
+  items: [
+    {
+      title: 'Produksi & Operasional',
+      description: 'Peran yang berhubungan dengan proses produksi, workshop, dan operasional lapangan.'
+    },
+    {
+      title: 'Engineering & Manufaktur',
+      description: 'Peran teknis dalam perancangan, permesinan, dan pengembangan produk manufaktur.'
+    },
+    {
+      title: 'Sales, Marketing & Project',
+      description: 'Peran yang menghubungkan produk dan solusi grup dengan pelanggan serta proyek di lapangan.'
+    },
+    {
+      title: 'Finance & Administration',
+      description: 'Peran yang menjaga keuangan, administrasi, dan operasional internal grup tetap tertata.'
+    }
+  ]
+}
+
+export const workEnvironment = {
+  title: 'Suasana Kerja',
+  description: 'Lingkungan kerja di Kembar Futago Group mempertemukan berbagai latar belakang dan keahlian. Ada yang bekerja di workshop, di lapangan, di kantor, di proyek, hingga di ruang kreatif digital.'
+}
 
 export type JobListing = {
   slug: string
   title: string
+  division: string
   city: string
   type: string
   datePosted: string
@@ -51,6 +91,7 @@ export type JobListing = {
 export const jobListings: JobListing[] = [
   {
     slug: 'staff-quality-control',
+    division: 'Produksi',
     title: 'Staff Quality Control',
     city: 'Klaten, Jawa Tengah',
     type: 'Penuh Waktu',
@@ -72,6 +113,7 @@ export const jobListings: JobListing[] = [
   },
   {
     slug: 'teknisi-mesin-produksi',
+    division: 'Produksi',
     title: 'Teknisi Mesin Produksi',
     city: 'Klaten, Jawa Tengah',
     type: 'Penuh Waktu',
@@ -93,6 +135,7 @@ export const jobListings: JobListing[] = [
   },
   {
     slug: 'marketing-executive',
+    division: 'Sales & Marketing',
     title: 'Marketing Executive',
     city: 'Yogyakarta',
     type: 'Penuh Waktu',
@@ -114,6 +157,7 @@ export const jobListings: JobListing[] = [
   },
   {
     slug: 'drafter-desainer-produk',
+    division: 'Engineering',
     title: 'Drafter & Desainer Produk',
     city: 'Klaten, Jawa Tengah',
     type: 'Kontrak',
@@ -135,6 +179,7 @@ export const jobListings: JobListing[] = [
   },
   {
     slug: 'staff-purchasing',
+    division: 'Purchasing',
     title: 'Staff Purchasing',
     city: 'Klaten, Jawa Tengah',
     type: 'Penuh Waktu',
@@ -156,6 +201,7 @@ export const jobListings: JobListing[] = [
   },
   {
     slug: 'magang-engineering',
+    division: 'Engineering',
     title: 'Magang Engineering',
     city: 'Klaten, Jawa Tengah',
     type: 'Magang',
@@ -176,8 +222,3 @@ export const jobListings: JobListing[] = [
     ]
   }
 ]
-
-export const careersListImage = {
-  src: 'https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=1200&q=85',
-  alt: 'Fasilitas produksi Kembar Futagroup'
-}

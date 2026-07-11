@@ -5,7 +5,7 @@ const props = withDefaults(defineProps<{
   variant: 'default'
 })
 
-const logoSrc = computed(() => props.variant === 'white' ? '/logo-white.png' : '/logo-transparent.png')
+const logoSrc = computed(() => props.variant === 'white' ? '/images/brand/logo-white.png' : '/images/brand/logo-transparent.png')
 </script>
 
 <template>

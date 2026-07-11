@@ -12,7 +12,7 @@ useSeoMeta({
   description,
   ogTitle: title,
   ogDescription: description,
-  ogImage: '/images/og-image.webp',
+  ogImage: '/images/brand/og-image.webp',
   twitterCard: 'summary_large_image'
 })
 
@@ -105,7 +105,7 @@ useSchemaOrg([
           Produk & Solusi
         </h2>
 
-        <div class="mt-10">
+        <div class="mt-10 ">
           <CardsProductSolutionCard
             v-for="(solution, index) in productSolutions"
             :key="solution.slug"

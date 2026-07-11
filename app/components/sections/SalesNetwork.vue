@@ -49,7 +49,7 @@ const tickerCities = [...cities, ...cities]
 
         <div class="relative mx-auto h-112 w-full max-w-6xl overflow-hidden sm:h-144 lg:h-192">
           <img
-            src="/images/sales-network-globe.png"
+            src="/images/misc/sales-network-globe.png"
             alt="Globe jaringan penjualan Kembar Futago Group dengan fokus Indonesia"
             class="absolute inset-0 size-full select-none object-cover object-top mix-blend-screen scale-[1.5] sm:scale-[1.75] lg:scale-[2] origin-top"
             draggable="false"
