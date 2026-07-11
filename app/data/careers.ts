@@ -1,7 +1,7 @@
 export const careersHero = {
   breadcrumbs: ['Beranda', 'Karir'],
   title: 'Karir',
-  description: 'Kembar Futago Group membuka ruang bagi talenta yang ingin belajar, bekerja, dan berkontribusi di dalam ekosistem lintas industri: logam, manufaktur, lansekap, infrastruktur, dan pengembangan kawasan.',
+  description: 'Kembar Futagroup membuka ruang bagi talenta yang ingin belajar, bekerja, dan berkontribusi di dalam ekosistem lintas industri: logam, manufaktur, lansekap, infrastruktur, dan pengembangan kawasan.',
   image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1800&q=85'
 }
 
@@ -9,12 +9,12 @@ export const careersIntro = {
   eyebrow: 'Bekerja Bersama Kami',
   title: 'Tempat untuk belajar, bekerja, dan bertumbuh.',
   paragraphs: [
-    'Kembar Futago Group dibangun oleh orang-orang yang bekerja di berbagai bidang: produksi, manufaktur, penjualan, proyek, keuangan, operasional, kreatif, hingga pengembangan unit usaha.',
+    'Kembar Futagroup dibangun oleh orang-orang yang bekerja di berbagai bidang: produksi, manufaktur, penjualan, proyek, keuangan, operasional, kreatif, hingga pengembangan unit usaha.',
     'Setiap peran memiliki kontribusi penting dalam menjaga ekosistem grup tetap bergerak. Di sini, pekerjaan bukan hanya tentang menyelesaikan tugas, tetapi juga tentang belajar dari proses, membangun kualitas kerja, dan memberi manfaat melalui peran masing-masing.'
   ],
   image: {
     src: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1600&q=85',
-    alt: 'Tim Kembar Futago Group bekerja bersama'
+    alt: 'Tim Kembar Futagroup bekerja bersama'
   }
 }
 
@@ -49,7 +49,7 @@ export const workCulture = {
 export const careerAreas = {
   eyebrow: 'Area Karir',
   title: 'Berbagai ruang untuk mengambil peran',
-  description: 'Kembar Futago Group membuka ruang karir di berbagai fungsi kerja, dari produksi dan operasional lapangan hingga pemasaran, administrasi, kreatif, dan pengembangan bisnis.',
+  description: 'Kembar Futagroup membuka ruang karir di berbagai fungsi kerja, dari produksi dan operasional lapangan hingga pemasaran, administrasi, kreatif, dan pengembangan bisnis.',
   items: [
     {
       title: 'Produksi & Operasional',
@@ -72,7 +72,7 @@ export const careerAreas = {
 
 export const workEnvironment = {
   title: 'Suasana Kerja',
-  description: 'Lingkungan kerja di Kembar Futago Group mempertemukan berbagai latar belakang dan keahlian. Ada yang bekerja di workshop, di lapangan, di kantor, di proyek, hingga di ruang kreatif digital.'
+  description: 'Lingkungan kerja di Kembar Futagroup mempertemukan berbagai latar belakang dan keahlian. Ada yang bekerja di workshop, di lapangan, di kantor, di proyek, hingga di ruang kreatif digital.'
 }
 
 export type JobListing = {

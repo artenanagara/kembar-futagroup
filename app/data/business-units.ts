@@ -9,6 +9,8 @@ export type BusinessUnit = {
   group: BusinessUnitGroup
   image: string
   cardImage?: string
+  /** URL website resmi unit usaha; tidak semua unit memiliki situs publik. */
+  website?: string
   about: {
     eyebrow: string
     title: string
@@ -35,7 +37,7 @@ export const businessUnitPage = {
     eyebrow: 'Satu Ekosistem',
     title: 'Setiap unit memiliki peran berbeda, namun bergerak dalam arah yang sama.',
     paragraphs: [
-      'Kembar Futago Group menaungi delapan unit usaha yang bergerak di empat lini industri: logam, manufaktur, lansekap, dan infrastruktur. Setiap unit dijalankan secara independen dengan standar kerja masing-masing — namun terhubung dalam satu rantai nilai yang saling mendukung.',
+      'Kembar Futagroup menaungi delapan unit usaha yang bergerak di empat lini industri: logam, manufaktur, lansekap, dan infrastruktur. Setiap unit dijalankan secara independen dengan standar kerja masing-masing — namun terhubung dalam satu rantai nilai yang saling mendukung.',
       'Dari pengolahan bahan baku logam di hulu, produksi komponen dan manufaktur di tengah, hingga pengembangan lahan dan infrastruktur di hilir, setiap unit mengisi peran spesifik dalam ekosistem industri grup.'
     ]
   },
@@ -58,12 +60,13 @@ export const businessUnits: BusinessUnit[] = [
     group: 'manufaktur-logam',
     image: 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=80',
     cardImage: 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=80',
+    website: 'https://ayemtentremlogam.co.id/',
     about: {
       eyebrow: 'Tentang Unit',
       title: 'Ayem Tentrem Logam menjadi titik awal produksi grup, mengolah logam cair menjadi komponen siap pakai.',
       paragraphs: [
-        'Ayem Tentrem Logam menjalankan proses pengecoran logam — titik awal dari seluruh rangkaian produksi Kembar Futagroup. Di sinilah besi cor dan aluminium diolah dari bahan mentah menjadi komponen dasar yang siap diteruskan ke tahap produksi berikutnya.',
-        'Berbasis di Klaten, unit ini menjadi fondasi produksi bagi unit-unit lain dalam ekosistem, khususnya Kembar Teknika dan Zwilling yang menangani perakitan dan penyelesaian produk akhir. Setiap komponen yang dihasilkan disesuaikan dengan spesifikasi teknis yang dibutuhkan, baik untuk kebutuhan produk katalog maupun proyek custom.',
+        'Ayem Tentrem Logam menjalankan proses pengecoran logam — titik awal dari seluruh rangkaian produksi Kembar Futagroup. Berbasis di Ceper, Klaten, salah satu sentra industri cor logam tertua di Indonesia, di sinilah besi cor dan aluminium diolah dari bahan mentah menjadi komponen dasar yang siap diteruskan ke tahap produksi berikutnya.',
+        'Selain komponen produksi, unit ini dikenal sebagai pengrajin logam cor antik: tiang lampu taman dan PJU, pagar antik, kursi antik, manhole cover, grill cover, bollard, hingga ornamen logam dekoratif. Ia menjadi fondasi produksi bagi unit-unit lain dalam ekosistem, khususnya Kembar Teknika dan Zwilling yang menangani perakitan dan penyelesaian produk akhir — setiap komponen disesuaikan dengan spesifikasi teknis yang dibutuhkan, baik untuk produk katalog maupun proyek custom.',
         'Selain menopang produksi internal grup, Ayem Tentrem Logam juga menjadi mitra bagi unit trading dan proyek seperti Futago Karya, memastikan pasokan komponen logam tetap konsisten ketika kebutuhan proyek berskala besar datang secara bersamaan.'
       ]
     },
@@ -99,12 +102,13 @@ export const businessUnits: BusinessUnit[] = [
     group: 'manufaktur-logam',
     image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80',
     cardImage: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80',
+    website: 'https://kembarteknika.com/',
     about: {
       eyebrow: 'Tentang Unit',
       title: 'Kembar Teknika merakit mesin tepat guna yang membuat produksi lebih efisien, dari skala UMKM hingga kebutuhan internal grup.',
       paragraphs: [
-        'Kembar Teknika berfokus pada perakitan mesin dan peralatan produksi, dengan perhatian khusus pada kebutuhan usaha skala kecil dan menengah (UMKM). Unit ini hadir untuk menjembatani kebutuhan alat produksi yang efisien dengan kapasitas dan anggaran yang realistis bagi pelaku usaha di berbagai skala.',
-        'Proses kerja Kembar Teknika dimulai dari memahami kebutuhan spesifik pelanggan — jenis produksi, volume, hingga ruang kerja yang tersedia — sebelum merancang dan merakit mesin yang sesuai. Pendekatan ini membuat setiap mesin yang dihasilkan tidak sekadar fungsional, tetapi juga mudah dioperasikan oleh penggunanya.',
+        'Kembar Teknika adalah unit cor logam dan permesinan dengan pengalaman produksi lebih dari sepuluh tahun di Ceper, Klaten. Fokusnya pada perakitan mesin dan peralatan produksi tepat guna — mulai dari mesin cetak bata dan pengolah pangan hingga peralatan produksi lain — dengan perhatian khusus pada kebutuhan usaha skala kecil dan menengah (UMKM).',
+        'Seluruh produk dikerjakan secara custom mengikuti kebutuhan pelanggan: jenis produksi, volume, hingga ruang kerja yang tersedia dipahami lebih dulu sebelum mesin dirancang dan dirakit. Sebagai produsen langsung yang mengantongi sertifikasi ISO 45001, TKDN, dan terdaftar di e-Katalog LKPP, Kembar Teknika juga memproduksi street furniture — tiang lampu PJU, bollard, kursi taman, hingga papan nama jalan — yang memperkuat lini produk pedestrian grup.',
         'Selain melayani kebutuhan UMKM, Kembar Teknika turut merancang dan merakit mesin custom untuk mendukung proses produksi di unit-unit lain dalam ekosistem Kembar Futagroup, menjadikannya bagian penting dari efisiensi produksi internal grup secara keseluruhan.'
       ]
     },
@@ -181,13 +185,14 @@ export const businessUnits: BusinessUnit[] = [
     group: 'channel-pasar',
     image: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=900&q=80',
     cardImage: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=900&q=80',
+    website: 'https://futagokarya.co.id/',
     about: {
       eyebrow: 'Tentang Unit',
       title: 'Futago Karya menerjemahkan kapasitas produksi grup menjadi proyek kawasan dan infrastruktur yang nyata.',
       paragraphs: [
-        'Futago Karya menjadi kanal yang menghubungkan hasil produksi manufaktur grup dengan pasar proyek berskala besar — mulai dari proyek kawasan, utilitas publik, lansekap, hingga infrastruktur. Unit ini menangani sisi project management sekaligus trading, memastikan produk-produk dari Ayem Tentrem Logam, Kembar Teknika, dan Zwilling sampai ke klien dalam bentuk solusi proyek yang utuh.',
-        'Dalam menjalankan setiap proyek, Futago Karya terlibat sejak tahap perencanaan kebutuhan, koordinasi dengan unit produksi, hingga pengawalan proses hingga serah terima. Pendekatan ini memungkinkan klien mendapatkan solusi yang terintegrasi, alih-alih sekadar membeli produk secara terpisah.',
-        'Sebagai unit yang berhadapan langsung dengan klien korporat maupun instansi pemerintah, Futago Karya berperan penting dalam menerjemahkan kapasitas produksi grup menjadi proyek nyata di lapangan — menjembatani skala produksi manufaktur dengan kebutuhan proyek yang seringkali memiliki tenggat dan spesifikasi ketat.'
+        'Futago Karya adalah perusahaan utama Kembar Futagroup yang telah beroperasi lebih dari satu dekade dari Krenekan, Klepu, Ceper, Klaten. Unit ini memproduksi dan memasok produk infrastruktur pedestrian — manhole cover, grill cover, steel grating, tiang lampu, kursi taman, plang nama, bollard, tong sampah, guiding block difabel, deck drain, roof drain, hingga cetakan buis beton dan produk cor custom.',
+        'Futago Karya menangani sisi project management sekaligus trading: terlibat sejak perencanaan kebutuhan, koordinasi dengan unit produksi seperti Ayem Tentrem Logam, Kembar Teknika, dan Zwilling, hingga pengawalan proses sampai serah terima. Pendekatan ini memungkinkan klien mendapatkan solusi terintegrasi, alih-alih sekadar membeli produk secara terpisah.',
+        'Kepercayaan kontraktor, pengembang, dan instansi pemerintah ditopang kredensial yang lengkap: sertifikasi ISO 14001:2015 dan ISO 45001, sertifikat TKDN, serta terdaftar sebagai penyedia di e-Katalog LKPP — memastikan produk grup memenuhi syarat untuk proyek pengadaan pemerintah dari skala kecil hingga besar.'
       ]
     },
     focus: {
@@ -222,12 +227,13 @@ export const businessUnits: BusinessUnit[] = [
     group: 'channel-pasar',
     image: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=900&q=80',
     cardImage: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=900&q=80',
+    website: 'https://futake.co.id/',
     about: {
       eyebrow: 'Tentang Unit',
       title: 'Futake menjadi kanal utama yang menghubungkan produk grup dengan pasar ritel dan proyek di seluruh Indonesia.',
       paragraphs: [
-        'Futake menghubungkan kemampuan produksi internal Kembar Futagroup dengan kebutuhan pasar yang menuntut produk siap pakai, rapi secara desain, dan konsisten secara kualitas. Unit ini menjalankan fungsi retail dan trading, menjadi jembatan antara hasil produksi grup dengan pasar yang lebih luas.',
-        'Futake bekerja sebagai kanal brand, katalog produk, dan distribusi, sehingga output dari lini pengecoran, fabrikasi, serta finishing dapat menjangkau proyek pemerintah, swasta, dan konsumen profesional. Melalui jaringan kantor cabang penjualan di berbagai kota besar di Indonesia, Futake memastikan produk grup dapat diakses oleh pelanggan di berbagai wilayah, bukan hanya di sekitar basis produksi di Klaten.',
+        'PT Futake Indonesia berdiri pada 2019 sebagai kanal brand, katalog produk, dan distribusi Kembar Futagroup, dengan showroom dan basis operasional di Jl. Solo–Jogja, Klepu, Ceper, Klaten. Melalui Futake, produk turunan logam dan permesinan grup — tiang PJU, kursi besi, manhole cover, grating, mesin rakitan, hingga aksesoris sambungan pipa PDAM — dapat dilihat dan dipesan langsung oleh pelanggan.',
+        'Futake menghubungkan lini pengecoran, fabrikasi, dan finishing grup dengan proyek pemerintah, swasta, dan konsumen profesional. Jangkauannya telah membentang jauh melampaui basis produksi di Klaten: dari beautifikasi Stasiun Klaten, Jembatan Pandansimo, hingga Alun-alun Toboali — serta mendukung kebutuhan proyek strategis nasional seperti IKN dan kawasan pariwisata prioritas (KSPN), dengan pelanggan dari Bengkulu sampai Labuan Bajo.',
         'Peran ini menjadikan Futake ujung tombak distribusi grup ke konsumen akhir dan mitra bisnis di tingkat nasional, sekaligus menjadi titik umpan balik pasar yang membantu unit produksi memahami kebutuhan yang terus berkembang di lapangan.'
       ]
     },
@@ -263,12 +269,13 @@ export const businessUnits: BusinessUnit[] = [
     group: 'material-lansekap',
     image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=900&q=80',
     cardImage: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=900&q=80',
+    website: 'https://futastone.com/',
     about: {
       eyebrow: 'Tentang Unit',
       title: 'Futastone menyediakan material batu dan precast yang menopang proyek lansekap dan konstruksi grup.',
       paragraphs: [
-        'Futastone menangani pengolahan material batu — baik batu alam maupun produk cetak beton (precast) — yang menjadi bahan penting dalam proyek lansekap dan konstruksi. Unit ini menggabungkan sisi produksi/retail dengan keterlibatan langsung dalam proyek, sehingga dapat menyesuaikan produk dengan kebutuhan spesifik setiap proyek yang ditangani.',
-        'Dari sisi retail, Futastone melayani kebutuhan material dalam skala kecil hingga menengah. Sementara dari sisi proyek, unit ini terlibat lebih jauh dalam perencanaan material untuk kebutuhan konstruksi dan penataan ruang publik berskala besar, termasuk penyesuaian bentuk, tekstur, dan dimensi sesuai desain kawasan.',
+        'Futastone menangani pengolahan material batu untuk kebutuhan lansekap dan konstruksi: batu alam seperti andesit, marmer, dan palimanan, hingga engineered stone berupa terrazzo dan stamp concrete. Lini produknya mencakup flooring, wastafel terrazzo, pot terrazzo, hingga bollard terrazzo untuk area pedestrian dan ruang publik.',
+        'Unit ini menggabungkan sisi produksi/retail dengan keterlibatan langsung dalam proyek. Dari sisi retail, Futastone melayani kebutuhan material skala kecil hingga menengah; dari sisi proyek, ia terlibat dalam perencanaan material untuk konstruksi dan penataan ruang publik berskala besar — termasuk penyesuaian bentuk, tekstur, dan dimensi sesuai desain kawasan.',
         'Material dari Futastone banyak digunakan untuk mendukung proyek kawasan yang dijalankan bersama Futago Karya, khususnya untuk elemen ruang publik dan infrastruktur berbasis batu dan beton — menjadikan unit ini bagian penting dari rantai material grup untuk proyek-proyek berskala kawasan.'
       ]
     },
@@ -304,12 +311,13 @@ export const businessUnits: BusinessUnit[] = [
     group: 'material-lansekap',
     image: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=900&q=80',
     cardImage: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=900&q=80',
+    website: 'https://futafarm.com/',
     about: {
       eyebrow: 'Tentang Unit',
       title: 'Futafarm menghadirkan elemen hijau yang melengkapi proyek lansekap dan penghijauan kota.',
       paragraphs: [
-        'Futafarm menjalankan fungsi pembibitan (nursery) dan pengerjaan lansekap, melengkapi ekosistem material & lansekap Kembar Futagroup. Unit ini menyediakan tanaman dan elemen hijau yang dibutuhkan dalam proyek penataan ruang publik, taman kota, dan kawasan.',
-        'Proses kerja Futafarm dimulai dari pembibitan dan perawatan tanaman hingga siap ditanam, kemudian dilanjutkan dengan perencanaan tata letak dan eksekusi penghijauan di lokasi proyek. Pendekatan ini memungkinkan unit untuk terlibat dari hulu ke hilir dalam setiap kebutuhan elemen hijau.',
+        'Futafarm menjalankan fungsi pembibitan (nursery) dan pengerjaan lansekap dari Klepu, Ceper, Klaten — memadukan keahlian agronomi dengan desain lansekap. Unit ini menyediakan pohon peneduh dan tanaman hias yang telah digunakan dalam berbagai proyek infrastruktur dan pengembangan kawasan, dari ruang publik hingga area komersial, baik swasta maupun pemerintah.',
+        'Proses kerja Futafarm dimulai dari pembibitan dan perawatan tanaman hingga siap ditanam, kemudian dilanjutkan dengan perencanaan tata letak dan eksekusi penghijauan di lokasi proyek. Pendekatan ini memungkinkan unit untuk terlibat dari hulu ke hilir dalam setiap kebutuhan elemen hijau — termasuk pemindahan dan perawatan pohon secara langsung oleh tim sendiri.',
         'Futafarm bekerja beriringan dengan Futastone yang menangani sisi material keras (batu dan precast). Kombinasi keduanya memungkinkan grup menawarkan solusi lansekap yang lebih menyeluruh — dari elemen hijau hingga elemen struktural — dalam satu proyek yang sama, tanpa perlu melibatkan vendor terpisah.'
       ]
     },

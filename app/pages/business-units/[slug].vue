@@ -95,6 +95,21 @@ useSchemaOrg([
                   {{ paragraph }}
                 </p>
               </div>
+              <div
+                v-if="unit.website"
+                class="pt-2"
+              >
+                <UiButton
+                  :to="unit.website"
+                  target="_blank"
+                  rel="noopener"
+                  variant="secondary"
+                  size="sm"
+                  trailing-icon="i-lucide-arrow-up-right"
+                >
+                  Kunjungi Website {{ unit.name }}
+                </UiButton>
+              </div>
             </div>
           </div>
         </div>

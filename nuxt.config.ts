@@ -28,6 +28,10 @@ const localizedRoutePaths = new Map([
   ['app/pages/careers/index.vue', '/karir'],
   ['app/pages/careers/[slug]/index.vue', '/karir/:slug()'],
   ['app/pages/careers/[slug]/apply.vue', '/karir/:slug()/lamar'],
+  ['app/pages/projects/index.vue', '/proyek'],
+  ['app/pages/csr/index.vue', '/kegiatan-csr'],
+  ['app/pages/sustainability/index.vue', '/keberlanjutan'],
+  ['app/pages/contact/index.vue', '/kontak'],
   ['app/pages/sitemap.vue', '/peta-situs']
 ])
 
@@ -81,6 +85,10 @@ export default defineNuxtConfig({
     '/karir/**': { prerender: true },
     '/berita': { prerender: true },
     '/berita/**': { prerender: true },
+    '/proyek': { prerender: true },
+    '/kegiatan-csr': { prerender: true },
+    '/keberlanjutan': { prerender: true },
+    '/kontak': { prerender: true },
     '/peta-situs': { prerender: true }
   },
 

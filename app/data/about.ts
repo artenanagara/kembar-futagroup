@@ -18,7 +18,7 @@ export const aboutIntro = {
   },
   stats: [
     ['Berdiri Sejak', '2015'],
-    ['Unit Bisnis', '10'],
+    ['Unit Bisnis', '8'],
     ['Produk', '50+'],
     ['Proyek Selesai', '200+']
   ]
@@ -33,45 +33,17 @@ export const aboutStoryHeader = {
 export const aboutStorySlides = [
   {
     eyebrow: 'Awal Berdiri',
-    year: '2008',
-    title: 'Fondasi pertama di Klaten',
-    description: 'Unit usaha pengolahan logam pertama berdiri di Klaten, Jawa Tengah. Berawal dari fasilitas produksi kecil dengan tim yang berdedikasi, inilah titik awal dari seluruh ekosistem yang ada hari ini.',
+    year: '2015',
+    title: 'Berakar di sentra cor logam Ceper, Klaten',
+    description: 'Perjalanan grup dimulai dari usaha pengecoran logam dan permesinan di Ceper, Klaten — sentra industri cor logam yang keahliannya diwariskan lintas generasi. Kembar Teknika dan Futago Karya menjadi fondasi awal yang kini telah beroperasi lebih dari satu dekade.',
     image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1800&q=85'
   },
   {
-    eyebrow: 'Ekspansi',
-    year: '2011',
-    title: 'Masuk ke sektor manufaktur',
-    description: 'Kembar Teknika hadir sebagai unit manufaktur pertama dalam grup, memberikan kapabilitas rekayasa teknis yang melengkapi kemampuan logam yang sudah ada.',
-    image: 'https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?auto=format&fit=crop&w=1800&q=85'
-  },
-  {
-    eyebrow: 'Diversifikasi',
-    year: '2014',
-    title: 'Lansekap masuk ke dalam portofolio grup',
-    description: 'Futastone didirikan untuk menjawab kebutuhan material batu alam yang terus tumbuh seiring meningkatnya proyek lansekap dan infrastruktur di Jawa Tengah dan sekitarnya.',
+    eyebrow: 'Ekspansi Kanal Pasar',
+    year: '2019',
+    title: 'PT Futake Indonesia berdiri sebagai kanal produk grup',
+    description: 'Grup memperkuat sisi hilir dengan mendirikan PT Futake Indonesia — kanal brand, katalog, dan distribusi dengan showroom di Jl. Solo–Jogja, Klepu, Ceper. Produk turunan logam dan permesinan grup kini dapat diakses langsung oleh pelanggan dari berbagai daerah.',
     image: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1800&q=85'
-  },
-  {
-    eyebrow: 'Milestone Korporat',
-    year: '2016',
-    title: 'Kembar Futago Group resmi terbentuk',
-    description: 'Struktur holding diformalkan. Unit-unit usaha yang selama ini beroperasi secara terpisah kini dihimpun bersama dalam satu entitas grup — memperkokoh koordinasi, sinergi, dan arah strategis bersama.',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1800&q=85'
-  },
-  {
-    eyebrow: 'Inisiatif',
-    year: '2018',
-    title: 'Futago Land memperkokoh tata nilai',
-    description: 'Dengan hadirnya Futago Land, grup menambahkan dimensi properti dan industri — ditopang oleh satu visi bersama untuk terus mengembangkan kapasitas dan infrastruktur. Inilah nilai terintegrasi dari hulu ke hilir.',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=85'
-  },
-  {
-    eyebrow: 'Peningkatan Kapasitas',
-    year: '2020',
-    title: 'Peningkatan fasilitas produksi di tengah ketidakpastian',
-    description: 'Di saat banyak industri melambat, grup justru memperkuat fasilitas — meningkatkan kapasitas area, memperluas jangkauan pasar, dan memastikan ketahanan operasional jangka panjang.',
-    image: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1600&q=85'
   },
   {
     eyebrow: 'Khazanah Sosial',
@@ -81,13 +53,53 @@ export const aboutStorySlides = [
     image: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1800&q=85'
   },
   {
-    eyebrow: 'Saat Ini',
+    eyebrow: 'Tanggung Jawab Sosial',
+    year: '2023',
+    title: 'Program CSR terdata resmi di Kabupaten Klaten',
+    description: 'Melalui Forum CSR Kabupaten Klaten, program tanggung jawab sosial grup terdata secara resmi — mencakup puluhan kegiatan di bidang pendidikan, pemberdayaan ekonomi, sosial, serta sarana dan prasarana bagi masyarakat sekitar wilayah operasi.',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1800&q=85'
+  },
+  {
+    eyebrow: 'Proyek Publik',
     year: '2024',
+    title: 'Karya grup hadir di ruang publik berbagai daerah',
+    description: 'Produk dan pengerjaan grup mewarnai proyek publik lintas daerah: beautifikasi Stasiun Klaten, Jembatan Pandansimo, Alun-alun Toboali, hingga renovasi GOR Klaten — serta dukungan bagi proyek strategis nasional seperti IKN dan kawasan pariwisata prioritas (KSPN).',
+    image: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1600&q=85'
+  },
+  {
+    eyebrow: 'Saat Ini',
+    year: '2026',
     title: 'Delapan unit usaha, satu ekosistem industri terpadu',
-    description: 'Kembar Futago Group kini menaungi delapan unit usaha aktif di sektor industri, dengan jangkauan pasar yang meluas ke seluruh Jawa dan terus memperkuat posisi sebagai holding industri regional yang diperhitungkan.',
+    description: 'Kembar Futagroup kini menaungi delapan unit usaha yang saling terhubung — dari pengecoran logam, permesinan, material dan lansekap, hingga properti — dengan jangkauan pasar nasional dan ekspor ke Singapura serta Timor Leste.',
     image: 'https://images.unsplash.com/photo-1624397640148-949b1732bb0a?auto=format&fit=crop&w=1800&q=85'
   }
 ]
+
+export const brandPhilosophy = {
+  eyebrow: 'Filosofi Nama',
+  title: 'Satu makna dalam banyak bahasa: kembar.',
+  paragraphs: [
+    'Nama-nama di dalam grup bukan sebuah kebetulan. Kembar, Futago, dan Zwilling adalah kata yang sama dalam tiga bahasa berbeda — Indonesia, Jepang, dan Jerman — dan semuanya berarti kembar.',
+    'Filosofi ini menggambarkan cara kami bekerja: setiap unit usaha lahir dan tumbuh berdampingan, saling mencerminkan standar kerja yang sama, dan bergerak sebagai satu kesatuan — seperti saudara kembar yang mengambil peran berbeda, namun berbagi satu identitas.'
+  ],
+  terms: [
+    {
+      term: 'Kembar',
+      lang: 'Bahasa Indonesia',
+      description: 'Akar identitas grup — dua kekuatan yang tumbuh bersama dari sentra cor logam Ceper, Klaten, tercermin pada nama Kembar Teknika.'
+    },
+    {
+      term: 'Futago',
+      lang: 'Bahasa Jepang',
+      description: 'Semangat presisi dan ketekunan kerja — melekat pada Futago Karya, Futago Land, serta keluarga brand Futake, Futastone, dan Futafarm.'
+    },
+    {
+      term: 'Zwilling',
+      lang: 'Bahasa Jerman',
+      description: 'Standar teknik dan kualitas — disandang unit assembly yang menjadi titik kontrol mutu terakhir sebelum produk didistribusikan.'
+    }
+  ]
+}
 
 export const visionMission = {
   vision: {
@@ -146,7 +158,7 @@ export const companyValues = [
 export const leadership = {
   eyebrow: 'Kepemimpinan',
   title: 'Digerakkan oleh visi satu keluarga, dijalankan oleh satu ekosistem.',
-  description: 'Kembar Futagroup didirikan dan dipimpin oleh Ir. H. Fikky Arif Ardianta, yang meletakkan fondasi awal usaha ini dari keahlian teknik dan pengolahan logam di Klaten. Di bawah kepemimpinannya, usaha yang semula berfokus pada satu bidang berkembang menjadi ekosistem yang menaungi berbagai unit usaha dengan peran saling melengkapi.',
+  description: 'Kembar Futagroup didirikan dan dipimpin oleh Ir. H. Fikky Arif Ardianta, A.Md., S.E., S.T., IPM., ASEAN.Eng., yang meletakkan fondasi awal usaha ini dari keahlian teknik dan pengolahan logam di Klaten. Di bawah kepemimpinannya, usaha yang semula berfokus pada satu bidang berkembang menjadi ekosistem yang menaungi berbagai unit usaha dengan peran saling melengkapi.',
   ctaLabel: 'Kenali Lebih Jauh',
   ctaTo: '/tentang-kami/kepemimpinan',
   portrait: {
@@ -161,14 +173,17 @@ export const leadership = {
 export const trackRecord = {
   eyebrow: 'Jejak & Kredensial',
   title: 'Bukti nyata dari setiap proyek dan pasar yang kami jangkau.',
-  description: 'Perjalanan kami tidak hanya diukur dari jumlah unit usaha, tetapi dari proyek dan pasar yang berhasil kami jangkau — di dalam maupun luar negeri.',
+  description: 'Perjalanan kami tidak hanya diukur dari jumlah unit usaha, tetapi dari proyek, kredensial, dan pasar yang berhasil kami jangkau — di dalam maupun luar negeri.',
   items: [
     {
-      title: 'Proyek Strategis Nasional',
-      description: 'Berkontribusi dalam proyek pembangunan Ibu Kota Nusantara (IKN).',
-      // PENDING VERIFICATION: no specific project name, product, or scope confirmed by client yet.
-      // Do not add invented specifics — update this description once confirmed.
-      verified: false
+      title: 'Proyek Publik Nasional',
+      description: 'Beautifikasi Stasiun Klaten, Jembatan Pandansimo, Alun-alun Toboali, dan renovasi GOR Klaten — serta dukungan bagi proyek strategis nasional seperti IKN dan kawasan pariwisata prioritas (KSPN).',
+      verified: true
+    },
+    {
+      title: 'Kredensial Mutu',
+      description: 'Unit usaha grup mengantongi sertifikasi ISO 14001:2015 dan ISO 45001, sertifikat TKDN, serta terdaftar sebagai penyedia di e-Katalog LKPP.',
+      verified: true
     },
     {
       title: 'Ekspor Internasional',
@@ -177,14 +192,13 @@ export const trackRecord = {
     },
     {
       title: 'Basis Produksi',
-      description: 'Berpusat di Klaten, Jawa Tengah — fondasi pengecoran logam bagi seluruh rantai produksi grup.',
+      description: 'Berpusat di sentra industri cor logam Ceper, Klaten, Jawa Tengah — fondasi pengecoran logam bagi seluruh rantai produksi grup.',
       verified: true
     },
     {
       title: 'Satu Ekosistem',
-      description: 'Sembilan unit usaha yang saling terhubung dalam satu ekosistem industri.',
-      // PENDING VERIFICATION: unit count pending client confirmation — update once confirmed.
-      verified: false
+      description: 'Delapan unit usaha yang saling terhubung dalam satu ekosistem industri, dari hulu hingga hilir.',
+      verified: true
     }
   ]
 }
@@ -204,7 +218,7 @@ export const leadershipStory = {
   eyebrow: 'Sosok Dibalik Ekosistem',
   title: 'Membangun dari daerah, menggerakkan banyak peran',
   paragraphs: [
-    'Ir. H. Fikky Arif Ardianta adalah pendiri Kembar Futagroup, sosok yang memiliki perhatian pada pengembangan industri, kewirausahaan, dan pemberdayaan. Dari akar daerah, ia membangun usaha dengan keyakinan bahwa industri dapat tumbuh kuat melalui proses, ketekunan, dan kerja nyata.',
+    'Ir. H. Fikky Arif Ardianta, A.Md., S.E., S.T., IPM., ASEAN.Eng. adalah pendiri Kembar Futagroup, sosok yang memiliki perhatian pada pengembangan industri, kewirausahaan, dan pemberdayaan. Dari akar daerah, ia membangun usaha dengan keyakinan bahwa industri dapat tumbuh kuat melalui proses, ketekunan, dan kerja nyata.',
     'Dalam perjalanannya, Kembar Futagroup berkembang sebagai ekosistem industri yang menghubungkan logam, manufaktur, lansekap, infrastruktur, dan pengembangan kawasan. Setiap unit usaha tumbuh dengan peran berbeda, namun tetap diarahkan untuk saling melengkapi dalam satu rantai nilai.',
     'Bagi Ir. H. Fikky Arif Ardianta, membangun usaha bukan hanya tentang memperbesar bisnis, tetapi juga tentang menumbuhkan orang, membuka ruang kesempatan, dan menghadirkan manfaat yang lebih luas bagi industri, masyarakat, dan pembangunan.'
   ],
@@ -407,8 +421,8 @@ export const leadershipStructureIntro = {
 export const leadershipStructureFounder = {
   title: 'Founder',
   description: 'Pendiri yang menjadi arah utama pertumbuhan Kembar Futagroup.',
-  name: 'Ir. H. Fikky Arif Ardianta',
-  role: 'Owner',
+  name: 'Ir. H. Fikky Arif Ardianta, A.Md., S.E., S.T., IPM., ASEAN.Eng.',
+  role: 'Founder & Owner',
   portrait: {
     src: '/images/misc/foto-pak-fiky.webp',
     alt: 'Ir. H. Fikky Arif Ardianta'

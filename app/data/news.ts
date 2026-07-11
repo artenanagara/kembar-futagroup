@@ -23,20 +23,20 @@ export type NewsPost = {
 
 export const newsPosts: NewsPost[] = [
   {
-    slug: 'perkuat-ekosistem-manufaktur-klaten',
-    title: 'Kembar Futagroup Perkuat Ekosistem Manufaktur Berbasis Klaten',
-    excerpt: 'Investasi lini produksi baru memperkuat kapasitas pengecoran logam dan permesinan di fasilitas Klaten.',
-    category: 'Perusahaan',
+    slug: 'beautifikasi-stasiun-klaten',
+    title: 'Kilas Proyek: Kembar Futagroup di Balik Beautifikasi Stasiun Klaten',
+    excerpt: 'Bollard, kursi tunggu, hingga tanaman dari unit usaha grup mempercantik wajah baru Stasiun Klaten.',
+    category: 'Proyek',
     date: '2026-06-19',
-    readTime: '5 Menit Baca',
+    readTime: '4 Menit Baca',
     image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=85',
     content: [
-      { type: 'heading', text: 'Investasi Lini Produksi Baru' },
-      { type: 'paragraph', text: 'Kembar Futagroup menambah kapasitas produksi di fasilitas utamanya di Klaten dengan menghadirkan lini pengecoran dan permesinan baru. Langkah ini menjadi bagian dari strategi jangka panjang grup untuk memperkuat posisinya sebagai holding manufaktur yang berakar dari industri cor logam.' },
-      { type: 'paragraph', text: 'Penambahan kapasitas ini diharapkan dapat mempercepat waktu produksi sekaligus menjaga konsistensi mutu produk yang dikirim ke berbagai proyek, mulai dari infrastruktur kawasan hingga produk ruang publik.' },
-      { type: 'image', src: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1400&q=85', alt: 'Lini produksi baru di fasilitas Klaten', caption: 'Lini pengecoran dan permesinan baru di fasilitas Klaten.' },
-      { type: 'heading', text: 'Investasi pada Manusia, Bukan Hanya Mesin' },
-      { type: 'paragraph', text: 'Selain investasi mesin, grup juga menyiapkan pelatihan teknis bagi karyawan agar dapat mengoperasikan lini produksi baru secara optimal, sejalan dengan komitmen perusahaan terhadap pengembangan sumber daya manusia lokal.' }
+      { type: 'heading', text: 'Karya Grup di Ruang Publik Kota Sendiri' },
+      { type: 'paragraph', text: 'Program beautifikasi Stasiun Klaten pada 2024 menjadi salah satu proyek yang paling dekat dengan rumah bagi Kembar Futagroup. Melalui unit usahanya, grup memasok produk-produk yang kini menyambut penumpang di area stasiun: bollard pembatas, kursi tunggu, hingga tanaman penghijau.' },
+      { type: 'paragraph', text: 'Kolaborasi antarunit menjadi kunci: elemen cor logam dikerjakan lini pengecoran dan fabrikasi grup, sementara elemen hijau disiapkan oleh Futafarm — memperlihatkan cara kerja ekosistem grup dalam satu proyek nyata.' },
+      { type: 'image', src: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1400&q=85', alt: 'Elemen ruang publik hasil produksi grup', caption: 'Elemen ruang publik hasil produksi unit usaha grup.' },
+      { type: 'heading', text: 'Dari Stasiun ke Proyek Publik Lainnya' },
+      { type: 'paragraph', text: 'Stasiun Klaten melengkapi jejak grup di ruang publik berbagai daerah — dari Jembatan Pandansimo, Alun-alun Toboali, hingga renovasi GOR Klaten — sekaligus menegaskan posisi grup sebagai mitra proyek beautifikasi dan infrastruktur ruang publik.' }
     ]
   },
   {
@@ -50,14 +50,6 @@ export const newsPosts: NewsPost[] = [
     content: [
       { type: 'heading', text: 'Langkah Awal Menuju Pasar Regional' },
       { type: 'paragraph', text: 'Setelah bertahun-tahun melayani pasar domestik, produk manufaktur Kembar Futagroup kini mulai menjangkau pasar ekspor, termasuk Singapura dan Timor Leste. Langkah ini menjadi tonggak penting dalam perjalanan grup sebagai holding manufaktur yang berakar dari Klaten.' },
-      { type: 'heading', text: 'Langkah Awal Menuju Pasar Regional' },
-      { type: 'paragraph', text: 'Setelah bertahun-tahun melayani pasar domestik, produk manufaktur Kembar Futagroup kini mulai menjangkau pasar ekspor, termasuk Singapura dan Timor Leste. Langkah ini menjadi tonggak penting dalam perjalanan grup sebagai holding manufaktur yang berakar dari Klaten.' },
-      { type: 'heading', text: 'Langkah Awal Menuju Pasar Regional' },
-      { type: 'paragraph', text: 'Setelah bertahun-tahun melayani pasar domestik, produk manufaktur Kembar Futagroup kini mulai menjangkau pasar ekspor, termasuk Singapura dan Timor Leste. Langkah ini menjadi tonggak penting dalam perjalanan grup sebagai holding manufaktur yang berakar dari Klaten.' },
-      { type: 'heading', text: 'Langkah Awal Menuju Pasar Regional' },
-      { type: 'paragraph', text: 'Setelah bertahun-tahun melayani pasar domestik, produk manufaktur Kembar Futagroup kini mulai menjangkau pasar ekspor, termasuk Singapura dan Timor Leste. Langkah ini menjadi tonggak penting dalam perjalanan grup sebagai holding manufaktur yang berakar dari Klaten.' },
-      { type: 'heading', text: 'Langkah Awal Menuju Pasar Regional' },
-      { type: 'paragraph', text: 'Setelah bertahun-tahun melayani pasar domestik, produk manufaktur Kembar Futagroup kini mulai menjangkau pasar ekspor, termasuk Singapura dan Timor Leste. Langkah ini menjadi tonggak penting dalam perjalanan grup sebagai holding manufaktur yang berakar dari Klaten.' },
       { type: 'paragraph', text: 'Produk yang diekspor meliputi komponen cor logam dan elemen ruang publik yang telah melalui proses kontrol kualitas ketat sesuai standar internasional.' },
       { type: 'image', src: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1400&q=85', alt: 'Pengiriman ekspor produk manufaktur', caption: 'Proses pengiriman produk untuk pasar ekspor.' },
       { type: 'heading', text: 'Membuka Peluang Kolaborasi Lintas Negara' },
@@ -66,19 +58,19 @@ export const newsPosts: NewsPost[] = [
   },
   {
     slug: 'sertifikasi-standar-mutu-produksi',
-    title: 'Kembar Futagroup Raih Sertifikasi Standar Mutu Produksi',
-    excerpt: 'Sertifikasi ini menegaskan komitmen grup terhadap konsistensi mutu di setiap tahap produksi.',
+    title: 'ISO 14001, ISO 45001, hingga TKDN: Kredensial Mutu Unit Usaha Kembar Futagroup',
+    excerpt: 'Unit usaha grup mengantongi sertifikasi ISO 14001:2015, ISO 45001, TKDN, dan terdaftar di e-Katalog LKPP.',
     category: 'Perusahaan',
     date: '2026-05-10',
     readTime: '3 Menit Baca',
     image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=85',
     content: [
-      { type: 'heading', text: 'Evaluasi Menyeluruh Sistem Produksi' },
-      { type: 'paragraph', text: 'Sebagai bagian dari komitmen menjaga mutu produk, Kembar Futagroup berhasil meraih sertifikasi standar mutu produksi untuk unit usaha manufaktur dan permesinannya.' },
-      { type: 'paragraph', text: 'Proses sertifikasi mencakup evaluasi menyeluruh terhadap sistem kontrol kualitas, mulai dari bahan baku, proses produksi, hingga distribusi produk ke pelanggan.' },
+      { type: 'heading', text: 'Kredensial yang Menopang Kepercayaan Proyek' },
+      { type: 'paragraph', text: 'Sebagai bagian dari komitmen menjaga mutu produk, unit usaha Kembar Futagroup — di antaranya Futago Karya dan Kembar Teknika — mengantongi sertifikasi ISO 14001:2015 untuk manajemen lingkungan dan ISO 45001 untuk keselamatan dan kesehatan kerja.' },
+      { type: 'paragraph', text: 'Selain itu, produk grup telah tersertifikasi TKDN (Tingkat Komponen Dalam Negeri) dan terdaftar sebagai penyedia di e-Katalog LKPP, sehingga memenuhi syarat untuk kebutuhan pengadaan barang dan jasa pemerintah.' },
       { type: 'image', src: 'https://images.unsplash.com/photo-1581093458791-9d42e3c7e117?auto=format&fit=crop&w=1400&q=85', alt: 'Proses kontrol kualitas produksi', caption: 'Proses inspeksi kontrol kualitas di lini produksi.' },
       { type: 'heading', text: 'Meningkatkan Kepercayaan Mitra dan Pelanggan' },
-      { type: 'paragraph', text: 'Pencapaian ini diharapkan dapat meningkatkan kepercayaan mitra dan pelanggan terhadap produk-produk yang dihasilkan oleh unit usaha di bawah grup.' }
+      { type: 'paragraph', text: 'Kredensial ini menjadi dasar kepercayaan kontraktor, pengembang, dan instansi pemerintah terhadap produk-produk yang dihasilkan oleh unit usaha di bawah grup — dari furnitur jalan hingga komponen infrastruktur drainase.' }
     ]
   },
   {
@@ -91,28 +83,28 @@ export const newsPosts: NewsPost[] = [
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85',
     content: [
       { type: 'heading', text: 'Kontribusi untuk Proyek Strategis Nasional' },
-      { type: 'paragraph', text: 'Kembar Futagroup turut berkontribusi dalam pembangunan Ibu Kota Nusantara (IKN) melalui penyediaan produk infrastruktur, utilitas kawasan, dan elemen ruang publik.' },
-      { type: 'paragraph', text: 'Kontribusi ini mencakup komponen drainase, furnitur jalan, serta produk cor logam yang digunakan untuk mendukung kebutuhan infrastruktur kawasan berskala nasional.' },
+      { type: 'paragraph', text: 'Kembar Futagroup melalui unit usahanya turut mendukung kebutuhan proyek strategis nasional, termasuk pembangunan Ibu Kota Nusantara (IKN) dan kawasan strategis pariwisata nasional (KSPN), melalui penyediaan produk infrastruktur, utilitas kawasan, dan elemen ruang publik.' },
+      { type: 'paragraph', text: 'Jangkauan pengiriman grup telah mencakup pelanggan dari berbagai penjuru — dari Bengkulu, Paser, hingga Labuan Bajo — dengan produk berupa komponen drainase, furnitur jalan, serta produk cor logam untuk kebutuhan infrastruktur kawasan.' },
       { type: 'image', src: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=85', alt: 'Produk infrastruktur untuk kawasan IKN', caption: 'Komponen infrastruktur dan utilitas kawasan yang dikirim ke lokasi proyek.' },
       { type: 'heading', text: 'Bukti Kapabilitas Produksi dari Klaten untuk Indonesia' },
       { type: 'paragraph', text: 'Keterlibatan dalam proyek strategis nasional ini menjadi bukti nyata kapabilitas produksi grup dalam mendukung pembangunan infrastruktur Indonesia dari Klaten untuk seluruh negeri.' }
     ]
   },
   {
-    slug: 'program-csr-pelatihan-las-klaten',
-    title: 'Program CSR: Kembar Futagroup Latih Warga Klaten Keahlian Las',
-    excerpt: 'Pelatihan keahlian teknik las digelar untuk membuka peluang kerja bagi warga sekitar fasilitas produksi.',
+    slug: 'program-csr-kembar-futagroup-klaten',
+    title: 'Puluhan Kegiatan CSR Kembar Futagroup Terdata di Forum CSR Kabupaten Klaten',
+    excerpt: 'Dari pendidikan hingga pemberdayaan ekonomi, program CSR grup menjangkau masyarakat sekitar wilayah operasi.',
     category: 'CSR',
     date: '2026-04-02',
     readTime: '3 Menit Baca',
     image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&q=85',
     content: [
-      { type: 'heading', text: 'Membekali Warga dengan Keahlian Teknis' },
-      { type: 'paragraph', text: 'Sebagai bagian dari program tanggung jawab sosial perusahaan, Kembar Futagroup menggelar pelatihan keahlian teknik las bagi warga di sekitar fasilitas produksi di Klaten.' },
-      { type: 'paragraph', text: 'Program ini bertujuan membekali warga dengan keterampilan teknis yang relevan dengan kebutuhan industri manufaktur, sekaligus membuka peluang kerja di unit-unit usaha grup maupun industri sejenis lainnya.' },
-      { type: 'image', src: 'https://images.unsplash.com/photo-1581093196277-9f608732e2c5?auto=format&fit=crop&w=1400&q=85', alt: 'Pelatihan teknik las bagi warga Klaten', caption: 'Sesi pelatihan teknik las bagi warga sekitar fasilitas produksi.' },
-      { type: 'heading', text: 'Rencana Perluasan Program Pelatihan' },
-      { type: 'paragraph', text: 'Ke depannya, grup berencana memperluas program pelatihan serupa ke bidang keahlian lain seperti permesinan dan quality control.' }
+      { type: 'heading', text: 'Komitmen Sosial yang Terdata Resmi' },
+      { type: 'paragraph', text: 'Melalui PT Futake Indonesia, program tanggung jawab sosial Kembar Futagroup terdata resmi di Forum CSR Kabupaten Klaten. Sepanjang 2023–2024, grup menjalankan puluhan kegiatan yang mencakup bidang pendidikan, pemberdayaan ekonomi, sosial, serta sarana dan prasarana.' },
+      { type: 'paragraph', text: 'Bidang sosial dan pendidikan menjadi porsi terbesar — mulai dari dukungan kegiatan masyarakat di sekitar fasilitas produksi di Kecamatan Ceper hingga program aksesibilitas pendidikan yang sejalan dengan misi Yayasan Futago.' },
+      { type: 'image', src: 'https://images.unsplash.com/photo-1581093196277-9f608732e2c5?auto=format&fit=crop&w=1400&q=85', alt: 'Kegiatan sosial bersama masyarakat Klaten', caption: 'Kegiatan sosial bersama masyarakat di sekitar wilayah operasi.' },
+      { type: 'heading', text: 'Tumbuh Bersama Masyarakat Sekitar' },
+      { type: 'paragraph', text: 'Bagi grup, kegiatan ini adalah wujud misi "tumbuh bersama, bermanfaat bersama" — memastikan pertumbuhan usaha juga dirasakan oleh masyarakat di sekitar wilayah operasi, dari lapangan kerja hingga program pemberdayaan.' }
     ]
   },
   {

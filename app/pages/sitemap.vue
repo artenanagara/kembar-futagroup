@@ -68,6 +68,15 @@ const sitemapSections = [
       { label: 'Semua Berita', to: '/berita' },
       ...newsPosts.map(post => ({ label: post.title, to: `/berita/${post.slug}` }))
     ]
+  },
+  {
+    title: 'Informasi Lain',
+    links: [
+      { label: 'Proyek', to: '/proyek' },
+      { label: 'Kegiatan CSR', to: '/kegiatan-csr' },
+      { label: 'Keberlanjutan', to: '/keberlanjutan' },
+      { label: 'Kontak', to: '/kontak' }
+    ]
   }
 ]
 </script>

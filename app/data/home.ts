@@ -13,7 +13,7 @@ export const aboutStats = [
   },
   {
     title: 'Skala',
-    description: 'Belasan unit usaha bersatu dalam satu holding industri.'
+    description: 'Delapan unit usaha bersatu dalam satu holding industri.'
   }
 ]
 
@@ -27,13 +27,13 @@ export const expertiseItems = [
   {
     number: '02',
     title: 'Manufaktur',
-    description: 'MMerancang dan merakit mesin serta peralatan produksi untuk kebutuhan industri dan UMKM.',
+    description: 'Merancang dan merakit mesin serta peralatan produksi untuk kebutuhan industri dan UMKM.',
     image: '/images/expertise/manufaktur.webp'
   },
   {
     number: '03',
     title: 'Lansekap',
-    description: ' Menghadirkan elemen ruang publik dan penghijauan kota, dari material hingga instalasi.',
+    description: 'Menghadirkan elemen ruang publik dan penghijauan kota, dari material hingga instalasi.',
     image: '/images/expertise/lansekap.webp'
   },
   {

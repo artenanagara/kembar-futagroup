@@ -210,7 +210,7 @@ const headings = computed(() => post.content.filter(block => block.type === 'hea
     <LayoutSiteFooter
       title="Ingin tahu lebih lanjut tentang kami?"
       primary-label="Hubungi Kami"
-      primary-to="#"
+      primary-to="/kontak"
     />
   </div>
 </template>

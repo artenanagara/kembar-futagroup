@@ -495,7 +495,7 @@ onBeforeUnmount(() => {
               Karya Kami <br>di Berbagai Sektor
             </h2>
             <UiButton
-              to="#"
+              to="/proyek"
               variant="secondary"
               trailing-icon="i-lucide-arrow-up-right"
             >

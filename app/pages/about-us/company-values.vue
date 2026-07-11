@@ -268,7 +268,7 @@ const activeBehaviorIndex = ref(0)
     <LayoutSiteFooter
       title="Bangun bersama nilai yang sama"
       primary-label="Hubungi Kami"
-      primary-to="#"
+      primary-to="/kontak"
       secondary-label="Jelajahi Unit Usaha"
       secondary-to="/unit-bisnis"
     />

@@ -100,8 +100,8 @@ export const navItems: NavItem[] = [
       description: solution.navDescription
     }))
   },
-  { label: 'Proyek', to: '#' },
-  { label: 'Kegiatan CSR', to: '#' },
+  { label: 'Proyek', to: '/proyek' },
+  { label: 'Kegiatan CSR', to: '/kegiatan-csr' },
   { label: 'Berita', to: '/berita' },
   { label: 'Karir', to: '/karir' }
 ]
@@ -124,7 +124,7 @@ export const footerColumns: FooterColumn[] = [
       { label: 'Tentang Kami', to: '/tentang-kami/profil' },
       { label: 'Unit Usaha', to: '/unit-bisnis' },
       { label: 'Produk & Solusi', to: '/produk-solusi' },
-      { label: 'Keberlanjutan', to: '#' }
+      { label: 'Keberlanjutan', to: '/keberlanjutan' }
     ]
   },
   {
@@ -141,7 +141,10 @@ export const footerColumns: FooterColumn[] = [
     links: [
       { label: 'Berita & Insight', to: '/berita' },
       { label: 'Karir', to: '/karir' },
-      { label: 'Kontak', to: '#' }
+      { label: 'Proyek', to: '/proyek' },
+      { label: 'Kegiatan CSR', to: '/kegiatan-csr' },
+      { label: 'Keberlanjutan', to: '/keberlanjutan' },
+      { label: 'Kontak', to: '/kontak' }
     ]
   },
   {

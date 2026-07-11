@@ -50,7 +50,7 @@ const tickerCities = [...cities, ...cities]
         <div class="relative mx-auto h-112 w-full max-w-6xl overflow-hidden sm:h-144 lg:h-192">
           <img
             src="/images/misc/sales-network-globe.png"
-            alt="Globe jaringan penjualan Kembar Futago Group dengan fokus Indonesia"
+            alt="Globe jaringan penjualan Kembar Futagroup dengan fokus Indonesia"
             class="absolute inset-0 size-full select-none object-cover object-top mix-blend-screen scale-[1.5] sm:scale-[1.75] lg:scale-[2] origin-top"
             draggable="false"
           >
@@ -62,7 +62,7 @@ const tickerCities = [...cities, ...cities]
         class="relative z-10 mx-auto -mt-20 max-w-4xl text-center text-base leading-relaxed text-white/80 sm:-mt-28 sm:text-lg lg:-mt-36"
         data-reveal-item
       >
-        Melalui kantor cabang penjualan di berbagai kota besar, kami memastikan produk dan layanan Kembar Futago Group dapat diakses oleh pelanggan di seluruh Indonesia.
+        Melalui kantor cabang penjualan di berbagai kota besar, kami memastikan produk dan layanan Kembar Futagroup dapat diakses oleh pelanggan di seluruh Indonesia.
       </p>
     </div>
   </section>

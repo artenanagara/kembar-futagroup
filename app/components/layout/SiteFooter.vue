@@ -21,7 +21,7 @@ withDefaults(defineProps<{
   title: 'Bangun solusi industri bersama kami.',
   description: 'Jelajahi unit usaha, produk, dan solusi yang terhubung dalam ekosistem industri kami.',
   primaryLabel: 'Hubungi Kami',
-  primaryTo: '#',
+  primaryTo: '/kontak',
   secondaryLabel: 'Lihat Unit Usaha',
   secondaryTo: '/unit-bisnis'
 })
@@ -50,7 +50,7 @@ withDefaults(defineProps<{
 
         <div class="flex flex-col items-start gap-7 lg:items-end">
           <p class="max-w-2xl text-left text-base font-medium leading-[1.55] text-black/68 lg:text-right">
-            Kembar Futago Group adalah ekosistem holding manufaktur berbasis Klaten yang menaungi berbagai lini bisnis di bidang logam, manufaktur, infrastruktur, lanskap, properti, dan solusi industri.
+            Kembar Futagroup adalah ekosistem holding manufaktur berbasis Klaten yang menaungi berbagai lini bisnis di bidang logam, manufaktur, infrastruktur, lanskap, properti, dan solusi industri.
           </p>
           <div class="flex w-full flex-wrap justify-start gap-5 lg:justify-end 2xl:gap-7">
             <NuxtLink
@@ -113,12 +113,12 @@ withDefaults(defineProps<{
           <div
             v-for="column in footerNavColumns"
             :key="column.title"
-            class="space-y-6"
+            class="space-y-8"
           >
             <h3 class="text-base font-medium leading-tight text-ink 2xl:text-xl">
               {{ column.title }}
             </h3>
-            <ul class="space-y-5">
+            <ul class="space-y-4">
               <li
                 v-for="link in column.links"
                 :key="link.label"

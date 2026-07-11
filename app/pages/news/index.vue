@@ -31,9 +31,8 @@ useSchemaOrg([
       :image="newsHero.image"
       :image-alt="newsHero.title"
       :breadcrumbs="newsHero.breadcrumbs.map((crumb, index) => ({ label: crumb, to: index === 0 ? '/' : undefined }))"
-      :reveal-title="false"
-      height-class="min-h-125"
-      overlay="vignette-horizontal"
+      height-class="h-125"
+      overlay="vignette-side"
     />
 
     <section
@@ -54,7 +53,7 @@ useSchemaOrg([
     <LayoutSiteFooter
       title="Ingin tahu lebih lanjut tentang kami?"
       primary-label="Hubungi Kami"
-      primary-to="#"
+      primary-to="/kontak"
     />
   </div>
 </template>

@@ -135,7 +135,7 @@ useSchemaOrg([
           <img
             :src="leadershipStructureFounder.portrait.src"
             :alt="leadershipStructureFounder.portrait.alt"
-            class="absolute inset-0 size-full object-cover transition duration-700 ease-out group-hover:scale-105"
+            class="absolute inset-0 size-full object-cover transition duration-700 ease-out group-hover:scale-105 group-hover:grayscale"
           >
           <div class="bg-card-scrim absolute inset-0" />
 
@@ -154,7 +154,7 @@ useSchemaOrg([
               class="inline-flex size-9 shrink-0 items-center justify-center rounded-full border border-white/50 text-white/80 transition duration-300 hover:border-white hover:text-white"
             >
               <UIcon
-                name="i-lucide-linkedin"
+                name="i-carbon-logo-linkedin"
                 class="size-4"
               />
             </NuxtLink>
@@ -203,7 +203,7 @@ useSchemaOrg([
               v-else
               :src="member.portrait.src"
               :alt="member.portrait.alt"
-              class="absolute inset-0 size-full object-cover transition duration-700 ease-out group-hover:scale-105"
+              class="absolute inset-0 size-full object-cover transition duration-700 ease-out group-hover:scale-105 group-hover:grayscale"
             >
             <div class="bg-card-scrim absolute inset-0" />
 
@@ -222,7 +222,7 @@ useSchemaOrg([
                 class="inline-flex size-8 shrink-0 items-center justify-center rounded-full border border-white/50 text-white/80 transition duration-300 hover:border-white hover:text-white"
               >
                 <UIcon
-                  name="i-lucide-linkedin"
+                  name="i-carbon-logo-linkedin"
                   class="size-4"
                 />
               </NuxtLink>
@@ -272,7 +272,7 @@ useSchemaOrg([
               v-else
               :src="member.portrait.src"
               :alt="member.portrait.alt"
-              class="absolute inset-0 size-full object-cover transition duration-700 ease-out group-hover:scale-105"
+              class="absolute inset-0 size-full object-cover transition duration-700 ease-out group-hover:scale-105 group-hover:grayscale"
             >
             <div class="bg-card-scrim absolute inset-0" />
 
@@ -291,7 +291,7 @@ useSchemaOrg([
                 class="inline-flex size-8 shrink-0 items-center justify-center rounded-full border border-white/50 text-white/80 transition duration-300 hover:border-white hover:text-white"
               >
                 <UIcon
-                  name="i-lucide-linkedin"
+                  name="i-carbon-logo-linkedin"
                   class="size-4"
                 />
               </NuxtLink>
@@ -305,7 +305,7 @@ useSchemaOrg([
       title="Bangun kolaborasi dengan tim kami"
       description=""
       primary-label="Hubungi Kami"
-      primary-to="#"
+      primary-to="/kontak"
       secondary-label="Lihat Karir"
       secondary-to="/karir"
     />

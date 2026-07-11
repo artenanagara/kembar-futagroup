@@ -233,7 +233,7 @@ useSchemaOrg([
       title="Nilai yang sama, tujuan yang satu"
       description=""
       primary-label="Hubungi Kami"
-      primary-to="#"
+      primary-to="/kontak"
       secondary-label="Tentang Grup"
       secondary-to="/tentang-kami"
     />

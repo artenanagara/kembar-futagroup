@@ -270,7 +270,7 @@ const openArea = ref(0)
       title="Siap mengambil peran bersama kami?"
       description=""
       primary-label="Hubungi Kami"
-      primary-to="#"
+      primary-to="/kontak"
       secondary-label="Lihat Produk Lainnya"
       secondary-to="/produk-solusi"
     />

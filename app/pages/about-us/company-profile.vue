@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { aboutHero, aboutIntro, aboutStoryHeader, aboutStorySlides, companyValues, leadership, trackRecord, visionMission } from '~/data/about'
+import { aboutHero, aboutIntro, aboutStoryHeader, aboutStorySlides, brandPhilosophy, companyValues, leadership, trackRecord, visionMission } from '~/data/about'
 
 const title = 'Profil Perusahaan - Kembar Futagroup'
 const description = 'Profil Kembar Futagroup sebagai holding manufaktur dari Klaten yang menaungi unit usaha logam, permesinan, lansekap, dan infrastruktur.'
@@ -255,6 +255,62 @@ onMounted(() => {
     </section>
 
     <section
+      id="filosofi"
+      class="bg-white scroll-mt-24"
+      data-section-reveal
+    >
+      <div class="mx-auto max-w-360 px-5 py-20 sm:px-8 lg:px-20 lg:py-25">
+        <p
+          class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green"
+          data-reveal-item
+        >
+          {{ brandPhilosophy.eyebrow }}
+        </p>
+
+        <div
+          class="mt-2 space-y-8"
+          data-reveal-item
+        >
+          <h2 class="max-w-4xl text-4xl font-normal leading-tight text-ink sm:text-5xl">
+            {{ brandPhilosophy.title }}
+          </h2>
+          <div class="h-px bg-black/20" />
+        </div>
+
+        <div
+          class="mt-8 grid gap-8 text-base leading-relaxed text-black/70 lg:grid-cols-2 lg:gap-24"
+          data-reveal-item
+        >
+          <p
+            v-for="paragraph in brandPhilosophy.paragraphs"
+            :key="paragraph"
+          >
+            {{ paragraph }}
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-5 sm:grid-cols-3">
+          <article
+            v-for="item in brandPhilosophy.terms"
+            :key="item.term"
+            class="group border border-black/16 p-7 transition duration-500 ease-out hover:-translate-y-1 hover:border-brand-green"
+            data-reveal-item
+          >
+            <p class="text-sm leading-tight text-black/45">
+              {{ item.lang }}
+            </p>
+            <h3 class="mt-3 text-2xl font-medium leading-tight text-ink">
+              {{ item.term }}
+            </h3>
+            <p class="mt-5 text-sm leading-relaxed text-black/65">
+              {{ item.description }}
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section
       id="visi-misi"
       class="bg-black text-white scroll-mt-24"
       data-section-reveal
@@ -472,7 +528,7 @@ onMounted(() => {
       primary-label="Lihat Unit Bisnis"
       primary-to="/unit-bisnis"
       secondary-label="Hubungi Kami"
-      secondary-to="#"
+      secondary-to="/kontak"
     />
   </div>
 </template>
