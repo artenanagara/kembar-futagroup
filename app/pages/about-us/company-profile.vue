@@ -175,6 +175,126 @@ onMounted(() => {
     </section>
 
     <section
+      id="visi-misi"
+      class="bg-black text-white scroll-mt-24"
+      data-section-reveal
+    >
+      <div class="mx-auto max-w-360 px-5 py-20 sm:px-8 lg:px-20 lg:py-25">
+        <div
+          class="grid gap-8 lg:grid-cols-[110px_1fr]"
+          data-reveal-item
+        >
+          <p class="text-sm leading-tight text-white/45">
+            {{ visionMission.vision.label }}
+          </p>
+          <div class="max-w-2xl">
+            <h2 class="text-3xl font-normal leading-tight sm:text-4xl lg:text-5xl">
+              {{ visionMission.vision.title }}
+            </h2>
+            <p class="mt-5 text-base leading-relaxed text-white/70">
+              {{ visionMission.vision.description }}
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="my-12 h-px bg-white/18"
+          data-reveal-item
+        />
+
+        <div
+          class="grid gap-8 lg:grid-cols-[110px_1fr]"
+          data-reveal-item
+        >
+          <p class="text-sm leading-tight text-white/45">
+            {{ visionMission.mission.label }}
+          </p>
+          <div>
+            <div class="max-w-2xl">
+              <h2 class="text-3xl font-normal leading-tight sm:text-4xl lg:text-5xl">
+                {{ visionMission.mission.title }}
+              </h2>
+              <p class="mt-5 text-base leading-relaxed text-white/70">
+                {{ visionMission.mission.description }}
+              </p>
+            </div>
+
+            <div class="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+              <article
+                v-for="principle in visionMission.principles"
+                :key="principle.title"
+                class="border border-white/24 p-6 transition duration-500 ease-out hover:border-brand-green hover:bg-white/4"
+              >
+                <h3 class="text-base font-medium leading-tight text-white">
+                  {{ principle.title }}
+                </h3>
+                <p class="mt-6 text-sm leading-relaxed text-white/70">
+                  {{ principle.description }}
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="filosofi"
+      class="bg-white scroll-mt-24"
+      data-section-reveal
+    >
+      <div class="mx-auto max-w-360 px-5 py-20 sm:px-8 lg:px-20 lg:py-25">
+        <p
+          class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green"
+          data-reveal-item
+        >
+          {{ brandPhilosophy.eyebrow }}
+        </p>
+
+        <div
+          class="mt-2 space-y-8"
+          data-reveal-item
+        >
+          <h2 class="max-w-4xl text-4xl font-normal leading-tight text-ink sm:text-5xl">
+            {{ brandPhilosophy.title }}
+          </h2>
+          <div class="h-px bg-black/20" />
+        </div>
+
+        <div
+          class="mt-8 grid gap-8 text-base leading-relaxed text-black/70 lg:grid-cols-2 lg:gap-24"
+          data-reveal-item
+        >
+          <p
+            v-for="paragraph in brandPhilosophy.paragraphs"
+            :key="paragraph"
+          >
+            {{ paragraph }}
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-5 sm:grid-cols-3">
+          <article
+            v-for="item in brandPhilosophy.terms"
+            :key="item.term"
+            class="group border border-black/16 p-7 transition duration-500 ease-out hover:-translate-y-1 hover:border-brand-green"
+            data-reveal-item
+          >
+            <p class="text-sm leading-tight text-black/45">
+              {{ item.lang }}
+            </p>
+            <h3 class="mt-3 text-2xl font-medium leading-tight text-ink">
+              {{ item.term }}
+            </h3>
+            <p class="mt-5 text-sm leading-relaxed text-black/65">
+              {{ item.description }}
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section
       id="sejarah"
       class="bg-white text-ink scroll-mt-24"
     >
@@ -249,126 +369,6 @@ onMounted(() => {
                 </p>
               </div>
             </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section
-      id="filosofi"
-      class="bg-white scroll-mt-24"
-      data-section-reveal
-    >
-      <div class="mx-auto max-w-360 px-5 py-20 sm:px-8 lg:px-20 lg:py-25">
-        <p
-          class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green"
-          data-reveal-item
-        >
-          {{ brandPhilosophy.eyebrow }}
-        </p>
-
-        <div
-          class="mt-2 space-y-8"
-          data-reveal-item
-        >
-          <h2 class="max-w-4xl text-4xl font-normal leading-tight text-ink sm:text-5xl">
-            {{ brandPhilosophy.title }}
-          </h2>
-          <div class="h-px bg-black/20" />
-        </div>
-
-        <div
-          class="mt-8 grid gap-8 text-base leading-relaxed text-black/70 lg:grid-cols-2 lg:gap-24"
-          data-reveal-item
-        >
-          <p
-            v-for="paragraph in brandPhilosophy.paragraphs"
-            :key="paragraph"
-          >
-            {{ paragraph }}
-          </p>
-        </div>
-
-        <div class="mt-12 grid gap-5 sm:grid-cols-3">
-          <article
-            v-for="item in brandPhilosophy.terms"
-            :key="item.term"
-            class="group border border-black/16 p-7 transition duration-500 ease-out hover:-translate-y-1 hover:border-brand-green"
-            data-reveal-item
-          >
-            <p class="text-sm leading-tight text-black/45">
-              {{ item.lang }}
-            </p>
-            <h3 class="mt-3 text-2xl font-medium leading-tight text-ink">
-              {{ item.term }}
-            </h3>
-            <p class="mt-5 text-sm leading-relaxed text-black/65">
-              {{ item.description }}
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section
-      id="visi-misi"
-      class="bg-black text-white scroll-mt-24"
-      data-section-reveal
-    >
-      <div class="mx-auto max-w-360 px-5 py-20 sm:px-8 lg:px-20 lg:py-25">
-        <div
-          class="grid gap-8 lg:grid-cols-[110px_1fr]"
-          data-reveal-item
-        >
-          <p class="text-sm leading-tight text-white/45">
-            {{ visionMission.vision.label }}
-          </p>
-          <div class="max-w-2xl">
-            <h2 class="text-3xl font-normal leading-tight sm:text-4xl lg:text-5xl">
-              {{ visionMission.vision.title }}
-            </h2>
-            <p class="mt-5 text-base leading-relaxed text-white/70">
-              {{ visionMission.vision.description }}
-            </p>
-          </div>
-        </div>
-
-        <div
-          class="my-12 h-px bg-white/18"
-          data-reveal-item
-        />
-
-        <div
-          class="grid gap-8 lg:grid-cols-[110px_1fr]"
-          data-reveal-item
-        >
-          <p class="text-sm leading-tight text-white/45">
-            {{ visionMission.mission.label }}
-          </p>
-          <div>
-            <div class="max-w-2xl">
-              <h2 class="text-3xl font-normal leading-tight sm:text-4xl lg:text-5xl">
-                {{ visionMission.mission.title }}
-              </h2>
-              <p class="mt-5 text-base leading-relaxed text-white/70">
-                {{ visionMission.mission.description }}
-              </p>
-            </div>
-
-            <div class="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
-              <article
-                v-for="principle in visionMission.principles"
-                :key="principle.title"
-                class="border border-white/24 p-6 transition duration-500 ease-out hover:border-brand-green hover:bg-white/4"
-              >
-                <h3 class="text-base font-medium leading-tight text-white">
-                  {{ principle.title }}
-                </h3>
-                <p class="mt-6 text-sm leading-relaxed text-white/70">
-                  {{ principle.description }}
-                </p>
-              </article>
-            </div>
           </div>
         </div>
       </div>

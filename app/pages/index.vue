@@ -324,14 +324,14 @@ onBeforeUnmount(() => {
         </div>
 
         <div
-          class="mt-20 overflow-hidden border border-white bg-black lg:flex lg:min-h-93"
+          class="mt-20 overflow-hidden border border-white bg-black lg:flex lg:min-h-80"
           data-reveal-item
         >
           <button
             v-for="(item, index) in expertiseItems"
             :key="`${item.number}-${item.title}`"
             type="button"
-            class="group relative flex min-h-76 w-full min-w-0 flex-col border-white p-6 text-left transition-[background-color,color,flex-basis] duration-700 ease-[cubic-bezier(.16,1,.3,1)] lg:min-h-93 lg:w-auto"
+            class="group relative flex min-h-64 w-full min-w-0 flex-col border-white p-6 text-left transition-[background-color,color,flex-basis] duration-700 ease-[cubic-bezier(.16,1,.3,1)] lg:min-h-80 lg:w-auto"
             :class="[
               activeExpertiseIndex === index ? 'bg-white text-black lg:basis-[40%]' : 'bg-black text-white hover:bg-white/5 lg:basis-[20%]',
               index === 0 ? '' : 'border-t lg:border-l lg:border-t-0'
@@ -368,7 +368,7 @@ onBeforeUnmount(() => {
 
             <span
               v-else
-              class="flex h-full min-h-60 flex-col justify-start"
+              class="flex h-full min-h-48 flex-col justify-start"
             >
               <span class="text-base font-normal leading-none text-white/80">
                 {{ item.number }}

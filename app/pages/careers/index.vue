@@ -98,64 +98,6 @@ const openArea = ref(0)
           class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green"
           data-reveal-item
         >
-          {{ careersJobsSection.eyebrow }}
-        </p>
-        <h2
-          class="mt-2 max-w-2xl text-4xl font-normal leading-tight text-ink sm:text-5xl"
-          data-reveal-item
-        >
-          {{ careersJobsSection.title }}
-        </h2>
-
-        <div
-          class="mt-12 divide-y divide-black/10 border-y border-black/10"
-          data-reveal-item
-        >
-          <NuxtLink
-            v-for="job in jobListings"
-            :key="job.slug"
-            :to="`/karir/${job.slug}`"
-            class="group grid grid-cols-[1fr_auto] items-center gap-x-6 gap-y-3 px-2 py-7 transition-colors duration-200 hover:bg-neutral-50 sm:grid-cols-[1.4fr_1fr_1fr_auto] sm:px-4"
-          >
-            <h3 class="text-lg font-medium leading-tight text-ink transition-colors duration-200 group-hover:text-brand-green sm:text-xl">
-              {{ job.title }}
-            </h3>
-
-            <div class="order-3 sm:order-none sm:justify-self-center">
-              <UiBadge
-                variant="outline-dark"
-                size="sm"
-              >
-                {{ job.type }}
-              </UiBadge>
-            </div>
-
-            <span class="order-4 inline-flex items-center gap-2 text-sm leading-tight text-black/65 sm:order-none sm:justify-self-center">
-              <UIcon
-                name="i-lucide-map-pin"
-                class="size-4 shrink-0 text-black/45"
-              />
-              {{ job.city }}
-            </span>
-
-            <UIcon
-              name="i-lucide-arrow-right"
-              class="size-6 shrink-0 justify-self-end text-black/45 transition duration-200 group-hover:translate-x-1 group-hover:text-brand-green"
-            />
-          </NuxtLink>
-        </div>
-      </div>
-    </section>
-
-    <section
-      class="bg-white"
-      data-section-reveal
-    >
-      <div class="mx-auto max-w-360 px-5 py-20 sm:px-8 lg:px-20 lg:py-25">
-        <p
-          class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green"
-          data-reveal-item
-        >
           {{ workCulture.eyebrow }}
         </p>
         <h2
@@ -262,6 +204,64 @@ const openArea = ref(0)
             class="aspect-4/5 bg-neutral-200"
             aria-hidden="true"
           />
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="bg-white"
+      data-section-reveal
+    >
+      <div class="mx-auto max-w-360 px-5 py-20 sm:px-8 lg:px-20 lg:py-25">
+        <p
+          class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green"
+          data-reveal-item
+        >
+          {{ careersJobsSection.eyebrow }}
+        </p>
+        <h2
+          class="mt-2 max-w-2xl text-4xl font-normal leading-tight text-ink sm:text-5xl"
+          data-reveal-item
+        >
+          {{ careersJobsSection.title }}
+        </h2>
+
+        <div
+          class="mt-12 divide-y divide-black/10 border-y border-black/10"
+          data-reveal-item
+        >
+          <NuxtLink
+            v-for="job in jobListings"
+            :key="job.slug"
+            :to="`/karir/${job.slug}`"
+            class="group grid grid-cols-[1fr_auto] items-center gap-x-6 gap-y-3 px-2 py-7 transition-colors duration-200 hover:bg-neutral-50 sm:grid-cols-[1.4fr_1fr_1fr_auto] sm:px-4"
+          >
+            <h3 class="text-lg font-medium leading-tight text-ink transition-colors duration-200 group-hover:text-brand-green sm:text-xl">
+              {{ job.title }}
+            </h3>
+
+            <div class="order-3 sm:order-none sm:justify-self-center">
+              <UiBadge
+                variant="outline-dark"
+                size="sm"
+              >
+                {{ job.type }}
+              </UiBadge>
+            </div>
+
+            <span class="order-4 inline-flex items-center gap-2 text-sm leading-tight text-black/65 sm:order-none sm:justify-self-center">
+              <UIcon
+                name="i-lucide-map-pin"
+                class="size-4 shrink-0 text-black/45"
+              />
+              {{ job.city }}
+            </span>
+
+            <UIcon
+              name="i-lucide-arrow-right"
+              class="size-6 shrink-0 justify-self-end text-black/45 transition duration-200 group-hover:translate-x-1 group-hover:text-brand-green"
+            />
+          </NuxtLink>
         </div>
       </div>
     </section>
