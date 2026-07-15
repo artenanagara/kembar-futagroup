@@ -247,7 +247,7 @@ onBeforeUnmount(() => {
         <div>
           <p
             ref="paragraphRef"
-            class="max-w-5xl text-xl leading-[1.5] text-ink sm:text-2xl sm:leading-[1.5] xl:text-3xl xl:leading-[1.55]"
+            class="max-w-5xl text-xl leading-normal text-ink sm:text-2xl sm:leading-normal xl:text-3xl xl:leading-[1.55]"
           >
             <span
               v-for="([word, tone], index) in introWords"
