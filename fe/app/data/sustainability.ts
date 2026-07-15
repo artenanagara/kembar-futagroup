@@ -55,7 +55,7 @@ export const sustainabilityCommitments = {
     },
     {
       title: 'Manfaat Sosial',
-      description: 'Program CSR dan Yayasan Futago memastikan pertumbuhan usaha memberi manfaat nyata bagi masyarakat sekitar.'
+      description: 'Program CSR yang terdata di Forum CSR Kabupaten Klaten memastikan pertumbuhan usaha memberi manfaat nyata bagi masyarakat sekitar.'
     }
   ]
 }

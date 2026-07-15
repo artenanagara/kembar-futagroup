@@ -226,8 +226,19 @@ const openArea = ref(0)
           {{ careersJobsSection.title }}
         </h2>
 
+        <p
+          class="mt-6 flex items-start gap-2 rounded-md bg-neutral-100 p-4 text-sm leading-relaxed text-black/60"
+          data-reveal-item
+        >
+          <UIcon
+            name="i-lucide-info"
+            class="mt-0.5 size-4 shrink-0 text-brand-green"
+          />
+          <span>{{ careersJobsSection.note }}</span>
+        </p>
+
         <div
-          class="mt-12 divide-y divide-black/10 border-y border-black/10"
+          class="mt-8 divide-y divide-black/10 border-y border-black/10"
           data-reveal-item
         >
           <NuxtLink

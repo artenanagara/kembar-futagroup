@@ -149,6 +149,14 @@ const headings = computed(() => post.content.filter(block => block.type === 'hea
           class="space-y-6 text-base leading-relaxed text-black/70 lg:text-lg"
           data-reveal-item
         >
+          <p class="flex items-start gap-2 rounded-md bg-neutral-100 p-4 text-sm leading-relaxed text-black/60 lg:text-sm">
+            <UIcon
+              name="i-lucide-info"
+              class="mt-0.5 size-4 shrink-0 text-brand-green"
+            />
+            <span>Artikel ini merupakan contoh ilustrasi berbasis fakta nyata. Rilis dan kabar resmi akan diperbarui secara berkala.</span>
+          </p>
+
           <template
             v-for="(block, index) in post.content"
             :key="index"

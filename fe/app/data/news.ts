@@ -5,6 +5,11 @@ export const newsHero = {
   image: 'https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=85'
 }
 
+// CONTOH: artikel di bawah adalah materi ilustrasi berbasis fakta nyata (ekspor, IKN,
+// sertifikasi, CSR), namun dikemas sebagai contoh — tanggal dan detail naratif belum resmi.
+// Ganti dengan rilis berita aktual sebelum publikasi.
+export const newsDisclaimer = 'Artikel di halaman ini merupakan contoh ilustrasi. Kabar dan rilis resmi akan diperbarui secara berkala.'
+
 export type NewsContentBlock
   = | { type: 'heading', text: string }
     | { type: 'paragraph', text: string }
@@ -101,7 +106,7 @@ export const newsPosts: NewsPost[] = [
     content: [
       { type: 'heading', text: 'Komitmen Sosial yang Terdata Resmi' },
       { type: 'paragraph', text: 'Melalui PT Futake Indonesia, program tanggung jawab sosial Kembar Futagroup terdata resmi di Forum CSR Kabupaten Klaten. Sepanjang 2023–2024, grup menjalankan puluhan kegiatan yang mencakup bidang pendidikan, pemberdayaan ekonomi, sosial, serta sarana dan prasarana.' },
-      { type: 'paragraph', text: 'Bidang sosial dan pendidikan menjadi porsi terbesar — mulai dari dukungan kegiatan masyarakat di sekitar fasilitas produksi di Kecamatan Ceper hingga program aksesibilitas pendidikan yang sejalan dengan misi Yayasan Futago.' },
+      { type: 'paragraph', text: 'Bidang sosial dan pendidikan menjadi porsi terbesar — mulai dari dukungan kegiatan masyarakat di sekitar fasilitas produksi di Kecamatan Ceper hingga program aksesibilitas pendidikan bagi masyarakat di sekitar wilayah operasi.' },
       { type: 'image', src: 'https://images.unsplash.com/photo-1581093196277-9f608732e2c5?auto=format&fit=crop&w=1400&q=85', alt: 'Kegiatan sosial bersama masyarakat Klaten', caption: 'Kegiatan sosial bersama masyarakat di sekitar wilayah operasi.' },
       { type: 'heading', text: 'Tumbuh Bersama Masyarakat Sekitar' },
       { type: 'paragraph', text: 'Bagi grup, kegiatan ini adalah wujud misi "tumbuh bersama, bermanfaat bersama" — memastikan pertumbuhan usaha juga dirasakan oleh masyarakat di sekitar wilayah operasi, dari lapangan kerja hingga program pemberdayaan.' }

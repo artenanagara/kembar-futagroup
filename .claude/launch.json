@@ -4,7 +4,7 @@
     {
       "name": "dev",
       "runtimeExecutable": "bash",
-      "runtimeArgs": ["-c", "NUXT_BUILD_DIR=.nuxt-preview npm run dev"],
+      "runtimeArgs": ["-c", "cd fe && NUXT_BUILD_DIR=.nuxt-preview npm run dev"],
       "port": 3000,
       "autoPort": true
     }

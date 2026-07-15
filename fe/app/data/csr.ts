@@ -9,7 +9,7 @@ export const csrIntro = {
   eyebrow: 'Tumbuh Bersama',
   title: 'Bagi kami, keberhasilan diukur dari manfaat yang dirasakan orang lain.',
   paragraphs: [
-    'Kembar Futagroup meyakini bahwa pertumbuhan usaha harus berjalan seiring dengan manfaat bagi masyarakat sekitar. Komitmen ini diwujudkan melalui program tanggung jawab sosial yang berkelanjutan, dan diperkuat dengan hadirnya Yayasan Futago sejak 2022.',
+    'Kembar Futagroup meyakini bahwa pertumbuhan usaha harus berjalan seiring dengan manfaat bagi masyarakat sekitar. Komitmen ini diwujudkan melalui program tanggung jawab sosial yang berkelanjutan di sekitar wilayah operasi.',
     'Melalui PT Futake Indonesia, program CSR grup terdata resmi di Forum CSR Kabupaten Klaten. Sepanjang 2023–2024, puluhan kegiatan dijalankan di empat bidang utama: pendidikan, pemberdayaan ekonomi, sosial, serta sarana dan prasarana.'
   ]
 }
@@ -25,7 +25,7 @@ export const csrPillars = {
       title: 'Pendidikan',
       count: '13',
       unit: 'kegiatan',
-      description: 'Dukungan aksesibilitas pendidikan dan pengembangan keterampilan, sejalan dengan misi Yayasan Futago.'
+      description: 'Dukungan aksesibilitas pendidikan dan pengembangan keterampilan bagi masyarakat sekitar.'
     },
     {
       title: 'Sosial',
@@ -49,11 +49,11 @@ export const csrPillars = {
 }
 
 export const csrFoundation = {
-  eyebrow: 'Yayasan Futago',
-  title: 'Komitmen sosial yang diformalkan sejak 2022',
+  eyebrow: 'Komitmen Berkelanjutan',
+  title: 'Tanggung jawab sosial yang terdata dan berkelanjutan',
   paragraphs: [
-    'Yayasan Futago menjadi wadah resmi bagi komitmen sosial grup. Berdiri pada 2022, yayasan ini berfokus pada pemberdayaan masyarakat, aksesibilitas pendidikan, dan program lingkungan di sekitar wilayah operasi.',
-    'Melalui yayasan, program-program sosial grup dijalankan secara lebih terarah dan berkelanjutan — memastikan manfaat pertumbuhan usaha benar-benar sampai kepada masyarakat, bukan sekadar kegiatan sesaat.'
+    'Komitmen sosial grup bukan kegiatan sesaat. Melalui PT Futake Indonesia, program CSR terdaftar secara resmi di Forum CSR Kabupaten Klaten — memastikan setiap kegiatan tercatat, terarah, dan dapat dipertanggungjawabkan.',
+    'Fokus kami tetap konsisten dari waktu ke waktu: pemberdayaan masyarakat, aksesibilitas pendidikan, dan kepedulian lingkungan di sekitar wilayah operasi — agar manfaat pertumbuhan usaha benar-benar sampai kepada masyarakat.'
   ],
   commitments: [
     {

@@ -89,6 +89,11 @@ export default defineNuxtConfig({
     '/kegiatan-csr': { prerender: true },
     '/keberlanjutan': { prerender: true },
     '/kontak': { prerender: true },
+    '/cms': { prerender: true },
+    '/cms/artikel': { prerender: true },
+    '/cms/artikel/buat': { prerender: true },
+    '/cms/seo': { prerender: true },
+    '/cms/media': { prerender: true },
     '/peta-situs': { prerender: true }
   },
 

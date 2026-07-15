@@ -19,8 +19,8 @@ export const aboutIntro = {
   stats: [
     ['Berdiri Sejak', '2015'],
     ['Unit Bisnis', '8'],
-    ['Produk', '50+'],
-    ['Proyek Selesai', '200+']
+    ['Produk', '500+'],
+    ['Kota Terjangkau', '15+']
   ]
 }
 
@@ -44,13 +44,6 @@ export const aboutStorySlides = [
     title: 'PT Futake Indonesia berdiri sebagai kanal produk grup',
     description: 'Grup memperkuat sisi hilir dengan mendirikan PT Futake Indonesia — kanal brand, katalog, dan distribusi dengan showroom di Jl. Solo–Jogja, Klepu, Ceper. Produk turunan logam dan permesinan grup kini dapat diakses langsung oleh pelanggan dari berbagai daerah.',
     image: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1800&q=85'
-  },
-  {
-    eyebrow: 'Khazanah Sosial',
-    year: '2022',
-    title: 'Yayasan Futago resmi diluncurkan',
-    description: 'Komitmen sosial grup diformalkan melalui pendirian yayasan yang berfokus pada pemberdayaan masyarakat, aksesibilitas pendidikan, dan program lingkungan di sekitar wilayah operasi.',
-    image: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1800&q=85'
   },
   {
     eyebrow: 'Tanggung Jawab Sosial',

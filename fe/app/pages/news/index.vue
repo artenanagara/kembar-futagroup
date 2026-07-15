@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { newsHero, newsPosts } from '~/data/news'
+import { newsDisclaimer, newsHero, newsPosts } from '~/data/news'
 
 const title = 'Berita & Insight - Kembar Futagroup'
 const description = newsHero.description
@@ -40,6 +40,16 @@ useSchemaOrg([
       data-section-reveal
     >
       <div class="mx-auto max-w-360 px-5 py-20 sm:px-8 lg:px-20 lg:py-25">
+        <p
+          class="mb-10 flex items-start gap-2 rounded-md bg-neutral-100 p-4 text-sm leading-relaxed text-black/60"
+          data-reveal-item
+        >
+          <UIcon
+            name="i-lucide-info"
+            class="mt-0.5 size-4 shrink-0 text-brand-green"
+          />
+          <span>{{ newsDisclaimer }}</span>
+        </p>
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <CardsNewsCard
             v-for="post in newsPosts"

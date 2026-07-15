@@ -248,6 +248,14 @@ const handleSubmit = () => {
           </div>
 
           <div data-reveal-item>
+            <p class="mb-8 flex items-start gap-2 rounded-md bg-neutral-100 p-4 text-sm leading-relaxed text-black/60">
+              <UIcon
+                name="i-lucide-info"
+                class="mt-0.5 size-4 shrink-0 text-brand-green"
+              />
+              <span>Lowongan ini merupakan contoh ilustrasi bidang yang umum dibuka, bukan lowongan aktif. Untuk posisi yang sedang tersedia, silakan hubungi kami.</span>
+            </p>
+
             <h2 class="text-2xl font-medium leading-tight text-ink sm:text-3xl">
               Ringkasan
             </h2>

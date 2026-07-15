@@ -20,7 +20,9 @@ export const careersIntro = {
 
 export const careersJobsSection = {
   eyebrow: 'Lowongan Tersedia',
-  title: 'Temukan posisi yang sesuai dengan Anda'
+  title: 'Temukan posisi yang sesuai dengan Anda',
+  // CONTOH: posisi di bawah adalah ilustrasi bidang yang umum dibuka, bukan lowongan aktif.
+  note: 'Posisi berikut merupakan contoh ilustrasi bidang yang umum dibuka di lingkungan grup. Untuk lowongan yang sedang aktif, silakan hubungi kami.'
 }
 
 export const workCulture = {
