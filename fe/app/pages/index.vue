@@ -38,7 +38,6 @@ const paragraphRef = ref<HTMLElement | null>(null)
 const dividerRef = ref<HTMLElement | null>(null)
 const statsRef = ref<HTMLElement | null>(null)
 let aboutAnimationContext: { revert: () => void } | undefined
-let aboutMediaContext: gsap.MatchMedia | undefined
 
 const introWords = [
   ['Dari', 'black'],
@@ -112,58 +111,45 @@ onMounted(async () => {
       y: 24
     })
 
-    aboutMediaContext = gsap.matchMedia()
+    gsap.set(content, {
+      y: 32
+    })
 
-    const createRevealTimeline = (pin: boolean) => {
-      gsap.set(content, {
-        y: pin ? 48 : 0
+    const revealTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: section,
+        start: 'top 85%',
+        end: 'bottom 65%',
+        scrub: 0.8,
+        invalidateOnRefresh: true
+      }
+    })
+
+    revealTimeline
+      .to(content, {
+        y: 0,
+        ease: 'power2.out',
+        duration: 0.35
       })
-
-      const revealTimeline = gsap.timeline({
-        scrollTrigger: {
-          trigger: section,
-          start: pin ? 'top top' : 'top 82%',
-          end: pin ? '+=180%' : 'bottom 35%',
-          scrub: pin ? 1.4 : 0.8,
-          pin,
-          pinSpacing: pin,
-          anticipatePin: pin ? 1 : 0,
-          invalidateOnRefresh: true
-        }
-      })
-
-      revealTimeline
-        .to(content, {
-          y: 0,
-          ease: 'power2.out',
-          duration: 0.5
-        })
-        .to(words, {
-          width: '100%',
-          stagger: {
-            each: 0.12
-          },
-          ease: 'none',
-          duration: 0.12
-        }, '-=0.1')
-        .to(revealItems, {
-          autoAlpha: 1,
-          y: 0,
-          stagger: 0.08,
-          duration: 2,
-          ease: 'power2.out'
-        }, '+=0.18')
-
-      return () => revealTimeline.kill()
-    }
-
-    aboutMediaContext.add('(min-width: 1024px) and (min-height: 760px)', () => createRevealTimeline(true))
-    aboutMediaContext.add('(max-width: 1023px), (max-height: 759px)', () => createRevealTimeline(false))
+      .to(words, {
+        width: '100%',
+        stagger: {
+          each: 0.075
+        },
+        ease: 'none',
+        duration: 0.1
+      }, 0.08)
+      .to(revealItems, {
+        autoAlpha: 1,
+        y: 0,
+        stagger: 0.08,
+        duration: 0.8,
+        ease: 'power2.out'
+      }, 2.35)
   })
 })
 
 onBeforeUnmount(() => {
-  aboutMediaContext?.revert()
   aboutAnimationContext?.revert()
 })
 
