@@ -14,7 +14,7 @@ defineProps<{
 <template>
   <NuxtLink
     :to="`/produk-solusi/${solution.slug}`"
-    class="sticky top-24 grid min-h-110 gap-6 border-t border-black/20 bg-white py-8 last:border-b md:min-h-80 md:grid-cols-[120px_1fr] lg:min-h-75 lg:grid-cols-[180px_1.1fr_1.45fr_452px] lg:items-start"
+    class="grid min-h-110 gap-6 border-t border-black/20 bg-white py-8 last:border-b md:min-h-80 md:grid-cols-[120px_1fr] lg:sticky lg:top-24 lg:min-h-75 lg:grid-cols-[180px_1.1fr_1.45fr_minmax(280px,452px)] lg:items-start"
     :style="{ zIndex: index + 1 }"
   >
     <p class="font-mono text-base leading-tight text-black/45">

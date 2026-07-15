@@ -38,6 +38,7 @@ const paragraphRef = ref<HTMLElement | null>(null)
 const dividerRef = ref<HTMLElement | null>(null)
 const statsRef = ref<HTMLElement | null>(null)
 let aboutAnimationContext: { revert: () => void } | undefined
+let aboutMediaContext: gsap.MatchMedia | undefined
 
 const introWords = [
   ['Dari', 'black'],
@@ -111,48 +112,58 @@ onMounted(async () => {
       y: 24
     })
 
-    gsap.set(content, {
-      y: 72
-    })
+    aboutMediaContext = gsap.matchMedia()
 
-    const revealTimeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: section,
-        start: 'top top',
-        end: '+=180%',
-        scrub: 1.4,
-        pin: true,
-        pinSpacing: true,
-        anticipatePin: 1,
-        invalidateOnRefresh: true
-      }
-    })
-
-    revealTimeline
-      .to(content, {
-        y: 0,
-        ease: 'power2.out',
-        duration: 0.5
+    const createRevealTimeline = (pin: boolean) => {
+      gsap.set(content, {
+        y: pin ? 48 : 0
       })
-      .to(words, {
-        width: '100%',
-        stagger: {
-          each: 0.12
-        },
-        ease: 'none',
-        duration: 0.12
-      }, '-=0.1')
-      .to(revealItems, {
-        autoAlpha: 1,
-        y: 0,
-        stagger: 0.08,
-        duration: 2,
-        ease: 'power2.out'
-      }, '+=0.18')
+
+      const revealTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: pin ? 'top top' : 'top 82%',
+          end: pin ? '+=180%' : 'bottom 35%',
+          scrub: pin ? 1.4 : 0.8,
+          pin,
+          pinSpacing: pin,
+          anticipatePin: pin ? 1 : 0,
+          invalidateOnRefresh: true
+        }
+      })
+
+      revealTimeline
+        .to(content, {
+          y: 0,
+          ease: 'power2.out',
+          duration: 0.5
+        })
+        .to(words, {
+          width: '100%',
+          stagger: {
+            each: 0.12
+          },
+          ease: 'none',
+          duration: 0.12
+        }, '-=0.1')
+        .to(revealItems, {
+          autoAlpha: 1,
+          y: 0,
+          stagger: 0.08,
+          duration: 2,
+          ease: 'power2.out'
+        }, '+=0.18')
+
+      return () => revealTimeline.kill()
+    }
+
+    aboutMediaContext.add('(min-width: 1024px) and (min-height: 760px)', () => createRevealTimeline(true))
+    aboutMediaContext.add('(max-width: 1023px), (max-height: 759px)', () => createRevealTimeline(false))
   })
 })
 
 onBeforeUnmount(() => {
+  aboutMediaContext?.revert()
   aboutAnimationContext?.revert()
 })
 
@@ -237,11 +248,11 @@ onBeforeUnmount(() => {
     <section
       id="tentang"
       ref="sectionRef"
-      class="relative z-20 h-screen overflow-hidden bg-white"
+      class="relative z-20 min-h-svh bg-white"
     >
       <div
         ref="contentRef"
-        class="mx-auto grid h-screen max-w-360 items-start top-24 gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[220px_1fr] lg:gap-48 lg:px-20"
+        class="mx-auto grid min-h-svh max-w-360 content-start items-start gap-8 px-5 pb-16 pt-28 sm:gap-10 sm:px-8 sm:pb-20 sm:pt-32 lg:grid-cols-[minmax(160px,220px)_minmax(0,1fr)] lg:gap-16 lg:px-20 lg:pb-16 lg:pt-30 xl:gap-32 2xl:gap-48"
       >
         <p class="pt-2 text-sm font-medium uppercase leading-tight tracking-wide text-brand-green lg:pt-1">
           Sekilas Tentang Kami
@@ -250,7 +261,7 @@ onBeforeUnmount(() => {
         <div>
           <p
             ref="paragraphRef"
-            class="max-w-5xl text-xl leading-[1.55] text-ink sm:text-3xl"
+            class="max-w-5xl text-xl leading-[1.5] text-ink sm:text-2xl sm:leading-[1.5] xl:text-3xl xl:leading-[1.55]"
           >
             <span
               v-for="([word, tone], index) in introWords"
@@ -275,7 +286,7 @@ onBeforeUnmount(() => {
 
           <div
             ref="dividerRef"
-            class="my-12 h-px bg-black/10"
+            class="my-8 h-px bg-black/10 sm:my-10 xl:my-12"
           />
 
           <div
@@ -388,7 +399,7 @@ onBeforeUnmount(() => {
     >
       <div class="mx-auto grid gap-12 px-5 pb-0 pt-24 sm:px-8 lg:grid-cols-[minmax(180px,360px)_minmax(0,1fr)] lg:gap-18 lg:px-25 lg:pb-0 lg:pt-32">
         <div
-          class="pt-2 pb-16 sticky top-24 self-start h-140"
+          class="self-start pb-8 pt-2 lg:sticky lg:top-24 lg:h-140 lg:pb-16"
           data-reveal-item
         >
           <p class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green">

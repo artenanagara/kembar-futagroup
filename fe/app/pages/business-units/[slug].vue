@@ -47,7 +47,7 @@ useSchemaOrg([
         { label: 'Unit Bisnis', to: '/unit-bisnis' },
         { label: unit.name }
       ]"
-      height-class="h-125"
+      height-class="min-h-125"
       overlay="vignette-soft"
     />
 

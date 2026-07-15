@@ -34,7 +34,7 @@ useSchemaOrg([
       :image="productSolutionPage.hero.image"
       image-alt="Produk dan solusi Kembar Futagroup"
       :breadcrumbs="productSolutionPage.hero.breadcrumbs.map((crumb, index) => ({ label: crumb, to: index === 0 ? '/' : undefined }))"
-      height-class="h-125"
+      height-class="min-h-125"
     />
 
     <section

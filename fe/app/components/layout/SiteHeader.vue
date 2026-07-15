@@ -334,7 +334,7 @@ onBeforeUnmount(() => {
 
     <div
       v-if="isOpen"
-      class="border-t border-white/10 bg-black/90 px-5 py-4 text-white xl:hidden"
+      class="max-h-[calc(100svh-5.625rem)] overflow-y-auto overscroll-contain border-t border-white/10 bg-black/95 px-5 py-4 text-white xl:hidden"
     >
       <template
         v-for="item in navItems"

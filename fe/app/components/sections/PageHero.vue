@@ -26,7 +26,7 @@ withDefaults(defineProps<{
 
 <template>
   <section
-    class="relative overflow-hidden bg-ink text-white"
+    class="relative flex flex-col overflow-hidden bg-ink text-white"
     :class="heightClass"
     data-section-reveal
   >
@@ -54,7 +54,7 @@ withDefaults(defineProps<{
 
     <LayoutSiteHeader />
 
-    <div class="relative z-10 mx-auto flex h-full max-w-360 flex-col items-start justify-end gap-8 px-5 pb-12 pt-28 sm:px-8 lg:px-20">
+    <div class="relative z-10 mx-auto flex w-full flex-1 flex-col items-start justify-end gap-6 px-5 pb-10 pt-28 sm:gap-8 sm:px-8 sm:pb-12 lg:px-20">
       <nav
         v-if="breadcrumbs.length"
         class="flex flex-wrap items-center gap-2 text-sm leading-tight text-white/70"

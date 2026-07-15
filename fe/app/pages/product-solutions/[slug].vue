@@ -47,7 +47,7 @@ useSchemaOrg([
         { label: 'Produk & Solusi', to: '/produk-solusi' },
         { label: solution.name }
       ]"
-      height-class="h-125"
+      height-class="min-h-125"
       overlay="vignette-soft"
     />
 

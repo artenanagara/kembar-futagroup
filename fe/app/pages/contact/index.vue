@@ -31,7 +31,7 @@ useSchemaOrg([
       :image="contactHero.image"
       :image-alt="contactHero.title"
       :breadcrumbs="contactHero.breadcrumbs.map((crumb, index) => ({ label: crumb, to: index === 0 ? '/' : undefined }))"
-      height-class="h-125"
+      height-class="min-h-125"
       overlay="vignette-side"
     />
 

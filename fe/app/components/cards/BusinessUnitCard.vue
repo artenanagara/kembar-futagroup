@@ -13,7 +13,7 @@ defineProps<{
 <template>
   <NuxtLink
     :to="`/unit-bisnis/${unit.slug}`"
-    class="group relative flex h-125 overflow-hidden bg-black p-8 text-white transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] hover:-translate-y-1"
+    class="group relative flex min-h-105 overflow-hidden bg-black p-6 text-white transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] hover:-translate-y-1 sm:min-h-115 sm:p-8 lg:min-h-125"
   >
     <img
       v-if="unit.cardImage"
@@ -46,8 +46,8 @@ defineProps<{
         <h2 class="text-3xl font-medium leading-tight lg:text-4xl">
           {{ unit.name }}
         </h2>
-        <div class="grid grid-rows-[0fr] opacity-0 transition-[grid-template-rows,opacity,transform] duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:grid-rows-[1fr] group-hover:opacity-100">
-          <p class="min-h-0 translate-y-2 overflow-hidden text-base leading-relaxed text-white/70 transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-y-0">
+        <div class="grid grid-rows-[1fr] opacity-100 transition-[grid-template-rows,opacity,transform] duration-700 ease-[cubic-bezier(.16,1,.3,1)] lg:grid-rows-[0fr] lg:opacity-0 lg:group-hover:grid-rows-[1fr] lg:group-hover:opacity-100">
+          <p class="min-h-0 overflow-hidden text-sm leading-relaxed text-white/70 transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] sm:text-base lg:translate-y-2 lg:group-hover:translate-y-0">
             {{ unit.description }}
           </p>
         </div>

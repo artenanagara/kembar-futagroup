@@ -92,7 +92,7 @@ const sitemapSections = [
         { label: 'Beranda', to: '/' },
         { label: 'Peta Situs' }
       ]"
-      height-class="h-125"
+      height-class="min-h-125"
     />
 
     <section

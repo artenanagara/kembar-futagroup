@@ -40,7 +40,7 @@ useSchemaOrg([
       :image="businessUnitPage.hero.image"
       image-alt="Unit bisnis Kembar Futagroup"
       :breadcrumbs="businessUnitPage.hero.breadcrumbs.map((crumb, index) => ({ label: crumb, to: index === 0 ? '/' : undefined }))"
-      height-class="h-125"
+      height-class="min-h-125"
     />
 
     <section

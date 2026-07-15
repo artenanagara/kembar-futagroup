@@ -24,7 +24,7 @@ const isActive = (to: string) => route.path === to
 <template>
   <div class="min-h-screen bg-[#f4f7f3] text-ink">
     <div class="grid min-h-screen lg:grid-cols-[280px_minmax(0,1fr)]">
-      <aside class="border-b border-black/10 bg-white px-5 py-5 lg:sticky lg:top-0 lg:h-screen lg:border-b-0 lg:border-r lg:px-6 lg:py-6">
+      <aside class="border-b border-black/10 bg-white px-5 py-5 lg:sticky lg:top-0 lg:max-h-svh lg:overflow-y-auto lg:border-b-0 lg:border-r lg:px-6 lg:py-6">
         <div class="flex items-center justify-between gap-4 lg:block">
           <NuxtLink
             to="/"
