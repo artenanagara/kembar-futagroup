@@ -23,7 +23,7 @@ export type Project = {
   image: string
 }
 
-// Proyek terverifikasi dari publikasi & profil unit usaha grup (Futake, Kembar Teknika,
+// Proyek terverifikasi dari publikasi & profil unit bisnis grup (Futake, Kembar Teknika,
 // Futago Karya). Angka lingkup detail belum dikonfirmasi klien — deskripsi dijaga faktual
 // tanpa klaim kuantitatif yang belum pasti.
 export const projects: Project[] = [
@@ -80,7 +80,7 @@ export const projects: Project[] = [
 export const projectsNational = {
   eyebrow: 'Proyek Strategis Nasional',
   title: 'Mendukung pembangunan dari Klaten untuk Indonesia',
-  description: 'Melalui unit usahanya, grup turut mendukung kebutuhan proyek strategis nasional dan kawasan prioritas — dengan jangkauan pengiriman yang membentang dari Bengkulu, Paser, hingga Labuan Bajo.',
+  description: 'Melalui unit bisnisnya, grup turut mendukung kebutuhan proyek strategis nasional dan kawasan prioritas — dengan jangkauan pengiriman yang membentang dari Bengkulu, Paser, hingga Labuan Bajo.',
   items: [
     {
       title: 'Ibu Kota Nusantara (IKN)',

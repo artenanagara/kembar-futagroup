@@ -8,10 +8,10 @@ withDefaults(defineProps<{
   secondaryTo?: string
 }>(), {
   title: 'Bangun solusi industri bersama kami.',
-  description: 'Jelajahi unit usaha, produk, dan solusi yang terhubung dalam ekosistem industri kami.',
+  description: 'Jelajahi unit bisnis, produk, dan solusi yang terhubung dalam ekosistem industri kami.',
   primaryLabel: 'Hubungi Kami',
   primaryTo: '#',
-  secondaryLabel: 'Lihat Unit Usaha',
+  secondaryLabel: 'Lihat Unit Bisnis',
   secondaryTo: '/unit-bisnis'
 })
 </script>
@@ -21,7 +21,7 @@ withDefaults(defineProps<{
     class="bg-black text-white"
     data-section-reveal
   >
-    <div class="mx-auto flex min-h-130 max-w-7xl flex-col items-center justify-center px-5 py-28 text-center sm:px-8 lg:px-25 lg:py-34">
+    <div class="mx-auto flex min-h-[80svh] max-w-7xl flex-col items-center justify-center px-5 py-28 text-center sm:px-8 lg:px-25 lg:py-34">
       <div
         class="w-full"
         data-reveal-item

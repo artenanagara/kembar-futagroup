@@ -9,7 +9,7 @@ export const careersIntro = {
   eyebrow: 'Bekerja Bersama Kami',
   title: 'Tempat untuk belajar, bekerja, dan bertumbuh.',
   paragraphs: [
-    'Kembar Futagroup dibangun oleh orang-orang yang bekerja di berbagai bidang: produksi, manufaktur, penjualan, proyek, keuangan, operasional, kreatif, hingga pengembangan unit usaha.',
+    'Kembar Futagroup dibangun oleh orang-orang yang bekerja di berbagai bidang: produksi, manufaktur, penjualan, proyek, keuangan, operasional, kreatif, hingga pengembangan unit bisnis.',
     'Setiap peran memiliki kontribusi penting dalam menjaga ekosistem grup tetap bergerak. Di sini, pekerjaan bukan hanya tentang menyelesaikan tugas, tetapi juga tentang belajar dari proses, membangun kualitas kerja, dan memberi manfaat melalui peran masing-masing.'
   ],
   image: {
@@ -35,7 +35,7 @@ export const workCulture = {
     },
     {
       title: 'Kerja Sama',
-      description: 'Bergerak bersama lintas tim dan unit usaha.'
+      description: 'Bergerak bersama lintas tim dan unit bisnis.'
     },
     {
       title: 'Pembelajaran',
@@ -143,7 +143,7 @@ export const jobListings: JobListing[] = [
     type: 'Penuh Waktu',
     datePosted: '2026-07-10',
     validThrough: '2026-08-09',
-    description: 'Mengembangkan strategi pemasaran dan menjalin hubungan dengan calon klien untuk produk dan solusi dari unit usaha grup.',
+    description: 'Mengembangkan strategi pemasaran dan menjalin hubungan dengan calon klien untuk produk dan solusi dari unit bisnis grup.',
     responsibilities: [
       'Menyusun dan menjalankan rencana pemasaran produk dan solusi',
       'Membangun serta menjaga hubungan dengan klien dan mitra',
@@ -214,7 +214,7 @@ export const jobListings: JobListing[] = [
       'Membantu tim engineering dalam riset dan pengembangan produk',
       'Ikut serta dalam proses evaluasi teknis di lapangan',
       'Membantu dokumentasi teknis dan laporan proyek',
-      'Belajar langsung dari proses produksi di berbagai unit usaha'
+      'Belajar langsung dari proses produksi di berbagai unit bisnis'
     ],
     requirements: [
       'Mahasiswa aktif Teknik Mesin/Industri/terkait',

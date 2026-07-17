@@ -45,6 +45,8 @@ useSchemaOrg([
 const curtainRef = ref<HTMLElement | null>(null)
 const isCovering = ref(false)
 const curtainRevealed = useCurtainRevealed()
+const route = useRoute()
+const isPublicPage = computed(() => !route.path.startsWith('/cms'))
 
 let gsapInstance: typeof import('gsap').default | undefined
 
@@ -168,7 +170,7 @@ onMounted(() => {
 
 <template>
   <UApp>
-    <main>
+    <main :class="isPublicPage ? 'public-page' : 'cms-page'">
       <NuxtPage
         :transition="{
           name: 'page',

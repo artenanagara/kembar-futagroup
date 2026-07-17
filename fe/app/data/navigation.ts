@@ -72,7 +72,7 @@ export const navItems: NavItem[] = [
     hasDropdown: true,
     dropdownLimit: 8,
     eyebrow: 'Unit Bisnis',
-    description: 'Berbagai unit usaha grup saling terhubung untuk mendukung manufaktur, teknik, lansekap, dan infrastruktur.',
+    description: 'Berbagai unit bisnis grup saling terhubung untuk mendukung manufaktur, teknik, lansekap, dan infrastruktur.',
     image: {
       src: businessUnits[0]?.image ?? '',
       alt: 'Unit bisnis Kembar Futagroup'
@@ -122,7 +122,7 @@ export const footerColumns: FooterColumn[] = [
     links: [
       { label: 'Beranda', to: '/' },
       { label: 'Tentang Kami', to: '/tentang-kami/profil' },
-      { label: 'Unit Usaha', to: '/unit-bisnis' },
+      { label: 'Unit Bisnis', to: '/unit-bisnis' },
       { label: 'Produk & Solusi', to: '/produk-solusi' },
       { label: 'Keberlanjutan', to: '/keberlanjutan' }
     ]
@@ -159,7 +159,7 @@ export const footerColumns: FooterColumn[] = [
     ]
   },
   {
-    title: 'Unit Usaha',
+    title: 'Unit Bisnis',
     links: [
       { label: 'Ayem Tentrem Logam', to: '/unit-bisnis/ayem-tentrem-logam' },
       { label: 'Kembar Teknika', to: '/unit-bisnis/kembar-teknika' },

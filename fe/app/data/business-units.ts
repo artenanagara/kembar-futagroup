@@ -9,7 +9,7 @@ export type BusinessUnit = {
   group: BusinessUnitGroup
   image: string
   cardImage?: string
-  /** URL website resmi unit usaha; tidak semua unit memiliki situs publik. */
+  /** URL website resmi unit bisnis; tidak semua unit memiliki situs publik. */
   website?: string
   about: {
     eyebrow: string
@@ -30,14 +30,14 @@ export const businessUnitPage = {
   hero: {
     breadcrumbs: ['Beranda', 'Unit Bisnis'],
     title: 'Unit Bisnis',
-    description: 'Kembar Futagroup menaungi sejumlah unit usaha yang bekerja sebagai satu ekosistem — dari pengecoran logam, manufaktur, material lansekap, hingga properti.',
+    description: 'Kembar Futagroup menaungi sejumlah unit bisnis yang bekerja sebagai satu ekosistem — dari pengecoran logam, manufaktur, material lansekap, hingga properti.',
     image: 'https://images.unsplash.com/photo-1779608993307-456d4a9ab4fa?auto=format&fit=crop&w=1800&q=85'
   },
   intro: {
     eyebrow: 'Satu Ekosistem',
     title: 'Setiap unit memiliki peran berbeda, namun bergerak dalam arah yang sama.',
     paragraphs: [
-      'Kembar Futagroup menaungi delapan unit usaha yang bergerak di empat lini industri: logam, manufaktur, lansekap, dan infrastruktur. Setiap unit dijalankan secara independen dengan standar kerja masing-masing — namun terhubung dalam satu rantai nilai yang saling mendukung.',
+      'Kembar Futagroup menaungi delapan unit bisnis yang bergerak di empat lini industri: logam, manufaktur, lansekap, dan infrastruktur. Setiap unit dijalankan secara independen dengan standar kerja masing-masing — namun terhubung dalam satu rantai nilai yang saling mendukung.',
       'Dari pengolahan bahan baku logam di hulu, produksi komponen dan manufaktur di tengah, hingga pengembangan lahan dan infrastruktur di hilir, setiap unit mengisi peran spesifik dalam ekosistem industri grup.'
     ]
   },

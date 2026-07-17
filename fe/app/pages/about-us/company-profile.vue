@@ -2,7 +2,7 @@
 import { aboutHero, aboutIntro, aboutStoryHeader, aboutStorySlides, brandPhilosophy, companyValues, leadership, trackRecord, visionMission } from '~/data/about'
 
 const title = 'Profil Perusahaan - Kembar Futagroup'
-const description = 'Profil Kembar Futagroup sebagai holding manufaktur dari Klaten yang menaungi unit usaha logam, permesinan, lansekap, dan infrastruktur.'
+const description = 'Profil Kembar Futagroup sebagai holding manufaktur dari Klaten yang menaungi unit bisnis logam, permesinan, lansekap, dan infrastruktur.'
 
 useSeoMeta({
   title,

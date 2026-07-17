@@ -10,7 +10,7 @@ export const contactIntro = {
   title: 'Satu pintu untuk seluruh ekosistem usaha kami.',
   paragraphs: [
     'Dari kebutuhan produk ruang publik, pengecoran custom, mesin tepat guna, material lansekap, hingga kerja sama proyek dan properti — Anda dapat menghubungi kami melalui satu titik kontak.',
-    'Sampaikan kebutuhan Anda, dan tim kami akan mengarahkannya ke unit usaha yang paling sesuai di dalam ekosistem grup.'
+    'Sampaikan kebutuhan Anda, dan tim kami akan mengarahkannya ke unit bisnis yang paling sesuai di dalam ekosistem grup.'
   ]
 }
 

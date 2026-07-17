@@ -10,7 +10,7 @@ export const aboutIntro = {
   title: 'Dari logam cair, kami menghasilkan produk yang dipakai setiap hari.',
   paragraphs: [
     'Kembar Futagroup berakar di Klaten, salah satu jantung industri cor logam di Indonesia. Di sinilah logam cair diubah menjadi produk nyata, mulai dari tutup manhole, hingga mesin produksi yang dirancang, dicor, dan difinishing dengan presisi.',
-    'Dari satu keahlian itu, kami berkembang menjadi holding yang menaungi unit usaha di bidang logam, manufaktur, lansekap, dan infrastruktur. Dengan akar lokal dan standar mutu yang kami jaga, produk kami kini menjangkau pasar ekspor hingga proyek pembangunan nasional.'
+    'Dari satu keahlian itu, kami berkembang menjadi holding yang menaungi unit bisnis di bidang logam, manufaktur, lansekap, dan infrastruktur. Dengan akar lokal dan standar mutu yang kami jaga, produk kami kini menjangkau pasar ekspor hingga proyek pembangunan nasional.'
   ],
   media: {
     src: '/images/misc/siapa-kami.webp',
@@ -26,7 +26,7 @@ export const aboutIntro = {
 
 export const aboutStoryHeader = {
   eyebrow: 'Kisah Kami',
-  title: 'Dari Satu Unit Usaha, Tumbuh Menjadi Ekosistem Industri',
+  title: 'Dari Satu Unit Bisnis, Tumbuh Menjadi Ekosistem Industri',
   description: 'Setiap langkah adalah bukti komitmen kami untuk terus berkembang dan memberikan dampak nyata bagi industri nasional.'
 }
 
@@ -62,8 +62,8 @@ export const aboutStorySlides = [
   {
     eyebrow: 'Saat Ini',
     year: '2026',
-    title: 'Delapan unit usaha, satu ekosistem industri terpadu',
-    description: 'Kembar Futagroup kini menaungi delapan unit usaha yang saling terhubung — dari pengecoran logam, permesinan, material dan lansekap, hingga properti — dengan jangkauan pasar nasional dan ekspor ke Singapura serta Timor Leste.',
+    title: 'Delapan unit bisnis, satu ekosistem industri terpadu',
+    description: 'Kembar Futagroup kini menaungi delapan unit bisnis yang saling terhubung — dari pengecoran logam, permesinan, material dan lansekap, hingga properti — dengan jangkauan pasar nasional dan ekspor ke Singapura serta Timor Leste.',
     image: 'https://images.unsplash.com/photo-1624397640148-949b1732bb0a?auto=format&fit=crop&w=1800&q=85'
   }
 ]
@@ -73,7 +73,7 @@ export const brandPhilosophy = {
   title: 'Satu makna dalam banyak bahasa: kembar.',
   paragraphs: [
     'Nama-nama di dalam grup bukan sebuah kebetulan. Kembar, Futago, dan Zwilling adalah kata yang sama dalam tiga bahasa berbeda — Indonesia, Jepang, dan Jerman — dan semuanya berarti kembar.',
-    'Filosofi ini menggambarkan cara kami bekerja: setiap unit usaha lahir dan tumbuh berdampingan, saling mencerminkan standar kerja yang sama, dan bergerak sebagai satu kesatuan — seperti saudara kembar yang mengambil peran berbeda, namun berbagi satu identitas.'
+    'Filosofi ini menggambarkan cara kami bekerja: setiap unit bisnis lahir dan tumbuh berdampingan, saling mencerminkan standar kerja yang sama, dan bergerak sebagai satu kesatuan — seperti saudara kembar yang mengambil peran berbeda, namun berbagi satu identitas.'
   ],
   terms: [
     {
@@ -151,7 +151,7 @@ export const companyValues = [
 export const leadership = {
   eyebrow: 'Kepemimpinan',
   title: 'Digerakkan oleh visi satu keluarga, dijalankan oleh satu ekosistem.',
-  description: 'Kembar Futagroup didirikan dan dipimpin oleh Ir. H. Fikky Arif Ardianta, A.Md., S.E., S.T., IPM., ASEAN.Eng., yang meletakkan fondasi awal usaha ini dari keahlian teknik dan pengolahan logam di Klaten. Di bawah kepemimpinannya, usaha yang semula berfokus pada satu bidang berkembang menjadi ekosistem yang menaungi berbagai unit usaha dengan peran saling melengkapi.',
+  description: 'Kembar Futagroup didirikan dan dipimpin oleh Ir. H. Fikky Arif Ardianta, A.Md., S.E., S.T., IPM., ASEAN.Eng., yang meletakkan fondasi awal usaha ini dari keahlian teknik dan pengolahan logam di Klaten. Di bawah kepemimpinannya, usaha yang semula berfokus pada satu bidang berkembang menjadi ekosistem yang menaungi berbagai unit bisnis dengan peran saling melengkapi.',
   ctaLabel: 'Kenali Lebih Jauh',
   ctaTo: '/tentang-kami/kepemimpinan',
   portrait: {
@@ -166,7 +166,7 @@ export const leadership = {
 export const trackRecord = {
   eyebrow: 'Jejak & Kredensial',
   title: 'Bukti nyata dari setiap proyek dan pasar yang kami jangkau.',
-  description: 'Perjalanan kami tidak hanya diukur dari jumlah unit usaha, tetapi dari proyek, kredensial, dan pasar yang berhasil kami jangkau — di dalam maupun luar negeri.',
+  description: 'Perjalanan kami tidak hanya diukur dari jumlah unit bisnis, tetapi dari proyek, kredensial, dan pasar yang berhasil kami jangkau — di dalam maupun luar negeri.',
   items: [
     {
       title: 'Proyek Publik Nasional',
@@ -175,7 +175,7 @@ export const trackRecord = {
     },
     {
       title: 'Kredensial Mutu',
-      description: 'Unit usaha grup mengantongi sertifikasi ISO 14001:2015 dan ISO 45001, sertifikat TKDN, serta terdaftar sebagai penyedia di e-Katalog LKPP.',
+      description: 'Unit bisnis grup mengantongi sertifikasi ISO 14001:2015 dan ISO 45001, sertifikat TKDN, serta terdaftar sebagai penyedia di e-Katalog LKPP.',
       verified: true
     },
     {
@@ -190,7 +190,7 @@ export const trackRecord = {
     },
     {
       title: 'Satu Ekosistem',
-      description: 'Delapan unit usaha yang saling terhubung dalam satu ekosistem industri, dari hulu hingga hilir.',
+      description: 'Delapan unit bisnis yang saling terhubung dalam satu ekosistem industri, dari hulu hingga hilir.',
       verified: true
     }
   ]
@@ -212,7 +212,7 @@ export const leadershipStory = {
   title: 'Membangun dari daerah, menggerakkan banyak peran',
   paragraphs: [
     'Ir. H. Fikky Arif Ardianta, A.Md., S.E., S.T., IPM., ASEAN.Eng. adalah pendiri Kembar Futagroup, sosok yang memiliki perhatian pada pengembangan industri, kewirausahaan, dan pemberdayaan. Dari akar daerah, ia membangun usaha dengan keyakinan bahwa industri dapat tumbuh kuat melalui proses, ketekunan, dan kerja nyata.',
-    'Dalam perjalanannya, Kembar Futagroup berkembang sebagai ekosistem industri yang menghubungkan logam, manufaktur, lansekap, infrastruktur, dan pengembangan kawasan. Setiap unit usaha tumbuh dengan peran berbeda, namun tetap diarahkan untuk saling melengkapi dalam satu rantai nilai.',
+    'Dalam perjalanannya, Kembar Futagroup berkembang sebagai ekosistem industri yang menghubungkan logam, manufaktur, lansekap, infrastruktur, dan pengembangan kawasan. Setiap unit bisnis tumbuh dengan peran berbeda, namun tetap diarahkan untuk saling melengkapi dalam satu rantai nilai.',
     'Bagi Ir. H. Fikky Arif Ardianta, membangun usaha bukan hanya tentang memperbesar bisnis, tetapi juga tentang menumbuhkan orang, membuka ruang kesempatan, dan menghadirkan manfaat yang lebih luas bagi industri, masyarakat, dan pembangunan.'
   ],
   portrait: {
@@ -298,7 +298,7 @@ export const companyValuesFoundation = {
     },
     {
       title: 'Bertumbuh bersama',
-      description: 'Menguatkan kolaborasi antarindividu, unit usaha, dan mitra.'
+      description: 'Menguatkan kolaborasi antarindividu, unit bisnis, dan mitra.'
     }
   ]
 }
@@ -373,7 +373,7 @@ export const companyValuesBehavior = {
 
 export const companyValuesOperational = {
   eyebrow: 'Budaya Operasional',
-  title: 'Nilai yang Menghubungkan Seluruh Unit Usaha',
+  title: 'Nilai yang Menghubungkan Seluruh Unit Bisnis',
   items: [
     {
       title: 'Untuk Individu',
@@ -384,7 +384,7 @@ export const companyValuesOperational = {
       description: 'Menjadi pedoman dalam berkolaborasi, saling mendukung, dan menyelesaikan pekerjaan bersama.'
     },
     {
-      title: 'Untuk Unit Usaha',
+      title: 'Untuk Unit Bisnis',
       description: 'Menjadi penghubung agar setiap unit bergerak selaras dalam satu ekosistem grup.'
     },
     {
@@ -401,14 +401,14 @@ export const leadershipStructureHero = {
     { label: 'Struktur Kepemimpinan' }
   ],
   title: 'Struktur Kepemimpinan',
-  description: 'Kembar Futagroup dijalankan oleh tim kepemimpinan yang berlapis, dari pendiri hingga kepala divisi di setiap unit usaha.',
+  description: 'Kembar Futagroup dijalankan oleh tim kepemimpinan yang berlapis, dari pendiri hingga kepala divisi di setiap unit bisnis.',
   image: 'https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=1800&q=85'
 }
 
 export const leadershipStructureIntro = {
   eyebrow: 'Satu Ekosistem',
   title: 'Dipimpin oleh individu yang membawa komitmen nyata terhadap industri nasional.',
-  description: 'Kembar Futagroup dijalankan oleh tim kepemimpinan yang berlapis — dari pendiri, dewan direksi grup, kepala divisi fungsional, hingga manajemen di tiap unit usaha. Setiap level membawa tanggung jawab dan keahlian yang spesifik untuk memastikan seluruh ekosistem bergerak dengan arah yang sama.'
+  description: 'Kembar Futagroup dijalankan oleh tim kepemimpinan yang berlapis — dari pendiri, dewan direksi grup, kepala divisi fungsional, hingga manajemen di tiap unit bisnis. Setiap level membawa tanggung jawab dan keahlian yang spesifik untuk memastikan seluruh ekosistem bergerak dengan arah yang sama.'
 }
 
 export const leadershipStructureFounder = {
@@ -427,7 +427,7 @@ export const leadershipStructureFounder = {
 // each entry here once confirmed, without touching the page template.
 export const leadershipStructureDireksi = {
   title: 'Direksi',
-  description: 'Pimpinan grup berperan dalam menjaga arah pertumbuhan, pengambilan keputusan strategis, serta koordinasi antarunit usaha di dalam ekosistem Kembar Futagroup.',
+  description: 'Pimpinan grup berperan dalam menjaga arah pertumbuhan, pengambilan keputusan strategis, serta koordinasi antarunit bisnis di dalam ekosistem Kembar Futagroup.',
   members: [
     { name: 'Bambang Setiawan', role: 'Direktur Utama', portrait: { src: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=900&q=80', alt: 'Bambang Setiawan' } },
     { name: 'Andi Wijaya', role: 'Direktur Operasional', portrait: { src: 'https://images.unsplash.com/photo-1544717297-fa95b6ee9643?auto=format&fit=crop&w=900&q=80', alt: 'Andi Wijaya' } },

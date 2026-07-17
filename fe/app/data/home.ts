@@ -13,7 +13,7 @@ export const aboutStats = [
   },
   {
     title: 'Skala',
-    description: 'Delapan unit usaha bersatu dalam satu holding industri.'
+    description: 'Delapan unit bisnis bersatu dalam satu holding industri.'
   }
 ]
 

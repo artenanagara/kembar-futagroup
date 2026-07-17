@@ -30,16 +30,16 @@ export const newsPosts: NewsPost[] = [
   {
     slug: 'beautifikasi-stasiun-klaten',
     title: 'Kilas Proyek: Kembar Futagroup di Balik Beautifikasi Stasiun Klaten',
-    excerpt: 'Bollard, kursi tunggu, hingga tanaman dari unit usaha grup mempercantik wajah baru Stasiun Klaten.',
+    excerpt: 'Bollard, kursi tunggu, hingga tanaman dari unit bisnis grup mempercantik wajah baru Stasiun Klaten.',
     category: 'Proyek',
     date: '2026-06-19',
     readTime: '4 Menit Baca',
     image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=85',
     content: [
       { type: 'heading', text: 'Karya Grup di Ruang Publik Kota Sendiri' },
-      { type: 'paragraph', text: 'Program beautifikasi Stasiun Klaten pada 2024 menjadi salah satu proyek yang paling dekat dengan rumah bagi Kembar Futagroup. Melalui unit usahanya, grup memasok produk-produk yang kini menyambut penumpang di area stasiun: bollard pembatas, kursi tunggu, hingga tanaman penghijau.' },
+      { type: 'paragraph', text: 'Program beautifikasi Stasiun Klaten pada 2024 menjadi salah satu proyek yang paling dekat dengan rumah bagi Kembar Futagroup. Melalui unit bisnisnya, grup memasok produk-produk yang kini menyambut penumpang di area stasiun: bollard pembatas, kursi tunggu, hingga tanaman penghijau.' },
       { type: 'paragraph', text: 'Kolaborasi antarunit menjadi kunci: elemen cor logam dikerjakan lini pengecoran dan fabrikasi grup, sementara elemen hijau disiapkan oleh Futafarm — memperlihatkan cara kerja ekosistem grup dalam satu proyek nyata.' },
-      { type: 'image', src: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1400&q=85', alt: 'Elemen ruang publik hasil produksi grup', caption: 'Elemen ruang publik hasil produksi unit usaha grup.' },
+      { type: 'image', src: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1400&q=85', alt: 'Elemen ruang publik hasil produksi grup', caption: 'Elemen ruang publik hasil produksi unit bisnis grup.' },
       { type: 'heading', text: 'Dari Stasiun ke Proyek Publik Lainnya' },
       { type: 'paragraph', text: 'Stasiun Klaten melengkapi jejak grup di ruang publik berbagai daerah — dari Jembatan Pandansimo, Alun-alun Toboali, hingga renovasi GOR Klaten — sekaligus menegaskan posisi grup sebagai mitra proyek beautifikasi dan infrastruktur ruang publik.' }
     ]
@@ -63,19 +63,19 @@ export const newsPosts: NewsPost[] = [
   },
   {
     slug: 'sertifikasi-standar-mutu-produksi',
-    title: 'ISO 14001, ISO 45001, hingga TKDN: Kredensial Mutu Unit Usaha Kembar Futagroup',
-    excerpt: 'Unit usaha grup mengantongi sertifikasi ISO 14001:2015, ISO 45001, TKDN, dan terdaftar di e-Katalog LKPP.',
+    title: 'ISO 14001, ISO 45001, hingga TKDN: Kredensial Mutu Unit Bisnis Kembar Futagroup',
+    excerpt: 'Unit bisnis grup mengantongi sertifikasi ISO 14001:2015, ISO 45001, TKDN, dan terdaftar di e-Katalog LKPP.',
     category: 'Perusahaan',
     date: '2026-05-10',
     readTime: '3 Menit Baca',
     image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=85',
     content: [
       { type: 'heading', text: 'Kredensial yang Menopang Kepercayaan Proyek' },
-      { type: 'paragraph', text: 'Sebagai bagian dari komitmen menjaga mutu produk, unit usaha Kembar Futagroup — di antaranya Futago Karya dan Kembar Teknika — mengantongi sertifikasi ISO 14001:2015 untuk manajemen lingkungan dan ISO 45001 untuk keselamatan dan kesehatan kerja.' },
+      { type: 'paragraph', text: 'Sebagai bagian dari komitmen menjaga mutu produk, unit bisnis Kembar Futagroup — di antaranya Futago Karya dan Kembar Teknika — mengantongi sertifikasi ISO 14001:2015 untuk manajemen lingkungan dan ISO 45001 untuk keselamatan dan kesehatan kerja.' },
       { type: 'paragraph', text: 'Selain itu, produk grup telah tersertifikasi TKDN (Tingkat Komponen Dalam Negeri) dan terdaftar sebagai penyedia di e-Katalog LKPP, sehingga memenuhi syarat untuk kebutuhan pengadaan barang dan jasa pemerintah.' },
       { type: 'image', src: 'https://images.unsplash.com/photo-1581093458791-9d42e3c7e117?auto=format&fit=crop&w=1400&q=85', alt: 'Proses kontrol kualitas produksi', caption: 'Proses inspeksi kontrol kualitas di lini produksi.' },
       { type: 'heading', text: 'Meningkatkan Kepercayaan Mitra dan Pelanggan' },
-      { type: 'paragraph', text: 'Kredensial ini menjadi dasar kepercayaan kontraktor, pengembang, dan instansi pemerintah terhadap produk-produk yang dihasilkan oleh unit usaha di bawah grup — dari furnitur jalan hingga komponen infrastruktur drainase.' }
+      { type: 'paragraph', text: 'Kredensial ini menjadi dasar kepercayaan kontraktor, pengembang, dan instansi pemerintah terhadap produk-produk yang dihasilkan oleh unit bisnis di bawah grup — dari furnitur jalan hingga komponen infrastruktur drainase.' }
     ]
   },
   {
@@ -88,7 +88,7 @@ export const newsPosts: NewsPost[] = [
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85',
     content: [
       { type: 'heading', text: 'Kontribusi untuk Proyek Strategis Nasional' },
-      { type: 'paragraph', text: 'Kembar Futagroup melalui unit usahanya turut mendukung kebutuhan proyek strategis nasional, termasuk pembangunan Ibu Kota Nusantara (IKN) dan kawasan strategis pariwisata nasional (KSPN), melalui penyediaan produk infrastruktur, utilitas kawasan, dan elemen ruang publik.' },
+      { type: 'paragraph', text: 'Kembar Futagroup melalui unit bisnisnya turut mendukung kebutuhan proyek strategis nasional, termasuk pembangunan Ibu Kota Nusantara (IKN) dan kawasan strategis pariwisata nasional (KSPN), melalui penyediaan produk infrastruktur, utilitas kawasan, dan elemen ruang publik.' },
       { type: 'paragraph', text: 'Jangkauan pengiriman grup telah mencakup pelanggan dari berbagai penjuru — dari Bengkulu, Paser, hingga Labuan Bajo — dengan produk berupa komponen drainase, furnitur jalan, serta produk cor logam untuk kebutuhan infrastruktur kawasan.' },
       { type: 'image', src: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=85', alt: 'Produk infrastruktur untuk kawasan IKN', caption: 'Komponen infrastruktur dan utilitas kawasan yang dikirim ke lokasi proyek.' },
       { type: 'heading', text: 'Bukti Kapabilitas Produksi dari Klaten untuk Indonesia' },

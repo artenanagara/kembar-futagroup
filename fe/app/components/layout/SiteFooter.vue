@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { footerColumns } from '~/data/navigation'
 
-const _footerTitles: string[] = ['Tentang Kami', 'Unit Usaha', 'Produk & Solusi', 'Informasi']
+const _footerTitles: string[] = ['Tentang Kami', 'Unit Bisnis', 'Produk & Solusi', 'Informasi']
 const footerNavColumns = footerColumns.filter(c => _footerTitles.includes(c.title))
 
 const socialLinks = [
@@ -19,10 +19,10 @@ withDefaults(defineProps<{
   secondaryTo?: string
 }>(), {
   title: 'Bangun solusi industri bersama kami.',
-  description: 'Jelajahi unit usaha, produk, dan solusi yang terhubung dalam ekosistem industri kami.',
+  description: 'Jelajahi unit bisnis, produk, dan solusi yang terhubung dalam ekosistem industri kami.',
   primaryLabel: 'Hubungi Kami',
   primaryTo: '/kontak',
-  secondaryLabel: 'Lihat Unit Usaha',
+  secondaryLabel: 'Lihat Unit Bisnis',
   secondaryTo: '/unit-bisnis'
 })
 </script>

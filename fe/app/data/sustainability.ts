@@ -22,7 +22,7 @@ export const sustainabilityPillars = {
     {
       icon: 'i-lucide-leaf',
       title: 'Tanggung Jawab Lingkungan',
-      description: 'Unit usaha grup menerapkan sistem manajemen lingkungan bersertifikat ISO 14001:2015, memastikan proses produksi dijalankan dengan memperhatikan dampak lingkungan.'
+      description: 'Unit bisnis grup menerapkan sistem manajemen lingkungan bersertifikat ISO 14001:2015, memastikan proses produksi dijalankan dengan memperhatikan dampak lingkungan.'
     },
     {
       icon: 'i-lucide-shield-check',

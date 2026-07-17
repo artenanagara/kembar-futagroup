@@ -2,7 +2,7 @@
 import { companyValuesBehavior, companyValuesFoundation, companyValuesHero, companyValuesOperational, companyValuesPillars } from '~/data/about'
 
 const title = 'Tata Nilai Perusahaan - Kembar Futagroup'
-const description = 'Tata nilai CREATIVE+ yang menjadi pedoman kerja, pelayanan, dan sinergi seluruh unit usaha Kembar Futagroup.'
+const description = 'Tata nilai CREATIVE+ yang menjadi pedoman kerja, pelayanan, dan sinergi seluruh unit bisnis Kembar Futagroup.'
 
 useSeoMeta({
   title,
@@ -269,7 +269,7 @@ const activeBehaviorIndex = ref(0)
       title="Bangun bersama nilai yang sama"
       primary-label="Hubungi Kami"
       primary-to="/kontak"
-      secondary-label="Jelajahi Unit Usaha"
+      secondary-label="Jelajahi Unit Bisnis"
       secondary-to="/unit-bisnis"
     />
   </div>

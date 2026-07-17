@@ -247,7 +247,7 @@ onBeforeUnmount(() => {
         <div>
           <p
             ref="paragraphRef"
-            class="max-w-5xl text-xl leading-normal text-ink sm:text-2xl sm:leading-normal xl:text-3xl xl:leading-[1.55]"
+            class="max-w-5xl text-xl leading-normal text-ink sm:text-2xl sm:leading-normal xl:text-4xl xl:leading-normal"
           >
             <span
               v-for="([word, tone], index) in introWords"
@@ -298,7 +298,7 @@ onBeforeUnmount(() => {
     </section>
 
     <section
-      class="bg-black text-white"
+      class="min-h-[80svh] bg-black text-white"
       data-section-reveal
     >
       <div class="mx-auto max-w-[1817px] px-5 py-24 sm:px-8 lg:px-25 lg:py-36">
@@ -380,7 +380,7 @@ onBeforeUnmount(() => {
     </section>
 
     <section
-      class="bg-white text-black"
+      class="min-h-[80svh] bg-white text-black"
       data-section-reveal
     >
       <div class="mx-auto grid gap-12 px-5 pb-0 pt-24 sm:px-8 lg:grid-cols-[minmax(180px,360px)_minmax(0,1fr)] lg:gap-18 lg:px-25 lg:pb-0 lg:pt-32">
@@ -389,7 +389,7 @@ onBeforeUnmount(() => {
           data-reveal-item
         >
           <p class="text-sm font-medium uppercase leading-tight tracking-wide text-brand-green">
-            Unit Usaha
+            Unit Bisnis
           </p>
           <h2 class="pt-2 text-4xl font-normal leading-tight text-ink sm:text-5xl lg:text-6xl">
             Satu Ekosistem Industri
@@ -415,7 +415,7 @@ onBeforeUnmount(() => {
     </section>
 
     <section
-      class="relative overflow-hidden bg-black text-white"
+      class="relative min-h-[80svh] overflow-hidden bg-black text-white"
       data-section-reveal
       data-reveal-start="top 92%"
     >
@@ -476,7 +476,7 @@ onBeforeUnmount(() => {
     </section>
 
     <!-- <section
-      class="bg-white"
+      class="min-h-[80svh] bg-white"
       data-section-reveal
     >
       <div class="mx-auto max-w-360 px-5 py-24 sm:px-8 lg:px-20 lg:py-25">
@@ -548,7 +548,7 @@ onBeforeUnmount(() => {
     </section> -->
 
     <section
-      class="bg-white"
+      class="min-h-[80svh] bg-white"
       data-section-reveal
     >
       <div class="mx-auto max-w-360 px-5 py-24 sm:px-8 lg:px-20 lg:py-25">

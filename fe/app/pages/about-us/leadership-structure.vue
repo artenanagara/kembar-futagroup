@@ -2,7 +2,7 @@
 import { leadershipStructureDireksi, leadershipStructureDivisi, leadershipStructureFounder, leadershipStructureHero, leadershipStructureIntro } from '~/data/about'
 
 const title = 'Struktur Kepemimpinan - Kembar Futagroup'
-const description = 'Susunan tim kepemimpinan Kembar Futagroup, dari pendiri, dewan direksi, hingga kepala divisi di setiap unit usaha.'
+const description = 'Susunan tim kepemimpinan Kembar Futagroup, dari pendiri, dewan direksi, hingga kepala divisi di setiap unit bisnis.'
 
 useSeoMeta({
   title,

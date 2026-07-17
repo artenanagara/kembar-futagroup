@@ -40,6 +40,15 @@ body {
   color: #050505;
 }
 
+/* Keep every public content section substantial without constraining its content. */
+.public-page section {
+  min-height: 80svh;
+}
+
+.public-page section.min-h-svh {
+  min-height: 100svh;
+}
+
 a,
 button {
   -webkit-tap-highlight-color: transparent;
