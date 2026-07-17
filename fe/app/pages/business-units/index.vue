@@ -3,15 +3,6 @@ import { businessUnitPage, businessUnits } from '~/data/business-units'
 
 const title = 'Unit Bisnis - Kembar Futagroup'
 const description = 'Daftar unit bisnis Kembar Futagroup di bidang manufaktur, logam, teknik, lansekap, dan solusi industri.'
-const activeFilter = ref<(typeof businessUnitPage.filters)[number]['value']>('all')
-
-const filteredUnits = computed(() => {
-  if (activeFilter.value === 'all') {
-    return businessUnits
-  }
-
-  return businessUnits.filter(unit => unit.group === activeFilter.value)
-})
 
 useSeoMeta({
   title,
@@ -81,27 +72,14 @@ useSchemaOrg([
           data-reveal-item
         />
 
-        <!-- Filter + cards grid -->
+        <!-- Cards grid -->
         <div
-          class="mt-12 flex flex-col items-start gap-8"
+          class="mt-12"
           data-reveal-item
         >
-          <div class="flex flex-wrap items-center gap-4">
-            <button
-              v-for="filter in businessUnitPage.filters"
-              :key="filter.value"
-              type="button"
-              class="inline-flex items-center justify-center rounded-full px-4 py-3 text-sm font-normal leading-[1.2] transition duration-300 ease-out focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-brand-green"
-              :class="activeFilter === filter.value ? 'bg-brand-green text-white' : 'border border-black/10 text-black/70 hover:border-brand-green hover:text-brand-green'"
-              @click="activeFilter = filter.value"
-            >
-              {{ filter.label }}
-            </button>
-          </div>
-
           <div class="grid w-full gap-8 md:grid-cols-2 xl:grid-cols-3">
             <CardsBusinessUnitCard
-              v-for="unit in filteredUnits"
+              v-for="unit in businessUnits"
               :key="unit.slug"
               :unit="unit"
             />
